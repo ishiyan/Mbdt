@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="iso-8859-1"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+ 
+
+<title>Binckbank Technische AEX Beurs Grafiek Analyse</title>
+<meta name="description" content="Binckbank technische aex amx beurs analyse voor belegging site Beursbox.nl" />
+<meta name="keywords" content="binckbank, technische analyse, koers, beurs, stijging, overname, alex, broker, koersenfeed, koersen, kosten, transactie" />
+
+<meta name="robots" content="index, follow" />
+<base href="http://www.beursbox.nl/" />
+	<link rel="shortcut icon" href="http://www.beursbox.nl/images/favicon.ico" />
+	
+
+<link rel="stylesheet" href="templates/crss_beursbox/css/template_css.css" type="text/css" />
+<link rel="stylesheet" href="templates/crss_beursbox/css/sfish.css" type="text/css" />
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-554144-31";
+urchinTracker();
+</script>
+
+<meta http-equiv="Content-Language" content="nl" /></head>
+
+<body class="bodies">
+<div id="wrapper" align="center" >
+	<div id="pagewrapper" style="width:940px; ">
+		<div id="topsect">
+			<div id="logo">
+				<a href="/"><img src="templates/crss_beursbox/images/logo.jpg" alt=" " /></a>
+			</div>
+			<div id="xtd_menu_wrapper">
+				<div id="xtd_menu">
+							<div class="moduletable">
+			<script type="text/javascript" language="JavaScript" src="http://www.beursbox.nl/templates/crss_beursbox/js/menu.js"></script>
+<div class="menu-son-of-suckerfish-horizontal">
+<ul id="menulist_root-son-of-suckerfish-horizontal"
+class="mainlevel-son-of-suckerfish-horizontal"
+><li><a href="http://www.beleggingstips.com/" target="_blank" class="mainlevel-son-of-suckerfish-horizontal">Aandelen Advies</a></li><li><a href="http://www.topaandelen.com" target="_blank" class="mainlevel-son-of-suckerfish-horizontal">Goedkope aandelen</a></li><li><a href="http://www.globalenergynewsletter.nl" target="_blank" class="mainlevel-son-of-suckerfish-horizontal">Trend aandelen</a></li><li><a href="http://forum.beursbox.nl/" target="_blank" class="mainlevel-son-of-suckerfish-horizontal">Beursbox Forum</a></li></ul>
+</div>		</div>
+						</div><div style="clear:both;"></div>
+			</div>
+	
+		</div><!-- end topsect -->
+		<div style="clear:both;"></div>
+
+
+
+		<div id="loginwrapper" >
+			<div id="tpath">
+							<span class="pathway">Voorpagina </span>				 
+			</div>
+			<!--[if IE 7]><div style="margin-top:-2px;"><![endif]-->
+			<!--[if IE 7]></div><![endif]-->
+			<div style="clear:both;"></div>
+		</div>
+
+		<img src="templates/crss_beursbox/images/spacer.gif" width="940" height="12" alt=" " />
+		
+		<div id="banner_wrp">
+			<div id="banner_inner" align="center">
+						<div class="moduletable">
+			<a href="/"><img border="0" alt="" src="images/stories/banner.jpg" /></a>		</div>
+					</div>
+			
+		
+					
+		<div id="bodywrapper">
+			<div id="bodywrapper_inner">
+								<div id="leftsection">
+							<div class="moduletable">
+			<style type="text/css">
+
+	#dropinboxv2cover{
+		width: 400px; 
+		height: 340px;
+		padding: 8px;  
+		position:absolute; 
+		z-index: 100;
+		overflow:hidden;
+		visibility: hidden;
+	}
+
+	#dropinboxv2{
+		color: #000000;
+		width: 390px; 
+		height: 330px; 
+		border-width:1px;
+		border-color:#CCCCCC;
+		border-style:solid;
+		background-color:#FFFFFF;
+		-moz-opacity:0.95;
+		position:absolute; 
+		left: 0;
+		top: 0;
+	}
+</style>
+
+
+<script>
+var dropboxleft=500 //set left position of box (in px)
+var dropboxtop=150 //set top position of box (in px)
+var dropspeed=15 //set speed of drop animation (larger=faster)
+var displaymode="oncepersession";
+
+if (parseInt(displaymode)!=NaN)
+var random_num=Math.floor(Math.random()*displaymode)
+var ie=document.all
+var dom=document.getElementById
+
+function initboxv2(){
+	if (!dom&&!ie)
+		return
+	crossboxcover=(dom)?document.getElementById("dropinboxv2cover") : document.all.dropinboxv2cover
+	crossbox=(dom)?document.getElementById("dropinboxv2"): document.all.dropinboxv2
+	scroll_top=(ie)? truebody().scrollTop : window.pageYOffset
+	crossbox.height=crossbox.offsetHeight
+	crossboxcover.style.height=parseInt(crossbox.height)+"px"
+	crossbox.style.top=crossbox.height*(-1)+"px"
+	crossboxcover.style.left=dropboxleft+"px"
+	crossboxcover.style.top=dropboxtop+"px"
+	crossboxcover.style.visibility=(dom||ie)? "visible" : "show"
+	setTimeout('dropstart=setInterval("dropinv2()",50)', 0) //setinterval = de snelheid van scrollen van de hoover en settimeout is de wachttijd voor de hoover verschijnd.
+}
+
+function dropinv2(){
+	scroll_top=(ie)? truebody().scrollTop : window.pageYOffset
+	if (parseInt(crossbox.style.top)<0){
+		crossboxcover.style.top=scroll_top+dropboxtop+"px"
+		crossbox.style.top=parseInt(crossbox.style.top)+dropspeed+"px"
+	}
+	else{
+		clearInterval(dropstart)
+		crossbox.style.top=0
+	}
+}
+
+function dismissboxv2(){
+	if (window.dropstart) clearInterval(dropstart)
+		crossboxcover.style.visibility="hidden"
+}
+
+function truebody(){
+	return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
+}
+
+function get_cookie(Name) {
+	var search = Name + "="
+	var returnvalue = ""
+	if (document.cookie.length > 0) {
+		offset = document.cookie.indexOf(search)
+		if (offset != -1) {
+			offset += search.length
+			end = document.cookie.indexOf(";", offset)
+			if (end == -1)
+				end = document.cookie.length;
+			returnvalue=unescape(document.cookie.substring(offset, end))
+		}
+	}
+	return returnvalue;
+}
+
+if (displaymode=="oncepersession" && get_cookie("droppedinv2")=="" || displaymode=="always" || parseInt(displaymode)!=NaN && random_num==0){
+	if (window.addEventListener)
+		window.addEventListener("load", initboxv2, false)
+	else if (window.attachEvent)
+		window.attachEvent("onload", initboxv2)
+	else if (document.getElementById || document.all)
+		window.onload=initboxv2
+	if (displaymode=="oncepersession")
+		document.cookie="droppedinv2=yes"
+}
+</script>
+<div id="dropinboxv2cover">
+	<div id="dropinboxv2">
+		<div align="right"><a href="#" onClick="dismissboxv2();return false"><font color="darkblue">[Sluiten]</font></a></div>
+		<div align="left">
+		
+		<table class="contentpaneopen">
+				<tr>
+			<td valign="top" colspan="2">
+				<font face="Arial" size="2">Schrijf nu in op onze gratis  Nieuwsbrief.</font>
+<div><font face="Arial" size="2">Als dank krijgt u het E-boek over Japanse Candles  gratis toegestuurd.<br />
+<br />
+</font>
+<div align="center"><font face="Arial" size="2"> <form action="http://www.beursbox.nl/cgi-bin/mail.cgi" method="get">
+<input type="hidden" name="list" value="bbbh" />
+<input type="hidden" name="f" value="subscribe" />
+<input type="text" name="email" value="email adres" size="16" onfocus="this.value='';" maxlength="1024" />
+<input type="submit" value="Ja, stuur mij de gratis beurs nieuwsbrief" />
+</form></font><font face="Arial" size="2"><img hspace="5" height="220" border="0" width="156" alt="De beursbox nieuwsbrief" src="http://www.beursbox.nl/images/stories/beursbox-nieuwsbrief-front.jpg" /></font></div>
+</div>			</td>
+		</tr>
+				</table>
+
+		<span class="article_seperator">&nbsp;</span>
+
+		</div>
+	</div>
+</div>
+
+
+		</div>
+				<div class="moduletable">
+							<h3>
+					Beursbox Content				</h3>
+				
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr align="left"><td><a href="http://www.beursbox.nl/" class="mainlevel" >Voorpagina</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/beurs-analyses.html" class="mainlevel" >Beurs Analyses</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/beurs-artikelen.html" class="mainlevel" >Beurs Artikelen</a></td></tr>
+<tr align="left"><td><a href="http://forum.beursbox.nl" target="_blank" class="mainlevel" >Beursbox Forum</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/beurs-kennis-box.html" class="mainlevel" >Beurs Kennis Box</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/koersen.html" class="mainlevel" >Koersen</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/table/nieuws-update/" class="mainlevel" >Nieuws</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/aanmelden-nieuwsbrief.html" class="mainlevel" >Aanmelden Nieuwsbrief</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/cgi-bin/mail.cgi/list/bbbh/" target="_blank" class="mainlevel" >Nieuwsbrief archief</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/financiele-diensten.html" class="mainlevel" >Financiële Diensten</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/elliott-wave-op-beursbox.nl.html" class="mainlevel" >Elliott Wave</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/japanse-candles.html" class="mainlevel" >Japanse Candles</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/speeders-citi.html" class="mainlevel" >Speeders Citi</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/links.html" class="mainlevel" >Links</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/disclaimer-en-privacy-policy.html" class="mainlevel" >Disclaimer / Privacy</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/spamfilter-aanpassen.html" class="mainlevel" >Spamfilter aanpassen</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/de-echte-beursbox.html" class="mainlevel" >usmarkets</a></td></tr>
+</table>		</div>
+				<div class="moduletable">
+							<h3>
+					 Abonneer op Feeds				</h3>
+				<div align="center" class="dsmodule"><div align="center" class="dsmessage"></div><div align="center" class="dsfeed"><a href="index2.php?option=com_ds-syndicate&amp;version=1&amp;feed_id=1"><img src="http://www.beursbox.nl/components/com_ds-syndicate/buttons/rss20.gif" alt="feed image" /></a></div><div align="center" class="dsfeed"><a href="index2.php?option=com_ds-syndicate&amp;version=1&amp;feed_id=2"><img src="http://www.beursbox.nl/components/com_ds-syndicate/buttons/atom03.gif" alt="feed image" /></a></div></div>		</div>
+				<div class="moduletable">
+					</div>
+						</div>
+								<div id="mainbodysect" style="width:740px;">
+														<table class="contentpaneopen">
+			<tr>
+								<td class="contentheading" width="100%">
+					Binckbank Technische AEX Beurs Grafiek Analyse 									</td>
+							</tr>
+			</table>
+			
+		<table class="contentpaneopen">
+				<tr>
+			<td valign="top" colspan="2">
+				<table width="100%" class="normal">
+    <tbody>
+        <tr>
+            <td valign="top" align="left"><SCRIPT LANGUAGE="JavaScript" src="http://ad.adtoma.com/adam/detect?tag=scr&amp;req=XO&amp;cat=beursbox.ros&amp;format=ad7_rectangle"></SCRIPT>
+            <p>  			<img height="462" width="731" border="0" align="left" src="http://www.beursbox.nl/plaatjes/binckbank.png" alt="Binckbank technische analyse op beursbox.nl" />         </p>
+            <p> </p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<table cellspacing="0" cellpadding="0" border="0">
+    <tbody>
+        <tr>
+            <td>
+            <p><font color="#000000">30 juli 2009</font></p>
+            <p><font color="#000000">Na de recente goede cijfers is het interessant om eens naar de grafiek te kijken. Richting de publicatie van de mooie cijfers gingen de koersen prachtig omhoog. Vanaf begin mei was Binck rond de 9 euro te vinden. Halverwege juli sprong de koers, in lijn met de beurzen in de wereld, ineens los en ging naar 10,35 toen de cijfers bekend werden. Het bezit van de zaak is het einde van het vermaak, dat was ook hier weer het geval. Eergisteren corrigeerde het aandeel flink en gisteren zagen we een prachtige Doji. RSI en Stochastic geven verkoopsignaal. In een gewone markt zou je dan een daling verwachten, maar het is vakantietijd en de stijging van de laatste weken is niet 'normaal'. Ik ga hier dus niet short op. Na de Doji moet de bevestiging komen. Ik ben benieuwd wat het gaat worden. Ik geef toe, ik heb geen idee.<br />
+            Fundamenteel ben ik voor de lange termijn geen fan van het aandeel. Het marktaandeel van Binck is groot en marges staan onder druk. Positief is echter dat ze nog altijd weten te groeien en dat volumes de laatste tijd flink zijn aangetrokken. Ik vrees voor Binck dat de nog goedkopere brokers gaan winnen ten kosten van Binck.<br />
+            </font></p>
+            <p><font color="#000000">15 juli 2009</font></p>
+            <p><font color="#000000">De koers van Binck is door de afgelopen twee heel sterke dagen tegen de trend in naar boven de Bollingerbands range gekomen. Het is de eerste van de uitbraken die nodig is om het aandeel 'los' te krijgen. De vorige top die begin juni gezet werd, die moet nu eerst doorbroken worden. Een slotkoers van 9,5 zou daarvoor nodig zijn. Een verrassende gang van zaken. In twee dagen tijd wordt hier heel het technische plaatje op zijn kop gezet. Vanwege die zo dicht bij zijnde top van begin juni, doe ik nu niets. Bij een doorbraak zouden technische traders instappen kunnen overwegen. De koers moet dan de dag na het slot op of boven 9,5 om 10:00 uur 's morgens nog altijd boven de 10,5 staan. Stoploss in dat geval een koers van 9,3 end of day. Ik doe hier zelf hoe dan ook niet aan mee.<br />
+            </font></p>
+            <p><font color="#000000">29 juni 2009</font></p>
+            <p><font color="#000000">De Bollingerbands, die rondom de 20 MA getekend worden, lijken een top gemaakt te hebben. De koers was heel even onder de Bollingerbands te vinden, maar dat is al weer gecorrigeerd. Er lijkt nu ruimte omhoog tot 9 euro te zijn, maar ik geloof meer in een hernieuwde daling tot 8,5. We sloten vrijdag op 8,73. Ik doe hier niets mee.<br />
+            </font></p>
+            <p><font color="#000000">12 juni 2009</font></p>
+            <p><font color="#000000">Het aandeel is rond de 9 euro blijven liggen en ook de Bollingerbands zijn horizontaal komen te liggen. De stijging lijkt haar top te hebben gevonden. Na twee Doji's zagen we maar liefst 4 zwarte candles op rij. Toch bleef de koers al die tijd vrijwel op dezelfde plaats liggen. Nu dus even niet interessant, maar het is niet gezegd dat de volgende beweging 'dus' omlaag moet zijn. Gewoon even afwachten.<br />
+            </font></p>
+            <p><font color="#000000">26 mei 2009</font></p>
+            <p><font color="#000000">Wederom zijn we rond de 9 euro per aandeel aangekomen en RSI en Stochastic geven nu verkoopsignalen af. Er lijkt hier een dubbele top gevormd te worden. Aandeelhouders raad ik aan te overwegen de aandelen te verkopen of anders call opties te schrijven en evt. met de ontvangen premie put opties te kopen.<br />
+            </font></p>
+            <p><font color="#000000">8 mei 2009</font></p>
+            <p><font color="#000000">De opmerkelijke stijging van het aandeel Binckbank lijkt ten einde te zijn. We hebben nu op het niveau van 9 euro per aandeel drie Doji's achter elkaar gezien. Zowel RSI als Stochastic hebben verkoopsignalen afgegeven. De kans dat we hier dus even een lager niveau gaan opzoeken lijkt groot. Eerste koersdoel in dat geval 8 euro.<br />
+            </font></p>
+            <p><font color="#000000">20 apr 2009</font></p>
+            <p><font color="#000000">Zo heel af en toe zit ik er compleet naast... Mijn vorige analyse was zo'n moment. Niet zo gek als we de grafiek bezien. Het is opmerkelijk, maar ondanks dat alle seinen op rood stonden, ging de koers weer fors hoger. We sloten vrijdag op 7,69. Wat is hier aan de hand? Binck is weer eigen aandelen aan het inkopen. Heeft dat zoveel impact dat het de markt verstoord? Dat lijkt onwaarschijnlijk, maar het is wel zo dat er 33.700 aandelen uit de markt gehaald zijn. Met een dagvolume van 200.000 (mogelijke dubbeltelling) kan dat net voldoende zijn. Het kan natuurlijk ook dat beleggers ineens heel positief over Binck geworden zijn. Het is ook geen slecht bedrijf. Het is slechts de vraag of hun nu zo winstgevende model de tand der tijd kan doorstaan. Ik heb daar mijn twijfels over. Anderen blijkbaar niet.<br />
+            </font></p>
+            <p><font color="#000000">30 mrt 2009</font></p>
+            <p><font color="#000000">Het herstel van Binck is opmerkelijk en bij de aandeelhouders ongetwijfeld zeer welkom. Het aandeel sloot vrijdag op 6,85 en wie de aandelen heeft raad ik aan deze te verkopen, of af te dekken. De volgende beweging is omlaag en naar mijn idee wel naar ergens rond de 6,20 en mogelijk lager. Hoe dan ook een 10% verlies ten opzichte van de koers van nu. Ook Stochastic gaf vrijdag een verkoopsignaal.<br />
+            </font></p>
+            <p><font color="#000000">12 mrt 2009</font></p>
+            <p><font color="#000000">Als &eacute;&eacute;n van de weinigen wist Binck de winst van eergisteren wel verder uit te bouwen. Gisteren werd weer boven de 6 euro gesloten. Een prachtig herstel, maar ik doe niet mee en dat blijft zo.<br />
+            </font></p>
+            <p><font color="#000000">13 feb 2009</font></p>
+            <p><font color="#000000">Vooralsnog is de richting van de koers nog zuidwaarts. De Bollingerbands lopen nu ook neutraal en gisteren werd na drie Doji's een zwarte candle neergezet. Dat is niet gunstig. Ook Stochastic en RSI hebben recent verkoopsignalen gegeven en de koers daalde daarna ook.<br />
+            </font></p>
+            <p><font color="#000000">23 jan 2009</font></p>
+            <p><font color="#000000">Het hernieuwde beurs pessimisme kan niet goed zijn voor deze bank. Fundamenteel is er dus een probleem. Technisch gaat het de laatste tijd wel goed met het aandeel. De Bollingerbands lopen weer op en heel keurig weet de koers aan de bovenkant van de bands te blijven. Ik ben en blijf geen koper van dit aandeel. Het is geen groeimarkt meer waar Binck in zit. Ze timmeren mooi aan de weg met Alex, maar wat ze daar nu doen, is confectie verkopen als maatwerk. Ik denk niet dat veel consumenten daar in gaan trappen. Ik denk dat Alex &eacute;&eacute;n van de betere platforms heeft voor particuliere beleggers, maar dat die groep consumenten niet echt warm lopen voor vermogensbeheer op massale schaal. Je moet wat om te blijven groeien, maar mij komt het nu iets 'te gemaakt' over.<br />
+            </font></p>
+            <p><font color="#000000">7 jan 2009</font></p>
+            <p><font color="#000000">De herstel beweging in de beurzen is goed nieuws voor een bank als Binck. Immers, bij stijgende koersen zijn particuliere beleggers veel actiever. In oktober stonden we op een gegeven moment vlak bij de 4 euro per aandeel. Gisteren sloten we op 5,7. Procentueel mooi, maar dan moest je wel intraday op dat moment de koper van die aandelen zijn. Re&euml;el gezien hebben de meeste aandeelhouders van Binck nog te maken met aanzienlijke verliezen en is de dalende trend nog niet gebroken door dit herstel.<br />
+            Als ik naar de grafiek kijk, dan lijkt een klein stukje klimmen nog mogelijk, waarna er dan toch weer een correctie naar misschien zelfs wel 5,2 in zit. Dat lijkt op een koers van 5,7 niet veel, maar is wel een tik van 10%. Als je er met 10.000 in zit, dan voel je zo'n correctie dus echt wel. Ik blijf er nog altijd vanaf.<br />
+            </font></p>
+            <p><font color="#000000">18 dec 2008</font></p>
+            <p><font color="#000000">Ik probeer in deze rubriek altijd vooral 'technisch' naar de kansen op de beurs te kijken. In het geval van Binck is me dat te moeilijk. Het is een goede broker. Het is echter een goede broker in een moeilijke markt, waar winstmarges onder druk staan en we de kans lopen dat bij een aanhoudende zwakke beurs de klanten massaal gaan afhaken. Beleggen is nu eenmaal populair in goede tijden en in tijden dat men er vertrouwen in heeft dat het morgen beter zal gaan. De huidige krantenkoppen helpen daarbij niet.<br />
+            Meestal is dat een teken van de bodem, maar meestal ziet het gros van de beleggers dat pas veel later in. Ik ben geen koper van deze aandelen. Technisch niet en fundamenteel niet.<br />
+            </font></p>
+            <p><font color="#000000">4 dec 2008</font></p>
+            <p><font color="#000000">De trend is en blijft zijwaarts bij Binckbank. We sloten gisteren op 5,29. In feite is dit nog &eacute;&eacute;n van de beste AEX aandelen van de laatste maanden. Beleggers hebben sinds begin juli niet zo heel veel verloren. zo triest is het ondertussen tegenwoordig. Nog altijd niet interessant voor een belegging.<br />
+            </font></p>
+            <p><font color="#000000">17 nov 2008</font></p>
+            <p><font color="#000000">Sinds juli dit jaar is er bij Binck grofweg een koers van 6,5 euro per aandeel te vinden. We sloten vrijdag op 5,86. De trend is nu zijwaarts. Niet interessant voor een belegging.<br />
+            </font></p>
+            <p><font color="#000000">28 okt 2008</font></p>
+            <p><font color="#000000">De laatste weken is Binckbank blijven liggen rond het niveau van 5,50. Vooralsnog is de trend echter neerwaarts. Ik blijf hier nog altijd vanaf.</font></p>
+            <p><font color="#000000">9 okt 2008</font></p>
+            <p><font color="#000000">Deze bank staat ook op het AFM lijstje van banken waarin niet meer short gegaan mag worden. Dat is niet zomaar, ze is in gevaar. Toch denk ik dat klanten niet snel bang hoeven te zijn. In de kern is Binck nu een sterke bank. Tenzij ze stom zijn geweest, kunnen ze naar mijn idee niet zomaar onderuit gaan. Ik heb geen aanwijzingen dat ze stom zijn geweest, maar ze staan niet voor niets op het AFM lijstje. Waar rook is...<br />
+            Ondertussen is ondanks, of is het dankzij de 'bescherming' van de AFM zuidwaarts gegaan met de koers. Tot de AFM bescherming lag de steun op 6 euro. Na de hulp van de AFM daalde het aandeel tot een slotkoers van 4,70 gisteren. Wat zullen ze bij Binck blij zijn met vrienden als de AFM. Het is ongehoord triest dat de AFM echt geen idee heeft wat ze met haar ingrijpen heeft aangericht. Ze holde slechts buitenlandse collega's achterna en veroorzaakte met haar actie juist dat wat ze beoogde te voorkomen. Diep triest en eigenlijk zouden aandeelhouders de AFM ter verantwoording moeten roepen. Waar blijft de VEB in deze? Moet slecht toezichthouderschap niet vol aangepakt worden? Is dat niet net zo erg als slechts ondernemerschap?</font></p>
+            <p><font color="#000000">23 sept 2008</font></p>
+            <p><font color="#000000">Het is nu al twee maanden akelig stil rondom het aandeel Binckbank. Beleggers hebben er geen fantasie meer bij. De trend is hier neutraal en ik heb nog geen indicatie dat dit snel gaat veranderen. Even laten liggen dus en niets mee doen.<br />
+            </font></p>
+            <p><font color="#000000">4 sept 2008</font></p>
+            <p><font color="#000000">De koers is de laatste weken omhoog gekropen van 6 euro tot nu 6,66. Daarbij werd gisteren een Doji gevormd en lopen we de kans dat we vandaag een daling gaan zien die deze Doji dan zal bevestigen.<br />
+            </font></p>
+            <p><font color="#000000">11 aug 2008</font></p>
+            <p><font color="#000000">Fundamenteel zie ik niet zo heel veel in dit bedrijf. Immers staan de margins nu maximaal en kan het alleen maar minder worden. Andere partijen worden goedkoper en het kan niet anders dan dat Binckbank moet gaan snijden in haar enorme winstmarges. Ze maken nu 10 euro winst op iedere transactie die klanten bij Alex of Binck doen. Dat is niet vol te houden. Beleggers lijken dat ook in te zien en we zien dan ook een dalende trend sinds begin mei van dit jaar.<br />
+            Technisch is er nu ook geen reden om nu in te willen stappen.</font></p>
+            <p><font color="#000000">24 juli 2008</font></p>
+            <p><font color="#000000">Het aandeel is de laatste twee weken in herstel, maar gisteren een Doji op de top. Het lijkt weer over te zijn met de stijging, die het aandeel tot 7,34 bracht. Ik blijf hier echt van af.</font></p>
+            <p><font color="#000000">24 juni 2008</font></p>
+            <p><font color="#000000">De vorige analyse van Binckbank was op een koers van 9. Ik gaf toen aan op fundamentele gronden geen interesse in dit aandeel te hebben. Dat was op 9 euro. Gisteren sloten we op 7,09. Achteraf gezien had ik gewoon keihard short moeten gaan. De indicatoren geven koopsignalen, maar in de grafiek op dit moment nog geen enkele herstel indicatie. Ik blijf hier daarom nog altijd van af.</font></p>
+            <p><font color="#000000">4 juni 2008</font></p>
+            <p><font color="#000000">In de indicatoren zien we een herstelbeweging, maar in de koersgrafiek resulteerde dat tot op heden in slechts centen koerswinst. Op een koers van 9 euro per aandeel is Binckbank niet bijster interessant. Op dit moment is de onderneming nog zeer winstgevend, maar een aanhoudende slechte beurs in combinatie met druk op de provisies maken dat Binckbank nu wel eens op haar hoogtepunt als bedrijf kan zijn. Fundamenteel ben ik dan ook niet bijzonder positief over de vooruitzichten, hoe mooi de huidige winsten dan ook zijn. Binck maakt op dit moment gemiddeld 10 euro per transactie die u als belegger doet aan netto winst.</font></p>
+            <p><font color="#000000">16 mei 2008</font></p>
+            <p><font color="#000000">In mei is het aandeel alleen maar lager gegaan. We zien opvallend genoeg bij Binck vooral een hoog volume als de koers hard daalt. Dat is geen goed teken.</font></p>
+            <p><font color="#000000">22 apr 2008</font></p>
+            <p><font color="#000000">Het is nog altijd een zijwaartse trend bij Binckbank. Na de expiratie van januari is er niet veel meer voorgevallen bij dit aandeel. Ik kom er dan ook vooral niet aan.</font></p>
+            <p><font color="#000000">9 apr 2008</font></p>
+            <p><font color="#000000">Nog altijd zitten we in de zijwaartse trend bij Binckbank. Ook de dagcandles zijn zeer klein hetgeen duidt op weinig interesse van beleggers. Dat klopt ook wel als we naar het volume kijken. Dat is zeer laag te noemen. Op dit moment is het aandeel dus zeer oninteressant.</font></p>
+            <p><font color="#000000">14 mrt 2008</font></p>
+            <p><font color="#000000">Een zijwaartse trend sinds halverwege januari. Weliswaar geeft de Stochastic nu een koopsignaal, maar overtuigen kan me dat niet. Al het andere is namelijk neutraal. Ik blijf hier nog altijd rustig op mijn handen zitten.</font></p>
+            <p><font color="#000000">26 feb 2008</font></p>
+            <p><font color="#000000">De minieme candles zeggen al genoeg over de vraag naar de aandelen. We zien dat ook terug naar de ruimte in de Bollinger Bands. Die ruimte is slechts dubbeltjes. Vooralsnog lijkt de trend neutraal te zijn. Niet interessant voor een actuele belegging.</font></p>
+            <p><font color="#000000">4 feb 2008</font></p>
+            <p><font color="#000000">Na de enorme dip vanaf een stand van ruim 12 euro in november, tot onder de 7 euro in januari, is de koers van Binck rond de 8 euro blijven hangen. Onder een koers van 9 euro lijkt me dit aandeel niet interessant. Ik blijf er dan ook verre van, mede omdat we in de grafiek vier Doji's na elkaar zien. Beleggers twijfelen massaal. Overigens zijn de indicatoren al wel op koopwaardig gekomen. Het vertaalde zich echter nog niet in hogere koersen.</font></p>
+            <p><font color="#000000">16 jan 2008</font></p>
+            <p><font color="#000000">Hoewel de Stochastic een koopsignaal heeft gegeven, zie ik nog geen kooppatroon in de Japanse Candles grafiek. Ik wacht dus nog altijd met het nemen van een eerste positie in dit fonds.</font></p>
+            <p><font color="#000000">6 jan</font><font color="#000000"> 2008</font></p>
+            <p><font color="#000000">We gaan vanaf nu ook Binckbank in de analyses opnemen. Op  			dit moment niet koopwaardig.</font></p>
+            <p> </p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+<table width="100%" class="tablebox">
+    <tbody>
+        <tr>
+            <td width="40%" valign="top">
+            <p><font size="2">De Analyses zijn gemaakt door Tom Lassing, tenzij anders aangegeven.</font></p>
+            <p><font size="2">Tom Lassing en <a target="_blank" href="http://www.progainbv.nl">Pro Gain BV</a> houden geen aanzienlijke belangen in binnen Europa gelegen beursgenoteerde ondernemingen.<br />
+            Het kan zijn dat Tom Lassing priv&eacute; een positie zal innemen conform zijn analyse en advies. U dient daar bij de beoordeling van de analyse rekening mee te houden.<br />
+            Er zijn geen afspraken met banken of brokers over vergoeding omzet op basis van de gegeven adviezen. Ook als adviezen van Tom Lassing via andere aanbieders tot u komen is er geen sprake van een betaalde bijdrage. De analyses worden altijd gratis verstrekt aan derden met slechts de afspraak dat er een werkende link naar <a target="_blank" href="http://www.beursbox.nl">www.beursbox.nl</a> onder staat.   </font></p>
+            </td>
+            <td width="20%" align="center">
+            <p><br />
+            </p>
+            </td>
+            <td width="40%"><font size="2">Leest u ook onze <a href="http://www.beursbox.nl/disclaimer-en-privacy-policy.html">disclaimer</a> nog eens goed na. In de nieuwsbrief treft u dagelijks de meest recente analyses aan.<br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            </font></td>
+        </tr>
+    </tbody>
+</table>
+</p>			</td>
+		</tr>
+				</table>
+
+		<span class="article_seperator">&nbsp;</span>
+
+					<div class="back_button">
+				<a href='javascript:history.go(-1)'>
+					[ terug ]</a>
+			</div>
+							</div>
+								<div style="clear:both;"></div>
+			</div>
+			<div style="clear:both;"></div>
+			</div>
+		</div><!-- end body wrapper -->
+		
+				<div id="footer_wrapper">
+			<div id="footer_left"></div>
+						<div style="clear:both;"></div>	
+			<center>Copyright &#169; 2009 <a href="http://www.progainbv.nl" target="_blank">Pro Gain BV</a> | <a href="http://www.beursbox.nl/over-beurbox.nl.html">Over ons | <a href="http://www.beursbox.nl/contact-beursbox.html">Contact</a> | <a href="http://www.beursbox.nl/testimonials-beursbox.nl.html">Testimonials</a> | <a href="http://www.progainshop.com/affiliate" target="_blank">Partnerprogramma</a> | <a href="http://www.beursbox.nl/aanmelden-nieuwsbrief.html">Inschrijven nieuwsbrief</a> | <a href="index.php?option=com_joomap&Itemid=259">Sitemap</a><br /><br />
+			Beursbox.nl over: beurs - aandelen - beleggen - geld beleggen - beursnieuws - investeren - koers - beleggingsadvies - rendement - opties - beurskoersen - aex - aandelen tips - aandelen koersen - beursinformatie - aandelenfonds - aandelenkoersen - financiele markt - aandelen koersen - beleggen opties
+			</center>
+		</div>
+
+	</div> <!-- end pagewrapper -->
+</div> <!-- end wrapper -->
+
+</body>
+</html><!-- 1251185176 -->

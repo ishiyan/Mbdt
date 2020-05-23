@@ -1,0 +1,3155 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        "Mbh5"
+    </assembly>
+    <members>
+        <member name="M:Mbh5.ScalarData.TicksIndexRange(System.Int64,System.Int64,System.Int64@,System.Int64@,System.Boolean@,System.Boolean@)">
+            <summary>
+Converts a ticks range to an index range.
+</summary>
+            <param name="ticksFrom">The first ticks of the range.</param>
+            <param name="ticksTo">The last ticks of the range.</param>
+            <param name="indexFrom">The index of the first item in the range.</param>
+            <param name="indexTo">The index of the last item in the range.</param>
+            <param name="matchFrom">If the index of the first item in the range matches the ticks exactly or is a lower neighbour.</param>
+            <param name="matchTo">If the index of the last item in the range matches the ticks exactly or is a lower neighbour.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.ScalarData.TicksIndex(System.Int64,System.Int64@,System.Boolean@)">
+            <summary>
+Converts ticks to a neares index.
+</summary>
+            <param name="ticks">The ticks to convert.</param>
+            <param name="index">The index of the ticks.</param>
+            <param name="match">If the index matches the ticks exactly or is a lower neighbour.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.ScalarData.Fetch(System.Collections.Generic.List`1{Mbh5.Scalar},System.Int64,System.Int64)">
+            <summary>
+Fetches a specified range of stored items.
+</summary>
+            <param name="list">A list to fetch into.</param>
+            <param name="index">The index of the first item in the range.</param>
+            <param name="count">The number of items in the range.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.ScalarData.Fetch(System.Collections.Generic.List`1{Mbh5.Scalar},System.DateTime,System.DateTime)">
+            <summary>
+Fetches a specified range of stored items.
+</summary>
+            <param name="list">A list to fetch into.</param>
+            <param name="from">A beginning date and time.</param>
+            <param name="to">An ending date and time.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.ScalarData.Fetch(System.Collections.Generic.List`1{Mbh5.Scalar})">
+            <summary>
+Fetches all stored items.
+</summary>
+            <param name="list">A list to fetch into.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.ScalarData.Add(System.Collections.Generic.List`1{Mbh5.Scalar},Mbh5.DuplicateTimeTicks,System.Boolean)">
+            <summary>
+Adds a list of scalar items to the data.
+</summary>
+            <param name="list">A list of scalar items.</param>
+            <param name="duplicateTimeTicks">The duplicate time tick policy.</param>
+            <param name="verbose">Trace information messages.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.ScalarData.SpreadDuplicateTimeTicks(System.Collections.Generic.List`1{Mbh5.Scalar},System.Boolean)">
+            <summary>
+Spreads the duplicate time ticks making one-tick increments.
+</summary>
+            <param name="list">A list of ohlcv items.</param>
+            <param name="verbose">Trace information messages.</param>
+            <returns>A boolean indicating if the time ticks were spread.</returns>
+        </member>
+        <member name="M:Mbh5.ScalarData.#ctor(Mbh5.Instrument,Mbh5.DataKind,System.Int64,System.Int64,System.Int64,System.Boolean)">
+            <summary>
+Constructs a new instance.
+</summary>
+        </member>
+        <member name="T:Mbh5.ScalarData">
+            <summary>
+Encapsulates the access to the instrument's Scalar data.
+</summary>
+        </member>
+        <member name="M:Mbh5.OhlcvPriceOnlyData.TicksIndexRange(System.Int64,System.Int64,System.Int64@,System.Int64@,System.Boolean@,System.Boolean@)">
+            <summary>
+Converts a ticks range to an index range.
+</summary>
+            <param name="ticksFrom">The first ticks of the range.</param>
+            <param name="ticksTo">The last ticks of the range.</param>
+            <param name="indexFrom">The index of the first item in the range.</param>
+            <param name="indexTo">The index of the last item in the range.</param>
+            <param name="matchFrom">If the index of the first item in the range matches the ticks exactly or is a lower neighbour.</param>
+            <param name="matchTo">If the index of the last item in the range matches the ticks exactly or is a lower neighbour.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.OhlcvPriceOnlyData.TicksIndex(System.Int64,System.Int64@,System.Boolean@)">
+            <summary>
+Converts ticks to a neares index.
+</summary>
+            <param name="ticks">The ticks to convert.</param>
+            <param name="index">The index of the ticks.</param>
+            <param name="match">If the index matches the ticks exactly or is a lower neighbour.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.OhlcvPriceOnlyData.Fetch(System.Collections.Generic.List`1{Mbh5.OhlcvPriceOnly},System.Int64,System.Int64)">
+            <summary>
+Fetches a specified range of stored items.
+</summary>
+            <param name="list">A list to fetch into.</param>
+            <param name="index">The index of the first item in the range.</param>
+            <param name="count">The number of items in the range.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.OhlcvPriceOnlyData.Fetch(System.Collections.Generic.List`1{Mbh5.OhlcvPriceOnly},System.DateTime,System.DateTime)">
+            <summary>
+Fetches a specified range of stored items.
+</summary>
+            <param name="list">A list to fetch into.</param>
+            <param name="from">A beginning date and time.</param>
+            <param name="to">An ending date and time.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.OhlcvPriceOnlyData.Fetch(System.Collections.Generic.List`1{Mbh5.OhlcvPriceOnly})">
+            <summary>
+Fetches all stored items.
+</summary>
+            <param name="list">A list to fetch into.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.OhlcvPriceOnlyData.Add(System.Collections.Generic.List`1{Mbh5.OhlcvPriceOnly},Mbh5.DuplicateTimeTicks,System.Boolean)">
+            <summary>
+Adds a list of ohlcv items to the data.
+</summary>
+            <param name="list">A list of ohlcv items.</param>
+            <param name="duplicateTimeTicks">The duplicate time tick policy.</param>
+            <param name="verbose">Trace information messages.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.OhlcvPriceOnlyData.SpreadDuplicateTimeTicks(System.Collections.Generic.List`1{Mbh5.OhlcvPriceOnly},System.Boolean)">
+            <summary>
+Spreads the duplicate time ticks making one-tick increments.
+</summary>
+            <param name="list">A list of ohlcv items.</param>
+            <param name="verbose">Trace information messages.</param>
+            <returns>A boolean indicating if the time ticks were spread.</returns>
+        </member>
+        <member name="M:Mbh5.OhlcvPriceOnlyData.#ctor(Mbh5.Instrument,Mbh5.DataKind,System.Int64,System.Int64,System.Int64,System.Boolean)">
+            <summary>
+Constructs a new instance.
+</summary>
+        </member>
+        <member name="T:Mbh5.OhlcvPriceOnlyData">
+            <summary>
+Encapsulates the access to the instrument's OhlcvPriceOnly data.
+</summary>
+        </member>
+        <member name="M:Mbh5.OhlcvData.TicksIndexRange(System.Int64,System.Int64,System.Int64@,System.Int64@,System.Boolean@,System.Boolean@)">
+            <summary>
+Converts a ticks range to an index range.
+</summary>
+            <param name="ticksFrom">The first ticks of the range.</param>
+            <param name="ticksTo">The last ticks of the range.</param>
+            <param name="indexFrom">The index of the first item in the range.</param>
+            <param name="indexTo">The index of the last item in the range.</param>
+            <param name="matchFrom">If the index of the first item in the range matches the ticks exactly or is a lower neighbour.</param>
+            <param name="matchTo">If the index of the last item in the range matches the ticks exactly or is a lower neighbour.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.OhlcvData.TicksIndex(System.Int64,System.Int64@,System.Boolean@)">
+            <summary>
+Converts ticks to a neares index.
+</summary>
+            <param name="ticks">The ticks to convert.</param>
+            <param name="index">The index of the ticks.</param>
+            <param name="match">If the index matches the ticks exactly or is a lower neighbour.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.OhlcvData.Fetch(System.Collections.Generic.List`1{Mbh5.Ohlcv},System.Int64,System.Int64)">
+            <summary>
+Fetches a specified range of stored items.
+</summary>
+            <param name="list">A list to fetch into.</param>
+            <param name="index">The index of the first item in the range.</param>
+            <param name="count">The number of items in the range.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.OhlcvData.Fetch(System.Collections.Generic.List`1{Mbh5.Ohlcv},System.DateTime,System.DateTime)">
+            <summary>
+Fetches a specified range of stored items.
+</summary>
+            <param name="list">A list to fetch into.</param>
+            <param name="from">A beginning date and time.</param>
+            <param name="to">An ending date and time.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.OhlcvData.Fetch(System.Collections.Generic.List`1{Mbh5.Ohlcv})">
+            <summary>
+Fetches all stored items.
+</summary>
+            <param name="list">A list to fetch into.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.OhlcvData.Add(System.Collections.Generic.List`1{Mbh5.Ohlcv},Mbh5.DuplicateTimeTicks,System.Boolean)">
+            <summary>
+Adds a list of ohlcv items to the data.
+</summary>
+            <param name="list">A list of ohlcv items.</param>
+            <param name="duplicateTimeTicks">The duplicate time tick policy.</param>
+            <param name="verbose">Trace information messages.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.OhlcvData.SpreadDuplicateTimeTicks(System.Collections.Generic.List`1{Mbh5.Ohlcv},System.Boolean)">
+            <summary>
+Spreads the duplicate time ticks making one-tick increments.
+</summary>
+            <param name="list">A list of ohlcv items.</param>
+            <param name="verbose">Trace information messages.</param>
+            <returns>A boolean indicating if the time ticks were spread.</returns>
+        </member>
+        <member name="M:Mbh5.OhlcvData.#ctor(Mbh5.Instrument,Mbh5.DataKind,System.Int64,System.Int64,System.Int64,System.Boolean)">
+            <summary>
+Constructs a new instance.
+</summary>
+        </member>
+        <member name="T:Mbh5.OhlcvData">
+            <summary>
+Encapsulates the access to the instrument's Ohlcv data.
+</summary>
+        </member>
+        <member name="M:Mbh5.TradePriceOnlyData.TicksIndexRange(System.Int64,System.Int64,System.Int64@,System.Int64@,System.Boolean@,System.Boolean@)">
+            <summary>
+Converts a ticks range to an index range.
+</summary>
+            <param name="ticksFrom">The first ticks of the range.</param>
+            <param name="ticksTo">The last ticks of the range.</param>
+            <param name="indexFrom">The index of the first item in the range.</param>
+            <param name="indexTo">The index of the last item in the range.</param>
+            <param name="matchFrom">If the index of the first item in the range matches the ticks exactly or is a lower neighbour.</param>
+            <param name="matchTo">If the index of the last item in the range matches the ticks exactly or is a lower neighbour.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.TradePriceOnlyData.TicksIndex(System.Int64,System.Int64@,System.Boolean@)">
+            <summary>
+Converts ticks to a neares index.
+</summary>
+            <param name="ticks">The ticks to convert.</param>
+            <param name="index">The index of the ticks.</param>
+            <param name="match">If the index matches the ticks exactly or is a lower neighbour.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.TradePriceOnlyData.Fetch(System.Collections.Generic.List`1{Mbh5.TradePriceOnly},System.Int64,System.Int64)">
+            <summary>
+Fetches a specified range of stored items.
+</summary>
+            <param name="list">A list to fetch into.</param>
+            <param name="index">The index of the first item in the range.</param>
+            <param name="count">The number of items in the range.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.TradePriceOnlyData.Fetch(System.Collections.Generic.List`1{Mbh5.TradePriceOnly},System.DateTime,System.DateTime)">
+            <summary>
+Fetches a specified range of stored items.
+</summary>
+            <param name="list">A list to fetch into.</param>
+            <param name="from">A beginning date and time.</param>
+            <param name="to">An ending date and time.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.TradePriceOnlyData.Fetch(System.Collections.Generic.List`1{Mbh5.TradePriceOnly})">
+            <summary>
+Fetches all stored items.
+</summary>
+            <param name="list">A list to fetch into.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.TradePriceOnlyData.Add(System.Collections.Generic.List`1{Mbh5.TradePriceOnly},Mbh5.DuplicateTimeTicks,System.Boolean)">
+            <summary>
+Adds a list of trades to the data.
+</summary>
+            <param name="list">A list of trade items.</param>
+            <param name="duplicateTimeTicks">The duplicate time tick policy.</param>
+            <param name="verbose">Trace information messages.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.TradePriceOnlyData.SpreadDuplicateTimeTicks(System.Collections.Generic.List`1{Mbh5.TradePriceOnly},System.Boolean)">
+            <summary>
+Spreads the duplicate time ticks making one-tick increments.
+</summary>
+            <param name="list">A list of trade items.</param>
+            <param name="verbose">Trace information messages.</param>
+            <returns>A boolean indicating if the time ticks were spread.</returns>
+        </member>
+        <member name="M:Mbh5.TradePriceOnlyData.#ctor(Mbh5.Instrument,System.Int64,System.Int64,System.Int64,System.Boolean)">
+            <summary>
+Constructs a new instance.
+</summary>
+        </member>
+        <member name="T:Mbh5.TradePriceOnlyData">
+            <summary>
+Encapsulates the access to the instrument's TradePriceOnly data.
+</summary>
+        </member>
+        <member name="M:Mbh5.TradeData.TicksIndexRange(System.Int64,System.Int64,System.Int64@,System.Int64@,System.Boolean@,System.Boolean@)">
+            <summary>
+Converts a ticks range to an index range.
+</summary>
+            <param name="ticksFrom">The first ticks of the range.</param>
+            <param name="ticksTo">The last ticks of the range.</param>
+            <param name="indexFrom">The index of the first item in the range.</param>
+            <param name="indexTo">The index of the last item in the range.</param>
+            <param name="matchFrom">If the index of the first item in the range matches the ticks exactly or is a lower neighbour.</param>
+            <param name="matchTo">If the index of the last item in the range matches the ticks exactly or is a lower neighbour.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.TradeData.TicksIndex(System.Int64,System.Int64@,System.Boolean@)">
+            <summary>
+Converts ticks to a neares index.
+</summary>
+            <param name="ticks">The ticks to convert.</param>
+            <param name="index">The index of the ticks.</param>
+            <param name="match">If the index matches the ticks exactly or is a lower neighbour.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.TradeData.Fetch(System.Collections.Generic.List`1{Mbh5.Trade},System.Int64,System.Int64)">
+            <summary>
+Fetches a specified range of stored items.
+</summary>
+            <param name="list">A list to fetch into.</param>
+            <param name="index">The index of the first item in the range.</param>
+            <param name="count">The number of items in the range.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.TradeData.Fetch(System.Collections.Generic.List`1{Mbh5.Trade},System.DateTime,System.DateTime)">
+            <summary>
+Fetches a specified range of stored items.
+</summary>
+            <param name="list">A list to fetch into.</param>
+            <param name="from">A beginning date and time.</param>
+            <param name="to">An ending date and time.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.TradeData.Fetch(System.Collections.Generic.List`1{Mbh5.Trade})">
+            <summary>
+Fetches all stored items.
+</summary>
+            <param name="list">A list to fetch into.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.TradeData.Add(System.Collections.Generic.List`1{Mbh5.Trade},Mbh5.DuplicateTimeTicks,System.Boolean)">
+            <summary>
+Adds a list of trades to the data.
+</summary>
+            <param name="list">A list of trade items.</param>
+            <param name="duplicateTimeTicks">The duplicate time tick policy.</param>
+            <param name="verbose">Trace information messages.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.TradeData.SpreadDuplicateTimeTicks(System.Collections.Generic.List`1{Mbh5.Trade},System.Boolean)">
+            <summary>
+Spreads the duplicate time ticks making one-tick increments.
+</summary>
+            <param name="list">A list of trade items.</param>
+            <param name="verbose">Trace information messages.</param>
+            <returns>A boolean indicating if the time ticks were spread.</returns>
+        </member>
+        <member name="M:Mbh5.TradeData.#ctor(Mbh5.Instrument,System.Int64,System.Int64,System.Int64,System.Boolean)">
+            <summary>
+Constructs a new instance.
+</summary>
+        </member>
+        <member name="T:Mbh5.TradeData">
+            <summary>
+Encapsulates the access to the instrument's Trade data.
+</summary>
+        </member>
+        <member name="M:Mbh5.QuotePriceOnlyData.TicksIndexRange(System.Int64,System.Int64,System.Int64@,System.Int64@,System.Boolean@,System.Boolean@)">
+            <summary>
+Converts a ticks range to an index range.
+</summary>
+            <param name="ticksFrom">The first ticks of the range.</param>
+            <param name="ticksTo">The last ticks of the range.</param>
+            <param name="indexFrom">The index of the first item in the range.</param>
+            <param name="indexTo">The index of the last item in the range.</param>
+            <param name="matchFrom">If the index of the first item in the range matches the ticks exactly or is a lower neighbour.</param>
+            <param name="matchTo">If the index of the last item in the range matches the ticks exactly or is a lower neighbour.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.QuotePriceOnlyData.TicksIndex(System.Int64,System.Int64@,System.Boolean@)">
+            <summary>
+Converts ticks to a neares index.
+</summary>
+            <param name="ticks">The ticks to convert.</param>
+            <param name="index">The index of the ticks.</param>
+            <param name="match">If the index matches the ticks exactly or is a lower neighbour.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.QuotePriceOnlyData.Fetch(System.Collections.Generic.List`1{Mbh5.QuotePriceOnly},System.Int64,System.Int64)">
+            <summary>
+Fetches a specified range of stored items.
+</summary>
+            <param name="list">A list to fetch into.</param>
+            <param name="index">The index of the first item in the range.</param>
+            <param name="count">The number of items in the range.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.QuotePriceOnlyData.Fetch(System.Collections.Generic.List`1{Mbh5.QuotePriceOnly},System.DateTime,System.DateTime)">
+            <summary>
+Fetches a specified range of stored items.
+</summary>
+            <param name="list">A list to fetch into.</param>
+            <param name="from">A beginning date and time.</param>
+            <param name="to">An ending date and time.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.QuotePriceOnlyData.Fetch(System.Collections.Generic.List`1{Mbh5.QuotePriceOnly})">
+            <summary>
+Fetches all stored items.
+</summary>
+            <param name="list">A list to fetch into.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.QuotePriceOnlyData.Add(System.Collections.Generic.List`1{Mbh5.QuotePriceOnly},Mbh5.DuplicateTimeTicks,System.Boolean)">
+            <summary>
+Adds a list of quotes to the data.
+</summary>
+            <param name="list">A list of quote items.</param>
+            <param name="duplicateTimeTicks">The duplicate time tick policy.</param>
+            <param name="verbose">Trace information messages.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.QuotePriceOnlyData.SpreadDuplicateTimeTicks(System.Collections.Generic.List`1{Mbh5.QuotePriceOnly},System.Boolean)">
+            <summary>
+Spreads the duplicate time ticks making one-tick increments.
+</summary>
+            <param name="list">A list of quote items.</param>
+            <param name="verbose">Trace information messages.</param>
+            <returns>A boolean indicating if the time ticks were spread.</returns>
+        </member>
+        <member name="M:Mbh5.QuotePriceOnlyData.#ctor(Mbh5.Instrument,System.Int64,System.Int64,System.Int64,System.Boolean)">
+            <summary>
+Constructs a new instance.
+</summary>
+        </member>
+        <member name="T:Mbh5.QuotePriceOnlyData">
+            <summary>
+Encapsulates the access to the instrument's QuotePriceOnly data.
+</summary>
+        </member>
+        <member name="M:Mbh5.QuoteData.TicksIndexRange(System.Int64,System.Int64,System.Int64@,System.Int64@,System.Boolean@,System.Boolean@)">
+            <summary>
+Converts a ticks range to an index range.
+</summary>
+            <param name="ticksFrom">The first ticks of the range.</param>
+            <param name="ticksTo">The last ticks of the range.</param>
+            <param name="indexFrom">The index of the first item in the range.</param>
+            <param name="indexTo">The index of the last item in the range.</param>
+            <param name="matchFrom">If the index of the first item in the range matches the ticks exactly or is a lower neighbour.</param>
+            <param name="matchTo">If the index of the last item in the range matches the ticks exactly or is a lower neighbour.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.QuoteData.TicksIndex(System.Int64,System.Int64@,System.Boolean@)">
+            <summary>
+Converts ticks to a neares index.
+</summary>
+            <param name="ticks">The ticks to convert.</param>
+            <param name="index">The index of the ticks.</param>
+            <param name="match">If the index matches the ticks exactly or is a lower neighbour.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.QuoteData.Fetch(System.Collections.Generic.List`1{Mbh5.Quote},System.Int64,System.Int64)">
+            <summary>
+Fetches a specified range of stored items.
+</summary>
+            <param name="list">A list to fetch into.</param>
+            <param name="index">The index of the first item in the range.</param>
+            <param name="count">The number of items in the range.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.QuoteData.Fetch(System.Collections.Generic.List`1{Mbh5.Quote},System.DateTime,System.DateTime)">
+            <summary>
+Fetches a specified range of stored items.
+</summary>
+            <param name="list">A list to fetch into.</param>
+            <param name="from">A beginning date and time.</param>
+            <param name="to">An ending date and time.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.QuoteData.Fetch(System.Collections.Generic.List`1{Mbh5.Quote})">
+            <summary>
+Fetches all stored items.
+</summary>
+            <param name="list">A list to fetch into.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.QuoteData.Add(System.Collections.Generic.List`1{Mbh5.Quote},Mbh5.DuplicateTimeTicks,System.Boolean)">
+            <summary>
+Adds a list of quotes to the data.
+</summary>
+            <param name="list">A list of quote items.</param>
+            <param name="duplicateTimeTicks">The duplicate time tick policy.</param>
+            <param name="verbose">Trace information messages.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.QuoteData.SpreadDuplicateTimeTicks(System.Collections.Generic.List`1{Mbh5.Quote},System.Boolean)">
+            <summary>
+Spreads the duplicate time ticks making one-tick increments.
+</summary>
+            <param name="list">A list of quote items.</param>
+            <param name="verbose">Trace information messages.</param>
+            <returns>A boolean indicating if the time ticks were spread.</returns>
+        </member>
+        <member name="M:Mbh5.QuoteData.#ctor(Mbh5.Instrument,System.Int64,System.Int64,System.Int64,System.Boolean)">
+            <summary>
+Constructs a new instance.
+</summary>
+        </member>
+        <member name="T:Mbh5.QuoteData">
+            <summary>
+Encapsulates the access to the instrument's Quote data.
+</summary>
+        </member>
+        <member name="M:Mbh5.Data.TicksIndexRange(System.Int64,System.Int64,System.Int64@,System.Int64@,System.Boolean@,System.Boolean@)">
+            <summary>
+Converts a ticks range to an index range.
+</summary>
+            <param name="ticksFrom">The first ticks of the range.</param>
+            <param name="ticksTo">The last ticks of the range.</param>
+            <param name="indexFrom">The index of the first item in the range.</param>
+            <param name="indexTo">The index of the last item in the range.</param>
+            <param name="matchFrom">If the index of the first item in the range matches the ticks exactly or is a lower neighbour.</param>
+            <param name="matchTo">If the index of the last item in the range matches the ticks exactly or is a lower neighbour.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.Data.TicksIndex(System.Int64,System.Int64@,System.Boolean@)">
+            <summary>
+Converts ticks to an index.
+</summary>
+            <param name="ticks">The ticks to convert.</param>
+            <param name="index">The index of the ticks.</param>
+            <param name="match">If the index matches the ticks exactly or is a lower neighbour.</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="P:Mbh5.Data.DefaultMaximumReadBufferBytes">
+            <summary>
+The default maximal size in bytes of the read buffer. 0 means unlimited.
+</summary>
+        </member>
+        <member name="P:Mbh5.Data.MaximumReadBufferBytes">
+            <summary>
+The maximal size in bytes of the read buffer. 0 means unlimited.
+</summary>
+        </member>
+        <member name="P:Mbh5.Data.Count">
+            <summary>
+The number of data items.
+</summary>
+        </member>
+        <member name="P:Mbh5.Data.TimeStampLast">
+            <summary>
+The time stamp of the last data item.
+</summary>
+        </member>
+        <member name="P:Mbh5.Data.TimeStampFirst">
+            <summary>
+The time stamp of the first data item.
+</summary>
+        </member>
+        <member name="P:Mbh5.Data.DateStampLast">
+            <summary>
+The date stamp of the last data item.
+</summary>
+        </member>
+        <member name="P:Mbh5.Data.DateStampFirst">
+            <summary>
+The date stamp of the first data item.
+</summary>
+        </member>
+        <member name="P:Mbh5.Data.DateTimeStampLast">
+            <summary>
+The date and time stamp of the last data item.
+</summary>
+        </member>
+        <member name="P:Mbh5.Data.DateTimeStampFirst">
+            <summary>
+The date and time stamp of the first data item.
+</summary>
+        </member>
+        <member name="P:Mbh5.Data.DateTimeStampWithFractionOfSecondLast">
+            <summary>
+The date and time stamp of the last data item with a fraction of second.
+</summary>
+        </member>
+        <member name="P:Mbh5.Data.DateTimeStampWithFractionOfSecondFirst">
+            <summary>
+The date and time stamp of the first data item with a fraction of second.
+</summary>
+        </member>
+        <member name="P:Mbh5.Data.DateTimeLast">
+            <summary>
+The date and time ticks of the first data item.
+</summary>
+        </member>
+        <member name="P:Mbh5.Data.DateTimeFirst">
+            <summary>
+The date and time ticks of the first data item.
+</summary>
+        </member>
+        <member name="P:Mbh5.Data.LastTicks">
+            <summary>
+The date and time ticks of the last data item.
+</summary>
+        </member>
+        <member name="P:Mbh5.Data.FirstTicks">
+            <summary>
+The date and time ticks of the first data item.
+</summary>
+        </member>
+        <member name="M:Mbh5.Data.Close">
+            <summary>
+Closes an access to the data.
+</summary>
+        </member>
+        <member name="M:Mbh5.Data.Flush">
+            <summary>
+Flushes the dataset.
+</summary>
+        </member>
+        <member name="M:Mbh5.Data.Dispose">
+            <summary>
+Destructs the instance; implements/overrides IDisposable::Dispose.
+</summary>
+        </member>
+        <member name="M:Mbh5.Data.Finalize">
+            <summary>
+Finalizes the instance; implements/overrides Object::Finalize.
+</summary>
+        </member>
+        <member name="M:Mbh5.Data.#ctor(Mbh5.Instrument,Mbh5.DataKind,System.Int64,System.Int64,System.Int64,System.Boolean)">
+            <summary>
+Constructs a new instance.
+</summary>
+        </member>
+        <member name="T:Mbh5.Data">
+            <summary>
+Encapsulates the access to the instrument's data.
+</summary>
+        </member>
+        <member name="M:Mbh5.Instrument.OpenScalar(Mbh5.ScalarKind,Mbh5.DataTimeFrame,System.Boolean)">
+            <summary>
+Opens an instruments's Scalar data.
+</summary>
+            <param name="kind">A kind of the data to open.</param>
+            <param name="timeFrame">A time frame of the data to open.</param>
+            <param name="createNonexistent">Create the data if it does not exist; works for writable repository files only.</param>
+            <returns>An ScalarData object.</returns>
+        </member>
+        <member name="M:Mbh5.Instrument.OpenScalar(Mbh5.ScalarKind,Mbh5.DataTimeFrame)">
+            <summary>
+Opens an instruments's Scalar data.
+</summary>
+            <param name="kind">A kind of the data to open.</param>
+            <param name="timeFrame">A time frame of the data to open.</param>
+            <returns>A ScalarData object.</returns>
+        </member>
+        <member name="M:Mbh5.Instrument.OpenOhlcvAdjustedPriceOnly(Mbh5.OhlcvKind,Mbh5.DataTimeFrame,System.Boolean)">
+            <summary>
+Opens an adjusted instruments's OhlcvPriceOnly data.
+</summary>
+            <param name="kind">A kind of the data to open.</param>
+            <param name="timeFrame">A time frame of the data to open.</param>
+            <param name="createNonexistent">Create the data if it does not exist; works for writable repository files only.</param>
+            <returns>An OhlcvPriceOnlyData object.</returns>
+        </member>
+        <member name="M:Mbh5.Instrument.OpenOhlcvAdjustedPriceOnly(Mbh5.OhlcvKind,Mbh5.DataTimeFrame)">
+            <summary>
+Opens an adjusted instruments's OhlcvPriceOnly data.
+</summary>
+            <param name="kind">A kind of the data to open.</param>
+            <param name="timeFrame">A time frame of the data to open.</param>
+            <returns>An OhlcvPriceOnlyData object.</returns>
+        </member>
+        <member name="M:Mbh5.Instrument.OpenOhlcvAdjusted(Mbh5.OhlcvKind,Mbh5.DataTimeFrame,System.Boolean)">
+            <summary>
+Opens an adjusted instruments's Ohlcv data.
+</summary>
+            <param name="kind">A kind of the data to open.</param>
+            <param name="timeFrame">A time frame of the data to open.</param>
+            <param name="createNonexistent">Create the data if it does not exist; works for writable repository files only.</param>
+            <returns>An OhlcvData object.</returns>
+        </member>
+        <member name="M:Mbh5.Instrument.OpenOhlcvAdjusted(Mbh5.OhlcvKind,Mbh5.DataTimeFrame)">
+            <summary>
+Opens an adjusted instruments's Ohlcv data.
+</summary>
+            <param name="kind">A kind of the data to open.</param>
+            <param name="timeFrame">A time frame of the data to open.</param>
+            <returns>An OhlcvData object.</returns>
+        </member>
+        <member name="M:Mbh5.Instrument.OpenOhlcvPriceOnly(Mbh5.OhlcvKind,Mbh5.DataTimeFrame,System.Boolean)">
+            <summary>
+Opens an instruments's OhlcvPriceOnly data.
+</summary>
+            <param name="kind">A kind of the data to open.</param>
+            <param name="timeFrame">A time frame of the data to open.</param>
+            <param name="createNonexistent">Create the data if it does not exist; works for writable repository files only.</param>
+            <returns>An OhlcvPriceOnlyData object.</returns>
+        </member>
+        <member name="M:Mbh5.Instrument.OpenOhlcvPriceOnly(Mbh5.OhlcvKind,Mbh5.DataTimeFrame)">
+            <summary>
+Opens an instruments's OhlcvPriceOnly data.
+</summary>
+            <param name="kind">A kind of the data to open.</param>
+            <param name="timeFrame">A time frame of the data to open.</param>
+            <returns>An OhlcvPriceOnlyData object.</returns>
+        </member>
+        <member name="M:Mbh5.Instrument.OpenOhlcv(Mbh5.OhlcvKind,Mbh5.DataTimeFrame,System.Boolean)">
+            <summary>
+Opens an instruments's Ohlcv data.
+</summary>
+            <param name="kind">A kind of the data to open.</param>
+            <param name="timeFrame">A time frame of the data to open.</param>
+            <param name="createNonexistent">Create the data if it does not exist; works for writable repository files only.</param>
+            <returns>An OhlcvData object.</returns>
+        </member>
+        <member name="M:Mbh5.Instrument.OpenOhlcv(Mbh5.OhlcvKind,Mbh5.DataTimeFrame)">
+            <summary>
+Opens an instruments's Ohlcv data.
+</summary>
+            <param name="kind">A kind of the data to open.</param>
+            <param name="timeFrame">A time frame of the data to open.</param>
+            <returns>An OhlcvData object.</returns>
+        </member>
+        <member name="M:Mbh5.Instrument.OpenTradePriceOnly(System.Boolean)">
+            <summary>
+Opens an instruments's TradePriceOnly data.
+</summary>
+            <param name="createNonexistent">Create the data if it does not exist; works for writable repository files only.</param>
+            <returns>A TradePriceOnlyData object.</returns>
+        </member>
+        <member name="M:Mbh5.Instrument.OpenTradePriceOnly">
+            <summary>
+Opens an instruments's TradePriceOnly data.
+</summary>
+            <returns>A TradePriceOnlyData object.</returns>
+        </member>
+        <member name="M:Mbh5.Instrument.OpenTrade(System.Boolean)">
+            <summary>
+Opens an instruments's Trade data.
+</summary>
+            <param name="createNonexistent">Create the data if it does not exist; works for writable repository files only.</param>
+            <returns>A TradeData object.</returns>
+        </member>
+        <member name="M:Mbh5.Instrument.OpenTrade">
+            <summary>
+Opens an instruments's Trade data.
+</summary>
+            <returns>A TradeData object.</returns>
+        </member>
+        <member name="M:Mbh5.Instrument.OpenQuotePriceOnly(System.Boolean)">
+            <summary>
+Opens an instruments's QuotePriceOnly data.
+</summary>
+            <param name="createNonexistent">Create the data if it does not exist; works for writable repository files only.</param>
+            <returns>A QuotePriceOnlyData object.</returns>
+        </member>
+        <member name="M:Mbh5.Instrument.OpenQuotePriceOnly">
+            <summary>
+Opens an instruments's QuotePriceOnly data.
+</summary>
+            <returns>A QuotePriceOnlyData object.</returns>
+        </member>
+        <member name="M:Mbh5.Instrument.OpenQuote(System.Boolean)">
+            <summary>
+Opens an instruments's Quote data.
+</summary>
+            <param name="createNonexistent">Create the data if it does not exist; works for writable repository files only.</param>
+            <returns>A QuoteData object.</returns>
+        </member>
+        <member name="M:Mbh5.Instrument.OpenQuote">
+            <summary>
+Opens an instruments's Quote data.
+</summary>
+            <returns>A QuoteData object.</returns>
+        </member>
+        <member name="M:Mbh5.Instrument.DeleteAllAfterIndex(Mbh5.DataInfo,System.Int64)">
+            <summary>
+Deletes all ticks after a specified index from the dataset represented by the dataInfo.
+</summary>
+            <param name="dataInfo">The data info structure of the dataset.</param>
+            <param name="index">The index (inclusive).</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.Instrument.DeleteAllAfterTick(Mbh5.DataInfo,System.Int64)">
+            <summary>
+Deletes all ticks after a specified ticks from the dataset represented by the dataInfo.
+</summary>
+            <param name="dataInfo">The data info structure of the dataset.</param>
+            <param name="ticks">The ticks (inclusive).</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.Instrument.DeleteAllBeforeIndex(Mbh5.DataInfo,System.Int64)">
+            <summary>
+Deletes all ticks before a specified index from the dataset represented by the dataInfo.
+</summary>
+            <param name="dataInfo">The data info structure of the dataset.</param>
+            <param name="index">The index (inclusive).</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.Instrument.DeleteAllBeforeTick(Mbh5.DataInfo,System.Int64)">
+            <summary>
+Deletes all ticks before a specified ticks from the dataset represented by the dataInfo.
+</summary>
+            <param name="dataInfo">The data info structure of the dataset.</param>
+            <param name="ticks">The ticks (inclusive).</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.Instrument.DeleteTickRange(Mbh5.DataInfo,System.Int64,System.Int64)">
+            <summary>
+Deletes a range of ticks from the dataset represented by the dataInfo.
+</summary>
+            <param name="dataInfo">The data info structure of the dataset.</param>
+            <param name="ticksFrom">The first ticks of the range (inclusive).</param>
+            <param name="ticksTo">The last ticks of the range (inclusive).</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.Instrument.DeleteIndexRange(Mbh5.DataInfo,System.Int64,System.Int64)">
+            <summary>
+Deletes a range of indices from the dataset represented by the dataInfo.
+</summary>
+            <param name="dataInfo">The data info structure of the dataset.</param>
+            <param name="indexFrom">The first index of the range (inclusive).</param>
+            <param name="indexTo">The last index of the range (inclusive).</param>
+            <returns>A boolean indicating the success of the operation.</returns>
+        </member>
+        <member name="M:Mbh5.Instrument.DatasetList(System.Boolean)">
+            <summary>
+Scans a flat non-recursive list of datasets of the instrument's group.
+</summary>
+            <param name="sort">Specifies whether to sort the list of datasets.</param>
+            <returns>The list of the data info objects.</returns>
+        </member>
+        <member name="M:Mbh5.Instrument.Close">
+            <summary>
+Closes an access to the instrument and all instruments's data.
+</summary>
+        </member>
+        <member name="M:Mbh5.Instrument.Dispose">
+            <summary>
+Destructs the instance; implements/overrides IDisposable::Dispose.
+</summary>
+        </member>
+        <member name="M:Mbh5.Instrument.Finalize">
+            <summary>
+Finalizes the instance; implements/overrides Object::Finalize.
+</summary>
+        </member>
+        <member name="M:Mbh5.Instrument.Flush">
+            <summary>
+Flushes the instrument.
+</summary>
+        </member>
+        <member name="M:Mbh5.Instrument.#ctor(Mbh5.Repository,System.String,System.Int64,System.Boolean)">
+            <summary>
+Constructs a new instance.
+</summary>
+        </member>
+        <member name="T:Mbh5.Instrument">
+            <summary>
+Encapsulates the access to an instrument.
+</summary>
+        </member>
+        <member name="M:Mbh5.Repository.OpenReadWrite(System.String,System.Boolean,Mbh5.FileDriver,System.Boolean)">
+            <summary>
+Opens a repository file for both reading and writing.
+</summary>
+            <param name="filePath">The repository file path to open.</param>
+            <param name="createNonexistent">Create file if it does not extst.</param>
+            <param name="fileDriver">The file driver to use.</param>
+            <param name="corkTheCache">If you have memory to spare, you could "cork the cache" until you reached a suitable point to update the metadata in the file and, call H5Fflush.</param>
+            <returns>A writable Repository object.</returns>
+        </member>
+        <member name="M:Mbh5.Repository.OpenReadWrite(System.String,System.Boolean,Mbh5.FileDriver)">
+            <summary>
+Opens a repository file for both reading and writing.
+</summary>
+            <param name="filePath">The repository file path to open.</param>
+            <param name="createNonexistent">Create file if it does not extst.</param>
+            <param name="fileDriver">The file driver to use.</param>
+            <returns>A writable Repository object.</returns>
+        </member>
+        <member name="M:Mbh5.Repository.OpenReadWrite(System.String,System.Boolean,System.Boolean)">
+            <summary>
+Opens a repository file for both reading and writing.
+</summary>
+            <param name="filePath">The repository file path to open.</param>
+            <param name="createNonexistent">Create file if it does not extst.</param>
+            <param name="corkTheCache">If you have memory to spare, you could "cork the cache" until you reached a suitable point to update the metadata in the file and, call H5Fflush.</param>
+            <returns>A writable Repository object.</returns>
+        </member>
+        <member name="M:Mbh5.Repository.OpenReadWrite(System.String,System.Boolean)">
+            <summary>
+Opens a repository file for both reading and writing.
+</summary>
+            <param name="filePath">The repository file path to open.</param>
+            <param name="createNonexistent">Create file if it does not extst.</param>
+            <returns>A writable Repository object.</returns>
+        </member>
+        <member name="M:Mbh5.Repository.OpenReadOnly(System.String,Mbh5.FileDriver,System.Boolean)">
+            <summary>
+Opens a repository file for reading.
+</summary>
+            <param name="filePath">The repository file path to open.</param>
+            <param name="fileDriver">The file driver to use.</param>
+            <param name="corkTheCache">If you have memory to spare, you could "cork the cache" until you reached a suitable point to update the metadata in the file and, call H5Fflush.</param>
+            <returns>A read-only Repository object.</returns>
+        </member>
+        <member name="M:Mbh5.Repository.OpenReadOnly(System.String,Mbh5.FileDriver)">
+            <summary>
+Opens a repository file for reading.
+</summary>
+            <param name="filePath">The repository file path to open.</param>
+            <param name="fileDriver">The file driver to use.</param>
+            <returns>A read-only Repository object.</returns>
+        </member>
+        <member name="M:Mbh5.Repository.OpenReadOnly(System.String,System.Boolean)">
+            <summary>
+Opens a repository file for reading.
+</summary>
+            <param name="filePath">The repository file path to open.</param>
+            <param name="corkTheCache">If you have memory to spare, you could "cork the cache" until you reached a suitable point to update the metadata in the file and, call H5Fflush.</param>
+            <returns>A read-only Repository object.</returns>
+        </member>
+        <member name="M:Mbh5.Repository.OpenReadOnly(System.String)">
+            <summary>
+Opens a repository file for reading.
+</summary>
+            <param name="filePath">The repository file path to open.</param>
+            <returns>A read-only Repository object.</returns>
+        </member>
+        <member name="M:Mbh5.Repository.RenameInstrument(System.String,System.String)">
+            <summary>
+Renames an instrument. The path to the instrument remains the same.
+</summary>
+            <param name="instrumentPath">The instrument path.</param>
+            <param name="instrumentNewName">The new name of the instrument.</param>
+        </member>
+        <member name="M:Mbh5.Repository.MoveInstrument(System.String,System.String)">
+            <summary>
+Moves an instrument from one path to another.
+</summary>
+            <param name="instrumentPathOld">The original instrument path to move.</param>
+            <param name="instrumentPathNew">The new moved instrument path.</param>
+        </member>
+        <member name="M:Mbh5.Repository.Delete(System.String,System.Boolean)">
+            <summary>
+Deletes an object with all descending objects from the repository.
+</summary>
+            <param name="objectPath">The object path to delete.</param>
+            <param name="deleteEmptyParentPath">Delete the parent path if empty.</param>
+            <returns>A boolean indicating the success of operation.</returns>
+        </member>
+        <member name="M:Mbh5.Repository.Open(System.String,System.Boolean)">
+            <summary>
+Opens an instrument.
+</summary>
+            <param name="instrumentPath">The instrument path to open.</param>
+            <param name="createNonexistent">Create the instrument if it does not exist; works for writable repository files only.</param>
+            <returns>An Instrument object.</returns>
+        </member>
+        <member name="M:Mbh5.Repository.Open(System.String)">
+            <summary>
+Opens an instrument.
+</summary>
+            <param name="instrumentPath">The instrument path to open.</param>
+            <returns>An Instrument object.</returns>
+        </member>
+        <member name="M:Mbh5.Repository.Close">
+            <summary>
+Closes an access to the repository file.
+</summary>
+        </member>
+        <member name="M:Mbh5.Repository.Dispose">
+            <summary>
+Destructs the instance; implements/overrides IDisposable::Dispose.
+</summary>
+        </member>
+        <member name="M:Mbh5.Repository.InterceptErrorStack">
+            <summary>
+Redirects the HDF5 error messages to the .NET trace log file; otherwise, the HDF5 library writes them to the console.
+Should be called once at the very beginning.
+</summary>
+        </member>
+        <member name="M:Mbh5.Repository.DatasetList(System.String,System.Boolean)">
+            <summary>
+Scans a flat non-recursive list of datasets of the instrument's group.
+</summary>
+            <param name="instrumentPath">The instrument path to scan.</param>
+            <param name="sort">Specifies whether to sort the list of datasets.</param>
+            <returns>The list of the data info objects.</returns>
+        </member>
+        <member name="M:Mbh5.Repository.ContentList(System.Boolean)">
+            <summary>
+Scans a flat list of the data content of the repository file.
+</summary>
+            <param name="sort">Specifies whether to sort the data content list.</param>
+            <returns>The list of the data info objects.</returns>
+        </member>
+        <member name="M:Mbh5.Repository.DatasetList(System.String,System.String,System.Boolean)">
+            <summary>
+Scans a flat non-recursive list of datasets of the instrument's group in the repository file.
+</summary>
+            <param name="filePath">The repository file path to scan.</param>
+            <param name="instrumentPath">The instrument path to scan.</param>
+            <param name="sort">Specifies whether to sort the list of datasets.</param>
+            <returns>The list of the data info objects.</returns>
+        </member>
+        <member name="M:Mbh5.Repository.ContentList(System.String,System.Boolean)">
+            <summary>
+Scans a flat list of the data content of the repository file.
+</summary>
+            <param name="filePath">The repository file path to scan.</param>
+            <param name="sort">Specifies whether to sort the data content list.</param>
+            <returns>The list of the data info objects.</returns>
+        </member>
+        <member name="M:Mbh5.Repository.ContentTree(System.Boolean)">
+            <summary>
+Scans a hierarchical tree structure of the content of the repository file.
+</summary>
+            <param name="sort">Specifies whether to sort the hierarchical tree structure.</param>
+            <returns>The root group info object.</returns>
+        </member>
+        <member name="M:Mbh5.Repository.ContentTree(System.String,System.Boolean)">
+            <summary>
+Scans a hierarchical tree structure of the content of the repository file.
+</summary>
+            <param name="filePath">The repository file path to scan.</param>
+            <param name="sort">Specifies whether to sort the hierarchical tree structure.</param>
+            <returns>The root group info object.</returns>
+        </member>
+        <member name="M:Mbh5.Repository.Finalize">
+            <summary>
+Finalizes the instance; implements/overrides Object::Finalize.
+</summary>
+        </member>
+        <member name="M:Mbh5.Repository.Flush">
+            <summary>
+Flushes the repository.
+</summary>
+        </member>
+        <member name="M:Mbh5.Repository.#ctor(System.String,System.Int64,System.Boolean)">
+            <summary>
+Constructs a new instance.
+</summary>
+        </member>
+        <member name="T:Mbh5.Repository">
+            <summary>
+Encapsulates the access to a repository file.
+</summary>
+        </member>
+        <member name="M:Mbh5.GroupInfo.#ctor">
+            <summary>
+Constructs a new instance.
+</summary>
+        </member>
+        <member name="M:Mbh5.GroupInfo.Sort(System.Collections.Generic.IComparer`1{Mbh5.GroupInfo},System.Collections.Generic.IComparer`1{Mbh5.DataInfo})">
+            <summary>
+Sorts the children of the group info.
+</summary>
+            <param name="groupInfoComparer">The group info comparer.</param>
+            <param name="dataInfoComparer">The data info comparer.</param>
+        </member>
+        <member name="M:Mbh5.GroupInfo.Populate(System.Collections.Generic.List`1{Mbh5.DataInfo})">
+            <summary>
+Populates a list fo the data info objects.
+</summary>
+            <param name="list">The list to populate.</param>
+        </member>
+        <member name="M:Mbh5.GroupInfo.#ctor(System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte!System.Runtime.CompilerServices.IsConst*,Mbh5.GroupInfo)">
+            <summary>
+Constructs a new instance.
+</summary>
+            <param name="name">The name of the group.</param>
+            <param name="parent">The parent group info instance.</param>
+        </member>
+        <member name="P:Mbh5.GroupInfo.Groups">
+            <summary>
+The groups.
+</summary>
+        </member>
+        <member name="P:Mbh5.GroupInfo.Datasets">
+            <summary>
+The datasets.
+</summary>
+        </member>
+        <member name="T:Mbh5.GroupInfo">
+            <summary>
+Encapsulates a HDF5 group info.
+</summary>
+        </member>
+        <member name="M:Mbh5.DataInfo.#ctor(System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte!System.Runtime.CompilerServices.IsConst*,Mbh5.GroupInfo)">
+            <summary>
+Constructs a new instance.
+</summary>
+            <param name="name">The name of the dataset.</param>
+            <param name="parent">The parent group info instance.</param>
+        </member>
+        <member name="P:Mbh5.DataInfo.IsValidName">
+            <summary>
+If the data name is a valid one.
+</summary>
+        </member>
+        <member name="P:Mbh5.DataInfo.ParsedTimeFrame">
+            <summary>
+The data time frame. Valid if IsValidName property is true.
+</summary>
+        </member>
+        <member name="P:Mbh5.DataInfo.ParsedQuoteKind">
+            <summary>
+The quote kind. Valid if IsValidName property is true.
+</summary>
+        </member>
+        <member name="P:Mbh5.DataInfo.ParsedTradeKind">
+            <summary>
+The trade kind. Valid if IsValidName property is true.
+</summary>
+        </member>
+        <member name="P:Mbh5.DataInfo.ParsedScalarKind">
+            <summary>
+The scalar kind. Valid if IsValidName property is true.
+</summary>
+        </member>
+        <member name="P:Mbh5.DataInfo.ParsedOhlcvKind">
+            <summary>
+The ohlcv kind. Valid if IsValidName property is true.
+</summary>
+        </member>
+        <member name="P:Mbh5.DataInfo.ParsedDataKind">
+            <summary>
+The data kind. Valid if IsValidName property is true.
+</summary>
+        </member>
+        <member name="P:Mbh5.DataInfo.ParsedDataType">
+            <summary>
+The data type. Valid if IsValidName property is true.
+</summary>
+        </member>
+        <member name="T:Mbh5.DataInfo">
+            <summary>
+Encapsulates a HDF5 dataset info.
+</summary>
+        </member>
+        <member name="M:Mbh5.ObjectInfo.ChildPath(System.String)">
+            <summary>
+Makes a full path to the child object.
+</summary>
+            <param name="name">The name of the child object.</param>
+        </member>
+        <member name="M:Mbh5.ObjectInfo.#ctor">
+            <summary>
+Constructs a new instance.
+</summary>
+        </member>
+        <member name="M:Mbh5.ObjectInfo.#ctor(System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte!System.Runtime.CompilerServices.IsConst*,Mbh5.GroupInfo)">
+            <summary>
+Constructs a new instance.
+</summary>
+            <param name="name">The name of the object.</param>
+            <param name="parent">The parent group info instance.</param>
+        </member>
+        <member name="P:Mbh5.ObjectInfo.Parent">
+            <summary>
+The parent group.
+</summary>
+        </member>
+        <member name="P:Mbh5.ObjectInfo.Path">
+            <summary>
+The full path to the object.
+</summary>
+        </member>
+        <member name="P:Mbh5.ObjectInfo.Name">
+            <summary>
+The name of the object.
+</summary>
+        </member>
+        <member name="T:Mbh5.ObjectInfo">
+            <summary>
+Encapsulates a HDF5 object info.
+</summary>
+        </member>
+        <member name="M:Mbh5.Scalar.IsDifferent(Mbh5.Scalar)">
+            <summary>
+Is scalar value different from another scalar item.
+</summary>
+            <param name="other">A scalar item to compare to.</param>
+            <returns>A boolean indicating the difference.</returns>
+        </member>
+        <member name="M:Mbh5.Scalar.IsIdentical(Mbh5.Scalar)">
+            <summary>
+Is scalar value identical to another scalar item.
+</summary>
+            <param name="other">A scalar item to compare to.</param>
+            <returns>A boolean indicating the identity.</returns>
+        </member>
+        <member name="F:Mbh5.Scalar.SizeOf">
+            <summary>
+The size of an instance in bytes.
+</summary>
+        </member>
+        <member name="M:Mbh5.Scalar.ToString">
+            <summary>
+Returns the string that represents this object.
+</summary>
+            <returns>Returns the string that represents this object.</returns>
+        </member>
+        <member name="P:Mbh5.Scalar.Value">
+            <summary>
+The value.
+</summary>
+        </member>
+        <member name="P:Mbh5.Scalar.TimeStamp">
+            <summary>
+The time stamp.
+</summary>
+        </member>
+        <member name="P:Mbh5.Scalar.DateStamp">
+            <summary>
+The date stamp.
+</summary>
+        </member>
+        <member name="P:Mbh5.Scalar.DateTimeStamp">
+            <summary>
+The DateTime stamp.
+</summary>
+        </member>
+        <member name="P:Mbh5.Scalar.DateTimeStampWithFractionOfSecond">
+            <summary>
+The DateTime stamp with a fraction of second.
+</summary>
+        </member>
+        <member name="P:Mbh5.Scalar.Ticks">
+            <summary>
+The DateTime.Ticks -- the number of 100 nanoseconds since 12:00 A.M., January, 1, 0001.
+</summary>
+        </member>
+        <member name="P:Mbh5.Scalar.Time">
+            <summary>
+The DateTime.
+</summary>
+        </member>
+        <member name="F:Mbh5.Scalar.value">
+            <summary>
+The value.
+</summary>
+        </member>
+        <member name="F:Mbh5.Scalar.dateTimeTicks">
+            <summary>
+The DateTime.Ticks -- the number of 100 nanoseconds since 12:00 A.M., January, 1, 0001.
+</summary>
+        </member>
+        <member name="T:Mbh5.Scalar">
+            <summary>
+The scalar struct.
+</summary>
+        </member>
+        <member name="M:Mbh5.OhlcvPriceOnly.IsDifferent(Mbh5.OhlcvPriceOnly)">
+            <summary>
+Are both ohlc prices different from another ohlc item.
+</summary>
+            <param name="other">An ohlc item to compare to.</param>
+            <returns>A boolean indicating the difference.</returns>
+        </member>
+        <member name="M:Mbh5.OhlcvPriceOnly.IsIdentical(Mbh5.OhlcvPriceOnly)">
+            <summary>
+Are both ohlc prices identical to another ohlc item.
+</summary>
+            <param name="other">An ohlc item to compare to.</param>
+            <returns>A boolean indicating the identity.</returns>
+        </member>
+        <member name="F:Mbh5.OhlcvPriceOnly.SizeOf">
+            <summary>
+The size of an instance in bytes.
+</summary>
+        </member>
+        <member name="M:Mbh5.OhlcvPriceOnly.ToString">
+            <summary>
+Returns the string that represents this object.
+</summary>
+            <returns>Returns the string that represents this object.</returns>
+        </member>
+        <member name="P:Mbh5.OhlcvPriceOnly.Close">
+            <summary>
+The closing price.
+</summary>
+        </member>
+        <member name="P:Mbh5.OhlcvPriceOnly.Low">
+            <summary>
+The lowest price.
+</summary>
+        </member>
+        <member name="P:Mbh5.OhlcvPriceOnly.High">
+            <summary>
+The highest price.
+</summary>
+        </member>
+        <member name="P:Mbh5.OhlcvPriceOnly.Open">
+            <summary>
+The opening price.
+</summary>
+        </member>
+        <member name="P:Mbh5.OhlcvPriceOnly.TimeStamp">
+            <summary>
+The time stamp.
+</summary>
+        </member>
+        <member name="P:Mbh5.OhlcvPriceOnly.DateStamp">
+            <summary>
+The date stamp.
+</summary>
+        </member>
+        <member name="P:Mbh5.OhlcvPriceOnly.DateTimeStamp">
+            <summary>
+The DateTime stamp.
+</summary>
+        </member>
+        <member name="P:Mbh5.OhlcvPriceOnly.DateTimeStampWithFractionOfSecond">
+            <summary>
+The DateTime stamp with a fraction of second.
+</summary>
+        </member>
+        <member name="P:Mbh5.OhlcvPriceOnly.Ticks">
+            <summary>
+The DateTime.Ticks -- the number of 100 nanoseconds since 12:00 A.M., January, 1, 0001.
+</summary>
+        </member>
+        <member name="P:Mbh5.OhlcvPriceOnly.Time">
+            <summary>
+The DateTime.
+</summary>
+        </member>
+        <member name="F:Mbh5.OhlcvPriceOnly.close">
+            <summary>
+The closing price.
+</summary>
+        </member>
+        <member name="F:Mbh5.OhlcvPriceOnly.low">
+            <summary>
+The lowest price.
+</summary>
+        </member>
+        <member name="F:Mbh5.OhlcvPriceOnly.high">
+            <summary>
+The highest price.
+</summary>
+        </member>
+        <member name="F:Mbh5.OhlcvPriceOnly.open">
+            <summary>
+The opening price.
+</summary>
+        </member>
+        <member name="F:Mbh5.OhlcvPriceOnly.dateTimeTicks">
+            <summary>
+The DateTime.Ticks -- the number of 100 nanoseconds since 12:00 A.M., January, 1, 0001.
+</summary>
+        </member>
+        <member name="T:Mbh5.OhlcvPriceOnly">
+            <summary>
+The ohlc struct.
+</summary>
+        </member>
+        <member name="M:Mbh5.Ohlcv.IsDifferent(Mbh5.Ohlcv)">
+            <summary>
+Are both ohlcv prices and volume different from another ohlcv item.
+</summary>
+            <param name="other">An ohlcv item to compare to.</param>
+            <returns>A boolean indicating the difference.</returns>
+        </member>
+        <member name="M:Mbh5.Ohlcv.IsIdentical(Mbh5.Ohlcv)">
+            <summary>
+Are both ohlcv prices and volume identical to another ohlcv item.
+</summary>
+            <param name="other">An ohlcv item to compare to.</param>
+            <returns>A boolean indicating the identity.</returns>
+        </member>
+        <member name="F:Mbh5.Ohlcv.SizeOf">
+            <summary>
+The size of an instance in bytes.
+</summary>
+        </member>
+        <member name="M:Mbh5.Ohlcv.ToString">
+            <summary>
+Returns the string that represents this object.
+</summary>
+            <returns>Returns the string that represents this object.</returns>
+        </member>
+        <member name="P:Mbh5.Ohlcv.Volume">
+            <summary>
+The volume.
+</summary>
+        </member>
+        <member name="P:Mbh5.Ohlcv.Close">
+            <summary>
+The closing price.
+</summary>
+        </member>
+        <member name="P:Mbh5.Ohlcv.Low">
+            <summary>
+The lowest price.
+</summary>
+        </member>
+        <member name="P:Mbh5.Ohlcv.High">
+            <summary>
+The highest price.
+</summary>
+        </member>
+        <member name="P:Mbh5.Ohlcv.Open">
+            <summary>
+The opening price.
+</summary>
+        </member>
+        <member name="P:Mbh5.Ohlcv.TimeStamp">
+            <summary>
+The time stamp.
+</summary>
+        </member>
+        <member name="P:Mbh5.Ohlcv.DateStamp">
+            <summary>
+The date stamp.
+</summary>
+        </member>
+        <member name="P:Mbh5.Ohlcv.DateTimeStamp">
+            <summary>
+The DateTime stamp.
+</summary>
+        </member>
+        <member name="P:Mbh5.Ohlcv.DateTimeStampWithFractionOfSecond">
+            <summary>
+The DateTime stamp with a fraction of second.
+</summary>
+        </member>
+        <member name="P:Mbh5.Ohlcv.Ticks">
+            <summary>
+The DateTime.Ticks -- the number of 100 nanoseconds since 12:00 A.M., January, 1, 0001.
+</summary>
+        </member>
+        <member name="P:Mbh5.Ohlcv.Time">
+            <summary>
+The DateTime.
+</summary>
+        </member>
+        <member name="F:Mbh5.Ohlcv.volume">
+            <summary>
+The volume.
+</summary>
+        </member>
+        <member name="F:Mbh5.Ohlcv.close">
+            <summary>
+The closing price.
+</summary>
+        </member>
+        <member name="F:Mbh5.Ohlcv.low">
+            <summary>
+The lowest price.
+</summary>
+        </member>
+        <member name="F:Mbh5.Ohlcv.high">
+            <summary>
+The highest price.
+</summary>
+        </member>
+        <member name="F:Mbh5.Ohlcv.open">
+            <summary>
+The opening price.
+</summary>
+        </member>
+        <member name="F:Mbh5.Ohlcv.dateTimeTicks">
+            <summary>
+The DateTime.Ticks -- the number of 100 nanoseconds since 12:00 A.M., January, 1, 0001.
+</summary>
+        </member>
+        <member name="T:Mbh5.Ohlcv">
+            <summary>
+The ohlcv struct.
+</summary>
+        </member>
+        <member name="M:Mbh5.TradePriceOnly.IsDifferent(Mbh5.TradePriceOnly)">
+            <summary>
+Is trade price different from another trade item.
+</summary>
+            <param name="other">A trade item to compare to.</param>
+            <returns>A boolean indicating the difference.</returns>
+        </member>
+        <member name="M:Mbh5.TradePriceOnly.IsIdentical(Mbh5.TradePriceOnly)">
+            <summary>
+Is trade price identical to another trade item.
+</summary>
+            <param name="other">A trade item to compare to.</param>
+            <returns>A boolean indicating the identity.</returns>
+        </member>
+        <member name="F:Mbh5.TradePriceOnly.SizeOf">
+            <summary>
+The size of an instance in bytes.
+</summary>
+        </member>
+        <member name="M:Mbh5.TradePriceOnly.ToString">
+            <summary>
+Returns the string that represents this object.
+</summary>
+            <returns>Returns the string that represents this object.</returns>
+        </member>
+        <member name="P:Mbh5.TradePriceOnly.Price">
+            <summary>
+The trade price.
+</summary>
+        </member>
+        <member name="P:Mbh5.TradePriceOnly.TimeStamp">
+            <summary>
+The time stamp.
+</summary>
+        </member>
+        <member name="P:Mbh5.TradePriceOnly.DateStamp">
+            <summary>
+The date stamp.
+</summary>
+        </member>
+        <member name="P:Mbh5.TradePriceOnly.DateTimeStamp">
+            <summary>
+The DateTime stamp.
+</summary>
+        </member>
+        <member name="P:Mbh5.TradePriceOnly.DateTimeStampWithFractionOfSecond">
+            <summary>
+The DateTime stamp with a fraction of second.
+</summary>
+        </member>
+        <member name="P:Mbh5.TradePriceOnly.Ticks">
+            <summary>
+The DateTime.Ticks -- the number of 100 nanoseconds since 12:00 A.M., January, 1, 0001.
+</summary>
+        </member>
+        <member name="P:Mbh5.TradePriceOnly.Time">
+            <summary>
+The DateTime.
+</summary>
+        </member>
+        <member name="F:Mbh5.TradePriceOnly.price">
+            <summary>
+The trade price.
+</summary>
+        </member>
+        <member name="F:Mbh5.TradePriceOnly.dateTimeTicks">
+            <summary>
+The DateTime.Ticks -- the number of 100 nanoseconds since 12:00 A.M., January, 1, 0001.
+</summary>
+        </member>
+        <member name="T:Mbh5.TradePriceOnly">
+            <summary>
+The trade (price only) struct.
+</summary>
+        </member>
+        <member name="M:Mbh5.Trade.IsDifferent(Mbh5.Trade)">
+            <summary>
+Are both trade price and volume different from another trade item.
+</summary>
+            <param name="other">A trade item to compare to.</param>
+            <returns>A boolean indicating the difference.</returns>
+        </member>
+        <member name="M:Mbh5.Trade.IsIdentical(Mbh5.Trade)">
+            <summary>
+Are both trade price and volume identical to another trade item.
+</summary>
+            <param name="other">A trade item to compare to.</param>
+            <returns>A boolean indicating the identity.</returns>
+        </member>
+        <member name="F:Mbh5.Trade.SizeOf">
+            <summary>
+The size of an instance in bytes.
+</summary>
+        </member>
+        <member name="M:Mbh5.Trade.ToString">
+            <summary>
+Returns the string that represents this object.
+</summary>
+            <returns>Returns the string that represents this object.</returns>
+        </member>
+        <member name="P:Mbh5.Trade.Volume">
+            <summary>
+The trade volume.
+</summary>
+        </member>
+        <member name="P:Mbh5.Trade.Price">
+            <summary>
+The trade price.
+</summary>
+        </member>
+        <member name="P:Mbh5.Trade.TimeStamp">
+            <summary>
+The time stamp.
+</summary>
+        </member>
+        <member name="P:Mbh5.Trade.DateStamp">
+            <summary>
+The date stamp.
+</summary>
+        </member>
+        <member name="P:Mbh5.Trade.DateTimeStamp">
+            <summary>
+The DateTime stamp.
+</summary>
+        </member>
+        <member name="P:Mbh5.Trade.DateTimeStampWithFractionOfSecond">
+            <summary>
+The DateTime stamp with a fraction of second.
+</summary>
+        </member>
+        <member name="P:Mbh5.Trade.Ticks">
+            <summary>
+The DateTime.Ticks -- the number of 100 nanoseconds since 12:00 A.M., January, 1, 0001.
+</summary>
+        </member>
+        <member name="P:Mbh5.Trade.Time">
+            <summary>
+The DateTime.
+</summary>
+        </member>
+        <member name="F:Mbh5.Trade.volume">
+            <summary>
+The trade volume.
+</summary>
+        </member>
+        <member name="F:Mbh5.Trade.price">
+            <summary>
+The trade price.
+</summary>
+        </member>
+        <member name="F:Mbh5.Trade.dateTimeTicks">
+            <summary>
+The DateTime.Ticks -- the number of 100 nanoseconds since 12:00 A.M., January, 1, 0001.
+</summary>
+        </member>
+        <member name="T:Mbh5.Trade">
+            <summary>
+The trade struct.
+</summary>
+        </member>
+        <member name="M:Mbh5.QuotePriceOnly.IsDifferent(Mbh5.QuotePriceOnly)">
+            <summary>
+Are both quote ask/bid price different from another quote item.
+</summary>
+            <param name="other">A quote item to compare to.</param>
+            <returns>A boolean indicating the difference.</returns>
+        </member>
+        <member name="M:Mbh5.QuotePriceOnly.IsIdentical(Mbh5.QuotePriceOnly)">
+            <summary>
+Are both quote ask/bid price identical to another quote item.
+</summary>
+            <param name="other">A quote item to compare to.</param>
+            <returns>A boolean indicating the identity.</returns>
+        </member>
+        <member name="F:Mbh5.QuotePriceOnly.SizeOf">
+            <summary>
+The size of an instance in bytes.
+</summary>
+        </member>
+        <member name="M:Mbh5.QuotePriceOnly.ToString">
+            <summary>
+Returns the string that represents this object.
+</summary>
+            <returns>Returns the string that represents this object.</returns>
+        </member>
+        <member name="P:Mbh5.QuotePriceOnly.BidPrice">
+            <summary>
+The bid price.
+</summary>
+        </member>
+        <member name="P:Mbh5.QuotePriceOnly.AskPrice">
+            <summary>
+The ask price.
+</summary>
+        </member>
+        <member name="P:Mbh5.QuotePriceOnly.TimeStamp">
+            <summary>
+The time stamp.
+</summary>
+        </member>
+        <member name="P:Mbh5.QuotePriceOnly.DateStamp">
+            <summary>
+The date stamp.
+</summary>
+        </member>
+        <member name="P:Mbh5.QuotePriceOnly.DateTimeStamp">
+            <summary>
+The DateTime stamp.
+</summary>
+        </member>
+        <member name="P:Mbh5.QuotePriceOnly.DateTimeStampWithFractionOfSecond">
+            <summary>
+The DateTime stamp with a fraction of second.
+</summary>
+        </member>
+        <member name="P:Mbh5.QuotePriceOnly.Ticks">
+            <summary>
+The DateTime.Ticks -- the number of 100 nanoseconds since 12:00 A.M., January, 1, 0001.
+</summary>
+        </member>
+        <member name="P:Mbh5.QuotePriceOnly.Time">
+            <summary>
+The DateTime.
+</summary>
+        </member>
+        <member name="F:Mbh5.QuotePriceOnly.bidPrice">
+            <summary>
+The bid price.
+</summary>
+        </member>
+        <member name="F:Mbh5.QuotePriceOnly.askPrice">
+            <summary>
+The ask price.
+</summary>
+        </member>
+        <member name="F:Mbh5.QuotePriceOnly.dateTimeTicks">
+            <summary>
+The DateTime.Ticks -- the number of 100 nanoseconds since 12:00 A.M., January, 1, 0001.
+</summary>
+        </member>
+        <member name="T:Mbh5.QuotePriceOnly">
+            <summary>
+The quote (price only) struct.
+</summary>
+        </member>
+        <member name="M:Mbh5.Quote.IsDifferent(Mbh5.Quote)">
+            <summary>
+Are both quote ask/bid price and size different from another quote item.
+</summary>
+            <param name="other">A quote item to compare to.</param>
+            <returns>A boolean indicating the difference.</returns>
+        </member>
+        <member name="M:Mbh5.Quote.IsIdentical(Mbh5.Quote)">
+            <summary>
+Are both quote ask/bid price and size identical to another quote item.
+</summary>
+            <param name="other">A quote item to compare to.</param>
+            <returns>A boolean indicating the identity.</returns>
+        </member>
+        <member name="F:Mbh5.Quote.SizeOf">
+            <summary>
+The size of an instance in bytes.
+</summary>
+        </member>
+        <member name="M:Mbh5.Quote.ToString">
+            <summary>
+Returns the string that represents this object.
+</summary>
+            <returns>Returns the string that represents this object.</returns>
+        </member>
+        <member name="P:Mbh5.Quote.BidSize">
+            <summary>
+The bid size.
+</summary>
+        </member>
+        <member name="P:Mbh5.Quote.AskSize">
+            <summary>
+The ask size.
+</summary>
+        </member>
+        <member name="P:Mbh5.Quote.BidPrice">
+            <summary>
+The bid price.
+</summary>
+        </member>
+        <member name="P:Mbh5.Quote.AskPrice">
+            <summary>
+The ask price.
+</summary>
+        </member>
+        <member name="P:Mbh5.Quote.TimeStamp">
+            <summary>
+The time stamp.
+</summary>
+        </member>
+        <member name="P:Mbh5.Quote.DateStamp">
+            <summary>
+The date stamp.
+</summary>
+        </member>
+        <member name="P:Mbh5.Quote.DateTimeStamp">
+            <summary>
+The DateTime stamp.
+</summary>
+        </member>
+        <member name="P:Mbh5.Quote.DateTimeStampWithFractionOfSecond">
+            <summary>
+The DateTime stamp with a fraction of second.
+</summary>
+        </member>
+        <member name="P:Mbh5.Quote.Ticks">
+            <summary>
+The DateTime.Ticks -- the number of 100 nanoseconds since 12:00 A.M., January, 1, 0001.
+</summary>
+        </member>
+        <member name="P:Mbh5.Quote.Time">
+            <summary>
+The DateTime.
+</summary>
+        </member>
+        <member name="F:Mbh5.Quote.bidSize">
+            <summary>
+The bid size.
+</summary>
+        </member>
+        <member name="F:Mbh5.Quote.askSize">
+            <summary>
+The ask size.
+</summary>
+        </member>
+        <member name="F:Mbh5.Quote.bidPrice">
+            <summary>
+The bid price.
+</summary>
+        </member>
+        <member name="F:Mbh5.Quote.askPrice">
+            <summary>
+The ask price.
+</summary>
+        </member>
+        <member name="F:Mbh5.Quote.dateTimeTicks">
+            <summary>
+The DateTime.Ticks -- the number of 100 nanoseconds since 12:00 A.M., January, 1, 0001.
+</summary>
+        </member>
+        <member name="T:Mbh5.Quote">
+            <summary>
+The quote struct.
+</summary>
+        </member>
+        <member name="T:Mbh5.DataKind">
+            <summary>
+The data kind enumeration.
+</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedPriceOnlyYear1">
+            <summary>The 1-year adjusted open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedPriceOnlyMonth6">
+            <summary>The 6-month adjusted open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedPriceOnlyMonth4">
+            <summary>The 4-month adjusted open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedPriceOnlyMonth3">
+            <summary>The 3-month adjusted open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedPriceOnlyMonth2">
+            <summary>The 2-month adjusted open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedPriceOnlyMonth1">
+            <summary>The 1-month adjusted open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedPriceOnlyWeek3">
+            <summary>The 3-week adjusted open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedPriceOnlyWeek2">
+            <summary>The 2-week adjusted open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedPriceOnlyWeek1">
+            <summary>The 1-week adjusted open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedPriceOnlyDay1">
+            <summary>The 1-day adjusted open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedPriceOnlyHour12">
+            <summary>The 12-hour adjusted open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedPriceOnlyHour8">
+            <summary>The 8-hour adjusted open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedPriceOnlyHour6">
+            <summary>The 6-hour adjusted open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedPriceOnlyHour4">
+            <summary>The 4-hour adjusted open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedPriceOnlyHour3">
+            <summary>The 3-hour adjusted open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedPriceOnlyHour2">
+            <summary>The 2-hour adjusted open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedPriceOnlyHour1">
+            <summary>The 1-hour adjusted open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedPriceOnlyMinute30">
+            <summary>The 30-minute adjusted open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedPriceOnlyMinute20">
+            <summary>The 20-minute adjusted open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedPriceOnlyMinute15">
+            <summary>The 15-minute adjusted open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedPriceOnlyMinute12">
+            <summary>The 12-minute adjusted open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedPriceOnlyMinute10">
+            <summary>The 10-minute adjusted open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedPriceOnlyMinute6">
+            <summary>The 6-minute adjusted open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedPriceOnlyMinute5">
+            <summary>The 5-minute adjusted open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedPriceOnlyMinute4">
+            <summary>The 4-minute adjusted open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedPriceOnlyMinute3">
+            <summary>The 3-minute adjusted open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedPriceOnlyMinute2">
+            <summary>The 2-minute adjusted open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedPriceOnlyMinute1">
+            <summary>The 1-minute adjusted open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedPriceOnlySecond30">
+            <summary>The 30-second adjusted open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedPriceOnlySecond20">
+            <summary>The 20-second adjusted open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedPriceOnlySecond15">
+            <summary>The 15-second adjusted open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedPriceOnlySecond12">
+            <summary>The 12-second adjusted open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedPriceOnlySecond10">
+            <summary>The 10-second adjusted open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedPriceOnlySecond6">
+            <summary>The 6-second adjusted open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedPriceOnlySecond5">
+            <summary>The 5-second adjusted open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedPriceOnlySecond4">
+            <summary>The 4-second adjusted open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedPriceOnlySecond3">
+            <summary>The 3-second adjusted open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedPriceOnlySecond2">
+            <summary>The 2-second adjusted open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedPriceOnlySecond1">
+            <summary>The 1-second adjusted open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedPriceOnlyAperiodic">
+            <summary>The adjusted open/high/low/close without any specific time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedYear1">
+            <summary>The 1-year adjusted open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedMonth6">
+            <summary>The 6-month adjusted open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedMonth4">
+            <summary>The 4-month adjusted open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedMonth3">
+            <summary>The 3-month adjusted open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedMonth2">
+            <summary>The 2-month adjusted open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedMonth1">
+            <summary>The 1-month adjusted open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedWeek3">
+            <summary>The 3-week adjusted open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedWeek2">
+            <summary>The 2-week adjusted open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedWeek1">
+            <summary>The 1-week adjusted open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedDay1">
+            <summary>The 1-day adjusted open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedHour12">
+            <summary>The 12-hour adjusted open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedHour8">
+            <summary>The 8-hour adjusted open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedHour6">
+            <summary>The 6-hour adjusted open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedHour4">
+            <summary>The 4-hour adjusted open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedHour3">
+            <summary>The 3-hour adjusted open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedHour2">
+            <summary>The 2-hour adjusted open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedHour1">
+            <summary>The 1-hour adjusted open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedMinute30">
+            <summary>The 30-minute adjusted open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedMinute20">
+            <summary>The 20-minute adjusted open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedMinute15">
+            <summary>The 15-minute adjusted open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedMinute12">
+            <summary>The 12-minute adjusted open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedMinute10">
+            <summary>The 10-minute adjusted open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedMinute6">
+            <summary>The 6-minute adjusted open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedMinute5">
+            <summary>The 5-minute adjusted open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedMinute4">
+            <summary>The 4-minute adjusted open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedMinute3">
+            <summary>The 3-minute adjusted open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedMinute2">
+            <summary>The 2-minute adjusted open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedMinute1">
+            <summary>The 1-minute adjusted open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedSecond30">
+            <summary>The 30-second adjusted open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedSecond20">
+            <summary>The 20-second adjusted open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedSecond15">
+            <summary>The 15-second adjusted open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedSecond12">
+            <summary>The 12-second adjusted open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedSecond10">
+            <summary>The 10-second adjusted open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedSecond6">
+            <summary>The 6-second adjusted open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedSecond5">
+            <summary>The 5-second adjusted open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedSecond4">
+            <summary>The 4-second adjusted open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedSecond3">
+            <summary>The 3-second adjusted open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedSecond2">
+            <summary>The 2-second adjusted open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedSecond1">
+            <summary>The 1-second adjusted open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAdjustedAperiodic">
+            <summary>The adjusted open/high/low/close/volume without any specific time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.ScalarYear1">
+            <summary>The 1-year scalar.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.ScalarMonth6">
+            <summary>The 6-month scalar.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.ScalarMonth4">
+            <summary>The 4-month scalar.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.ScalarMonth3">
+            <summary>The 3-month scalar.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.ScalarMonth2">
+            <summary>The 2-month scalar.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.ScalarMonth1">
+            <summary>The 1-month scalar.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.ScalarWeek3">
+            <summary>The 3-week scalar.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.ScalarWeek2">
+            <summary>The 2-week scalar.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.ScalarWeek1">
+            <summary>The 1-week scalar.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.ScalarDay1">
+            <summary>The 1-day scalar.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.ScalarHour12">
+            <summary>The 12-hour scalar.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.ScalarHour8">
+            <summary>The 8-hour scalar.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.ScalarHour6">
+            <summary>The 6-hour scalar.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.ScalarHour4">
+            <summary>The 4-hour scalar.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.ScalarHour3">
+            <summary>The 3-hour scalar.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.ScalarHour2">
+            <summary>The 2-hour scalar.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.ScalarHour1">
+            <summary>The 1-hour scalar.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.ScalarMinute30">
+            <summary>The 30-minute scalar.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.ScalarMinute20">
+            <summary>The 20-minute scalar.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.ScalarMinute15">
+            <summary>The 15-minute scalar.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.ScalarMinute12">
+            <summary>The 12-minute scalar.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.ScalarMinute10">
+            <summary>The 10-minute scalar.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.ScalarMinute6">
+            <summary>The 6-minute scalar.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.ScalarMinute5">
+            <summary>The 5-minute scalar.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.ScalarMinute4">
+            <summary>The 4-minute scalar.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.ScalarMinute3">
+            <summary>The 3-minute scalar.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.ScalarMinute2">
+            <summary>The 2-minute scalar.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.ScalarMinute1">
+            <summary>The 1-minute scalar.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.ScalarSecond30">
+            <summary>The 30-second scalar.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.ScalarSecond20">
+            <summary>The 20-second scalar.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.ScalarSecond15">
+            <summary>The 15-second scalar.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.ScalarSecond12">
+            <summary>The 12-second scalar.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.ScalarSecond10">
+            <summary>The 10-second scalar.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.ScalarSecond6">
+            <summary>The 6-second scalar.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.ScalarSecond5">
+            <summary>The 5-second scalar.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.ScalarSecond4">
+            <summary>The 4-second scalar.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.ScalarSecond3">
+            <summary>The 3-second scalar.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.ScalarSecond2">
+            <summary>The 2-second scalar.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.ScalarSecond1">
+            <summary>The 1-second scalar.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.ScalarAperiodic">
+            <summary>The scalar without any specific time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyBidYear1">
+            <summary>The 1-year open/high/low/close bid price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyBidMonth6">
+            <summary>The 6-month open/high/low/close bid price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyBidMonth4">
+            <summary>The 4-month open/high/low/close bid price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyBidMonth3">
+            <summary>The 3-month open/high/low/close bid price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyBidMonth2">
+            <summary>The 2-month open/high/low/close bid price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyBidMonth1">
+            <summary>The 1-month open/high/low/close bid price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyBidWeek3">
+            <summary>The 3-week open/high/low/close bid price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyBidWeek2">
+            <summary>The 2-week open/high/low/close bid price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyBidWeek1">
+            <summary>The 1-week open/high/low/close bid price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyBidDay1">
+            <summary>The 1-day open/high/low/close bid price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyBidHour12">
+            <summary>The 12-hour open/high/low/close bid price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyBidHour8">
+            <summary>The 8-hour open/high/low/close bid price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyBidHour6">
+            <summary>The 6-hour open/high/low/close bid price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyBidHour4">
+            <summary>The 4-hour open/high/low/close bid price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyBidHour3">
+            <summary>The 3-hour open/high/low/close bid price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyBidHour2">
+            <summary>The 2-hour open/high/low/close bid price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyBidHour1">
+            <summary>The 1-hour open/high/low/close bid price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyBidMinute30">
+            <summary>The 30-minute open/high/low/close bid price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyBidMinute20">
+            <summary>The 20-minute open/high/low/close bid price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyBidMinute15">
+            <summary>The 15-minute open/high/low/close bid price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyBidMinute12">
+            <summary>The 12-minute open/high/low/close bid price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyBidMinute10">
+            <summary>The 10-minute open/high/low/close bid price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyBidMinute6">
+            <summary>The 6-minute open/high/low/close bid price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyBidMinute5">
+            <summary>The 5-minute open/high/low/close bid price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyBidMinute4">
+            <summary>The 4-minute open/high/low/close bid price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyBidMinute3">
+            <summary>The 3-minute open/high/low/close bid price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyBidMinute2">
+            <summary>The 2-minute open/high/low/close bid price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyBidMinute1">
+            <summary>The 1-minute open/high/low/close bid price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyBidSecond30">
+            <summary>The 30-second open/high/low/close bid price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyBidSecond20">
+            <summary>The 20-second open/high/low/close bid price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyBidSecond15">
+            <summary>The 15-second open/high/low/close bid price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyBidSecond12">
+            <summary>The 12-second open/high/low/close bid price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyBidSecond10">
+            <summary>The 10-second open/high/low/close bid price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyBidSecond6">
+            <summary>The 6-second open/high/low/close bid price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyBidSecond5">
+            <summary>The 5-second open/high/low/close bid price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyBidSecond4">
+            <summary>The 4-second open/high/low/close bid price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyBidSecond3">
+            <summary>The 3-second open/high/low/close bid price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyBidSecond2">
+            <summary>The 2-second open/high/low/close bid price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyBidSecond1">
+            <summary>The 1-second open/high/low/close bid price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyBidAperiodic">
+            <summary>The open/high/low/close bid price without any specific time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyAskYear1">
+            <summary>The 1-year open/high/low/close ask price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyAskMonth6">
+            <summary>The 6-month open/high/low/close ask price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyAskMonth4">
+            <summary>The 4-month open/high/low/close ask price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyAskMonth3">
+            <summary>The 3-month open/high/low/close ask price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyAskMonth2">
+            <summary>The 2-month open/high/low/close ask price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyAskMonth1">
+            <summary>The 1-month open/high/low/close ask price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyAskWeek3">
+            <summary>The 3-week open/high/low/close ask price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyAskWeek2">
+            <summary>The 2-week open/high/low/close ask price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyAskWeek1">
+            <summary>The 1-week open/high/low/close ask price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyAskDay1">
+            <summary>The 1-day open/high/low/close ask price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyAskHour12">
+            <summary>The 12-hour open/high/low/close ask price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyAskHour8">
+            <summary>The 8-hour open/high/low/close ask price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyAskHour6">
+            <summary>The 6-hour open/high/low/close ask price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyAskHour4">
+            <summary>The 4-hour open/high/low/close ask price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyAskHour3">
+            <summary>The 3-hour open/high/low/close ask price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyAskHour2">
+            <summary>The 2-hour open/high/low/close ask price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyAskHour1">
+            <summary>The 1-hour open/high/low/close ask price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyAskMinute30">
+            <summary>The 30-minute open/high/low/close ask price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyAskMinute20">
+            <summary>The 20-minute open/high/low/close ask price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyAskMinute15">
+            <summary>The 15-minute open/high/low/close ask price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyAskMinute12">
+            <summary>The 12-minute open/high/low/close ask price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyAskMinute10">
+            <summary>The 10-minute open/high/low/close ask price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyAskMinute6">
+            <summary>The 6-minute open/high/low/close ask price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyAskMinute5">
+            <summary>The 5-minute open/high/low/close ask price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyAskMinute4">
+            <summary>The 4-minute open/high/low/close ask price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyAskMinute3">
+            <summary>The 3-minute open/high/low/close ask price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyAskMinute2">
+            <summary>The 2-minute open/high/low/close ask price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyAskMinute1">
+            <summary>The 1-minute open/high/low/close ask price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyAskSecond30">
+            <summary>The 30-second open/high/low/close ask price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyAskSecond20">
+            <summary>The 20-second open/high/low/close ask price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyAskSecond15">
+            <summary>The 15-second open/high/low/close ask price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyAskSecond12">
+            <summary>The 12-second open/high/low/close ask price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyAskSecond10">
+            <summary>The 10-second open/high/low/close ask price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyAskSecond6">
+            <summary>The 6-second open/high/low/close ask price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyAskSecond5">
+            <summary>The 5-second open/high/low/close ask price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyAskSecond4">
+            <summary>The 4-second open/high/low/close ask price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyAskSecond3">
+            <summary>The 3-second open/high/low/close ask price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyAskSecond2">
+            <summary>The 2-second open/high/low/close ask price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyAskSecond1">
+            <summary>The 1-second open/high/low/close ask price.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyAskAperiodic">
+            <summary>The open/high/low/close ask price without any specific time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyYear1">
+            <summary>The 1-year open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyMonth6">
+            <summary>The 6-month open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyMonth4">
+            <summary>The 4-month open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyMonth3">
+            <summary>The 3-month open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyMonth2">
+            <summary>The 2-month open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyMonth1">
+            <summary>The 1-month open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyWeek3">
+            <summary>The 3-week open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyWeek2">
+            <summary>The 2-week open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyWeek1">
+            <summary>The 1-week open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyDay1">
+            <summary>The 1-day open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyHour12">
+            <summary>The 12-hour open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyHour8">
+            <summary>The 8-hour open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyHour6">
+            <summary>The 6-hour open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyHour4">
+            <summary>The 4-hour open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyHour3">
+            <summary>The 3-hour open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyHour2">
+            <summary>The 2-hour open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyHour1">
+            <summary>The 1-hour open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyMinute30">
+            <summary>The 30-minute open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyMinute20">
+            <summary>The 20-minute open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyMinute15">
+            <summary>The 15-minute open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyMinute12">
+            <summary>The 12-minute open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyMinute10">
+            <summary>The 10-minute open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyMinute6">
+            <summary>The 6-minute open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyMinute5">
+            <summary>The 5-minute open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyMinute4">
+            <summary>The 4-minute open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyMinute3">
+            <summary>The 3-minute open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyMinute2">
+            <summary>The 2-minute open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyMinute1">
+            <summary>The 1-minute open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlySecond30">
+            <summary>The 30-second open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlySecond20">
+            <summary>The 20-second open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlySecond15">
+            <summary>The 15-second open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlySecond12">
+            <summary>The 12-second open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlySecond10">
+            <summary>The 10-second open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlySecond6">
+            <summary>The 6-second open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlySecond5">
+            <summary>The 5-second open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlySecond4">
+            <summary>The 4-second open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlySecond3">
+            <summary>The 3-second open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlySecond2">
+            <summary>The 2-second open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlySecond1">
+            <summary>The 1-second open/high/low/close.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvPriceOnlyAperiodic">
+            <summary>The open/high/low/close without any specific time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvBidYear1">
+            <summary>The 1-year open/high/low/close/volume bid price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvBidMonth6">
+            <summary>The 6-month open/high/low/close/volume bid price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvBidMonth4">
+            <summary>The 4-month open/high/low/close/volume bid price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvBidMonth3">
+            <summary>The 3-month open/high/low/close/volume bid price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvBidMonth2">
+            <summary>The 2-month open/high/low/close/volume bid price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvBidMonth1">
+            <summary>The 1-month open/high/low/close/volume bid price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvBidWeek3">
+            <summary>The 3-week open/high/low/close/volume bid price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvBidWeek2">
+            <summary>The 2-week open/high/low/close/volume bid price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvBidWeek1">
+            <summary>The 1-week open/high/low/close/volume bid price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvBidDay1">
+            <summary>The 1-day open/high/low/close/volume bid price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvBidHour12">
+            <summary>The 12-hour open/high/low/close/volume bid price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvBidHour8">
+            <summary>The 8-hour open/high/low/close/volume bid price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvBidHour6">
+            <summary>The 6-hour open/high/low/close/volume bid price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvBidHour4">
+            <summary>The 4-hour open/high/low/close/volume bid price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvBidHour3">
+            <summary>The 3-hour open/high/low/close/volume bid price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvBidHour2">
+            <summary>The 2-hour open/high/low/close/volume bid price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvBidHour1">
+            <summary>The 1-hour open/high/low/close/volume bid price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvBidMinute30">
+            <summary>The 30-minute open/high/low/close/volume bid price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvBidMinute20">
+            <summary>The 20-minute open/high/low/close/volume bid price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvBidMinute15">
+            <summary>The 15-minute open/high/low/close/volume bid price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvBidMinute12">
+            <summary>The 12-minute open/high/low/close/volume bid price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvBidMinute10">
+            <summary>The 10-minute open/high/low/close/volume bid price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvBidMinute6">
+            <summary>The 6-minute open/high/low/close/volume bid price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvBidMinute5">
+            <summary>The 5-minute open/high/low/close/volume bid price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvBidMinute4">
+            <summary>The 4-minute open/high/low/close/volume bid price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvBidMinute3">
+            <summary>The 3-minute open/high/low/close/volume bid price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvBidMinute2">
+            <summary>The 2-minute open/high/low/close/volume bid price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvBidMinute1">
+            <summary>The 1-minute open/high/low/close/volume bid price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvBidSecond30">
+            <summary>The 30-second open/high/low/close/volume bid price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvBidSecond20">
+            <summary>The 20-second open/high/low/close/volume bid price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvBidSecond15">
+            <summary>The 15-second open/high/low/close/volume bid price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvBidSecond12">
+            <summary>The 12-second open/high/low/close/volume bid price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvBidSecond10">
+            <summary>The 10-second open/high/low/close/volume bid price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvBidSecond6">
+            <summary>The 6-second open/high/low/close/volume bid price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvBidSecond5">
+            <summary>The 5-second open/high/low/close/volume bid price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvBidSecond4">
+            <summary>The 4-second open/high/low/close/volume bid price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvBidSecond3">
+            <summary>The 3-second open/high/low/close/volume bid price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvBidSecond2">
+            <summary>The 2-second open/high/low/close/volume bid price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvBidSecond1">
+            <summary>The 1-second open/high/low/close/volume bid price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvBidAperiodic">
+            <summary>The open/high/low/close/volume bid price/size without any specific time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAskYear1">
+            <summary>The 1-year open/high/low/close/volume ask price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAskMonth6">
+            <summary>The 6-month open/high/low/close/volume ask price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAskMonth4">
+            <summary>The 4-month open/high/low/close/volume ask price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAskMonth3">
+            <summary>The 3-month open/high/low/close/volume ask price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAskMonth2">
+            <summary>The 2-month open/high/low/close/volume ask price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAskMonth1">
+            <summary>The 1-month open/high/low/close/volume ask price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAskWeek3">
+            <summary>The 3-week open/high/low/close/volume ask price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAskWeek2">
+            <summary>The 2-week open/high/low/close/volume ask price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAskWeek1">
+            <summary>The 1-week open/high/low/close/volume ask price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAskDay1">
+            <summary>The 1-day open/high/low/close/volume ask price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAskHour12">
+            <summary>The 12-hour open/high/low/close/volume ask price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAskHour8">
+            <summary>The 8-hour open/high/low/close/volume ask price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAskHour6">
+            <summary>The 6-hour open/high/low/close/volume ask price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAskHour4">
+            <summary>The 4-hour open/high/low/close/volume ask price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAskHour3">
+            <summary>The 3-hour open/high/low/close/volume ask price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAskHour2">
+            <summary>The 2-hour open/high/low/close/volume ask price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAskHour1">
+            <summary>The 1-hour open/high/low/close/volume ask price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAskMinute30">
+            <summary>The 30-minute open/high/low/close/volume ask price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAskMinute20">
+            <summary>The 20-minute open/high/low/close/volume ask price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAskMinute15">
+            <summary>The 15-minute open/high/low/close/volume ask price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAskMinute12">
+            <summary>The 12-minute open/high/low/close/volume ask price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAskMinute10">
+            <summary>The 10-minute open/high/low/close/volume ask price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAskMinute6">
+            <summary>The 6-minute open/high/low/close/volume ask price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAskMinute5">
+            <summary>The 5-minute open/high/low/close/volume ask price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAskMinute4">
+            <summary>The 4-minute open/high/low/close/volume ask price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAskMinute3">
+            <summary>The 3-minute open/high/low/close/volume ask price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAskMinute2">
+            <summary>The 2-minute open/high/low/close/volume ask price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAskMinute1">
+            <summary>The 1-minute open/high/low/close/volume ask price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAskSecond30">
+            <summary>The 30-second open/high/low/close/volume ask price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAskSecond20">
+            <summary>The 20-second open/high/low/close/volume ask price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAskSecond15">
+            <summary>The 15-second open/high/low/close/volume ask price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAskSecond12">
+            <summary>The 12-second open/high/low/close/volume ask price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAskSecond10">
+            <summary>The 10-second open/high/low/close/volume ask price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAskSecond6">
+            <summary>The 6-second open/high/low/close/volume ask price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAskSecond5">
+            <summary>The 5-second open/high/low/close/volume ask price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAskSecond4">
+            <summary>The 4-second open/high/low/close/volume ask price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAskSecond3">
+            <summary>The 3-second open/high/low/close/volume ask price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAskSecond2">
+            <summary>The 2-second open/high/low/close/volume ask price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAskSecond1">
+            <summary>The 1-second open/high/low/close/volume ask price/size.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAskAperiodic">
+            <summary>The open/high/low/close/volume ask price/size without any specific time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvYear1">
+            <summary>The 1-year open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvMonth6">
+            <summary>The 6-month open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvMonth4">
+            <summary>The 4-month open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvMonth3">
+            <summary>The 3-month open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvMonth2">
+            <summary>The 2-month open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvMonth1">
+            <summary>The 1-month open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvWeek3">
+            <summary>The 3-week open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvWeek2">
+            <summary>The 2-week open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvWeek1">
+            <summary>The 1-week open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvDay1">
+            <summary>The 1-day open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvHour12">
+            <summary>The 12-hour open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvHour8">
+            <summary>The 8-hour open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvHour6">
+            <summary>The 6-hour open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvHour4">
+            <summary>The 4-hour open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvHour3">
+            <summary>The 3-hour open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvHour2">
+            <summary>The 2-hour open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvHour1">
+            <summary>The 1-hour open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvMinute30">
+            <summary>The 30-minute open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvMinute20">
+            <summary>The 20-minute open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvMinute15">
+            <summary>The 15-minute open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvMinute12">
+            <summary>The 12-minute open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvMinute10">
+            <summary>The 10-minute open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvMinute6">
+            <summary>The 6-minute open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvMinute5">
+            <summary>The 5-minute open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvMinute4">
+            <summary>The 4-minute open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvMinute3">
+            <summary>The 3-minute open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvMinute2">
+            <summary>The 2-minute open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvMinute1">
+            <summary>The 1-minute open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvSecond30">
+            <summary>The 30-second open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvSecond20">
+            <summary>The 20-second open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvSecond15">
+            <summary>The 15-second open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvSecond12">
+            <summary>The 12-second open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvSecond10">
+            <summary>The 10-second open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvSecond6">
+            <summary>The 6-second open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvSecond5">
+            <summary>The 5-second open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvSecond4">
+            <summary>The 4-second open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvSecond3">
+            <summary>The 3-second open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvSecond2">
+            <summary>The 2-second open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvSecond1">
+            <summary>The 1-second open/high/low/close/volume.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.OhlcvAperiodic">
+            <summary>The open/high/low/close/volume without any specific time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.QuotePriceOnlyAperiodic">
+            <summary>The ask/bid price (no size) quote.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.QuoteAperiodic">
+            <summary>The ask/bid price/size quote.</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.TradePriceOnlyAperiodic">
+            <summary>The trade price (no volume).</summary>
+        </member>
+        <member name="F:Mbh5.DataKind.TradeAperiodic">
+            <summary>The trade price/volume.</summary>
+        </member>
+        <member name="T:Mbh5.DataTimeFrame">
+            <summary>
+The data time frame enumeration.
+</summary>
+        </member>
+        <member name="F:Mbh5.DataTimeFrame.Year1">
+            <summary>The 1-year time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataTimeFrame.Month6">
+            <summary>The 6-month time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataTimeFrame.Month4">
+            <summary>The 4-month time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataTimeFrame.Month3">
+            <summary>The 3-month time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataTimeFrame.Month2">
+            <summary>The 2-month time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataTimeFrame.Month1">
+            <summary>The 1-month time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataTimeFrame.Week3">
+            <summary>The 3-week time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataTimeFrame.Week2">
+            <summary>The 2-week time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataTimeFrame.Week1">
+            <summary>The 1-week time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataTimeFrame.Day1">
+            <summary>The 1-day time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataTimeFrame.Hour12">
+            <summary>The 12-hour time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataTimeFrame.Hour8">
+            <summary>The 8-hour time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataTimeFrame.Hour6">
+            <summary>The 6-hour time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataTimeFrame.Hour4">
+            <summary>The 4-hour time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataTimeFrame.Hour3">
+            <summary>The 3-hour time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataTimeFrame.Hour2">
+            <summary>The 2-hour time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataTimeFrame.Hour1">
+            <summary>The 1-hour time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataTimeFrame.Minute30">
+            <summary>The 30-minute time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataTimeFrame.Minute20">
+            <summary>The 20-minute time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataTimeFrame.Minute15">
+            <summary>The 15-minute time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataTimeFrame.Minute12">
+            <summary>The 12-minute time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataTimeFrame.Minute10">
+            <summary>The 10-minute time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataTimeFrame.Minute6">
+            <summary>The 6-minute time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataTimeFrame.Minute5">
+            <summary>The 5-minute time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataTimeFrame.Minute4">
+            <summary>The 4-minute time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataTimeFrame.Minute3">
+            <summary>The 3-minute time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataTimeFrame.Minute2">
+            <summary>The 2-minute time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataTimeFrame.Minute1">
+            <summary>The 1-minute time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataTimeFrame.Second30">
+            <summary>The 30-second time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataTimeFrame.Second20">
+            <summary>The 20-second time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataTimeFrame.Second15">
+            <summary>The 15-second time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataTimeFrame.Second12">
+            <summary>The 12-second time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataTimeFrame.Second10">
+            <summary>The 10-second time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataTimeFrame.Second6">
+            <summary>The 6-second time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataTimeFrame.Second5">
+            <summary>The 5-second time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataTimeFrame.Second4">
+            <summary>The 4-second time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataTimeFrame.Second3">
+            <summary>The 3-second time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataTimeFrame.Second2">
+            <summary>The 2-second time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataTimeFrame.Second1">
+            <summary>The 1-second time frame.</summary>
+        </member>
+        <member name="F:Mbh5.DataTimeFrame.Aperiodic">
+            <summary>Without any specific time frame.</summary>
+        </member>
+        <member name="T:Mbh5.QuoteKind">
+            <summary>
+The quote kind enumeration.
+</summary>
+        </member>
+        <member name="F:Mbh5.QuoteKind.Default">
+            <summary>Has no specific meaning.</summary>
+        </member>
+        <member name="T:Mbh5.TradeKind">
+            <summary>
+The trade kind enumeration.
+</summary>
+        </member>
+        <member name="F:Mbh5.TradeKind.Default">
+            <summary>Has no specific meaning.</summary>
+        </member>
+        <member name="T:Mbh5.ScalarKind">
+            <summary>
+The scalar kind enumeration.
+</summary>
+        </member>
+        <member name="F:Mbh5.ScalarKind.Default">
+            <summary>Has no specific meaning.</summary>
+        </member>
+        <member name="T:Mbh5.OhlcvKind">
+            <summary>
+The ohlcv kind enumeration.
+</summary>
+        </member>
+        <member name="F:Mbh5.OhlcvKind.Bid">
+            <summary>Bid price(/size) ohlc(v).</summary>
+        </member>
+        <member name="F:Mbh5.OhlcvKind.Ask">
+            <summary>Ask price(/size) ohlc(v).</summary>
+        </member>
+        <member name="F:Mbh5.OhlcvKind.Default">
+            <summary>Has no specific meaning.</summary>
+        </member>
+        <member name="T:Mbh5.DataType">
+            <summary>
+The data type enumeration.
+</summary>
+        </member>
+        <member name="F:Mbh5.DataType.OhlcvAdjustedPriceOnly">
+            <summary>The adjusted ohlcv without volume (time, opening price, highest price, lowest price, closing price).</summary>
+        </member>
+        <member name="F:Mbh5.DataType.OhlcvAdjusted">
+            <summary>The adjusted ohlcv (time, opening price, highest price, lowest price, closing price, volume).</summary>
+        </member>
+        <member name="F:Mbh5.DataType.Scalar">
+            <summary>The scalar (time, value).</summary>
+        </member>
+        <member name="F:Mbh5.DataType.OhlcvPriceOnly">
+            <summary>The ohlcv without volume (time, opening price, highest price, lowest price, closing price).</summary>
+        </member>
+        <member name="F:Mbh5.DataType.Ohlcv">
+            <summary>The ohlcv (time, opening price, highest price, lowest price, closing price, volume).</summary>
+        </member>
+        <member name="F:Mbh5.DataType.QuotePriceOnly">
+            <summary>The quote without size (time, ask price, bid price).</summary>
+        </member>
+        <member name="F:Mbh5.DataType.Quote">
+            <summary>The quote (time, ask price, ask size, bid price, bid size).</summary>
+        </member>
+        <member name="F:Mbh5.DataType.TradePriceOnly">
+            <summary>The trade without volume (time, price).</summary>
+        </member>
+        <member name="F:Mbh5.DataType.Trade">
+            <summary>The trade (time, price, volume).</summary>
+        </member>
+        <member name="T:Mbh5.FileDriver">
+            <summary>
+The file driver enumeration.
+</summary>
+        </member>
+        <member name="F:Mbh5.FileDriver.Log">
+            <summary>The logging driver. Logs the file access information and statistics to the [filename].fapl_log file.</summary>
+        </member>
+        <member name="F:Mbh5.FileDriver.Core">
+            <summary>File contents are stored only in memory until the file is closed and is written to disk.</summary>
+        </member>
+        <member name="F:Mbh5.FileDriver.StdIo">
+            <summary>The standard I/O driver.</summary>
+        </member>
+        <member name="F:Mbh5.FileDriver.Sec2">
+            <summary>The default Section 2 POSIX driver.</summary>
+        </member>
+        <member name="T:Mbh5.DuplicateTimeTicks">
+            <summary>
+The duplicate time tick policy enumeration.
+</summary>
+        </member>
+        <member name="F:Mbh5.DuplicateTimeTicks.Update">
+            <summary>Update the sample.</summary>
+        </member>
+        <member name="F:Mbh5.DuplicateTimeTicks.Skip">
+            <summary>Drop the sample.</summary>
+        </member>
+        <member name="F:Mbh5.DuplicateTimeTicks.Fail">
+            <summary>Fail the execution.</summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+<xs:element name="securities" type="securitiesType">
+	<xs:annotation>
+		<xs:documentation>A root element containing securities.</xs:documentation>
+	</xs:annotation>
+</xs:element>
+
+<xs:complexType name="securitiesType" mixed="true">
+	<xs:sequence>
+		<xs:element name="security" type="securityType" minOccurs="1" maxOccurs="unbounded">
+    		<xs:annotation>
+				<xs:documentation>A security.</xs:documentation>
+			</xs:annotation>
+		</xs:element>
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="securityType" mixed="true">
+	<xs:sequence>
+		<xs:choice>
+			<xs:element name="endofday" type="endofdayType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A collection of end-of-day quotes.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="intraday" type="intradayType" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>A collection of intra-day ticks.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:choice>
+	</xs:sequence>
+	<xs:attribute name="currency" type="currencyType" use="optional">
+		<xs:annotation>
+			<xs:documentation>Currency.</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="isin" type="xs:string" use="required">
+		<xs:annotation>
+			<xs:documentation>ISIN.</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="mep" type="mepType" use="required">
+		<xs:annotation>
+			<xs:documentation>A market entry place.</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="name" type="xs:string" use="required">
+		<xs:annotation>
+			<xs:documentation>Security name.</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="symbol" type="xs:string" use="required">
+		<xs:annotation>
+			<xs:documentation>Security symbol.</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="type" type="typeType" use="optional">
+		<xs:annotation>
+			<xs:documentation>Security type.</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+</xs:complexType>
+
+<xs:complexType name="endofdayType" mixed="true">
+	<xs:sequence>
+		<xs:element name="q" type="endofdayQuoteType" minOccurs="0" maxOccurs="unbounded">
+    		<xs:annotation>
+				<xs:documentation>An end-of-day quote.</xs:documentation>
+			</xs:annotation>
+		</xs:element>
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="endofdayQuoteType">
+	<xs:attribute name="o" type="priceType" use="required">
+		<xs:annotation>
+			<xs:documentation>Opening price.</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="h" type="priceType" use="required">
+		<xs:annotation>
+			<xs:documentation>Highest price.</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="l" type="priceType" use="required">
+		<xs:annotation>
+			<xs:documentation>Lowest price.</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="c" type="priceType" use="required">
+		<xs:annotation>
+			<xs:documentation>Closing price.</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="v" type="volumeType" use="required">
+		<xs:annotation>
+			<xs:documentation>Volume.</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="d" type="dateType" use="required">
+		<xs:annotation>
+			<xs:documentation>Date in yyyyMMdd format.</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="j" type="jdnType" use="required">
+		<xs:annotation>
+			<xs:documentation>Julian day number.</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+</xs:complexType>
+
+<xs:complexType name="intradayType" mixed="true">
+	<xs:sequence>
+		<xs:element name="q" type="intradayQuoteType" minOccurs="0" maxOccurs="unbounded">
+    		<xs:annotation>
+				<xs:documentation>A collection of daily intra-day quotes.</xs:documentation>
+			</xs:annotation>
+		</xs:element>
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="intradayQuoteType">
+	<xs:sequence>
+		<xs:element name="tick" type="intradayTickType" minOccurs="0" maxOccurs="unbounded">
+    		<xs:annotation>
+				<xs:documentation>A collection of intra-day ticks.</xs:documentation>
+			</xs:annotation>
+		</xs:element>
+	</xs:sequence>
+	<xs:attribute name="d" type="dateType" use="required">
+		<xs:annotation>
+			<xs:documentation>Date in yyyyMMdd format.</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="j" type="jdnType" use="required">
+		<xs:annotation>
+			<xs:documentation>Julian date number.</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+</xs:complexType>
+
+<xs:complexType name="intradayTickType">
+	<xs:attribute name="s" type="secondsType" use="required">
+		<xs:annotation>
+			<xs:documentation>The number of seconds since midnight.</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="t" type="timeType" use="required">
+		<xs:annotation>
+			<xs:documentation>The time.</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="p" type="priceType" use="required">
+		<xs:annotation>
+			<xs:documentation>The price.</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+	<xs:attribute name="v" type="volumeType" use="required">
+		<xs:annotation>
+			<xs:documentation>The volume.</xs:documentation>
+		</xs:annotation>
+	</xs:attribute>
+</xs:complexType>
+
+<xs:simpleType name="priceType">
+ 	<xs:restriction base="xs:decimal">
+		<xs:minInclusive value="0"/>
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="volumeType">
+ 	<xs:restriction base="xs:unsignedLong"/>
+</xs:simpleType>
+
+<xs:simpleType name="jdnType">
+ 	<xs:restriction base="xs:positiveInteger"/>
+</xs:simpleType>
+
+<xs:simpleType name="dateType">
+ 	<xs:restriction base="xs:string">
+		<xs:pattern value="(19|20)\d\d(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])"/>
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="timeType">
+ 	<xs:restriction base="xs:time"/>
+</xs:simpleType>
+
+<xs:simpleType name="secondsType">
+ 	<xs:restriction base="xs:positiveInteger">
+		<xs:maxInclusive value="86399"/>
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="currencyType">
+	<xs:restriction base="xs:string">
+		<xs:enumeration value="EUR">
+			<xs:annotation>
+				<xs:documentation>Euro.</xs:documentation>
+			</xs:annotation>
+		</xs:enumeration>
+		<xs:enumeration value="USD">
+			<xs:annotation>
+				<xs:documentation>US dollar.</xs:documentation>
+			</xs:annotation>
+		</xs:enumeration>
+		<xs:enumeration value="GBP">
+			<xs:annotation>
+				<xs:documentation>British pound.</xs:documentation>
+			</xs:annotation>
+		</xs:enumeration>
+		<xs:enumeration value="?">
+			<xs:annotation>
+				<xs:documentation>Unknown or not applicable.</xs:documentation>
+			</xs:annotation>
+		</xs:enumeration>
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="mepType">
+	<xs:restriction base="xs:string">
+		<xs:enumeration value="AMS">
+			<xs:annotation>
+				<xs:documentation>Amsterdam.</xs:documentation>
+			</xs:annotation>
+		</xs:enumeration>
+		<xs:enumeration value="PAR">
+			<xs:annotation>
+				<xs:documentation>Paris.</xs:documentation>
+			</xs:annotation>
+		</xs:enumeration>
+		<xs:enumeration value="BRU">
+			<xs:annotation>
+				<xs:documentation>Brussels.</xs:documentation>
+			</xs:annotation>
+		</xs:enumeration>
+		<xs:enumeration value="LIS">
+			<xs:annotation>
+				<xs:documentation>Lissabon.</xs:documentation>
+			</xs:annotation>
+		</xs:enumeration>
+		<xs:enumeration value="OTH">
+			<xs:annotation>
+				<xs:documentation>Other or not applicable.</xs:documentation>
+			</xs:annotation>
+		</xs:enumeration>
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="typeType">
+	<xs:restriction base="xs:string">
+		<xs:enumeration value="stock">
+			<xs:annotation>
+				<xs:documentation>Stock.</xs:documentation>
+			</xs:annotation>
+		</xs:enumeration>
+		<xs:enumeration value="etf">
+			<xs:annotation>
+				<xs:documentation>ETF.</xs:documentation>
+			</xs:annotation>
+		</xs:enumeration>
+		<xs:enumeration value="inav">
+			<xs:annotation>
+				<xs:documentation>ETF INAV.</xs:documentation>
+			</xs:annotation>
+		</xs:enumeration>
+		<xs:enumeration value="index">
+			<xs:annotation>
+				<xs:documentation>Index.</xs:documentation>
+			</xs:annotation>
+		</xs:enumeration>
+		<xs:enumeration value="fund">
+			<xs:annotation>
+				<xs:documentation>Fund.</xs:documentation>
+			</xs:annotation>
+		</xs:enumeration>
+		<xs:enumeration value="currency">
+			<xs:annotation>
+				<xs:documentation>Currency rate.</xs:documentation>
+			</xs:annotation>
+		</xs:enumeration>
+	</xs:restriction>
+</xs:simpleType>
+
+</xs:schema>

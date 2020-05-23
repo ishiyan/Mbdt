@@ -1,0 +1,45 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="mbdt.NyseUpdate.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DownloadTimeoutMilliseconds" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">180000</Value>
+    </Setting>
+    <Setting Name="DownloadOverwriteExisting" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="DownloadRetries" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">6</Value>
+    </Setting>
+    <Setting Name="DownloadLastDate" Type="System.DateTime" Scope="Application">
+      <Value Profile="(Default)">1899-01-01</Value>
+    </Setting>
+    <Setting Name="UserAgent" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Mozilla/5.0 (Windows NT 6.1; WOW64; rv:43.0) Gecko/20100101 Firefox/43.0</Value>
+    </Setting>
+    <Setting Name="DownloadLookabckDaysDay" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+    <Setting Name="DownloadLookbackDaysMinute" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+    <Setting Name="SessionId" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">F1C7536DA11880FDA46F9C1FEF61C571</Value>
+    </Setting>
+    <Setting Name="DownloadDir" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">downloads\nyse</Value>
+    </Setting>
+    <Setting Name="RepositoryPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">repository\nyse</Value>
+    </Setting>
+    <Setting Name="ImportDownloadedData" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="CorkTheCache" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Symbols" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">30.10.,!DJI,DJI.h5,/XNYS_DJI_US2605661048/,hasvolume;30.10.,!DJITR,DJITR.h5,/XNYS_DJITR_US2605661048/,novolume;33.10.,!SPX,SPX.h5,/XNYS_SPX_US78378X1072/,hasvolume;41.10.,DMT,DMT.h5,/XNYS_DMT_XC0009694214/,novolume</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

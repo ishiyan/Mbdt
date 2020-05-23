@@ -1,0 +1,132 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.IO;
+using System.Xml.Linq;
+using System.Xml.XPath;
+using mbdt.Euronext;
+
+namespace mbdt.EuronextDiscover
+{
+    /// <summary>
+    /// Euronext discover utilities.
+    /// </summary>
+    internal static class EuronextDiscover
+    {
+        #region BackupXmlFile
+        private static void BackupXmlFile(string filePath, DateTime dateTime)
+        {
+            string suffix = dateTime.ToString("yyyyMMdd_HHmmss");
+            string filePathBackup = string.Concat(filePath, ".", suffix, ".xml");
+            File.Copy(filePath, filePathBackup);
+        }
+        #endregion
+
+        #region UpdateTask
+        /// <summary>
+        /// Performs an update task.
+        /// </summary>
+        /// <param name="downloadPath">The directory to download to.</param>
+        internal static void UpdateTask(string downloadPath)
+        {
+            EuronextActualInstruments.DownloadOverwriteExisting = Properties.Settings.Default.DownloadOverwriteExisting;
+            EuronextActualInstruments.DownloadRetries = Properties.Settings.Default.DownloadRetries;
+            EuronextActualInstruments.DownloadTimeout = Properties.Settings.Default.DownloadTimeout;
+
+            DateTime dateTime = DateTime.Now;
+            Dictionary<string, EuronextActualInstruments.InstrumentInfo> actualInstrumentsDictionary =
+                EuronextActualInstruments.Fetch(downloadPath);
+
+            foreach (var v in EuronextActualInstruments.UnknownMicDictionary)
+            {
+                Trace.TraceError("Unknown MIC: {0}", v.Key);
+                foreach (var isinInfo in actualInstrumentsDictionary)
+                {
+                    if (isinInfo.Value.Mic == v.Key)
+                        Trace.TraceError("------------ {0}, {1}", isinInfo.Key, isinInfo.Value.Type);
+                }
+            }
+
+            BackupXmlFile(Properties.Settings.Default.MainEuronextIndexPath, dateTime);
+            BackupXmlFile(Properties.Settings.Default.OtherEuronextIndexPath, dateTime);
+
+            XDocument xdocMain = XDocument.Load(Properties.Settings.Default.MainEuronextIndexPath
+                /* , LoadOptions.PreserveWhitespace | LoadOptions.SetLineInfo */);
+            List<XElement> xelistMain = xdocMain.XPathSelectElements("/instruments/instrument").ToList();
+
+            XDocument xdocOther = XDocument.Load(Properties.Settings.Default.OtherEuronextIndexPath
+                /*, LoadOptions.PreserveWhitespace | LoadOptions.SetLineInfo*/);
+            List<XElement> xelistOther = xdocOther.XPathSelectElements("/instruments/instrument").ToList();
+
+            xdocMain.XPathSelectElement("/instruments").Add(new XComment(dateTime.ToString(" yyyyMMdd_HHmmss ")));
+            xdocOther.XPathSelectElement("/instruments").Add(new XComment(dateTime.ToString(" yyyyMMdd_HHmmss ")));
+
+            string[] micListMain = Properties.Settings.Default.MainEuronextMics.Split(';');
+            foreach (var kvp in actualInstrumentsDictionary)
+            {
+                var ii = kvp.Value;
+                List<XElement> matchListMain = xelistMain.FindAll(xel => xel.MatchesIsinMicSymbol(ii));
+                ii.IsApproved = matchListMain.Count > 0;
+                if (matchListMain.Count > 1)
+                {
+                    Trace.TraceError("Approved: {0} duplicate matches for \"{1}\":", matchListMain.Count, ii.Key);
+                    int i = 0;
+                    foreach (var xElement in matchListMain)
+                    {
+                        Trace.TraceError("{0}: element [{1}]", ++i, xElement.ToString(SaveOptions.None));
+                    }
+                }
+                List<XElement> matchListOther = xelistOther.FindAll(xel => xel.MatchesIsinMicSymbol(ii));
+                ii.IsDiscovered = matchListOther.Count > 0;
+                if (matchListOther.Count > 1)
+                {
+                    Trace.TraceError("Discovered: {0} duplicate matches for \"{1}\":", matchListOther.Count, ii.Key);
+                    int i = 0;
+                    foreach (var xElement in matchListOther)
+                    {
+                        Trace.TraceError("{0}: element [{1}]", ++i, xElement.ToString(SaveOptions.None));
+                    }
+                }
+                if (!ii.IsApproved && !ii.IsDiscovered)
+                {
+                    Trace.TraceInformation("Discovered {0}: \"{1}\":", ii.Type, ii.Key);
+                    XElement xel = micListMain.Contains(ii.Mic) ? xdocMain.XPathSelectElement("/instruments") : xdocOther.XPathSelectElement("/instruments");
+                    XElement xelNew = ii.NewInstrumentElement(true);
+                    switch (ii.Type)
+                    {
+                        case EuronextInstrumentXml.Index:
+                            xelNew.EnrichIndexElement();
+                            break;
+                        case EuronextInstrumentXml.Stock:
+                            xelNew.EnrichStockElement();
+                            break;
+                        case EuronextInstrumentXml.Etv:
+                            xelNew.EnrichEtvElement();
+                            break;
+                        case EuronextInstrumentXml.Etf:
+                            xelNew.EnrichEtfElement();
+                            XElement xelInav = xelNew.InavElementFromEtf();
+                            if (null != xelInav)
+                            {
+                                xelInav.EnrichInavElement();
+                                if (xel != null) xel.Add(xelInav);
+                            }
+                            break;
+                        case EuronextInstrumentXml.Fund:
+                            xelNew.EnrichFundElement();
+                            break;
+                        default:
+                            xelNew.EnrichSearchInstrument();
+                            break;
+                    }
+
+                    if (xel != null) xel.Add(xelNew);
+                }
+            }
+            xdocMain.Save(Properties.Settings.Default.MainEuronextIndexPath, SaveOptions.None);
+            xdocOther.Save(Properties.Settings.Default.OtherEuronextIndexPath, SaveOptions.None);
+        }
+        #endregion
+    }
+}

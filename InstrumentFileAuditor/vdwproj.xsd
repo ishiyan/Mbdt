@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:documentation>Bla-bla</xs:documentation>
+  </xs:annotation>
+  <xs:element name="dataset" type="datasetType" />
+  <xs:complexType name="datasetType">
+    <xs:sequence>
+      <xs:element name="resource" type="resourceType" />
+      <xs:element name="data" type="dataType" />
+      <xs:element name="index" type="indexType" />
+      <xs:element name="searcher" type="searcherType" />
+    </xs:sequence>
+    <xs:attribute name="moniker" type="xs:normalizedString" use="required" />
+    <xs:attribute name="description" type="xs:normalizedString" use="required" />
+    <xs:attribute name="filename" type="xs:normalizedString" use="required" />
+    <xs:attribute name="password" type="xs:normalizedString" use="required" />
+    <xs:attribute name="versionMajor" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="versionMinor" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="versionBuild" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="bigEndian" type="xs:boolean" use="required" />
+    <xs:attribute name="signature" type="xs:normalizedString" use="required" />
+    <xs:attribute name="detailedProgress" type="xs:boolean" use="optional" />
+    <xs:attribute name="deleteTemporaryFiles" type="xs:boolean" use="optional" />
+    <xs:attribute name="deleteGeneratedFiles" type="xs:boolean" use="optional" />
+    <xs:attribute name="rebuildGeneratedFiles" type="xs:boolean" use="optional" />
+    <xs:attribute name="encoding" use="optional">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="utf8" />
+          <xs:enumeration value="utf16" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="resourceType">
+    <xs:sequence minOccurs="0">
+      <xs:choice>
+        <xs:element name="chunk" type="chunkResourceType" />
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="chunkResourceType">
+    <xs:sequence>
+      <xs:element name="file" type="resourceFileType" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="sequenceNumber" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="chunkType" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="rawResource" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="detailedProgress" type="xs:boolean" use="optional" />
+    <xs:attribute name="deleteTemporaryFiles" type="xs:boolean" use="optional" />
+    <xs:attribute name="encoding" use="optional">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="utf8" />
+          <xs:enumeration value="utf16" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="resourceFileType">
+    <xs:attribute name="name" type="xs:normalizedString" use="required" />
+    <xs:attribute name="path" type="xs:normalizedString" use="required" />
+    <xs:attribute name="byteSwappingGranularity" use="optional">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="byte" />
+          <xs:enumeration value="word" />
+          <xs:enumeration value="dword" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="dataType">
+    <xs:sequence minOccurs="0" maxOccurs="unbounded">
+      <xs:choice>
+        <xs:element name="chunk" type="chunkDataType" />
+        <xs:element name="bundle" type="bundleDataType" />
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bundleDataType">
+    <xs:sequence>
+      <xs:element name="chunk" type="bundleItemType" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="sequenceNumber" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="moniker" type="xs:normalizedString" use="required" />
+    <xs:attribute name="description" type="xs:normalizedString" use="required" />
+    <xs:attribute name="encoding" use="optional">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="utf8" />
+          <xs:enumeration value="utf16" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="bundleItemType">
+    <xs:attribute name="sequenceNumber" type="xs:unsignedLong" use="required" />
+  </xs:complexType>
+  <xs:complexType name="chunkDataType">
+    <xs:sequence>
+      <xs:element name="sourceXml" type="inputChoiceType" minOccurs="0" />
+      <xs:element name="sourcexs" type="inputChoiceType" minOccurs="0" />
+      <xs:element name="itemSelectionXPath" type="inputChoiceType" minOccurs="0" />
+      <xs:element name="itemSelectionxs" type="inputChoiceType" minOccurs="0" />
+      <xs:element name="itemTransformXsl" type="inputChoiceType" minOccurs="0" />
+      <xs:element name="itemTransformxs" type="inputChoiceType" minOccurs="0" />
+      <xs:element name="header" type="inputChoiceType" minOccurs="0" />
+      <xs:element name="headerHead" type="inputChoiceType" minOccurs="0" />
+      <xs:element name="headerScript" type="inputChoiceType" minOccurs="0" />
+      <xs:element name="headerStyle" type="inputChoiceType" minOccurs="0" />
+      <xs:element name="headerTail" type="inputChoiceType" minOccurs="0" />
+      <xs:element name="delimiter" type="inputChoiceType" minOccurs="0" />
+      <xs:element name="footer" type="inputChoiceType" minOccurs="0" />
+      <xs:element name="transform" type="inputChoiceType" minOccurs="0" />
+      <xs:element name="schema" type="inputChoiceType" minOccurs="0" />
+    </xs:sequence>
+    <xs:attribute name="sequenceNumber" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="moniker" type="xs:normalizedString" use="required" />
+    <xs:attribute name="description" type="xs:normalizedString" use="required" />
+    <xs:attribute name="contentType" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="xml" />
+          <xs:enumeration value="html" />
+          <xs:enumeration value="text" />
+          <xs:enumeration value="rtf" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="chunkType" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="blockZipTextData" />
+          <xs:enumeration value="blockPpmdTextData" />
+          <xs:enumeration value="blockPpmsTextData" />
+          <xs:enumeration value="xsltTextData" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="blockByteLimit" type="xs:unsignedLong" use="optional" />
+    <xs:attribute name="sourceChunkSequenceNumber" type="xs:unsignedLong" use="optional" />
+    <xs:attribute name="convertResourceNameToId" type="xs:boolean" use="optional" />
+    <xs:attribute name="detailedProgress" type="xs:boolean" use="optional" />
+    <xs:attribute name="deleteTemporaryFiles" type="xs:boolean" use="optional" />
+    <xs:attribute name="encoding" use="optional">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="utf8" />
+          <xs:enumeration value="utf16" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="inputChoiceType" mixed="true">
+    <xs:attribute name="source" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="file" />
+          <xs:enumeration value="data" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="inputChoiceTypeDelimited" mixed="true">
+    <xs:attribute name="delimiterCharacter" type="xs:normalizedString" use="required" />
+    <xs:attribute name="source" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="file" />
+          <xs:enumeration value="data" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="inputChoiceTypeDelimitedCommented" mixed="true">
+    <xs:attribute name="commentCharacter" type="xs:normalizedString" use="required" />
+    <xs:attribute name="delimiterCharacter" type="xs:normalizedString" use="required" />
+    <xs:attribute name="source" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="file" />
+          <xs:enumeration value="data" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="xsltParameterType">
+    <xs:attribute name="name" type="xs:normalizedString" use="required" />
+    <xs:attribute name="value" type="xs:normalizedString" use="required" />
+  </xs:complexType>
+  <xs:complexType name="outputFileType">
+    <xs:attribute name="delete" type="xs:boolean" use="optional" />
+    <xs:attribute name="rebuild" type="xs:boolean" use="optional" />
+  </xs:complexType>
+  <xs:complexType name="outputFileTypeDelimitedCommented">
+    <xs:attribute name="delete" type="xs:boolean" use="optional" />
+    <xs:attribute name="rebuild" type="xs:boolean" use="optional" />
+    <xs:attribute name="commentCharacter" type="xs:normalizedString" use="required" />
+    <xs:attribute name="delimiterCharacter" type="xs:normalizedString" use="required" />
+  </xs:complexType>
+  <xs:complexType name="indexSourceTypeDelimitedTextInput">
+    <xs:sequence minOccurs="1" maxOccurs="1">
+      <xs:element name="input" type="inputChoiceTypeDelimitedCommented" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="indexSourceTypeDelimitedTextTransform">
+    <xs:sequence minOccurs="1" maxOccurs="1">
+      <xs:element name="input" type="inputChoiceType" minOccurs="1" maxOccurs="1" />
+      <xs:element name="inputSchema" type="inputChoiceType" minOccurs="0" maxOccurs="1" />
+      <xs:element name="xslt" type="inputChoiceType" minOccurs="1" maxOccurs="1" />
+      <xs:element name="xsltParameter" type="xsltParameterType" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="outputFile" type="outputFileTypeDelimitedCommented" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="indexSourceTypeXmlInput">
+    <xs:sequence minOccurs="1" maxOccurs="1">
+      <xs:element name="input" type="inputChoiceType" minOccurs="1" maxOccurs="1" />
+      <xs:element name="inputSchema" type="inputChoiceType" minOccurs="0" maxOccurs="1" />
+      <xs:element name="headwordSelectionXPath" type="inputChoiceType" minOccurs="1" maxOccurs="1" />
+      <xs:element name="articleNumberSelectionXPath" type="inputChoiceType" minOccurs="0" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="indexSourceTypeXmlTransform">
+    <xs:sequence minOccurs="1" maxOccurs="1">
+      <xs:element name="input" type="inputChoiceType" minOccurs="1" maxOccurs="1" />
+      <xs:element name="inputSchema" type="inputChoiceType" minOccurs="0" maxOccurs="1" />
+      <xs:element name="xslt" type="inputChoiceType" minOccurs="1" maxOccurs="1" />
+      <xs:element name="xsltParameter" type="xsltParameterType" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="outputFile" type="outputFileType" minOccurs="1" maxOccurs="1" />
+      <xs:element name="outputSchema" type="inputChoiceType" minOccurs="0" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="indexType">
+    <xs:sequence minOccurs="0" maxOccurs="unbounded">
+      <xs:choice>
+        <xs:element name="chunk" type="chunkIndexType" />
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="indexReplaceCharactersType">
+    <xs:sequence minOccurs="0" maxOccurs="1">
+      <xs:element name="what" type="inputChoiceType" minOccurs="1" maxOccurs="1" />
+      <xs:element name="with" type="inputChoiceType" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="indexHeadwordPreprocessorType">
+    <xs:sequence minOccurs="0" maxOccurs="1">
+      <xs:element name="splitCharacters" type="inputChoiceType" minOccurs="0" maxOccurs="1" />
+      <xs:element name="replaceCharacters" type="indexReplaceCharactersType" minOccurs="0" maxOccurs="1" />
+      <xs:element name="deleteCharacters" type="inputChoiceType" minOccurs="0" maxOccurs="1" />
+      <xs:element name="trimCharacters" type="inputChoiceType" minOccurs="0" maxOccurs="1" />
+      <xs:element name="stopWords" type="inputChoiceTypeDelimited" minOccurs="0" maxOccurs="1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="chunkIndexType">
+    <xs:sequence minOccurs="1" maxOccurs="1">
+      <xs:choice>
+        <xs:element name="sourceDelimitedTextInput" type="indexSourceTypeDelimitedTextInput" minOccurs="1" maxOccurs="unbounded" />
+        <xs:element name="sourceDelimitedTextTransform" type="indexSourceTypeDelimitedTextTransform" minOccurs="1" maxOccurs="unbounded" />
+        <xs:element name="sourceXmlInput" type="indexSourceTypeXmlInput" minOccurs="1" maxOccurs="unbounded" />
+        <xs:element name="sourceXmlTransform" type="indexSourceTypeXmlTransform" minOccurs="1" maxOccurs="unbounded" />
+      </xs:choice>
+      <xs:element name="headwordSrdtwProcessor" type="indexHeadwordPreprocessorType" minOccurs="0" maxOccurs="1" />
+    </xs:sequence>
+    <xs:attribute name="sequenceNumber" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="moniker" type="xs:normalizedString" use="required" />
+    <xs:attribute name="description" type="xs:normalizedString" use="required" />
+    <xs:attribute name="chunkType" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="prefixArrayLinearUtf16Collator" />
+          <xs:enumeration value="prefixArrayLinearUtf16NlLevel0FilterCollator" />
+          <xs:enumeration value="prefixArrayLinearUtf8Collator" />
+          <xs:enumeration value="prefixArrayLinearUtf8NlLevel0FilterCollator" />
+          <xs:enumeration value="prefixArrayDucetUtf16Collator" />
+          <xs:enumeration value="prefixArrayDucetUtf8Collator" />
+          <xs:enumeration value="prefixArrayVandaleUtf16Collator" />
+          <xs:enumeration value="prefixArrayVandaleUtf8Collator" />
+          <xs:enumeration value="suffixArrayLinearUtf16Collator" />
+          <xs:enumeration value="suffixArrayLinearUtf16NlLevel0FilterCollator" />
+          <xs:enumeration value="suffixArrayLinearUtf8Collator" />
+          <xs:enumeration value="suffixArrayLinearUtf8NlLevel0FilterCollator" />
+          <xs:enumeration value="suffixArrayDucetUtf16Collator" />
+          <xs:enumeration value="suffixArrayDucetUtf8Collator" />
+          <xs:enumeration value="suffixArrayVandaleUtf16Collator" />
+          <xs:enumeration value="suffixArrayVandaleUtf8Collator" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="articleBundleSequenceNumber" type="xs:unsignedLong" use="optional" />
+    <xs:attribute name="cookieBundleSequenceNumber" type="xs:unsignedLong" use="optional" />
+    <xs:attribute name="detailedProgress" type="xs:boolean" use="optional" />
+    <xs:attribute name="deleteTemporaryFiles" type="xs:boolean" use="optional" />
+    <xs:attribute name="keepHeadwords" type="xs:boolean" use="optional" />
+    <xs:attribute name="filterDuplicates" type="xs:boolean" use="optional" />
+    <xs:attribute name="encoding" use="optional">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="utf8" />
+          <xs:enumeration value="utf16" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="normalizationForm" use="optional">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="nfc" />
+          <xs:enumeration value="nfd" />
+          <xs:enumeration value="nfkc" />
+          <xs:enumeration value="nfkd" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="searcherPropertyType">
+    <xs:attribute name="id" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="show" />
+          <xs:enumeration value="copyHtml" />
+          <xs:enumeration value="copyText" />
+          <xs:enumeration value="printHtml" />
+          <xs:enumeration value="printText" />
+          <xs:enumeration value="protectionOn" />
+          <xs:enumeration value="protectionOff" />
+          <xs:enumeration value="highlightPattern" />
+          <xs:enumeration value="highlightOff" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="searcherSourceIndexType">
+    <xs:attribute name="sequenceNumber" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="match" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="exact" />
+          <xs:enumeration value="prefix" />
+          <xs:enumeration value="infix" />
+          <xs:enumeration value="suffix" />
+          <xs:enumeration value="regex" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="presentation" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="absolutePositioning" />
+          <xs:enumeration value="oneHeadwordOneArticle" />
+          <xs:enumeration value="firstHeadwordAllArticles" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+  <xs:complexType name="searcherType">
+    <xs:sequence minOccurs="0" maxOccurs="unbounded">
+      <xs:choice>
+        <xs:element name="chunk" type="chunkSearcherType" />
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="chunkSearcherType">
+    <xs:sequence minOccurs="1" maxOccurs="1">
+      <xs:element name="property" type="searcherPropertyType" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="sourceIndex" type="searcherSourceIndexType" minOccurs="1" maxOccurs="1" />
+    </xs:sequence>
+    <xs:attribute name="sequenceNumber" type="xs:unsignedLong" use="required" />
+    <xs:attribute name="moniker" type="xs:normalizedString" use="required" />
+    <xs:attribute name="description" type="xs:normalizedString" use="required" />
+    <xs:attribute name="chunkType" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="indexSearcher" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="model" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="dynamicSet" />
+          <xs:enumeration value="staticPositioning" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="detailedProgress" type="xs:boolean" use="optional" />
+    <xs:attribute name="deleteTemporaryFiles" type="xs:boolean" use="optional" />
+    <xs:attribute name="encoding" use="optional">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="utf8" />
+          <xs:enumeration value="utf16" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+</xs:schema>

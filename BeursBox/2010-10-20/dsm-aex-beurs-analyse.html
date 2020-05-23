@@ -1,0 +1,847 @@
+<?xml version="1.0" encoding="iso-8859-1"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+ 
+
+<title>DSM aandeel AEX Beurs Grafiek Analyse</title>
+<meta name="description" content="DSM technische AEX euronext beurs analyse op japanse candles grafiek en indicatoren." />
+<meta name="keywords" content="dsm, analyse, aex, euronext, chemie, stoploss, stijging, aandelen, aandeel, cyclisch, stochastic, herstel, positie, koopsignaal" />
+
+<meta name="robots" content="index, follow" />
+<base href="http://www.beursbox.nl/" />
+	<link rel="shortcut icon" href="http://www.beursbox.nl/images/favicon.ico" />
+	
+
+<link rel="stylesheet" href="templates/crss_beursbox/css/template_css.css" type="text/css" />
+<link rel="stylesheet" href="templates/crss_beursbox/css/sfish.css" type="text/css" />
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-554144-31";
+urchinTracker();
+</script>
+
+<meta http-equiv="Content-Language" content="nl" /></head>
+
+<body class="bodies">
+<div id="wrapper" align="center" >
+	<div id="pagewrapper" style="width:940px; ">
+		<div id="topsect">
+			<div id="logo">
+				<a href="/"><img src="templates/crss_beursbox/images/logo.jpg" alt=" " /></a>
+			</div>
+			<div id="xtd_menu_wrapper">
+				<div id="xtd_menu">
+							<div class="moduletable">
+			<script type="text/javascript" language="JavaScript" src="http://www.beursbox.nl/templates/crss_beursbox/js/menu.js"></script>
+<div class="menu-son-of-suckerfish-horizontal">
+<ul id="menulist_root-son-of-suckerfish-horizontal"
+class="mainlevel-son-of-suckerfish-horizontal"
+><li><a href="http://www.beleggingstips.com/" target="_blank" class="mainlevel-son-of-suckerfish-horizontal">Aandelen Advies</a></li><li><a href="http://www.topaandelen.com" target="_blank" class="mainlevel-son-of-suckerfish-horizontal">Goedkope aandelen</a></li><li><a href="http://www.globalenergynewsletter.nl" target="_blank" class="mainlevel-son-of-suckerfish-horizontal">Trend aandelen</a></li><li><a href="http://forum.beursbox.nl/" target="_blank" class="mainlevel-son-of-suckerfish-horizontal">Beursbox Forum</a></li></ul>
+</div>		</div>
+						</div><div style="clear:both;"></div>
+			</div>
+	
+		</div><!-- end topsect -->
+		<div style="clear:both;"></div>
+
+
+
+		<div id="loginwrapper" >
+			<div id="tpath">
+							<span class="pathway">Voorpagina </span>				 
+			</div>
+			<!--[if IE 7]><div style="margin-top:-2px;"><![endif]-->
+			<!--[if IE 7]></div><![endif]-->
+			<div style="clear:both;"></div>
+		</div>
+
+		<img src="templates/crss_beursbox/images/spacer.gif" width="940" height="12" alt=" " />
+		
+		<div id="banner_wrp">
+			<div id="banner_inner" align="center">
+						<div class="moduletable">
+			<a href="/"><img border="0" alt="" src="images/stories/banner.jpg" /></a>		</div>
+					</div>
+			
+		
+					
+		<div id="bodywrapper">
+			<div id="bodywrapper_inner">
+								<div id="leftsection">
+							<div class="moduletable">
+			<style type="text/css">
+
+	#dropinboxv2cover{
+		width: 450px; 
+		height: 420px;
+		padding: 8px;  
+		position:absolute; 
+		z-index: 100;
+		overflow:hidden;
+		visibility: hidden;
+	}
+
+	#dropinboxv2{
+		color: #000000;
+		width: 440px; 
+		height: 410px; 
+		border-width:1px;
+		border-color:#CCCCCC;
+		border-style:solid;
+		background-color:#FFFFFF;
+		-moz-opacity:0.95;
+		position:absolute; 
+		left: 0;
+		top: 0;
+	}
+</style>
+
+
+<script>
+var dropboxleft=500 //set left position of box (in px)
+var dropboxtop=150 //set top position of box (in px)
+var dropspeed=15 //set speed of drop animation (larger=faster)
+var displaymode="oncepersession";
+
+if (parseInt(displaymode)!=NaN)
+var random_num=Math.floor(Math.random()*displaymode)
+var ie=document.all
+var dom=document.getElementById
+
+function initboxv2(){
+	if (!dom&&!ie)
+		return
+	crossboxcover=(dom)?document.getElementById("dropinboxv2cover") : document.all.dropinboxv2cover
+	crossbox=(dom)?document.getElementById("dropinboxv2"): document.all.dropinboxv2
+	scroll_top=(ie)? truebody().scrollTop : window.pageYOffset
+	crossbox.height=crossbox.offsetHeight
+	crossboxcover.style.height=parseInt(crossbox.height)+"px"
+	crossbox.style.top=crossbox.height*(-1)+"px"
+	crossboxcover.style.left=dropboxleft+"px"
+	crossboxcover.style.top=dropboxtop+"px"
+	crossboxcover.style.visibility=(dom||ie)? "visible" : "show"
+	setTimeout('dropstart=setInterval("dropinv2()",50)', 0) //setinterval = de snelheid van scrollen van de hoover en settimeout is de wachttijd voor de hoover verschijnd.
+}
+
+function dropinv2(){
+	scroll_top=(ie)? truebody().scrollTop : window.pageYOffset
+	if (parseInt(crossbox.style.top)<0){
+		crossboxcover.style.top=scroll_top+dropboxtop+"px"
+		crossbox.style.top=parseInt(crossbox.style.top)+dropspeed+"px"
+	}
+	else{
+		clearInterval(dropstart)
+		crossbox.style.top=0
+	}
+}
+
+function dismissboxv2(){
+	if (window.dropstart) clearInterval(dropstart)
+		crossboxcover.style.visibility="hidden"
+}
+
+function truebody(){
+	return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
+}
+
+function get_cookie(Name) {
+	var search = Name + "="
+	var returnvalue = ""
+	if (document.cookie.length > 0) {
+		offset = document.cookie.indexOf(search)
+		if (offset != -1) {
+			offset += search.length
+			end = document.cookie.indexOf(";", offset)
+			if (end == -1)
+				end = document.cookie.length;
+			returnvalue=unescape(document.cookie.substring(offset, end))
+		}
+	}
+	return returnvalue;
+}
+
+if (displaymode=="oncepersession" && get_cookie("droppedinv2")=="" || displaymode=="always" || parseInt(displaymode)!=NaN && random_num==0){
+	if (window.addEventListener)
+		window.addEventListener("load", initboxv2, false)
+	else if (window.attachEvent)
+		window.attachEvent("onload", initboxv2)
+	else if (document.getElementById || document.all)
+		window.onload=initboxv2
+	if (displaymode=="oncepersession")
+		document.cookie="droppedinv2=yes"
+}
+</script>
+<div id="dropinboxv2cover">
+	<div id="dropinboxv2">
+		<div align="right"><a href="#" onClick="dismissboxv2();return false"><font color="darkblue">[Sluiten]</font></a></div>
+		<div align="left">
+		
+		<table class="contentpaneopen">
+				<tr>
+			<td valign="top" colspan="2">
+				<font face="Arial" size="2">Schrijf nu in op onze gratis  Nieuwsbrief.</font>
+<div><font face="Arial" size="2">Als dank krijgt u het E-boek over Japanse Candles  gratis toegestuurd.<br />
+<br />
+</font>
+<div align="center"><font face="Arial" size="2"> <iframe frameborder="0" height="110" name="frame1" scrolling="no" src="http://www.beursbox.nl/inschrijvenbeursbox.html" width="430"></iframe></font><font face="Arial" size="2"><img hspace="5" height="220" border="0" width="156" alt="De beursbox nieuwsbrief" src="http://www.beursbox.nl/images/stories/beursbox-nieuwsbrief-front.jpg" /></font></div>
+</div>			</td>
+		</tr>
+				</table>
+
+		<span class="article_seperator">&nbsp;</span>
+
+		</div>
+	</div>
+</div>
+
+
+		</div>
+				<div class="moduletable">
+							<h3>
+					Beursbox Content				</h3>
+				
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr align="left"><td><a href="http://www.beursbox.nl/" class="mainlevel" >Voorpagina</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/beurs-analyses.html" class="mainlevel" >Beurs Analyses</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/beurs-artikelen.html" class="mainlevel" >Beurs Artikelen</a></td></tr>
+<tr align="left"><td><a href="http://forum.beursbox.nl" target="_blank" class="mainlevel" >Beursbox Forum</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/beurs-kennis-box.html" class="mainlevel" >Beurs Kennis Box</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/koersen.html" class="mainlevel" >Koersen</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/table/nieuws-update/" class="mainlevel" >Nieuws</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/update.html" class="mainlevel" >Aanmelding Nieuwsbrief</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/cgi-bin/mail.cgi/list/bbbh/" target="_blank" class="mainlevel" >Nieuwsbrief Archief tot 27 mei 2010</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/nieuwsbrief-archief-26-mei-2010.html" class="mainlevel" >Nieuwsbrief Archief > 27 mei 2010</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/financiele-diensten.html" class="mainlevel" >Financiele Diensten</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/elliott-wave-op-beursbox.nl.html" class="mainlevel" >Elliott Wave</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/japanse-candles.html" class="mainlevel" >Japanse Candles</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/speeders-citi.html" class="mainlevel" >Speeders Citi</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/links.html" class="mainlevel" >Links</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/disclaimer-en-privacy-policy.html" class="mainlevel" >Disclaimer / Privacy</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/spamfilter-aanpassen.html" class="mainlevel" >Spamfilter aanpassen</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/de-echte-beursbox.html" class="mainlevel" >usmarkets</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/leren-beleggen.html" class="mainlevel" >Leren beleggen</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/uitschrijven-beursbox-nieuwsbrief.html" class="mainlevel" >Uitschrijven nieuwsbrief</a></td></tr>
+</table>		</div>
+				<div class="moduletable">
+							<h3>
+					 Abonneer op Feeds				</h3>
+				<div align="center" class="dsmodule"><div align="center" class="dsmessage"></div><div align="center" class="dsfeed"><a href="index2.php?option=com_ds-syndicate&amp;version=1&amp;feed_id=1"><img src="http://www.beursbox.nl/components/com_ds-syndicate/buttons/rss20.gif" alt="feed image" /></a></div><div align="center" class="dsfeed"><a href="index2.php?option=com_ds-syndicate&amp;version=1&amp;feed_id=2"><img src="http://www.beursbox.nl/components/com_ds-syndicate/buttons/atom03.gif" alt="feed image" /></a></div></div>		</div>
+				<div class="moduletable">
+					</div>
+						</div>
+								<div id="mainbodysect" style="width:740px;">
+														<table class="contentpaneopen">
+			<tr>
+								<td class="contentheading" width="100%">
+					DSM aandeel AEX Beurs Grafiek Analyse									</td>
+							</tr>
+			</table>
+			
+		<table class="contentpaneopen">
+				<tr>
+			<td valign="top" colspan="2">
+				<table width="100%" class="normal">
+    <tbody>
+        <tr>
+            <Script language="JavaScript"> 
+	var CM8Server = "ad7.checkm8.com";
+	var CM8Cat = "beursbox.ros";
+	var CM8Profile="";
+	
+</script> <SCRIPT language="JavaScript" src="http://ad7digital.checkm8.com/adam/cm8adam_1_call.js"></SCRIPT> <script type="text/javascript" language="javascript">CM8ShowAd("ad7_rectangle");</script>  <script type="text/javascript" language="javascript">CM8ShowAd("ad7_logolink");</script>  <script type="text/javascript" language="javascript">CM8ShowAd("ad7_logolink");</script>  <script type="text/javascript" language="javascript">CM8ShowAd("ad7_logolink");</script>  <script type="text/javascript" language="javascript">CM8ShowAd("ad7_logolink");</script>  <script type="text/javascript" language="javascript">CM8ShowAd("ad7_logolink");</script>  <script type="text/javascript" language="javascript">CM8ShowAd("ad7_logolink");</script>
+            <td align="left" width="849" valign="top">
+            <p align="center">  <img height="438" border="0" align="left" width="700" alt="DSM technische beurs analyse grafiek" src="http://www.beursbox.nl/plaatjes/dsm.png" /> </p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="600">
+    <tbody>
+        <tr>
+            <td><font color="#000000">20 okt 2010<br />
+            <br />
+            Ik had het niet verwacht, maar met minieme candles is de koers van DSM verder omhoog gekropen van 38 naar 39,4. We zagen gisteren een prachtige Doji en we verlieten de bovenkant van de Bollingerbands. Een daling tot 38 lijkt in het vat te zitten.<br />
+            <br />
+            6 okt 2010<br />
+            <br />
+            Op dit moment wordt de top op 38 getest. Dat ging al in augustus mis en ook in september. Een doorbraak zou een koopmoment kunnen zijn, maar de kans is groot dat ik het toch laat lopen. We komen immers van 32 euro een maand geleden en staan nu al op 38. Dat is wel heel hard gegaan. Zou er nog serieus veel in het vat zitten?<br />
+            <br />
+            20 sept 2010<br />
+            <br />
+            De vorige analyse was voorzichtig en achteraf bleek, misschien wel iets te voorzichtig. De koers steeg en uiteindelijk draaide de MA20 ook opwaarts. Het is nu te laat om er in te stappen, maar zo erg is dat nu ook weer niet. Minstens wachten tot een test van de MA20 is mijn advies op dit moment. De weerstand ligt op 38 en de Doji van afgelopen vrijdag geeft wel aan dat er twijfel bij beleggers is.<br />
+            <br />
+            3 sept 2010<br />
+            <br />
+            De laatste drie dagen zien we een prachtig herstel, maar gisteren een slot precies op de dalende MA20 lijn. Er heeft dus geen doorbreking plaatsgevonden. Gezien de zwakke vooruitzichten vandaag heb ik niet het idee dat de MA20 doorbroken gaat worden. Ook hier denk ik dat het beter is om het even aan te zien.<br />
+            <br />
+            2 aug 2010<br />
+            <br />
+            Het aandeel is na de vorige analyse uiteindelijk door de weerstand van 35 gebroken. We zijn nu terug naar dat niveau aan het gaan. De sterk stijgende MA20 bevindt zich nu ook op dat niveau. Zowel RSI als Stochastic hebben verkoopsignaal afgegeven. Vooralsnog schat ik in dat we de 35 voorzichtig gaan testen en daarna de weg omhoog verder gaan inzetten. Ik neem geen positie in.<br />
+            <br />
+            14 juli 2010<br />
+            <br />
+            Na het bereiken van het eerste koersdoel van 33,5 ging het aandeel DSM verder onderuit tot bijna de onderkant van het Bollingerbands kanaal. Daarna ging het weer omhoog en gisteren doorbraken we de MA20 weer. We zijn nu wederom op weg naar de weerstand op 35. Deze weerstand is erg sterk en eronder zou ik geen positie innemen. We sloten gisteren op 34,5.<br />
+            <br />
+            24 juni 2010<br />
+            <br />
+            De vorige analyse was perfect. Koersdoel was 32,2 en dat werd ook bereikt. Daarna ging het weer hoger tot precies de weerstand van 35 die in januari, februari en April al weerstand was. Stochastic geeft nu een verkoopsignaal. Koersdoel is nu 33,5. We sloten gisteren op 34,89.<br />
+            <br />
+            7 juni 2010<br />
+            <br />
+            Vrijdag werd intraday de bovenkant van de Bollingerbands geraakt. We sloten fors lager dan dat. Eerste koersdoel is nu 32,2. Ook de Stochastic gaf een verkoopsignaal. Steun onder de 32,2 is 30 euro per aandeel.<br />
+            <br />
+            21 mei 2010<br />
+            <br />
+            We hadden geen positie en dat bleek een juist besluit te zijn. De 35 was bij de vorige analyse de te nemen horde. Die horde bleek te hoog te zijn, we staan nu op 30,6. Gisteren werd de laagste koers van 2010 neergezet op de bodem die ook eind februari werd geraakt. Nog geen negatieve doorbraak, maar wat zitten we er dicht tegen aan!<br />
+            <br />
+            28 apr 2010<br />
+            <br />
+            Vandaag kwam het bedrijf met cijfers die conform de verwachtingen en daarbij zeer sterk waren. Het aandeel kwam gisteren tot aan de weerstand van 35 en daalde daarna. Onder de 35 euro dus geen long positie innemen.<br />
+            <br />
+            8 apr 2010<br />
+            <br />
+            De Stochastic heeft nu twee verkoopsignalen kort na elkaar gegeven. In de grafiek staat de koers boven de stijgende MA20 en dat is gunstig. Toch ziet het er eerder horizontaal dan structureel stijgend uit. Ik blijf hier op dit moment nog altijd vanaf.<br />
+            <br />
+            17 mrt 2010<br />
+            <br />
+            De positie is 4 maart niet ingenomen. Ik laat het ook even zo zijn. DSM liet begin dit jaar een top zien en op dit moment is er nog geen sprake van een omkering van de 'grote daling' na die top. Die omkering kan er nu wel aan gaan komen, maar dat moment wacht ik dan liever even af.<br />
+            <br />
+            4 mrt 2010<br />
+            <br />
+            De beoogde positie is op de 17e niet ingenomen. Gelukkig maar, we staan momenteel op 31,92. We gaan het opnieuw proberen. Als de koers vandaag om 10:00 uur boven de 32 staat, stappen we in, anders niet.<br />
+            Als we instappen, is de stoploss daarna een koers van 29,75.<br />
+            <br />
+            17 feb 2010<br />
+            <br />
+            De vorige analyse zat er goed op. Op dit moment is er in de grafiek nog altijd geen koopsignaal, maar gezien de positieve beurzen in de wereld lijkt een stukje koerswinst wel mogelijk. Ik moet daarbij zeggen, dat er weinig koopsignalen zijn. De volgende twee zaken zijn positief: De koers bevindt zich op de onderkant van de Bollingerbands en is te vinden op het niveau van het vorige dal.<br />
+            Negatief is dat de MA20 dalende is en de RSI en Stochastic geen koopsignalen geven. Een eventuele koop is dus speculatief. Toch zet ik deze nu in. Ik koop als de koers van DSM om 10:00 uur boven de 32,65 te vinden is. Stoploss 32,5 end of day.<br />
+            <br />
+            3 feb 2010<br />
+            <br />
+            De MA20 is dalende, maar de koers is wel boven de MA20 te vinden. Er zijn vanuit de indicatoren geen koopsignalen. Dit is te weinig om er op te willen handelen<br />
+            <br />
+            14 jan 2010<br />
+            <br />
+            In de vorige analyse, die alweer van begin december was, schreef ik dat 33 wel eens het koersdoel kon zijn. Gisteren begonnen we de dag op 34 en dat was tevens op dit moment de onderkant van de Bollingerbands. In &eacute;&eacute;n dag kwamen we weer bijna hij de MA20, die het middelpunt van de bands vormt.<br />
+            Hoewel het te beargumenteren is dat er gekocht kan worden, doe ik het niet. Ik blijf hier gewoon even vanaf.<br />
+            <br />
+            7 dec 2009<br />
+            <br />
+            Bij DSM is een nieuwe top gezet. Ik verwacht nu een technische correctie in een opgaande trend. De koers zou tot 33 kunnen dalen. Het lijkt erop dat zo'n scenario op dat moment een koopsignaal zou kunnen opleveren, maar dat laatste is op dat moment dan beter te bezien.<br />
+            <br />
+            23 nov 2009<br />
+            <br />
+            Zowel RSI als Stochastic gaven recent een verkoopsignaal, waarna de koers ook topte. Eerste steun is de MA20 op 31,8 en tweede steun is de onderkant van de Bollingerbands op 29,7. Hoewel de MA20 nog oploopt, zie ik hier nog geen koopsignaal ontstaan.<br />
+            <br />
+            3 nov 2009<br />
+            <br />
+            DSM deed het heel aardig.<br />
+            Hoewel de resultaten ten opzichte van een jaar geleden nog altijd minder zijn, is er ten opzichte van het tweede kwartaal een duidelijk resultaatverbetering te zien. Het bedrijfsresultaat over het 3e kwartaal was 139 miljoen euro.<br />
+            Enkele sectoren zagen een sterk herstel en de beoogde kostenbesparingen liggen op koers en zullen straks op jaarbasis tussen de 150 en 200 miljoen euro schelen.<br />
+            De cashflow was sterk met 517 miljoen.<br />
+            Echter... DSM blijft onzeker over het vierde kwartaal. <br />
+            - Zelfs in hun eigen markt kunnen ze dus eigenlijk niet zeggen hoe het gaat lopen.<br />
+            Dit laatste mag een waarschuwing zijn naar beleggers. DSM heeft tientallen jaren ervaring in de sectoren waarin ze nu actief is. Toch kunnen ze niet veel zeggen over welke resultaten ze gaan halen. Hoe wilt u, als belegger, dan serieus gaan beleggen in DSM? U heeft in feite totaal geen inzicht in die markt en zelfs DSM zelf weet niet of ze hun werk er winstgevend in kunnen doen. <br />
+            Dan is een belegging in DSM toch simpelweg gokken?<br />
+            Het enige wat u kan hopen als lange termijn belegger in DSM is dat de directie de zaken in de hand heeft en dat hun strategie van afstoten van niet kernactiviteiten en het versterken van de Life Sciences en Materials Sciences sectoren de juiste strategie is. Of het goed uit gaat pakken, dat is de grote gok. DSM wist de afgelopen maanden al op te lopen van 22 tot 32. We sloten gisteren op 30,55. Vooralsnog is er technisch een opgaande trend. In die zin een mooi koopmoment, ware het niet dat wij net de stoploss in werking zagen treden. De winst is net binnen, we nemen daarom even geen nieuwe positie in.<br />
+            <br />
+            23 okt 2009<br />
+            <br />
+            Wie op basis van de vorige analyse long ging en de stoploss op 27,5 gelegd heeft, mag die stoploss omhoog brengen naar 30,9. DSM is prachtig in waarde gestegen, maar RSI en Stochastic geven nu wel verkoopsignalen. Na zo'n enorme stijging is dat geen verrassing.<br />
+            <br />
+            7 okt 2009<br />
+            <br />
+            Het aandeel is na de vorige analyse definitief doorgebroken en wist gisteren zelfs op een hoogste punt in 2009 te sluiten. Erg sterk en technisch zou een voortzetting van die krachtige beweging omhoog nu logisch zijn. Puur technisch gesproken zouden we nu long moeten gaan met de stoploss op 27,5 end of day.<br />
+            <br />
+            18 sept 2009<br />
+            <br />
+            De analyse op DSM was 26 augustus prima in orde. We waren terughoudend en inderdaad ging de koers daarna terug tot net boven de 24.<br />
+            Vervolgens kwam er een sprong omhoog die we gemist hebben... De kwam keurig op de MA20 lijn en technisch was het een plaatje. We hebben even boven de Bollingerbands gekeken en ik verwacht nu een terugval tot onder de 26 euro. We sloten gisteren op 27,54. Is het genoeg om short te gaan? Ik denk van niet. Eerder zou je als belegger een Call optie kunnen schrijven en over een paar dagen de zaak weer terugkopen. Op de 26 ligt nu de steun van enkele eerdere mislukte pogingen om door te breken. Die steun kan best stevig zijn.<br />
+            <br />
+            26 aug 2009<br />
+            <br />
+            Deze week is DSM de weerstand op 26 weer vol aan het testen. Die 26 was ook de top begin juni en begin augustus dit jaar. Opvallend is dat de 26 steeds onder hoog volume berikt wordt, maar het daarna snel over is. Op dit moment ben ik geen voorstander van instappen. Ten eerste omdat de doorbraak er nog niet is, maar ten tweede ook omdat de bull toch onderhand wel een keer buiten adem moet gaan raken.<br />
+            <br />
+            31 juli 2009<br />
+            <br />
+            De cirkel in de Bollingerbands heeft bij DSM, in de beurs zoals we die de laatste weken hebben gezien, niet de verwachte rust in de koers gegeven. De stijging bleef aanvankelijk wel flink achter bij de markt, maar deze week is de koers van DSM 'losgeschoten' en flink hoger gegaan. Nog altijd staan we echter nog onder de top van begin juni. Een doorbraak is er dus zeker niet. Ik verwacht ook niet dat deze er nu nog komt. Daarvoor is de rally voor de index al wat te oud geworden. Daarom wat mij betreft nog altijd geen positie in DSM.<br />
+            <br />
+            14 juli 2009<br />
+            <br />
+            Bij DSM hebben we net de vorming van een cirkel in de Bollingerbands gezien. Dit patroon zagen we de laatste tijd vaker en het resulteerde tot nu toe steeds in een koers die volledig vlak kwam te liggen voor meer dan anderhalve maand. We zien nu al dat DSM al drie weken vrijwel vlak ligt en daar zou dus wel eens een paar weken bij kunnen komen. Vanuit die ervaring raad ik aan even niets in DSM te doen.<br />
+            <br />
+            26 juni 2009<br />
+            <br />
+            Mijn terughoudendheid bij DSM was terecht. Het aandeel is sinds begin deze maand gedaald van 26 naar 22. Een herstel naar 24 is mogelijk en lijkt het best haalbare. Niet interessant genoeg, dus laten zitten.<br />
+            <br />
+            8 juni 2009<br />
+            <br />
+            Het aandeel is onder de 26 stil komen te vallen. Ook de Bollingerbands zijn richting een horizontale richting verschoven. Vooralsnog weinig reden om optimistisch te zijn.<br />
+            <br />
+            22 mei 2009<br />
+            <br />
+            Na de vorige analyse kwam er inderdaad een correctie, maar na een paar dagen kwam er ook al weer een herstel op. We maakten een dubbele top en vooralsnog lijkt het erop dat het er bij blijft. Dat zou dan inhouden, een daling van 25 terug naar 22, waarmee de stijging technisch tot een einde komt. Wat me weerhoudt om nu short te gaan is het feit dat de Bollingerbands nog opwaarts gericht zijn. Ik hoef zo nodig niet, dus waarom gokken op het feit dat we hier de top nu zien, terwijl ik in andere posities veel meer potentie zie. Bij twijfel niet inhalen en persoonlijk blijf ik daarom toch van DSM af. Het feit is er echter, op dit moment is er sprake van een dubbele top en wie daar een sterk signaal in ziet, die kan er op handelen.<br />
+            <br />
+            7 mei 2009<br />
+            <br />
+            Ook in DSM heb ik de mooie stijging gemist. Ik zit er niet mee. Ten eerste kan je niet alles winnen en ten tweede heb ik in mij ogen terechte redenen om sceptisch te zijn. In de grafiek zijn nu 5 mooie stijgingscandles te zien. Het ziet er prachtig uit en ik blijf er niets mee doen. Het lijkt me toe dat ook hier onderhand wel eens een top gezet mag worden.<br />
+            <br />
+            20 apr 2009<br />
+            <br />
+            In mijn vorige analyse gaf ik aan te wachten op de zwarte candle. Die kwam er, en de daling ook. Vervolgens ontstond een mooi 'W' patroon en we hebben net het laatste pootje daarvan gezien.<br />
+            Ik doe niets in DSM. Ik zat er de laatste tijd niet zo goed in en bij twijfel niet inhalen. Bij DSM heb ik mijn twijfels. Ik twijfel over de juistheid van de door DSM gerapporteerde cijfers en ik twijfel over de handel in deze aandelen. Ik sluit niet uit dat enkele grote aandeelhouders hun posities strategisch aan het herschikken zijn. Dit houdt in, banken mooie rapporten laten schrijven en dan afstoten van de aandelen. Vooral de enorme omzet op de top in maart is me wat dat betreft verdacht.<br />
+            <br />
+            26 mrt 2009<br />
+            <br />
+            Ik zat mis bij DSM. Bij de vorige analyse kon DSM me niet overtuigen. Daarna werd een gestage stijging ingezet die het aandeel nu op 21,44 gebracht heeft. Mijn vorige analyse was precies op de bodem en de bevestiging die na de Doji moest komen, die kwam er ook. Ik heb er niets mee gedaan... Niets gewonnen, niets verloren. In de grafiek nu een Doji op de top en verkoopsignalen in de Stochastic indicator. Als er nu ook nog een zwarte candle komt, dan kan de daling weer vol inzetten. Het is even wachten op die bevestiging in de vorm van een zwarte candle.<br />
+            <br />
+            9 mrt 2009<br />
+            <br />
+            Op 13 februari gaf ik aan dat DSM mij niet kon overtuigen. Vanaf dat moment is de koers nog altijd verder gaan dalen. Niet dramatisch, maar van 20 naar 17 is toch een stevige daling. Vrijdag was er een Doji. Deze moet dan bevestigd worden met een witte candle. Er is ondertussen nog ruimte omlaag naar de onderkant van de (dalende) onderkant van de Bollingerband. Het kan me niet overtuigen.<br />
+            <br />
+            13 feb 2009<br />
+            <br />
+            Het aandeel herstelde een week geleden in &eacute;&eacute;n dag fors en daarna kalfde de winst weer af. Ook Stochastic heeft nu verkoopsignaal gegeven. Op zich ziet het er vanaf begin december niet eens zo heel slecht uit, maar ik zou puur op technische gronden eerst wachten op bevestiging van hogere toppen en hogere dalen. Mij kan DSM niet overtuigen op dit moment.<br />
+            <br />
+            26 jan 2009<br />
+            <br />
+            Het aandeel kwam boven de 19 die ik in de vorige analyse noemde uit, maar toen was het ook over. Ik heb er niets op gedaan. Ondertussen zijn we terug op 18,15. In de grafiek geen indicatie dat de bodem al gevonden is.<br />
+            <br />
+            2 jan 2009<br />
+            <br />
+            Het is de laatste weken stil rondom DSM. De koers is vorige week ook helemaal stilgevallen. De leeste twee beursdagen zagen we vrijwel geen bewegelijkheid. De eerste volgende stijging moet boven de 19 euro uitkomen. Tot dat moment zeker niets doen.<br />
+            <br />
+            19 dec 2008<br />
+            <br />
+            Eerder deze week &eacute;&eacute;n dag met een heel forse stijging. Dat was ook een dag met een hoge omzet. Het zou dus kunnen zijn dat er eerste koper weer in de markt kwam. Daarna was het namelijk direct weer gedaan met het volume. Opvallend is dat het de eerste hoog volume dag opwaarts was. Tot op heden was het steeds een hoog volume en dalingen.<br />
+            Vooralsnog zie ik nog altijd geen reden in te willen stappen. E&eacute;n zwaluw maakt nog geen zomer en fundamenteel zie ik nog geen reden waarom DSM nu interessant zou moeten zijn.<br />
+            <br />
+            4 dec 2008<br />
+            <br />
+            Treetje na treetje gaat de koers van dit aandeel omlaag. Vooralsnog zien ik geen reden om aan te nemen dat daar een verandering in komt. Dit aandeel moet u in mijn ogen pertinent niet hebben. Ik denk niet dat ik veel duidelijker kan zijn.<br />
+            <br />
+            18 nov 2008<br />
+            <br />
+            In de grafiek nu een Doji op de bodem. Technisch een interessant verhaal. Vandaag moet er duidelijk worden of er een bodem gevonden is. Als we vandaag een lange witte candle zien, met een slot boven de het slot van gisteren, dan is dat een positief signaal. Vooralsnog lijkt het vrijwel onmogelijk, gezien het slechte sentiment op de beurs, maar feit is dat de Doji gisteren al wel tot stand kwam. Even gaan aanzien deze week.<br />
+            Voor een uitleg over de Japanse Candles kijkt u op <a href="http://www.japansecandles.nl">www.japansecandles.nl</a><br />
+            <br />
+            28 okt 2008<br />
+            <br />
+            De vooruitzichten bij DSM zijn hard achteruit gehold. Dat is &eacute;&eacute;n verhaal. Een ander verhaal is dat Willem Okkerse mij al enige tijd geleden onder de belofte dat ik er voor de cijfers niets over zou publiceren, had aangegeven dat dit stond te gebeuren. Dat was dan ook de reden dat ik laatst al aangaf dat ik pertinent voor de cijfers weer vertrokken wilde zijn. Willem Okkerse heeft een systeem ontwikkeld waarbij hij vanuit de gepubliceerde cijfers kan opmaken hoe of een bedrijf er voor staat. Hij voorspelde Ahold onder andere. We hebben het als beleggers zo vaak over de onbetrouwbare cijfers die gepubliceerd worden. Willem Okkerse weet dat dit wel mee valt. Ze liegen maar zelden in de jaarverslagen. Je moet alleen precies weten welke gegevens je wel en welke je niet kan gebruiken. Okkerse heeft een systeem dat zo goed werkt, dat hij op basis van zijn analyses al vanaf half 2005 Warren Buffett en ALLE grote beleggingsfondsen aan het verslaan is. Er wordt nu gewerkt aan een aantal producten voor particuliere beleggers. Helaas is dat tot op heden het grootste manco van de OK score. Het is nog amper beschikbaar voor de kleine belegger.<br />
+            <br />
+            20 okt 2008<br />
+            <br />
+            Even om het verhaal compleet te houden, uiteraard is de op 14 oktober ingenomen DSM positie weer gesloten omdat deze door de stoploss gevallen is. Vrijdag herstelde het aandeel al iets, maar hier blijven we nu verder even vanaf.<br />
+            <br />
+            14 okt 2008<br />
+            <br />
+            Technisch is er hier een mooi Morning Star patroon ontstaan. Dit is technisch een hoog betrouwbaar patroon dat vaak uitkomt. Dat alles geeft geen garantie, maar het is voor mij reden om op technische gronden een korte termijn positie in te nemen. Als de koers om 10:00 uur boven de 28,81 staat, dan gaan ik long. Stop loss ligt op 27,45 end of day. Het is mijn bedoeling om deze positie uiterlijk 24 oktober weer gesloten te hebben! DSM komt 27 okt met de cijfers. Ik wil niet verrast worden.<br />
+            <br />
+            24 sept 2008<br />
+            <br />
+            Het aandeel is aan de onderkant van de Bollingerbands aangekomen. Op dit moment echter in de Japanse Candles nog geen bodempatroon en de bands lopen ook omlaag. Dit kan dus nog iets lager, waarna een herstel tot ergens rond de 37,5 kan inzetten. Nog even wachten hier.<br />
+            <br />
+            5 sept 2008<br />
+            <br />
+            De vorige top is niet doorbroken en daarmee is voor de derde keer rond de 40 dollar de top gevonden. Steun is er nu op 37 en rond de 36. Door die derde mislukte poging om door de 40 heen te breken is DSM nu even niet interessant meer.<br />
+            <br />
+            8 aug 2008<br />
+            <br />
+            Helaas was de stoploss recent net iets te scherp. We hebben daarna dan ook niet kunnen profiteren van de sprong omhoog. We laten dit aandeel nu even links liggen. Het gelijk was er, maar we waren niets te zuinig.<br />
+            <br />
+            22 juli 2008<br />
+            <br />
+            We zien de laatste dagen een mooi herstel in DSM. We gaan long, met stoploss op 34,85 end of day.<br />
+            <br />
+            30 juni 2008<br />
+            <br />
+            Na de vorige analyse, waarin ik aangaf niet meer in te stappen uit angst bij de laatste halte te zijn aangekomen, bleek dat inderdaad het geval te zijn. DSM daalde van boven de 40 naar 37,65 euro per aandeel.<br />
+            <br />
+            6 juni 2008<br />
+            <br />
+            Aandelen stijgen niet in &eacute;&eacute;n rechte lijn... Behalve DSM, die doet dat bijna wel. Al vanaf begin april is het vrijwel &eacute;&eacute;n streep omhoog. Van 28 naar bijna 40 euro per aandeel. Helaas ben ik niet ingestapt vanwege mijn exit door de zwakke AEX. Het ziet er prachtig uit, die stijging, maar natuurlijk gaat dat een keer mis. Nu nog instappen is erom vragen bij de laatste halte nog net op de trein te stappen.<br />
+            <br />
+            13 mei 2008<br />
+            <br />
+            Ook DSM is op de hoogste stand van 2008 gekomen, maar kan er niet overtuigen. In feite zouden we de huidige stand van 35,5 euro kunnen zien als de test van de stand per december 2007. Als de 35 euro stand houdt, dan gaan we weer in een opwaartse trend zitten en is een long positie in DSM mogelijk.<br />
+            <br />
+            25 apr 2008<br />
+            <br />
+            Het herstel van DSM lijkt af te vlakken. De laatste vier dagen was er al een minimale koerserosie zichtbaar. In de Stochastic een verkoopsignaal. Gezien de heel kleine candles lijkt er weinig vraag naar de aandelen te zijn. Het is allemaal erg mat in DSM.<br />
+            <br />
+            8 apr 2008<br />
+            <br />
+            Bij DSM heb ik het herstel gemist. Met een sprong omhoog werd een hoger niveau gevonden en naar verwachting gaat de aankomende dagen dit hogere niveau getest worden. Ook hier geeft de Stochastic indicator een verkoopsignaal.<br />
+            <br />
+            17 mrt 2008<br />
+            <br />
+            Bij de vorige analyse gaf ik aan dat ik op een correctie zou wachten. Die correctie zitten we nu midden in. We gaan even zien hoe ver dit zo gaat. Ik blijf hier even passief.<br />
+            <br />
+            27 feb 2008<br />
+            <br />
+            Het aandeel is eindelijk weer boven de 30 gekomen en lijkt nu eindelijk een serieuzer herstel in te zetten. De beweging lijkt al te oud om nu nog veel nieuw momentum in zich te kunnen hebben, dus liever wacht ik een correctie af.<br />
+            <br />
+            6 feb 2008<br />
+            <br />
+            Mijn besluit om bij DSM te wachten lijkt vandaag geen slecht besluit te zijn. De koers zou wel weer eens richting de 32 kunnen gaan. DSM is vol in de belangstelling vanwege de eventuele mijnrechten die ze zouden bezitten. DSM moet daar nog duidelijkheid over geven.<br />
+            <br />
+            9 jan 2008<br />
+            <br />
+            Ook bij DSM gaf ik halverwege december aan liefst te willen wachten. Dat was een goed besluit, want de koers daalde van 34 naar onder de 30. Het eerste koopsignaal kwam al in de Stochastic. Toch wacht ik nog even.<br />
+            <br />
+            18 dec 2007<br />
+            <br />
+            Het herstel dat we eerder in DSM zagen wordt op dit moment getest. Vooralsnog doe ik even niets, maar ik hoop het aandeel nu wel in de gaten te kunnen houden.<br />
+            <br />
+            4 dec 2007<br />
+            <br />
+            Ik wacht nog altijd met een positie innemen. Misschien tegen beter weten in, maar dit herstel moet naar mijn idee nog getest worden.<br />
+            <br />
+            5 nov 2007<br />
+            <br />
+            We zijn weer terug op de licht dalende trendlijn. Het is nog geen negatieve doorbraak, maar het beeld wordt er niet mooier op. Ik wacht even af met een nieuwe positie in DSM innemen.<br />
+            <br />
+            15 okt 2007<br />
+            <br />
+            Ik schreef bij de vorige analyse al, neem op tijd winst. Nu is niemand bij de negering van dat advies onderuit gegaan, maar wie netjes winst genomen heeft, had het net iets beter dan degene die is blijven zitten. De 'doorbraak' had weinig kracht en is nog niet definitief. Toch zou ik met de geschreven call poot niet te lang blijven handen. Ik heb de winst al genomen.<br />
+            <br />
+            25 sep 2007<br />
+            <br />
+            Twee weken geleden gaf ik aan dat het aandeel gevangen leek in een range van 36 tot 38. Vooralsnog is dat uitgekomen. De schrijvers van opties kunnen daar dus hun eerste plezier aan hebben. Neem op tijd winst!<br />
+            <br />
+            10 sep 2007<br />
+            <br />
+            Bij DSM lijkt er nu sprake te zijn van een horizontale tradingrange tussen 36 en 38. Dat kan leuk zijn voor optiebeleggers die dan opties schrijven met uitoefenprijzen net buiten die range. (Short Strangle) Zolang de koers er keurig tussen blijft is het dan een goede zaak voor die beleggers.<br />
+            <br />
+            20 aug 2007             </font>
+            <p> </p>
+            <font color="#000000">             Ook bij DSM is mijn voorzichtigheid zeer verstandig  geweest. 'Onder de 39 geen long positie innemen' bleek de juiste analyse. Het  aandeel sloot vrijdag op 35,5. Technisch lijkt hier de daling nog niet voorbij  te zijn. Als de koers boven de 36 sluit en we morgen nog weer een positieve  beurs zien plus een koers die om 10:00 uur hoger noteert dan het slot van  vandaag, dan mag een long positie ingenomen worden. Het zijn heel wat  voorwaarden, maar het gaat om geld en dan mogen we best voorzichtig zijn. U  strooit immers ook geen geld als u uit winkelen gaat.             </font>
+            <p> </p>
+            <font color="#000000">             17 juli 2007             </font>
+            <p> </p>
+            <font color="#000000">             Bij DSM heeft de onderste steunlijn het achteraf bezien  heel goed gehouden en de koers heeft zich keurig rond die lijn weer  omhooggewerkt. De dalende weerstandslijn is zelfs weer in beeld gekomen en  daarbij is ook de bovenkant van de gap van begin februari nu in beeld. Onder de  38,4 geen longpositie in te nemen. Ik zou zelfs liever zeggen, onder de 39 niet  long gaan.             </font>
+            <p> </p>
+            <font color="#000000">             22 juni 2007             </font>
+            <p> </p>
+            <font color="#000000">             Op de korte termijn lijkt DSM te willen klimmen, maar de  langere termijn dalende trendlijn komt akelig dicht bij. Daarbij is dan ook nog  eens de weerstand van de bovenkant van de dalende gap. Die was al eens te zwaar.  DSM lijkt daarom nog hoogstens 2 euro opgaande ruimte te hebben in die korte  termijn opgaande trend. We houden de stoploss op 35,9.             </font>
+            <p> </p>
+            <font color="#000000">             23 mei 2007             </font>
+            <p> </p>
+            <font color="#000000">             De stoploss was 34,65 en kan nu wederom omhoog naar 35,9.  Ondertussen is dit al de vierde verhoging van de stoploss en een stijging van  32,9 naar 35,9. Als de overname geruchten waar blijken te zijn kan het aandeel  nog een verdere klim maken.             </font>
+            <p> </p>
+            <font color="#000000">             2 mei 2007             </font>
+            <p> </p>
+            <font color="#000000">             De stoploss gaat wederom omhoog en nu naar 34,65. (Was  34,2)             </font>
+            <p> </p>
+            <font color="#000000">             17 apr 2007             </font>
+            <p> </p>
+            <font color="#000000">             De stoploss gaat omhoog van 33,49 naar 34,2.             </font>
+            <p> </p>
+            <font color="#000000">             30 mrt 2007             </font>
+            <p> </p>
+            <font color="#000000">             De stoploss bij DSM gaan we verhogen tot 33,49. Deze was  eerst 32,9.             </font>
+            <p> </p>
+            <font color="#000000">             12 mrt 2007             </font>
+            <p> </p>
+            <font color="#000000">             Het aandeel DSM is diep gegaan. Van 39 daalde het aandeel  naar onder de 32. We zien nu een herstel tot boven de 33. Zowel RSI als  Stochastic geven koopsignalen af. Met stoploss op 32,90 kunt u weer long  instappen.             </font>
+            <p> </p>
+            <font color="#000000">             14 feb 2007             </font>
+            <p> </p>
+            <font color="#000000">             Vandaag krijgt DSM er van langs. Na de bekendmaking van de  cijfers is het aandeel ruim 8% terug. Daar is niets tegen te beginnen. Wie de  aandelen had kijkt best vanavond of morgen ochtend na 10:00 uur of er al herstel  te zien is. Zo niet, dan afscheid nemen.             </font>
+            <p> </p>
+            <font color="#000000">             29 jan 2007             </font>
+            <p> </p>
+            <font color="#000000">             De doorbreking van de 38 is een feit geworden. We zien nu  de test van het 38 niveau. Als het aandeel boven de 38 weet te blijven, dan kan  een long positie ingenomen worden. Weet echter dat de indicatoren e.e.a. niet  steunen. Het is dus wel een speculatieve positie.             </font>
+            <p> </p>
+            <font color="#000000">             16 jan 2007             </font>
+            <p> </p>
+            <font color="#000000">             Pas als DSM boven de 38 weet te sluiten is er een  doorbreking van het trendkanaal waarin het aandeel eigenlijk al sinds begin  oktober 2006 gevangen zit.             </font>
+            <p> </p>
+            <font color="#000000">             4 dec 2006             </font>
+            <p> </p>
+            <font color="#000000">             Het aandeel is na de vorige analyse even boven de 37 euro  geweest, maar wist de vorige top van 38 (april 2006) niet te doorbreken. Het  lijkt me raadzaam een herstel van de AEX af te wachten voor te overwegen een  nieuwe long positie in DSM in te nemen             </font>
+            <p> </p>
+            <font color="#000000">             6 nov 2006             </font>
+            <p> </p>
+            <font color="#000000">             Op 27 oktober is de trailing stop loss in werking  getreden. De positie kon daarbij neutraal worden gesloten. Vooralsnog ziet het  er niet overtuigend positief uit. Onder de 37,1 raad ik geen nieuwe long positie  aan.             </font>
+            <p> </p>
+            <font color="#000000">             2 okt 2006             </font>
+            <p> </p>
+            <font color="#000000">             Het aandeel doorbrak vorige week de vorige top. Met  stoploss op 33,65 kan een long positie ingenomen worden. Na inname een trailing  stoploss van 1 euro aanhouden. Meer weten over deze methode van beleggen, vraagt  u dan de gratis Pluk de dag methode aan: <a target="_blank" href="http://www.beursbox.nl/bedankt.html"> http://www.beursbox.nl/bedankt.html</a> (Geen Tiscali E-mail adres gebruiken)             </font>
+            <p> </p>
+            <font color="#000000">             7 sept 2006             </font>
+            <p> </p>
+            <font color="#000000">             Ik heb al mijn stukken gisteren verkocht. Ook DSM is  daarmee dat lot overkomen. Met zo'n 10% winst in slechts een paar weken is <br />
+            het geen straf om afscheid te nemen. DSM haalde de weerstand van 31,75 niet  eens, en daarmee komt een ander punt in beeld. We <br />
+            herstelden 50% ten opzichte van de daling eind juli.<br />
+            Dit lijkt eerder op een dalende trend, dan een aandeel dat op zoek gaat naar  nieuwe hoogten. Omlaag is nu het koersdoel 28 euro. Het <br />
+            neerwaarts scenario gaat de prullenbak in bij een slotkoers boven de 31,8.             </font>
+            <p> </p>
+            <font color="#000000">             15 aug 2006             </font>
+            <p> </p>
+            <font color="#000000">             DSM heeft de bodem gezien. Een long positie, met als  stoploss 27,8 is te overwegen.             </font>
+            <p> </p>
+            <font color="#000000">             28 juli 2006             </font>
+            <p> </p>
+            <font color="#000000">             De 34 weerstand is duidelijk niet doorbroken. Achteraf is  het makkelijk beleggen en is duidelijk dat speculeren op de aanstaande <br />
+            doorbreking geen slimme zet was. Het aandeel daalde in &eacute;&eacute;n dag richting de  fibonacci steun van 61%.             </font>
+            <p> </p>
+            <font color="#000000">             26 jul 2006             </font>
+            <p> </p>
+            <font color="#000000">             Zo net voor de cijfers is het leuk om eens te kijken of we  iets in de grafiek kunnen 'zien'. DSM zette in juni een low voor het jaar.  Daarna een herstel, maar dat stuitte vooralsnog op weerstand.<br />
+            De 34 euro is de te nemen horde. Gezien de nog altijd goede markt lijkt het  onwaarschijnlijk dat DSM met tegenvallende resultaten gaat komen. de kans dat we  dus door die 34 gaan schieten lijkt aannemelijk. Wie dus voor de cijfers uit  durft te lopen kan instappen, met als stoploss 32,9 euro.             </font>
+            <p> </p>
+            <font color="#000000">             7 jul 2006             </font>
+            <p> </p>
+            <font color="#000000">             We zagen recent wat herstel bij DSM, maar de 34 euro bleef  buiten beeld. Pas boven die koers wil ik weer aan long posities in DSM gaan  denken.             </font>
+            <p> </p>
+            <font color="#000000">             12 jun 2006             </font>
+            <p> </p>
+            <font color="#000000">             Er werd vrijdag een nieuwe low voor het jaar gezet. Ik had  al aangegeven dat ik onder de 34,2 geen koper zou zijn. Ondanks de fundamentele  kracht van het bedrijf ziet het er nu naar uit dat de aandelen nog wat goedkoper  gaan worden. Dit tot wanhoop van de fundamentele aandeelhouders, maar deze  afwaarderingen horen er nu eenmaal bij, ook bij bedrijven die dat fundamenteel  gezien helemaal niet verdienen.             </font>
+            <p> </p>
+            <font color="#000000">             5 jun 2006             </font>
+            <p> </p>
+            <font color="#000000">             De stoploss is in het koersgeweld van de laatste weken  geraakt. Het aandeel is nu onder zowel het 50 daags als het 200 daags gemiddelde  gekomen. Pas bij een koers van 34,2 of hoger is het aandeel mogelijk weer  interessant. Tot die tijd blijf ik er vanaf.             </font>
+            <p> </p>
+            <font color="#000000">             2 mei 2006             </font>
+            <p> </p>
+            <font color="#000000">             Stop loss gaat naar 35,8             </font>
+            <p> </p>
+            <font color="#000000">             24 jan 2006             </font>
+            <p> </p>
+            <font color="#000000">             DSM is amper geraakt door de correctie van de AEX. Begin  januari is de stop loss op 33,9 gezet. Deze wil ik op dit niveau handhaven.             </font>
+            <p> </p>
+            <font color="#000000">             6 jan 2006             </font>
+            <p> </p>
+            <font color="#000000">             Ik stel voor de eerder genoemde stop loss te verhogen naar  33,9. Met deze stap wordt er weer een extra euro aan winst veiliggesteld.             </font>
+            <p> </p>
+            <font color="#000000">             3 jan 2006             </font>
+            <p> </p>
+            <font color="#000000">             DSM De indicatoren geven een verkoopsignaal. Kijk ik  echter naar de effectiviteit van die indicatoren in het laatste jaar, dan zie ik  veel momenten dat ze te vroeg een signaal gaven en soms zelfs een signaal gaven  dat in de koers totaal niet gevolgd werd. Gezien de kracht van de markt lijkt me  te snel reageren op de verkoopsignalen dan ook niet verstandig. Hoe dan wel te  reageren?<br />
+            Wel, als u een long positie, bijvoorbeeld aandelen, heeft, dan kunt u denken aan  een stop loss niveau bepalen. 32,9 heb ik al eerder genoemd. Dat lijkt me nog  altijd een prachtig niveau.             </font>
+            <p> </p>
+            <font color="#000000">             5 dec 2005             </font>
+            <p> </p>
+            <font color="#000000">De vorige analyses waren heel erg netjes. Ik schreef op 4  november dat 31,6 wel mogelijk leek. Dat was dan ook zo ongeveer het niveau dat  de laatste twee weken de top steeds was, tot donderdag en vrijdag. Vrijdag  ineens 4% erbij. De beleggers die de aandelen indertijd gekocht hebben zullen  het niet erg vinden. Die extra 4% was niet op gerekend. Ik zou hier nu willen  werken met een stop loss. Als de koers onder de 32,9 komt moet u naar mijn idee  met een brede grijns afscheid nemen.</font>
+            <p> </p>
+            <font color="#000000">            4 nov 2005  </font>
+            <p> </p>
+            <font color="#000000">            De vorige analyse zat er perfect op. Het technisch herstel zette in. De 31,6 is eerste koersdoel, maar ik raad beleggers in DSM aan om dan niet te snel de winst te nemen. Neemt u liever een stop loss in acht van bijvoorbeeld 1 euro onder de hoogste koers. (Zie pluk de Dag methode)  </font>
+            <p> </p>
+            <font color="#000000">            25 okt 2005  </font>
+            <p> </p>
+            <font color="#000000">            DSM vond gisteren steun rond de vorige toppen van begin april en begin juni. Hier lijkt minstens een technisch herstel mogelijk te zijn tot mogelijk wel 31,6.  </font>
+            <p> </p>
+            <font color="#000000">            15 sep 2005  </font>
+            <p> </p>
+            <font color="#000000">            DSM heeft na de splitsing weer ene sprong omhoog gemaakt en liet de afgelopen dagen even een top laten zien. De stop loss kan omhoog naar 31,9 euro. Vooralsnog dus de aandelen aanhouden, de opwaartse beweging is nog niet gebroken.  </font>
+            <p> </p>
+            <font color="#000000">            5 aug 2005   </font>
+            <p> </p>
+            <font color="#000000">            Even een adempauze bij dit aandeel. Nadat we vorige week het all time high weer verbeterden werd het rustig, heel rustig. De candles zijn klein en het volume is relatief vrij laag. Daarmee lopen de indicatoren nu al mooi terug, hetgeen weer ruimte kan geven voor misschien nog wel weer een prachtige aanval op weer een hogere top. Stop loss voor aandeelhouders is te leggen op 61,2 op slotbasis. Zolang DSM daar niet onder komt kan een longpositie aangehouden worden.  </font>
+            <p> </p>
+            <font color="#000000">            27 jul 2005  </font>
+            <p> </p>
+            <font color="#000000">            De gepubliceerde cijfers waren bijzonder goed te noemen. De bruto winst steeg met 44% naar 213 miljoen euro. De netto winst kwam uit op 133 miljoen euro, een toename van 16%.<br />
+            De omzet is gestegen met 8% naar 2,1 miljard euro.<br />
+            DSM wil een dividend van 0,58 cent per aandeel gaan uitkeren.<br />
+            Technisch liet DSM de laatste twee dagen zwarte candles zien. Dit is &eacute;&eacute;n van de zeldzame aandelen die steeds nieuwe all time highs neerzet. Wie op basis van het advies van 8 juli na de doorbreking van de 59 een positie innam, kan nu de stop loss verhogen tot 60,4 end of day.  </font>
+            <p> </p>
+            <font color="#000000">            8 jul 2005  </font>
+            <p> </p>
+            <font color="#000000">            DSM heeft nu in feite een tripple top neergezet. Begin april, halverwege juni en begin juli. De 59 is nu de te nemen horde. Pas daarboven zou ik eventueel kunnen overwegen om long te gaan. Vooralsnog lijkt echter een geschreven call de meeste kans te bieden.  </font>
+            <p> </p>
+            <font color="#000000">            21 jun 2005  </font>
+            <p> </p>
+            <font color="#000000">            DSm wist recent de top van begin april niet te slechten. Daarna ging het ruim een euro lager, maar echt omlaag doorzetten doen het niet. Een hernieuwde test van de niveaus boven de 58 lijkt in de maak. Vooralsnog niet interessant voor een nieuwe positie. Iedereen die eerder al wel meedeed houdt de stop loss op 55,9.   </font>
+            <p> </p>
+            <font color="#000000">            3 jun 2005  </font>
+            <p> </p>
+            <font color="#000000">            DSM is weer op weg omhoog. Gisteren werd boven de vorige top gesloten en nu is de opwaartse beweging bevestigd. Stop loss op 55,9 voor iedereen die instapt.  </font>
+            <p> </p>
+            <font color="#000000">            17 mei 2005  </font>
+            <p> </p>
+            <font color="#000000">            DSM is nog altijd te vinden op het niveau waarop het al sinds half februari verblijft. Heel even werd een opwaartse beweging naar de 59 euro gemaakt, maar na aanvankelijk een daling tot onder de 52 euro staan we nu rond de 53 euro.<br />
+            Vooralsnog is het patroon neutraal tot neerwaarts gericht.  </font>
+            <p> </p>
+            <font color="#000000">            2 mei 2005  </font>
+            <p> </p>
+            <font color="#000000">            DSM is nu terug op de steun n.a.v. de hoogste koers in 2002. Een gevaarlijk punt omdat daar onder komen de lange termijn beleggers kan gaan teleurstellen. Na die top in 2002 daalde DSM twee jaar voordat de opgaande lijn weer werd gevonden. Heel wat beleggers zullen zich niet graag nogmaals twee jaar willen committeren aan het aandeel.  </font>
+            <p> </p>
+            <font color="#000000">            25 apr 2005   </font>
+            <p> </p>
+            <font color="#000000">            Mijn stop loss is geraakt. De indicatoren staan heel erg laag en mogelijk komt er een herstel aan, maar ik wil geen risico lopen.  </font>
+            <p> </p>
+            <font color="#000000">            18 apr 2005  </font>
+            <p> </p>
+            <font color="#000000">            Sinds twee weken is de klad er in gekomen bij DSM. We komen nu op het niveau waarop de stop loss in zicht komt. Immers, voor aandeelhouders had ik die al eerder op 53,9 gelegd en dat niveau raad ik nog altijd aan.  </font>
+            <p> </p>
+            <font color="#000000">            17 mrt 2005  </font>
+            <p> </p>
+            <font color="#000000">            Gisteren werd een nieuwe top gezet. Dat is een mooi moment om er vol in te gaan, maar ik moet eerlijk zeggen, met een beurs die net een draai omlaag maakt lijkt het me niet handig om dan long te gaan in een witte raaf. Ik laat deze ronde dus even aan me voorbij gaan. Stop loss voor aandeelhouders op 53,9.  </font>
+            <p> </p>
+            <font color="#000000">            1 maart 2005  </font>
+            <p> </p>
+            <font color="#000000">            Het aandeel lijkt nu toch echt te toppen. Gisteren werd een heel kleine Doji gevormd en daarbij staan de indicatoren nu ook omlaag gericht. Legt u, als u de aandelen heeft, de stop loss op 51,90.  </font>
+            <p> </p>
+            <font color="#000000">            18 feb 2005   </font>
+            <p> </p>
+            <font color="#000000">            De recente stijging van DSM is zeer indrukwekkend te noemen. DSM staat nu op een all time high en er zijn nu niet veel aandelen die dat kunnen tonen. Ik zocht recent de weg omlaag en maakte ook winst met een korte rit omlaag. Aandeelhouder die het instapmoment dat ik aangaf voor instappen in puts aanhielden voor een stop loss op het bezit van de aandelen deden goede zaken. Immers, mijn short instapmoment werd niet geraakt en aandeelhouders konden dat dus blijven, met 5% koerswinst tot gevolg.  </font>
+            <p> </p>
+            <font color="#000000">            10 feb 2005  </font>
+            <p> </p>
+            <font color="#000000">            Gisteren werd iets dat lijkt op een shooting star gevormd. Het was er geen, want er zat geen gap tussen, maar het leek er al wel op. In feite is het 'slechts' een Doji en moeten we nu zoeken naar een bevestiging van de trendomkeer. Dit is er als we vandaag een zwarte candle vormen. Hoe dan ook geen goed teken voor de korte termijn. Ook de indicatoren geven aan dat er wel eens een trendomkeer kan gaan komen. Als DSM vandaag onder de 49 dreigt te sluiten kan overwogen worden in te zetten op een daling. Stop loss is dan 50,1.  </font>
+            <p> </p>
+            <font color="#000000">            26 jan 2005  </font>
+            <p> </p>
+            <font color="#000000">            De daling begin januari was prachtig getimed en werd vol van geprofiteerd (100% winst op de put opties) maar de daling van vorige week miste ik omdat deze niet in de candles voorspeld werd. De RSI is al redelijk laag gekomen en de Stochastic werkt ook niet mee. Deze ronde laat ik even aan mij voorbij gaan, zeker nu de AEX er zo sterk bij ligt.  </font>
+            <p> </p>
+            <font color="#000000">            7 jan 2005  </font>
+            <p> </p>
+            <font color="#000000">            Op 28 december ben ik er voor gegaan en heb ik een put positie op DSM ingenomen. Dat was op een moment dat DSM rond de 47,50 stond.<br />
+            Vanochtend staan we 46,29 en het mag duidelijk zijn dat ik een keer een bijna perfecte timing heb weten te bewerkstelligen. Mooi, maar wat we ook zien is dat de gekochte put nu eerst heel de tijd en verwachtingswaarde verloren heeft en pas bij nog meer stijging echt een stuk winst gaat maken. Het is het grote nadeel van werken met kortlopende gekochte opties. eenheel frustrerende manier van werken, want je hebt gelijk, maar je krijgt het pas als je als belegger echt ENORM gelijk hebt. Niet voor niets ben ik normaal gesproken veel meer een voorstander van geschreven opties. Rond 11:00 uur vanochtend zijn de opties uiteindelijk met 100% winst verkocht.  </font>
+            <p> </p>
+            <font color="#000000">            29 dec 2004   </font>
+            <p> </p>
+            <font color="#000000">            DSM wist gisteren dankzij het grote herstel in Amerika toch een positieve dag neer te zetten. Als de koers boven de 48 euro komt kan de put positie wel gesloten worden. Het is dan typisch een geval van jammer dan...   </font>
+            <p> </p>
+            <font color="#000000">            28 dec 2004  </font>
+            <p> </p>
+            <font color="#000000">            Technisch een verkoopsignaal, maar het komt wel op een moment dat de omzetten relatief laag zijn. DSM is &eacute;&eacute;n van de sterkste aandelen van de laatste 10 jaar. Toch ga ik nu voor de gok short en ik koop de put jan 47 voor hooguit 0,50.  </font>
+            <p> </p>
+            <font color="#000000">            24 dec 2004  </font>
+            <p> </p>
+            <font color="#000000">            Houders van de aandelen, opgelet! Het is niet onverstandig een stop loss niveau in te brengen, of eventueel alvast te beginnen door call opties op uw bezit te schrijven. Ik weet, mijn waarschuwing op 13 december was te vroeg, maar feit blijft dat de aandeelhouders van DSM veel te verliezen hebben. Er is een prachtige winst opgebouwd en laat u die vooral niet door de vingers glippen! Als u pertinent de aandelen aan wilt houden, koopt u dan eventueel een langjarige put die u gaat financieren met het te ontvangen dividend en de premie op korte geschreven calls.  </font>
+            <p> </p>
+            <font color="#000000">            17 dec 2004  </font>
+            <p> </p>
+            <font color="#000000">            Mijn waarschuwing dat aandeelhouders voorzichtig moeten zijn was te vroeg, gisteren zagen we weer een prachtige witte candle. Wel raad ik aandeelhouders aan een trailing stop loss te hanteren. De indicatoren staan erg hoog en de stijging van de laatste maanden is al aanzienlijk. DSM is &eacute;&eacute;n van die weinige aandelen die in feite nooit uit de opgaande trend is gevallen. Ik heb een koersenhistorie die teruggaat tot begin 1996 en vanaf dat moment gaat het al goed met DSM, dat in 2002 een top neerzette boven de 50 en op dit moment op haar op &eacute;&eacute;n na hoogste niveau ooit staat, als we heel de 2002 stijging even als &eacute;&eacute;n stijging en &eacute;&eacute;n koers zien.   </font>
+            <p> </p>
+            <font color="#000000">            13 dec 2004   </font>
+            <p> </p>
+            <font color="#000000">            We zien in de RSI lager toppen terwijl er in de koersgrafiek hogere toppen gezet worden. Deze negatieve divergentie is geen goed teken. Het houdt in dat de stijging niet echt gedragen wordt. De kans op een daling neemt daarom toe en beleggers in dit aandeel dienen voorzichtig te zijn.  </font>
+            <p> </p>
+            <font color="#000000">            3 dec 2004  </font>
+            <p> </p>
+            <font color="#000000">            Gisteren een opwaartse gapopening en uiteindelijk weer een hogere koers, maar wel in de vorm van een Doji. Kortom, dit aandeel moeten we in de gaten houden. Ruim twee weken geleden was het verkoopsignaal vanuit de indicatoren een feit, maar de koers stagneerde, maar daalde niet. Nu met de Doji moeten we even afwachten of de kentering er dan nu gaan komen. Ik zou hier op dit moment geen nieuwe posities willen innemen. Eerst maar eens kijken wat er gaat gebeuren.  </font>
+            <p> </p>
+            <font color="#000000">            24 nov 2004  </font>
+            <p> </p>
+            <font color="#000000">            We zien ook bij DSM even wat winstnemingen. Het is &eacute;&eacute;n van de sterkste aandelen binnen de AEX index. Het is slechts de vraag, wanneer is het feest over? Beleggers die hun winst willen vastklikken leggen de stop loss op 44,80 end of day. Wie nu nog wil instappen kan dan doen, maar houdt dan dezelfde stop loss aan. </font>
+            <p> </p>
+            <font color="#000000">            26 okt 2004 </font>
+            <p> </p>
+            <font color="#000000">            We zagen een zwakke AEX, maar een prachtig herstel van DSM, dat hiermee een nieuwe top voor 2004 neerzet. Zo zien we maar, zelfs in een zwakke markt is er altijd we een aandeel dat tegen de trend in wil gaan.<br />
+            DSM is &eacute;&eacute;n van de weinige aandelen die nog immer in een stijgende lange termijn trend te vinden is (sinds 1996) de top was in 2002, maar de bodems waren nog altijd steeds weer hoger dan de vorige bodem. </font>
+            <p> </p>
+            <font color="#000000">            19 okt 2004  </font>
+            <p> </p>
+            <font color="#000000">            De steun ligt op 41,8. Daarmee is op dit moment even het meeste gezegd. Het is nu afwachten wat er gaat gebeuren. </font>
+            <p> </p>
+            <font color="#000000">            8 okt 2004 </font>
+            <p> </p>
+            <font color="#000000">            DSM is nog altijd niet aan de logische daling begonnen. De indicatoren staan heel hoog, maar werken met een stop loss heeft zo de voordelen. verhoog de stop loss van 41,40 naar 42,50 zodat u nog meer winst kunt vastleggen. </font>
+            <p> </p>
+            <font color="#000000">            4 okt 2004 </font>
+            <p> </p>
+            <font color="#000000">            De indicatoren komen bij DSM nu wel heel erg hoog. Hoewel de koers nog steeds hoger gaat mag onderhand het moment van winstnemingen wel verwacht gaan worden. Nu nog instappen is dus niet handig. Winst nemen op een eerdere belegging kan wel, maar er kan ook met stop loss gewerkt worden zodat verdere stijging nog gewoon mee kan gaan tellen. Stop loss op 41,50 end of day lijkt me geen slecht niveau. </font>
+            <p> </p>
+            <font color="#000000">            13 sept 2004 </font>
+            <p> </p>
+            <font color="#000000">            Nog altijd vrij neutraal, maar toch met een opwaarts momentum. De Stochastic en RSI zijn nu weer aan het stijgen en de koers van het aandeel maakte ook een kleine beweging omhoog. Of het allemaal genoeg is voor een nieuw in te nemen positie? Ik ben niet razend enthousiast. Wie wel enthousiast genoeg is kan long gaan, met stop loss op 40 (slotbasis)  </font>
+            <p> </p>
+            <font color="#000000">            17 sept 2004 </font>
+            <p> </p>
+            <font color="#000000">            DSM is neutraal. Ik zou bijna zeggen, zo neutraal als een aandeel maar kan zijn, maar het aandeel zit wel in een 10 jarige opgaande trend. er zijn maar weinig aandelen die dat nu nog kunnen voorleggen. Stochastic en RSI op 50. Neutraler kan niet. zelfs opties schrijven is hier niet echt interessant. De bewegelijkheid is al een tijd zo laag dat de premie niet interessant genoeg is.  </font>
+            <p> </p>
+            <font color="#000000">            7 sept 2004 </font>
+            <p> </p>
+            <font color="#000000">            Gisteren een Bearish Engulfing, hetgeen, de naam laat het eigenlijk al weten, een negatief signaal is. Het is echter een niet zo heel betrouwbaar signaal, dus wachten op wat bevestiging is niet onverstandig. Stochastic indicator bevestigd de negatieve draai, de RSI niet, die staat net boven de 50 en is vlak. Ik sluit bij DSM niet uit dat we even in een consolidatiefase zitten. De koers mag niet onder de 39,1 komen. Daar ligt een eerste gap op weg omhoog. Dat zou een openingsgap kunnen zijn. Als we binnenkort opwaarts een gap zien, dan is dat de middengap. Aan de andere kant... want dit is een hele leuke case, is de stijging die we net zagen, ongeveer 50% van de daling die we daarvoor zagen. het kan hier dus vriezen en dooien en even afwachten en bevestiging zien van welk scenario het wordt lijkt me niet onverstandig. </font>
+            <p> </p>
+            <font color="#000000">            20 aug 2004 </font>
+            <p> </p>
+            <font color="#000000">            Ik heb de grafiek bij DSM even over wat meer jaren een beeld laten geven. Als &eacute;&eacute;n van de weinige aandelen zit DSM al sinds <br />
+            1996 in een stijgend trendkanaal, al moet daarbij gezegd worden dat het aandeel halverwege 2002 boven de bovenkant kwam, en nu, <br />
+            twee jaar later en in twee jaar daling, de onderkant van het trendkanaal aan het naderen is. Op dit moment ligt de steun op 36,3.  </font>
+            <p> </p>
+            <font color="#000000">            17 aug 2004 </font>
+            <p> </p>
+            <font color="#000000">            De gap omhoog eind april van dit jaar is neerwaarts nog niet gesloten. Het neerwaarts risico is daarmee beperkt, maar de opwaartse kansen zijn nu nog niet overtuigend. </font>
+            <p> </p>
+            <font color="#000000">            8 jul 2004 </font>
+            <p> </p>
+            <font color="#000000">            Opletten! Stochastic gaf al koopsignaal en gisteren ook een positief patroon in de Japanse Candles. Als nu de markt in zijn geheel ook weer gaat aantrekken is hier mogelijk iets leuks te halen, maar binnen een zo zwakke markt die we nu zien lijkt het me niet verstandig long te gaan in het zeldzame aandeel dat tegen de trend in toch weet te stijgen.</font>
+            <p> </p>
+            <font color="#000000">            </font></td>
+        </tr>
+    </tbody>
+</table>
+<p>
+<table width="100%" class="tablebox">
+    <tbody>
+        <tr>
+            <td width="40%">
+            <p><font size="2">De Analyses zijn gemaakt door Tom Lassing, tenzij anders aangegeven.</font></p>
+            <font size="2">            </font>
+            <p><font size="2"><font size="2">Tom Lassing en <a target="_blank" href="http://www.progainbv.nl">Pro Gain BV</a> houden geen aanzienlijke belangen in binnen Europa gelegen beursgenoteerde ondernemingen.<br />
+            Het kan zijn dat Tom Lassing priv&eacute; een kleine positie zal innemen conform zijn analyse en advies. U dient daar bij de beoordeling van de analyse rekening mee te houden.<br />
+            Er zijn geen afspraken met banken of brokers over vergoeding omzet op basis van de gegeven adviezen. Ook als adviezen van Tom Lassing via andere aanbieders tot u komen is er geen sprake van een betaalde bijdrage. De analyses worden altijd gratis verstrekt aan derden met slechts de afspraak dat er een werkende link naar <a target="_blank" href="http://www.beursbox.nl">www.beursbox.nl</a> onder staat.   </font></font></p>
+            <font size="2"><font size="2">            </font></font></td>
+            <td align="center" width="20%">
+            <p><br />
+            </p>
+            </td>
+            <td width="40%"><font size="2">Leest u ook onze <a href="http://www.beursbox.nl/disclaimer-en-privacy-policy.html">disclaimer</a> nog eens goed na. In de nieuwsbrief treft u dagelijks de meest recente analyses aan.<br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            </font></td>
+        </tr>
+    </tbody>
+</table>
+</p>			</td>
+		</tr>
+				</table>
+
+		<span class="article_seperator">&nbsp;</span>
+
+					<div class="back_button">
+				<a href='javascript:history.go(-1)'>
+					[ terug ]</a>
+			</div>
+							</div>
+								<div style="clear:both;"></div>
+			</div>
+			<div style="clear:both;"></div>
+			</div>
+		</div><!-- end body wrapper -->
+		
+				<div id="footer_wrapper">
+			<div id="footer_left"></div>
+						<div style="clear:both;"></div>	
+			<center>Copyright &#169; 2010 <a href="http://www.progainbv.nl" target="_blank">Pro Gain BV</a> | <a href="http://www.beursbox.nl/over-beurbox.nl.html">Over ons | <a href="http://www.beursbox.nl/contact-beursbox.html">Contact</a> | <a href="http://www.beursbox.nl/testimonials-beursbox.nl.html">Testimonials</a> | <a href="http://www.progainshop.com/affiliate" target="_blank">Partnerprogramma</a> | <a href="http://www.beursbox.nl/aanmelden-nieuwsbrief.html">Inschrijven nieuwsbrief</a> | <a href="index.php?option=com_joomap&Itemid=259">Sitemap</a><br /><br />
+			Beursbox.nl over: beurs - aandelen - beleggen - geld beleggen - beursnieuws - investeren - koers - beleggingsadvies - rendement - opties - beurskoersen - aex - aandelen tips - aandelen koersen - beursinformatie - aandelenfonds - aandelenkoersen - financiele markt - aandelen koersen - beleggen opties
+			</center>
+		</div>
+
+	</div> <!-- end pagewrapper -->
+</div> <!-- end wrapper -->
+
+</body>
+</html><!-- 1287578775 -->

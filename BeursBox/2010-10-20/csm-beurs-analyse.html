@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="iso-8859-1"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+ 
+
+<title>CSM Aandelen AEX Beurs Grafiek Analyse</title>
+<meta name="description" content="CSM Technische Beurs Analyse koersen grafiek op beursbox.nl" />
+<meta name="keywords" content="csm, analyse, aex, koersen, grafiek, aandeel, aandelen, japanse candles, stoploss, aankoopniveau, kopen, verkopen, doji, persbericht, koers" />
+
+<meta name="robots" content="index, follow" />
+<base href="http://www.beursbox.nl/" />
+	<link rel="shortcut icon" href="http://www.beursbox.nl/images/favicon.ico" />
+	
+
+<link rel="stylesheet" href="templates/crss_beursbox/css/template_css.css" type="text/css" />
+<link rel="stylesheet" href="templates/crss_beursbox/css/sfish.css" type="text/css" />
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-554144-31";
+urchinTracker();
+</script>
+
+<meta http-equiv="Content-Language" content="nl" /></head>
+
+<body class="bodies">
+<div id="wrapper" align="center" >
+	<div id="pagewrapper" style="width:940px; ">
+		<div id="topsect">
+			<div id="logo">
+				<a href="/"><img src="templates/crss_beursbox/images/logo.jpg" alt=" " /></a>
+			</div>
+			<div id="xtd_menu_wrapper">
+				<div id="xtd_menu">
+							<div class="moduletable">
+			<script type="text/javascript" language="JavaScript" src="http://www.beursbox.nl/templates/crss_beursbox/js/menu.js"></script>
+<div class="menu-son-of-suckerfish-horizontal">
+<ul id="menulist_root-son-of-suckerfish-horizontal"
+class="mainlevel-son-of-suckerfish-horizontal"
+><li><a href="http://www.beleggingstips.com/" target="_blank" class="mainlevel-son-of-suckerfish-horizontal">Aandelen Advies</a></li><li><a href="http://www.topaandelen.com" target="_blank" class="mainlevel-son-of-suckerfish-horizontal">Goedkope aandelen</a></li><li><a href="http://www.globalenergynewsletter.nl" target="_blank" class="mainlevel-son-of-suckerfish-horizontal">Trend aandelen</a></li><li><a href="http://forum.beursbox.nl/" target="_blank" class="mainlevel-son-of-suckerfish-horizontal">Beursbox Forum</a></li></ul>
+</div>		</div>
+						</div><div style="clear:both;"></div>
+			</div>
+	
+		</div><!-- end topsect -->
+		<div style="clear:both;"></div>
+
+
+
+		<div id="loginwrapper" >
+			<div id="tpath">
+							<span class="pathway">Voorpagina </span>				 
+			</div>
+			<!--[if IE 7]><div style="margin-top:-2px;"><![endif]-->
+			<!--[if IE 7]></div><![endif]-->
+			<div style="clear:both;"></div>
+		</div>
+
+		<img src="templates/crss_beursbox/images/spacer.gif" width="940" height="12" alt=" " />
+		
+		<div id="banner_wrp">
+			<div id="banner_inner" align="center">
+						<div class="moduletable">
+			<a href="/"><img border="0" alt="" src="images/stories/banner.jpg" /></a>		</div>
+					</div>
+			
+		
+					
+		<div id="bodywrapper">
+			<div id="bodywrapper_inner">
+								<div id="leftsection">
+							<div class="moduletable">
+			<style type="text/css">
+
+	#dropinboxv2cover{
+		width: 450px; 
+		height: 420px;
+		padding: 8px;  
+		position:absolute; 
+		z-index: 100;
+		overflow:hidden;
+		visibility: hidden;
+	}
+
+	#dropinboxv2{
+		color: #000000;
+		width: 440px; 
+		height: 410px; 
+		border-width:1px;
+		border-color:#CCCCCC;
+		border-style:solid;
+		background-color:#FFFFFF;
+		-moz-opacity:0.95;
+		position:absolute; 
+		left: 0;
+		top: 0;
+	}
+</style>
+
+
+<script>
+var dropboxleft=500 //set left position of box (in px)
+var dropboxtop=150 //set top position of box (in px)
+var dropspeed=15 //set speed of drop animation (larger=faster)
+var displaymode="oncepersession";
+
+if (parseInt(displaymode)!=NaN)
+var random_num=Math.floor(Math.random()*displaymode)
+var ie=document.all
+var dom=document.getElementById
+
+function initboxv2(){
+	if (!dom&&!ie)
+		return
+	crossboxcover=(dom)?document.getElementById("dropinboxv2cover") : document.all.dropinboxv2cover
+	crossbox=(dom)?document.getElementById("dropinboxv2"): document.all.dropinboxv2
+	scroll_top=(ie)? truebody().scrollTop : window.pageYOffset
+	crossbox.height=crossbox.offsetHeight
+	crossboxcover.style.height=parseInt(crossbox.height)+"px"
+	crossbox.style.top=crossbox.height*(-1)+"px"
+	crossboxcover.style.left=dropboxleft+"px"
+	crossboxcover.style.top=dropboxtop+"px"
+	crossboxcover.style.visibility=(dom||ie)? "visible" : "show"
+	setTimeout('dropstart=setInterval("dropinv2()",50)', 0) //setinterval = de snelheid van scrollen van de hoover en settimeout is de wachttijd voor de hoover verschijnd.
+}
+
+function dropinv2(){
+	scroll_top=(ie)? truebody().scrollTop : window.pageYOffset
+	if (parseInt(crossbox.style.top)<0){
+		crossboxcover.style.top=scroll_top+dropboxtop+"px"
+		crossbox.style.top=parseInt(crossbox.style.top)+dropspeed+"px"
+	}
+	else{
+		clearInterval(dropstart)
+		crossbox.style.top=0
+	}
+}
+
+function dismissboxv2(){
+	if (window.dropstart) clearInterval(dropstart)
+		crossboxcover.style.visibility="hidden"
+}
+
+function truebody(){
+	return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
+}
+
+function get_cookie(Name) {
+	var search = Name + "="
+	var returnvalue = ""
+	if (document.cookie.length > 0) {
+		offset = document.cookie.indexOf(search)
+		if (offset != -1) {
+			offset += search.length
+			end = document.cookie.indexOf(";", offset)
+			if (end == -1)
+				end = document.cookie.length;
+			returnvalue=unescape(document.cookie.substring(offset, end))
+		}
+	}
+	return returnvalue;
+}
+
+if (displaymode=="oncepersession" && get_cookie("droppedinv2")=="" || displaymode=="always" || parseInt(displaymode)!=NaN && random_num==0){
+	if (window.addEventListener)
+		window.addEventListener("load", initboxv2, false)
+	else if (window.attachEvent)
+		window.attachEvent("onload", initboxv2)
+	else if (document.getElementById || document.all)
+		window.onload=initboxv2
+	if (displaymode=="oncepersession")
+		document.cookie="droppedinv2=yes"
+}
+</script>
+<div id="dropinboxv2cover">
+	<div id="dropinboxv2">
+		<div align="right"><a href="#" onClick="dismissboxv2();return false"><font color="darkblue">[Sluiten]</font></a></div>
+		<div align="left">
+		
+		<table class="contentpaneopen">
+				<tr>
+			<td valign="top" colspan="2">
+				<font face="Arial" size="2">Schrijf nu in op onze gratis  Nieuwsbrief.</font>
+<div><font face="Arial" size="2">Als dank krijgt u het E-boek over Japanse Candles  gratis toegestuurd.<br />
+<br />
+</font>
+<div align="center"><font face="Arial" size="2"> <iframe frameborder="0" height="110" name="frame1" scrolling="no" src="http://www.beursbox.nl/inschrijvenbeursbox.html" width="430"></iframe></font><font face="Arial" size="2"><img hspace="5" height="220" border="0" width="156" alt="De beursbox nieuwsbrief" src="http://www.beursbox.nl/images/stories/beursbox-nieuwsbrief-front.jpg" /></font></div>
+</div>			</td>
+		</tr>
+				</table>
+
+		<span class="article_seperator">&nbsp;</span>
+
+		</div>
+	</div>
+</div>
+
+
+		</div>
+				<div class="moduletable">
+							<h3>
+					Beursbox Content				</h3>
+				
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr align="left"><td><a href="http://www.beursbox.nl/" class="mainlevel" >Voorpagina</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/beurs-analyses.html" class="mainlevel" >Beurs Analyses</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/beurs-artikelen.html" class="mainlevel" >Beurs Artikelen</a></td></tr>
+<tr align="left"><td><a href="http://forum.beursbox.nl" target="_blank" class="mainlevel" >Beursbox Forum</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/beurs-kennis-box.html" class="mainlevel" >Beurs Kennis Box</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/koersen.html" class="mainlevel" >Koersen</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/table/nieuws-update/" class="mainlevel" >Nieuws</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/update.html" class="mainlevel" >Aanmelding Nieuwsbrief</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/cgi-bin/mail.cgi/list/bbbh/" target="_blank" class="mainlevel" >Nieuwsbrief Archief tot 27 mei 2010</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/nieuwsbrief-archief-26-mei-2010.html" class="mainlevel" >Nieuwsbrief Archief > 27 mei 2010</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/financiele-diensten.html" class="mainlevel" >Financiele Diensten</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/elliott-wave-op-beursbox.nl.html" class="mainlevel" >Elliott Wave</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/japanse-candles.html" class="mainlevel" >Japanse Candles</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/speeders-citi.html" class="mainlevel" >Speeders Citi</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/links.html" class="mainlevel" >Links</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/disclaimer-en-privacy-policy.html" class="mainlevel" >Disclaimer / Privacy</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/spamfilter-aanpassen.html" class="mainlevel" >Spamfilter aanpassen</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/de-echte-beursbox.html" class="mainlevel" >usmarkets</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/leren-beleggen.html" class="mainlevel" >Leren beleggen</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/uitschrijven-beursbox-nieuwsbrief.html" class="mainlevel" >Uitschrijven nieuwsbrief</a></td></tr>
+</table>		</div>
+				<div class="moduletable">
+							<h3>
+					 Abonneer op Feeds				</h3>
+				<div align="center" class="dsmodule"><div align="center" class="dsmessage"></div><div align="center" class="dsfeed"><a href="index2.php?option=com_ds-syndicate&amp;version=1&amp;feed_id=1"><img src="http://www.beursbox.nl/components/com_ds-syndicate/buttons/rss20.gif" alt="feed image" /></a></div><div align="center" class="dsfeed"><a href="index2.php?option=com_ds-syndicate&amp;version=1&amp;feed_id=2"><img src="http://www.beursbox.nl/components/com_ds-syndicate/buttons/atom03.gif" alt="feed image" /></a></div></div>		</div>
+				<div class="moduletable">
+					</div>
+						</div>
+								<div id="mainbodysect" style="width:740px;">
+														<table class="contentpaneopen">
+			<tr>
+								<td class="contentheading" width="100%">
+					CSM Aandelen AEX Beurs Grafiek Analyse									</td>
+							</tr>
+			</table>
+			
+		<table class="contentpaneopen">
+				<tr>
+			<td valign="top" colspan="2">
+				<table width="100%" class="normal">
+    <tbody>
+        <tr>
+            <td width="849" valign="top" align="left">
+            <p align="center"><img height="459" width="700" border="0" align="left" src="http://www.beursbox.nl/plaatjes/csm.png" alt="CSM technische beurs analyse koersen grafiek" /> </p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<table width="600" cellspacing="0" cellpadding="0" border="0">
+    <tbody>
+        <tr>
+            <td width="100%">
+            <p><font color="#000000">18 feb 2009</font></p>
+            <p><font color="#000000">Bij dit aandeel overweeg ik de analyses maar te stoppen. Er is al vanaf begin november niets meer gaande. Uiteindelijk sloten we gisteren op het laagste punt sinds zeker tien jaar. Verder terug gaat de koersenfeed op Alex niet. Hoewel de Stochastic en RSI eind januari koopsignalen gaven, is de koers verder weggegleden. Niet interessant derhalve.<br />
+            </font></p>
+            <p><font color="#000000">23 jan 2009</font></p>
+            <p><font color="#000000">Ik heb dit aandeel maar even wat maanden laten liggen en niet geanalyseerd. Daar is niets meer verloren gegaan. De koers is als die tijd grofweg tussen de 10 en 11,5 gebleven. Hele kleine candles, die pas de afgelopen dagen weer iets groter worden. We zijn in een paar weken tijd snel van de bovenkant van de Bollingerbands naar de onderkant gegaan. Het lijkt erop dat er vanuit Stochastic en RSI binnenkort wel een koopsignaal zal komen. Even afwachten nog, want zo ver is het zeker nog niet.<br />
+            </font></p>
+            <p><font color="#000000">4 nov 2008</font></p>
+            <p><font color="#000000">Een slecht bericht vanuit dit bedrijf. Hun markt is flink teruggevallen. De laatste analyse die we deden was op 26 september en toen gaven we duidelijk aan dat het aandeel links kon blijven liggen. Dat was op een koers van 18 euro per aandeel. We staan nu onder de 11... Dit blijft daarom een aandeel waar we niet in willen zitten.<br />
+            </font></p>
+            <p><font color="#000000">26 sept 2008</font></p>
+            <p><font color="#000000">Na de koersduikeling in augustus is het heel erg stil geworden. In feite is het aandeel vanaf dat moment te vinden tussen de 18 en 19,5. Beleggers laten het aandeel massaal links liggen en naar mijn idee ligt het daar prima.<br />
+            </font></p>
+            <p><font color="#000000">4 sept 2008</font></p>
+            <p><font color="#000000">De vorige analyse was half juni en ik was zeer negatief. Dat bleek een opmerkelijk juist analyse te zijn, want daarna ging de koers van 26 naar 18,1 waar we nu staan. Het aandeel ligt er dat laatste weken triest bij. Toch is het volume toegenomen, terwijl de bewegingen vrijwel uit het aandeel verdwenen zijn. Een opmerkelijk gegeven dat moeilijk te verklaren is. Voor de daling zagen we juist dat bij veel omzet ook de beweging heftiger was. De enige verklaring die ik voor het huidige beeld kan geven is dat &eacute;&eacute;n of meer partijen op een koers van tussen de 18,1 en 18,3 zwaar aan het inkopen zijn. Alles dat aangeboden wordt, wordt rond die koers opgepakt. Gezien de koersdaling die we al zagen niet zo gek dat er ergens een partij is die dit snoepje wel wil hebben.<br />
+            Technisch gezien is er vanuit zowel RSI als Stochastic een koopsignaal gekomen. Vanuit de Japanse Candles zie ik echter nog geen koopsignaal.<br />
+            Met stoploss van 17,9 end of day nemen we hier een positie in. Als die grote koper er echt is, dan horen we daar ongetwijfeld binnenkort wel van.<br />
+            </font></p>
+            <p><font color="#000000">13 juni 2008</font></p>
+            <p><font color="#000000">Het aandeel CSM lijkt nu neerwaarts door de vorige top heengebroken te zijn. Met ook de indicatoren neerwaarts gericht lijkt het me geen moment om aandeelhouder te willen worden.</font></p>
+            <p><font color="#000000">16 mei 2008</font></p>
+            <p><font color="#000000">Het aandeel is de top van dec 2007 aan het testen en vooralsnog lijkt het er niet doorheen te kunnen breken. We hebben de afgelopen maanden, achteraf gezien, wel een mooie stijging gezien. De winst werd echter steeds in &eacute;&eacute;n dag gemaakt, waarna het aandeel op een iets hoger niveau stabiliseerde. Op de stijgdagen een hoog volume dat daarna weer helemaal terugvalt. Als dat patroon zich voortzet, dan zou &eacute;&eacute;n dezer dagen weer een mooie dag moeten volgen. Je moet het als belegger maar durven om daar op te beleggen.</font></p>
+            <p><font color="#000000">4 apr 2008</font></p>
+            <p><font color="#000000">Eerder deze week het bericht dat de CSM suiker uit de schappen zal verdwijnen. Het heeft met beleggen niets te doen, maar het maakt wel duidelijk dat de onderneming duidelijk veranderd is en niet meer alleen suiker is. De koers is de laatste tijd toch mooi gestegen. Die winst heb ik dus gemist. Gisteren op de top een Doji. Als dat vandaag gevolgd wordt door een donkere candle, dan pakken zich donderwolken rond de koers samen. Stochastic en RSI geven verkoopsignaal. Technisch gezien is dit een schreeuwende verkoop. We hebben echter de aandelen niet. Het aandeel wordt te weinig verhandeld om hier nu veilig short in te kunnen gaan. Ik blijf er dus verder even af.</font></p>
+            <p><font color="#000000">7 mrt 2008</font></p>
+            <p><font color="#000000">Op 18 nam ik geen positie in. Achteraf gezien was het toch een goed niveau, want de koers is nu 20,73 geworden. Toch denk ik niet dat hier te snel positie ingenomen moet worden. De markt is nu in haar geheel te zwak en dat kan doorwerken naar in feite dit relatief kleine aandeel met weinig handel. Wel moet gezegd worden dat de handel de laatste tijd aan het toenemen is. Sinds halverwege februari zien we duidelijk meer handel en we zagen eind februari in een dag met een enorm volume de koers herstellen tot boven de 20. Op zich is dat een gunstig teken. Ik ben alleen van mening dat het gehele beurs sentiment te zwak is voor een nieuwe positie in een aandeel als dit.</font></p>
+            <p><font color="#000000">11 feb 2008</font></p>
+            <p><font color="#000000">CSM kijk ik nog slechts zelden naar. Op 8 januari vond ik het aandeel op een koers boven de 23 niet interessant. Gelukkig maar, want we staan nu nog slechts 18 euro. Daar lijkt dan ook wel een bodem gevonden te zijn. Hoewel een speculatieve positie dan overwogen kan worden, ben ik niet gecharmeerd van het feit dat er amper omzet in de stukken is. Ik blijf er in het huidige beursklimaat dus liever vanaf.</font></p>
+            <p><font color="#000000">8 jan 2008</font></p>
+            <p><font color="#000000">Het aandeel CSM is al sinds half augustus 2007 niet meer serieus in beweging geweest. Wil af en toe iemand nog even schudden en vragen of het aandeel nog leeft? Onder 25 euro nog altijd niet interessant.</font></p>
+            <p><font color="#000000">10 dec 2007</font></p>
+            <p><font color="#000000">Het aandeel kruipt omhoog, maar daarmee zijn de indicatoren ook hoger gekomen. Onder de 25 euro zie ik nog altijd geen reden om hier serieus naar te kijken.</font></p>
+            <p><font color="#000000">14 nov 2007</font></p>
+            <p><font color="#000000">Het 'dode paard' (Zie analyse 24 okt 2007) CSM is helaas nog niet tot leven gewekt. Als sinds half augustus weinig beweging en een koers rond de 24 euro.</font></p>
+            <p><font color="#000000">24 okt 2007</font></p>
+            <p><font color="#000000">Het aandeel ligt er als een dood paard bij. Al vanaf half augustus is er weinig voorgevallen. E&eacute;n uitschieter omhoog en &eacute;&eacute;n omlaag en voor de rest hangen rond de 24 euro. Niet interessant.</font></p>
+            <p><font color="#000000">26 sep 2007</font></p>
+            <p><font color="#000000">Ik neem even geen nieuwe positie in na de winstname op de short positie. De trend lijkt nog altijd neerwaarts te zijn, maar het ziet er niet interessant genoeg uit. Opvallend is dat de Stochastic bij dit aandeel geen bruikbare signalen geeft. Ook RSI is maar 50% correct. Dat kan onder andere komen doordat de omzetten vrij laag zijn. Het is nu eenmaal geen aandeel dat 'hot' is. Fundamenteel interessant is het bedrijf ook niet echt vrees ik. De dalende trend sinds begin dit jaar laat dat ook duidelijk zien.</font></p>
+            <p><font color="#000000">22 aug 2007</font></p>
+            <p><font color="#000000">Als u op basis van de vorige analyse onder de 27,2  short zou zijn gegaan, dan is het nu tijd om winst te nemen. De koers hangt nu  net boven de 24 euro en hoewel de neiging nog altijd neerwaarts is, is er een  mooie winst.</font></p>
+            <p><font color="#000000">30 juli 2007</font></p>
+            <p><font color="#000000">De test tussen de OBV indicator en de Japanse Candles  is in het voordeel van de Japanse Candles uitgevallen. Nu is dat geen  wetenschappelijke test geweest, maar ik ben blij dat de door mij zo veel  gebruikte Japanse Candles een zo overtuigende overwinning lieten zien. Ik had  het even moeilijk om op een grafiek met de laatste twee jaar een goed beeld te  krijgen. Toen ik de grafiek oprekte naar de laatste 12 jaar werd het wel  duidelijker. Rond de 27 is er vaak een top gezet. Ook nu zitten we op dat punt.  Geen moment om long te gaan, want eerst moet het aandeel maar eens bewijzen door  die top heen te kunnen komen. Als CSM weer neerwaarts door de 27,2 gaat, dan zou  een short positie overwogen kunnen worden.</font></p>
+            <p><font color="#000000">22 juni 2007</font></p>
+            <p><font color="#000000">Voor het eerst heb ik in de grafiek een 'On Balance  Volume' geplot. Volgens de ontwikkelaar heeft deze indicator een voorspellende  werking omdat beleggers eerst met het hart en daarna met de hersens handelen.  Bij een dalende koers en dalende OBV houdt het dus in dat een verdere daling  verwacht wordt. Ik ben benieuwd, want de candle van gisteren had wel een lange  lower shadow. Dat houdt juist vaak in dat de bodem gezocht is. Het gaat echter  niet altijd op, maar is dat niet met alle technische Analyse het geval? We  hebben geen positie meer in CSM en dat houden we zo.</font></p>
+            <p><font color="#000000">22 mei 2007</font></p>
+            <p><font color="#000000">Bij CSM is goed te zien dat we nu bij een belangrijke  steunlijn aangekomen zijn. De vorige analyse was perfect. Op dit moment wordt de  steun getest. Gezien de kracht van de markt lijkt een instap op dit punt, met  stoploss op 26,8 een aardige suggestie met weinig risico op een groot verlies.</font></p>
+            <p><font color="#000000">24 apr 2007</font></p>
+            <p><font color="#000000">Het aandeel is sinds halverwege maart aan een prachtig  herstel begonnen. Op dit moment lopen we tegen de gap weerstanden van begin 2007  aan. We zien in de grafiek een niet zuivere &quot;Advance Block&quot;. Niet zuiver, omdat  de koersen niet altijd binnen de range van de vorige body opende. Toch is naar  mijn idee het beeld duidelijk. De rally boet aan kracht in. (Meer weten over wat  Japanse Candles u kunnen zeggen, kijkt u op www.japansecandles.nl).</font></p>
+            <p><font color="#000000">20 feb 2007</font></p>
+            <p><font color="#000000">De winst is laatst genomen. Hoewel er mogelijk kansen  zijn, laat ik dit aandeel nu even links liggen. We hebben niet voor niets een  stoploss ingesteld en daarna de winst genomen.</font></p>
+            <p><font color="#000000">17 jan 2007</font></p>
+            <p><font color="#000000">Het is nog niet zo ver, maar de stoploss komt bij CSM  nu toch wel akelig dicht in de buurt. Wie nog geen eerdere winst nam zal nu op  moeten letten. Het is de laatste maanden een mooie run omhoog geweest. Nu lijkt  de trend toch echt te keren. Met al meer dan een half jaar in portefeuille is  dit &eacute;&eacute;n van de oudste posities in de Beursbox portefeuille geworden.</font></p>
+            <p><font color="#000000">7 dec 2006</font></p>
+            <p><font color="#000000">De stoploss gaan we verhogen naar 27,6. (Was 26,7) In  de indicatoren en in de Candles nu verkoopsignalen, dus wie winst wil nemen kan  dat nu ook doen op een stand boven de 28 euro. Op 3 juli openden we de positie  op 22 euro. Het bleek prachtig op de bodem van 2006 te zijn! 25% op een zo  weinig aansprekend aandeel is geen slecht resultaat.</font></p>
+            <p><font color="#000000">8 nov 2006</font></p>
+            <p><font color="#000000">De stoploss leggen we nu op 26,7.</font></p>
+            <p><font color="#000000">2 nov 2006</font></p>
+            <p><font color="#000000">De stoploss, die op 25 september op 24,4 gelegd werd,  kan nu naar 26,45 gebracht worden.</font></p>
+            <p><font color="#000000">25 sept 2006</font></p>
+            <p><font color="#000000">We zien bij CSM dat de gap van eind april nu weerstand  is. Met vijf Doji's in de laatste zeven beursdagen is duidelijk dat er twijfel  bij beleggers is. Wie de aandelen nog bezit, legt de stoploss nu op 24,4</font></p>
+            <p><font color="#000000">21 aug 2006</font></p>
+            <p><font color="#000000">Stop loss gaat omhoog naar 22,5 end of day, of 1,1 euro  onder de top! Het volume neemt iets toe, maar de candles worden er niet mooier  op. Wel lijkt het aandeel sinds begin juni in ene positieve trend te zijn  gekomen. We zien hogere bodems en zagen vorige week ook een hogere top.</font></p>
+            <p><font color="#000000">3 jul 2006</font></p>
+            <p><font color="#000000">Bodemen deed CSM inderdaad en op dit moment zijn we die  bodem weer aan het testen. Het gevaar blijft het volume, maar dat name donderdag  en vrijdag weer aardig toe. Speculatief interessant voor beleggers die geld  hebben om mee te spelen. Stoploss na aankoop op 21,15 leggen. Na aankoop  trailing stop loss met 1,1 euro aan ruimte.</font></p>
+            <p><font color="#000000">13 jun 2006</font></p>
+            <p><font color="#000000">Het besluit om afscheid te nemen bleek juist te zijn.  Het aandeel is daarna nog meer dan 10% gedaald. Het lijkt nu te bodemen, maar in  dit zwakke beursklimaat heb ik geen zin in gokjes in aandelen waarin relatief  weinig handel is.</font></p>
+            <p><font color="#000000">24 apr 2006</font></p>
+            <p><font color="#000000">De stoploss is geraakt. Ik blijf hier zelf nu vanaf. De  koers daalde me net teveel en de winst is genomen.</font></p>
+            <p><font color="#000000">3 apr 2006</font></p>
+            <p><font color="#000000">De aandeelhouders leggen de stop loss liever iets  hoger. Deze mag naar 25,2.</font></p>
+            <p><font color="#000000">21 feb 006</font></p>
+            <p><font color="#000000">Na de doorbraak bij 24 euro zien we dat de koers snel  anderhalve euro wist te winnen. De gap van eind augustus is daarmee overwonnen  en met een stop loss op 23,8 kan de long positie aangehouden worden. Wie minder  risico wil nemen legt de stop loss hoger. Ook op 24,2 ligt een steun.</font></p>
+            <p><font color="#000000">9 jan 2006</font></p>
+            <p><font color="#000000">In december is de stop loss voor aandeelhouders  geraakt. We zien nu dat de koers net boven de vorige top is gekomen. Een  overtuigende doorbreking was het nog niet. Pas bij een slot boven de 24 euro zou  een long positie te overwegen kunnen zijn.</font></p>
+            <p><font color="#000000">1 dec 2005</font></p>
+            <p><font color="#000000">Ik wil beleggers die recent de aandelen gekocht hebben  aanraden de stop loss te verhogen naar 22,9 (was 22,2).</font></p>
+            <p><font color="#000000">24 nov 2005</font></p>
+            <p><font color="#000000">Nu suiker in de belangstelling staat wil ik ook weer  even naar CSM kijken. We zagen vorige week een mooi herstel vanaf de nieuwe  bodem. Er kwam in een week tijd 10% bij, dus dat is nogal een herstel te noemen.  Met een koersdoel van in eerste instantie 24,7 is het grootste deel van de  stijging al gerealiseerd. Toch zou een long positie een overweging kunnen zijn.  Wel moet u dan een stop loss aanhouden van 22,2. Een eventueel verlies blijft  dan beperkt en zou de stijging doorzetten, dan blijft u mee profiteren.</font></p>
+            <p><font color="#000000">12 sep 2005</font></p>
+            <p><font color="#000000">Sinds vorige week is het aandeel in herstel. De volumes namen eindelijk weer eens toe. Grootste weerstand ligt nu op 24,75. (de bovenkant van de gap omlaag.</font></p>
+            <p><font color="#000000">21 jun 2005</font></p>
+            <p><font color="#000000">CSM bevindt zich nog net onder het belangrijke 24,75 niveau, dat het laatste jaar het hoogste punt was. De indicatoren zijn al behoorlijk ver opgelopen, dus is het de vraag hoeveel ruimte er nog omhoog is. Er is nog geen verkoopsignaal. Ik verwacht dat binnenkort eigenlijk wel. Pas dan zien of het interessant is om er op te handelen.</font></p>
+            <p><font color="#000000">15 sept 2004  </font></p>
+            <p><font color="#000000">Het gaat structureel niet goed met dit bedrijf, maar kijken we naar de koers vanaf 1 januari, dan is dit &eacute;&eacute;n van de aandelen die wel hoger staat. De laatste 4 maanden is het echter een neergaande koers bij CSM.<br />
+            Ondanks dat Stochastic een koopsignaal gaf zijn er redenen voorzichtig te zijn. De omzetten zijn laag, de koersbewegingen per dag zijn ook heel gering. De laatste anderhalve week grossiert het aandeel in Doji's.</font></p>
+            <p><font color="#000000">30 jun 2004</font></p>
+            <p><font color="#000000">Technisch zou hier wel eens een koopmoment aan kunnen komen. Stochastic en RSI staan op het punt een koopsignaal te geven en eergisteren zagen we een Doji na twee zware dagen. Steun op 19,3. <br />
+            Komt er een tweede reorganisatieronde bij CSM? Als er lezers zijn die er meer van weten, dan hoor ik het graag.</font></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+<table width="100%" class="tablebox">
+    <tbody>
+        <tr>
+            <td width="40%">
+            <p><font size="2">De Analyses zijn gemaakt door Tom Lassing, tenzij anders aangegeven.</font></p>
+            <font size="2">            </font>
+            <p><font size="2"><font size="2">Tom Lassing en <a href="http://www.progainbv.nl">Pro Gain BV</a> houden geen aanzienlijke belangen in binnen Europa gelegen beursgenoteerde ondernemingen.<br />
+            Het kan zijn dat Tom Lassing priv&eacute; een kleine positie zal innemen conform zijn analyse en advies. U dient daar bij de beoordeling van de analyse rekening mee te houden.<br />
+            Er zijn geen afspraken met banken of brokers over vergoeding omzet op basis van de gegeven adviezen. Ook als adviezen van Tom Lassing via andere aanbieders tot u komen is er geen sprake van een betaalde bijdrage. De analyses worden altijd gratis verstrekt aan derden met slechts de afspraak dat er een werkende link naar <a href="http://www.beursbox.nl">www.beursbox.nl</a> onder staat.   </font></font></p>
+            <font size="2"><font size="2">            </font></font></td>
+            <td width="20%" align="center">
+            <p><br />
+            </p>
+            </td>
+            <td width="40%"><font size="2">Leest u ook onze <a href="http://www.beursbox.nl/disclaimer-en-privacy-policy.html">disclaimer</a> nog eens goed na. In de nieuwsbrief treft u dagelijks de meest recente analyses aan.<br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            </font></td>
+        </tr>
+    </tbody>
+</table>
+</p>			</td>
+		</tr>
+				</table>
+
+		<span class="article_seperator">&nbsp;</span>
+
+					<div class="back_button">
+				<a href='javascript:history.go(-1)'>
+					[ terug ]</a>
+			</div>
+							</div>
+								<div style="clear:both;"></div>
+			</div>
+			<div style="clear:both;"></div>
+			</div>
+		</div><!-- end body wrapper -->
+		
+				<div id="footer_wrapper">
+			<div id="footer_left"></div>
+						<div style="clear:both;"></div>	
+			<center>Copyright &#169; 2010 <a href="http://www.progainbv.nl" target="_blank">Pro Gain BV</a> | <a href="http://www.beursbox.nl/over-beurbox.nl.html">Over ons | <a href="http://www.beursbox.nl/contact-beursbox.html">Contact</a> | <a href="http://www.beursbox.nl/testimonials-beursbox.nl.html">Testimonials</a> | <a href="http://www.progainshop.com/affiliate" target="_blank">Partnerprogramma</a> | <a href="http://www.beursbox.nl/aanmelden-nieuwsbrief.html">Inschrijven nieuwsbrief</a> | <a href="index.php?option=com_joomap&Itemid=259">Sitemap</a><br /><br />
+			Beursbox.nl over: beurs - aandelen - beleggen - geld beleggen - beursnieuws - investeren - koers - beleggingsadvies - rendement - opties - beurskoersen - aex - aandelen tips - aandelen koersen - beursinformatie - aandelenfonds - aandelenkoersen - financiele markt - aandelen koersen - beleggen opties
+			</center>
+		</div>
+
+	</div> <!-- end pagewrapper -->
+</div> <!-- end wrapper -->
+
+</body>
+</html><!-- 1287578772 -->

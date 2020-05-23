@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="mbdt.EuronextBigConverter.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ApprovedIndexPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">repository\euronext\securities.xml</Value>
+    </Setting>
+    <Setting Name="DiscoveredIndexPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">repository\euronext\discovered\securities.xml</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

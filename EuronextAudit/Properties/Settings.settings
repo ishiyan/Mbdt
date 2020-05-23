@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="mbdt.EuronextAudit.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DownloadTimeout" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">180000</Value>
+    </Setting>
+    <Setting Name="ApprovedIndexPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">repository\euronext\securities.xml</Value>
+    </Setting>
+    <Setting Name="DiscoveredIndexPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">repository\euronext\discovered\securities.xml</Value>
+    </Setting>
+    <Setting Name="DownloadRetries" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="PauseBeforeRetry" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1000</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

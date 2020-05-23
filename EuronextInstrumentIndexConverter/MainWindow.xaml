@@ -1,0 +1,419 @@
+﻿<Window x:Class="EuronextInstrumentIndexConverter.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:EuronextInstrumentIndexConverter"
+    Title="Euronext instrument index converter" Height="Auto" Width="Auto" SizeToContent="WidthAndHeight" ShowInTaskbar="True" AllowsTransparency="False" WindowStyle="SingleBorderWindow" Icon="/EuronextInstrumentIndexConverter;component/App.ico">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="320"/>
+            <ColumnDefinition Width="500"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+            <TextBlock Style="{StaticResource textBlock}">Input</TextBlock>
+            <TextBox Style="{StaticResource textBox}" x:Name="inputFileTextBox" MinWidth="100" Width="Auto" MaxWidth="200" TextChanged="inputFileTextBox_TextChanged" />
+            <Button Style="{StaticResource button}" x:Name="buttonSelectParse" ToolTip="Select a file to parse" Click="buttonSelectParse_Click">...</Button>
+            <Button Style="{StaticResource button}" x:Name="buttonParse" ToolTip="Parse the selected file" Click="buttonParse_Click">Parse</Button>
+            <Button Style="{StaticResource button}" x:Name="buttonCurFiles" ToolTip="Create current instrument data files" Click="buttonCreateCurrentFiles_Click">&gt;Data</Button>
+            <Button Style="{StaticResource button}" x:Name="buttonAllFiles" ToolTip="Create all data files" Click="buttonCreateAllFiles_Click">&gt;&gt;Data</Button>
+        </StackPanel>
+        <ListBox x:Name="logListBox" Grid.Row="1" Grid.Column="0" Style="{StaticResource listBox}"/>
+        <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal">
+            <!-- Button Style="{StaticResource button}" x:Name="buttonClear" ToolTip="Clear the log" Click="buttonClear_Click">Clear log</Button -->
+            <Button Style="{StaticResource button}" x:Name="buttonFirst" ToolTip="Move to the first instrument" Click="buttonFirst_Click">|&lt;</Button>
+            <Button Style="{StaticResource button}" x:Name="buttonPrev" ToolTip="Move to the previous instrument" Click="buttonPrev_Click">&lt;</Button>
+            <Button Style="{StaticResource button}" x:Name="buttonNext" ToolTip="Move to the next instrument" Click="buttonNext_Click">&gt;</Button>
+            <Button Style="{StaticResource button}" x:Name="buttonLast" ToolTip="Move to the last instrument" Click="buttonLast_Click">&gt;|</Button>
+            <TextBlock Style="{StaticResource textBlock}" x:Name="currentInstrumentTextBlock"/>
+            <TextBlock Style="{StaticResource textBlock}"/>
+            <TextBox Style="{StaticResource textBox}" x:Name="goindexTextBox" Width="Auto"/>
+            <Button Style="{StaticResource button}" x:Name="goindexButton" ToolTip="Move to this instrument" Click="goindexButton_Click">Go</Button>
+            <TextBlock Style="{StaticResource textBlock}" x:Name="masterTextBlock" Foreground="Green">Master</TextBlock>
+            <Button Style="{StaticResource button}" x:Name="buttonSearchMaster" ToolTip="Search master" Click="buttonSearchMaster_Click">Search</Button>
+            <Button Style="{StaticResource button}" x:Name="buttonClone" ToolTip="Clone the current instrument in a new window" Click="buttonClone_Click">Clone</Button>
+            <Button Style="{StaticResource button}" x:Name="buttonNew" ToolTip="A new instrument in a new window" Click="buttonNew_Click">New</Button>
+        </StackPanel>
+        <TextBox x:Name="parseTextBox" Grid.Row="3" Grid.Column="0" Style="{StaticResource logTextBox}" Height="Auto" IsReadOnly="True" TextWrapping="Wrap" />
+        <StackPanel Grid.Row="4" Grid.Column="0" Orientation="Horizontal">
+            <TextBlock Style="{StaticResource textBlock}">Ouput</TextBlock>
+            <TextBox Style="{StaticResource textBox}" x:Name="outputFileTextBox" MinWidth="100" Width="Auto" TextChanged="outputFileTextBox_TextChanged" />
+            <Button Style="{StaticResource button}" x:Name="buttonSelectSave" ToolTip="Select a file to save" Click="buttonSelectSave_Click">...</Button>
+            <Button Style="{StaticResource button}" x:Name="buttonSaveThis" ToolTip="Save current instrument" Click="buttonSaveThis_Click">Save</Button>
+            <Button Style="{StaticResource button}" x:Name="buttonSaveAll" ToolTip="Save all instruments" Click="buttonSaveAll_Click">Save all</Button>
+        </StackPanel>
+        <StackPanel Grid.Row="0" Grid.Column="1" Grid.RowSpan="4" Orientation="Vertical" x:Name="convertedBinding" Width="500">
+            <Grid Width="Auto">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Grid.Row="0" Style="{StaticResource textBlock}">vendor</TextBlock>
+                <TextBox Grid.Column="0" Grid.Row="1" Style="{StaticResource textBox}" x:Name="vendorTextBox" Width="Auto" Text="{Binding Vendor, Mode=TwoWay}"/>
+                <TextBlock Grid.Column="1" Grid.Row="0" Style="{StaticResource textBlock}">mep</TextBlock>
+                <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource textBox}" x:Name="mepTextBox" Width="Auto" Text="{Binding Mep, Mode=TwoWay}"/>
+                <TextBlock Grid.Column="2" Grid.Row="0" Style="{StaticResource textBlock}">isin</TextBlock>
+                <TextBox Grid.Column="2" Grid.Row="1" Style="{StaticResource textBox}" x:Name="isinTextBox" Width="Auto" Text="{Binding Isin, Mode=TwoWay}" TextChanged="isinTextBox_TextChanged"/>
+                <TextBlock Grid.Column="3" Grid.Row="0" Style="{StaticResource textBlock}">symbol</TextBlock>
+                <TextBox Grid.Column="3" Grid.Row="1" Style="{StaticResource textBox}" x:Name="symbolTextBox" Width="Auto" Text="{Binding Symbol, Mode=TwoWay}"/>
+                <TextBlock Grid.Column="4" Grid.Row="0" Style="{StaticResource textBlock}">name</TextBlock>
+                <TextBox Grid.Column="4" Grid.Row="1" Style="{StaticResource textBox}" x:Name="nameTextBox" Width="Auto" Text="{Binding Name, Mode=TwoWay}"/>
+                <TextBlock Grid.Column="5" Grid.Row="0" Style="{StaticResource textBlock}">state</TextBlock>
+                <TextBox Grid.Column="5" Grid.Row="1" Style="{StaticResource textBox}" x:Name="stateTextBox" Width="Auto" Text="{Binding State, Mode=TwoWay}"/>
+                <TextBlock Grid.Column="6" Grid.Row="0" Style="{StaticResource textBlock}">type</TextBlock>
+                <TextBox Grid.Column="6" Grid.Row="1" Style="{StaticResource textBox}" x:Name="typeTextBox" Width="Auto" Text="{Binding Type, Mode=TwoWay}"/>
+            </Grid>
+            <TextBlock Style="{StaticResource textBlock}">file</TextBlock>
+            <TextBox Style="{StaticResource textBox}" x:Name="fileTextBox" Width="Auto" Height="Auto" TextWrapping="Wrap" Text="{Binding File, Mode=TwoWay}"/>
+            <TextBlock Style="{StaticResource textBlock}">description</TextBlock>
+            <TextBox Style="{StaticResource logTextBox}" x:Name="descriptionTextBox" Width="Auto" Height="Auto" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" Text="{Binding Description, Mode=TwoWay}"/>
+            <TextBlock Style="{StaticResource textBlock}">notes</TextBlock>
+            <TextBox Style="{StaticResource logTextBox}" x:Name="notesTextBox" Width="Auto" Height="Auto" TextWrapping="Wrap" Text="{Binding Notes, Mode=TwoWay}"/>
+            <Expander x:Name="indexExpander" Style="{StaticResource expander}" Header="index">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Grid.Row="0" Style="{StaticResource textBlock}">kind</TextBlock>
+                    <TextBox Grid.Column="0" Grid.Row="1" Style="{StaticResource textBox}" x:Name="indexKindTextBox" Width="Auto" Text="{Binding IndexKind, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="1" Grid.Row="0" Style="{StaticResource textBlock}">calcFreq</TextBlock>
+                    <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource textBox}" x:Name="indexCalcFreqTextBox" Width="Auto" Text="{Binding IndexCalcFreq, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="2" Grid.Row="0" Style="{StaticResource textBlock}">baseDate</TextBlock>
+                    <TextBox Grid.Column="2" Grid.Row="1" Style="{StaticResource textBox}" x:Name="indexBaseDateTextBox" Width="Auto" Text="{Binding IndexBaseDate, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="3" Grid.Row="0" Style="{StaticResource textBlock}">baseLevel</TextBlock>
+                    <TextBox Grid.Column="3" Grid.Row="1" Style="{StaticResource textBox}" x:Name="indexBaseLevelTextBox" Width="Auto" Text="{Binding IndexBaseLevel, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="4" Grid.Row="0" Style="{StaticResource textBlock}">baseCap</TextBlock>
+                    <TextBox Grid.Column="4" Grid.Row="1" Style="{StaticResource textBox}" x:Name="indexBaseCapTextBox" Width="Auto" Text="{Binding IndexBaseCap, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="5" Grid.Row="0" Style="{StaticResource textBlock}">baseCapCur</TextBlock>
+                    <TextBox Grid.Column="5" Grid.Row="1" Style="{StaticResource textBox}" x:Name="indexBaseCapCurrencyTextBox" Width="Auto" Text="{Binding IndexBaseCapCurrency, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="6" Grid.Row="0" Style="{StaticResource textBlock}">capFactor</TextBlock>
+                    <TextBox Grid.Column="6" Grid.Row="1" Style="{StaticResource textBox}" x:Name="indexCapFactorTextBox" Width="Auto" Text="{Binding IndexCapFactor, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="0" Grid.Row="2" Style="{StaticResource textBlock}">icb1</TextBlock>
+                    <TextBox Grid.Column="0" Grid.Row="3" Style="{StaticResource textBox}" x:Name="indexIcb1Box" Width="Auto" Text="{Binding IndexIcb1, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="1" Grid.Row="2" Style="{StaticResource textBlock}">icb2</TextBlock>
+                    <TextBox Grid.Column="1" Grid.Row="3" Style="{StaticResource textBox}" x:Name="indexIcb2Box" Width="Auto" Text="{Binding IndexIcb2, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="2" Grid.Row="2" Style="{StaticResource textBlock}">icb3</TextBlock>
+                    <TextBox Grid.Column="2" Grid.Row="3" Style="{StaticResource textBox}" x:Name="indexIcb3Box" Width="Auto" Text="{Binding IndexIcb3, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="3" Grid.Row="2" Style="{StaticResource textBlock}">icb4</TextBlock>
+                    <TextBox Grid.Column="3" Grid.Row="3" Style="{StaticResource textBox}" x:Name="indexIcb4Box" Width="Auto" Text="{Binding IndexIcb4, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="4" Grid.Row="2" Style="{StaticResource textBlock}">family</TextBlock>
+                    <TextBox Grid.Column="4" Grid.Row="3" Style="{StaticResource textBox}" x:Name="indexFamilyTextBox" Width="Auto" Text="{Binding IndexFamily, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="5" Grid.Row="2" Style="{StaticResource textBlock}">weighting</TextBlock>
+                    <TextBox Grid.Column="5" Grid.Row="3" Style="{StaticResource textBox}" x:Name="indexWeightingTextBox" Width="Auto" Text="{Binding IndexWeighting, Mode=TwoWay}"/>
+                </Grid>
+            </Expander>
+            <Expander x:Name="stockExpander" Style="{StaticResource expander}" Header="stock">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Grid.Row="0" Style="{StaticResource textBlock}">cfi</TextBlock>
+                    <TextBox Grid.Column="0" Grid.Row="1" Style="{StaticResource textBox}" x:Name="stockCfiTextBox" Width="Auto" Text="{Binding StockCfi, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="1" Grid.Row="0" Style="{StaticResource textBlock}">tradingMode</TextBlock>
+                    <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource textBox}" x:Name="stockTradingModeTextBox" Width="Auto" Text="{Binding StockTradingMode, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="2" Grid.Row="0" Style="{StaticResource textBlock}">compartment</TextBlock>
+                    <TextBox Grid.Column="2" Grid.Row="1" Style="{StaticResource textBox}" x:Name="stockCompartmentTextBox" Width="Auto" Text="{Binding StockCompartment, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="3" Grid.Row="0" Style="{StaticResource textBlock}">currency</TextBlock>
+                    <TextBox Grid.Column="3" Grid.Row="1" Style="{StaticResource textBox}" x:Name="stockCurrencyTextBox" Width="Auto" Text="{Binding StockCurrency, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="0" Grid.Row="2" Style="{StaticResource textBlock}">icb1</TextBlock>
+                    <TextBox Grid.Column="0" Grid.Row="3" Style="{StaticResource textBox}" x:Name="stockIcb1Box" Width="Auto" Text="{Binding StockIcb1, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="1" Grid.Row="2" Style="{StaticResource textBlock}">icb2</TextBlock>
+                    <TextBox Grid.Column="1" Grid.Row="3" Style="{StaticResource textBox}" x:Name="stockIcb2Box" Width="Auto" Text="{Binding StockIcb2, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="2" Grid.Row="2" Style="{StaticResource textBlock}">icb3</TextBlock>
+                    <TextBox Grid.Column="2" Grid.Row="3" Style="{StaticResource textBox}" x:Name="stockIcb3Box" Width="Auto" Text="{Binding StockIcb3, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="3" Grid.Row="2" Style="{StaticResource textBlock}">icb4</TextBlock>
+                    <TextBox Grid.Column="3" Grid.Row="3" Style="{StaticResource textBox}" x:Name="stockIcb4Box" Width="Auto" Text="{Binding StockIcb4, Mode=TwoWay}"/>
+                </Grid>
+            </Expander>
+            <Expander x:Name="inavExpander" Style="{StaticResource expander}" Header="inav">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Grid.Row="0" Style="{StaticResource textBlock}">icb1</TextBlock>
+                    <TextBox Grid.Column="0" Grid.Row="1" Style="{StaticResource textBox}" x:Name="inavIcb1TextBox" Width="Auto" Text="{Binding InavIcb1, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="1" Grid.Row="0" Style="{StaticResource textBlock}">icb2</TextBlock>
+                    <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource textBox}" x:Name="inavIcb2TextBox" Width="Auto" Text="{Binding InavIcb2, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="2" Grid.Row="0" Style="{StaticResource textBlock}">icb3</TextBlock>
+                    <TextBox Grid.Column="2" Grid.Row="1" Style="{StaticResource textBox}" x:Name="inavIcb3TextBox" Width="Auto" Text="{Binding InavIcb3, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="3" Grid.Row="0" Style="{StaticResource textBlock}">icb4</TextBlock>
+                    <TextBox Grid.Column="3" Grid.Row="1" Style="{StaticResource textBox}" x:Name="inavIcb4TextBox" Width="Auto" Text="{Binding InavIcb4, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="4" Grid.Row="0" Style="{StaticResource textBlock}">currency</TextBlock>
+                    <TextBox Grid.Column="4" Grid.Row="1" Style="{StaticResource textBox}" x:Name="inavCurrencyTextBox" Width="Auto" Text="{Binding InavCurrency, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="0" Grid.Row="2" Style="{StaticResource textBlock}">tgtVendor</TextBlock>
+                    <TextBlock Grid.Column="1" Grid.Row="2" Style="{StaticResource textBlock}">tgtMep</TextBlock>
+                    <TextBlock Grid.Column="2" Grid.Row="2" Style="{StaticResource textBlock}">tgtIsin</TextBlock>
+                    <TextBlock Grid.Column="3" Grid.Row="2" Style="{StaticResource textBlock}">tgtSymbol</TextBlock>
+                    <TextBlock Grid.Column="4" Grid.Row="2" Style="{StaticResource textBlock}">tgtName</TextBlock>
+                    <TextBox Grid.Column="0" Grid.Row="3" Style="{StaticResource textBox}" x:Name="inavTarget1VendorTextBox" Width="Auto" Text="{Binding InavTarget0Vendor, Mode=TwoWay}"/>
+                    <TextBox Grid.Column="1" Grid.Row="3" Style="{StaticResource textBox}" x:Name="inavTarget1MepTextBox" Width="Auto" Text="{Binding InavTarget0Mep, Mode=TwoWay}"/>
+                    <TextBox Grid.Column="2" Grid.Row="3" Style="{StaticResource textBox}" x:Name="inavTarget1IsinTextBox" Width="Auto" Text="{Binding InavTarget0Isin, Mode=TwoWay}"/>
+                    <TextBox Grid.Column="3" Grid.Row="3" Style="{StaticResource textBox}" x:Name="inavTarget1SymbolTextBox" Width="Auto" Text="{Binding InavTarget0Symbol, Mode=TwoWay}"/>
+                    <TextBox Grid.Column="4" Grid.Row="3" Style="{StaticResource textBox}" x:Name="inavTarget1NameTextBox" Width="Auto" Text="{Binding InavTarget0Name, Mode=TwoWay}"/>
+                    <TextBox Grid.Column="0" Grid.Row="4" Style="{StaticResource textBox}" x:Name="inavTarget2VendorTextBox" Width="Auto" Text="{Binding InavTarget1Vendor, Mode=TwoWay}"/>
+                    <TextBox Grid.Column="1" Grid.Row="4" Style="{StaticResource textBox}" x:Name="inavTarget2MepTextBox" Width="Auto" Text="{Binding InavTarget1Mep, Mode=TwoWay}"/>
+                    <TextBox Grid.Column="2" Grid.Row="4" Style="{StaticResource textBox}" x:Name="inavTarget2IsinTextBox" Width="Auto" Text="{Binding InavTarget1Isin, Mode=TwoWay}"/>
+                    <TextBox Grid.Column="3" Grid.Row="4" Style="{StaticResource textBox}" x:Name="inavTarget2SymbolTextBox" Width="Auto" Text="{Binding InavTarget1Symbol, Mode=TwoWay}"/>
+                    <TextBox Grid.Column="4" Grid.Row="4" Style="{StaticResource textBox}" x:Name="inavTarget2NameTextBox" Width="Auto" Text="{Binding InavTarget1Name, Mode=TwoWay}"/>
+                </Grid>
+            </Expander>
+            <Expander x:Name="etfExpander" Style="{StaticResource expander}" Header="etf">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Grid.Row="0" Style="{StaticResource textBlock}">currency</TextBlock>
+                    <TextBox Grid.Column="0" Grid.Row="1" Style="{StaticResource textBox}" x:Name="etfCurrencyTextBox" Width="Auto" Text="{Binding EtfCurrency, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="1" Grid.Row="0" Style="{StaticResource textBlock}">cfi</TextBlock>
+                    <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource textBox}" x:Name="etfCfiTextBox" Width="Auto" Text="{Binding EtfCfi, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="2" Grid.Row="0" Style="{StaticResource textBlock}">mer</TextBlock>
+                    <TextBox Grid.Column="2" Grid.Row="1" Style="{StaticResource textBox}" x:Name="etfMerTextBox" Width="Auto" Text="{Binding EtfMer, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="3" Grid.Row="0" Style="{StaticResource textBlock}">launchDate</TextBlock>
+                    <TextBox Grid.Column="3" Grid.Row="1" Style="{StaticResource textBox}" x:Name="etfLaunchDateTextBox" Width="Auto" Text="{Binding EtfLaunchDate, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="4" Grid.Row="0" Style="{StaticResource textBlock}">issuer</TextBlock>
+                    <TextBox Grid.Column="4" Grid.Row="1" Style="{StaticResource textBox}" x:Name="etfIssuerTextBox" Width="Auto" Text="{Binding EtfIssuer, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="5" Grid.Row="0" Style="{StaticResource textBlock}">fraction</TextBlock>
+                    <TextBox Grid.Column="5" Grid.Row="1" Style="{StaticResource textBox}" x:Name="etfFractionTextBox" Width="Auto" Text="{Binding EtfFraction, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="6" Grid.Row="0" Style="{StaticResource textBlock}">indexFamily</TextBlock>
+                    <TextBox Grid.Column="6" Grid.Row="1" Style="{StaticResource textBox}" x:Name="etfIndexFamilyTextBox" Width="Auto" Text="{Binding EtfIndexFamily, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="7" Grid.Row="0" Style="{StaticResource textBlock}">dividentFreq</TextBlock>
+                    <TextBox Grid.Column="7" Grid.Row="1" Style="{StaticResource textBox}" x:Name="etfDividentFrequencyTextBox" Width="Auto" Text="{Binding EtfDividentFrequency, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="0" Grid.Row="2" Style="{StaticResource textBlock}">icb1</TextBlock>
+                    <TextBox Grid.Column="0" Grid.Row="3" Style="{StaticResource textBox}" x:Name="etfIcb1TextBox" Width="Auto" Text="{Binding EtfIcb1, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="1" Grid.Row="2" Style="{StaticResource textBlock}">icb2</TextBlock>
+                    <TextBox Grid.Column="1" Grid.Row="3" Style="{StaticResource textBox}" x:Name="etfIcb2TextBox" Width="Auto" Text="{Binding EtfIcb2, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="2" Grid.Row="2" Style="{StaticResource textBlock}">icb3</TextBlock>
+                    <TextBox Grid.Column="2" Grid.Row="3" Style="{StaticResource textBox}" x:Name="etfIcb3TextBox" Width="Auto" Text="{Binding EtfIcb3, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="3" Grid.Row="2" Style="{StaticResource textBlock}">icb4</TextBlock>
+                    <TextBox Grid.Column="3" Grid.Row="3" Style="{StaticResource textBox}" x:Name="etfIcb4TextBox" Width="Auto" Text="{Binding EtfIcb4, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="4" Grid.Row="2" Style="{StaticResource textBlock}">seg1</TextBlock>
+                    <TextBox Grid.Column="4" Grid.Row="3" Style="{StaticResource textBox}" x:Name="etfSeg1TextBox" Width="Auto" Text="{Binding EtfSeg1, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="5" Grid.Row="2" Style="{StaticResource textBlock}">seg2</TextBlock>
+                    <TextBox Grid.Column="5" Grid.Row="3" Style="{StaticResource textBox}" x:Name="etfSeg2TextBox" Width="Auto" Text="{Binding EtfSeg2, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="6" Grid.Row="2" Style="{StaticResource textBlock}">seg3</TextBlock>
+                    <TextBox Grid.Column="6" Grid.Row="3" Style="{StaticResource textBox}" x:Name="etfSeg3TextBox" Width="Auto" Text="{Binding EtfSeg3, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="1" Grid.Row="4" Style="{StaticResource textBlock}">vendor</TextBlock>
+                    <TextBlock Grid.Column="2" Grid.Row="4" Style="{StaticResource textBlock}">mep</TextBlock>
+                    <TextBlock Grid.Column="3" Grid.Row="4" Style="{StaticResource textBlock}">isin</TextBlock>
+                    <TextBlock Grid.Column="4" Grid.Row="4" Style="{StaticResource textBlock}">symbol</TextBlock>
+                    <TextBlock Grid.Column="5" Grid.Row="4" Style="{StaticResource textBlock}">name</TextBlock>
+                    <TextBlock Grid.Column="0" Grid.Row="5" Style="{StaticResource textBlock}">inav</TextBlock>
+                    <TextBlock Grid.Column="0" Grid.Row="6" Style="{StaticResource textBlock}">underlying</TextBlock>
+                    <TextBox Grid.Column="1" Grid.Row="5" Style="{StaticResource textBox}" x:Name="etfInavVendorTextBox" Width="Auto" Text="{Binding EtfInavVendor, Mode=TwoWay}"/>
+                    <TextBox Grid.Column="2" Grid.Row="5" Style="{StaticResource textBox}" x:Name="etfInavMepTextBox" Width="Auto" Text="{Binding EtfInavMep, Mode=TwoWay}"/>
+                    <TextBox Grid.Column="3" Grid.Row="5" Style="{StaticResource textBox}" x:Name="etfInavIsinTextBox" Width="Auto" Text="{Binding EtfInavIsin, Mode=TwoWay}"/>
+                    <TextBox Grid.Column="4" Grid.Row="5" Style="{StaticResource textBox}" x:Name="etfInavSymbolTextBox" Width="Auto" Text="{Binding EtfInavSymbol, Mode=TwoWay}"/>
+                    <TextBox Grid.Column="5" Grid.Row="5" Style="{StaticResource textBox}" x:Name="etfInavNameTextBox" Width="Auto" Text="{Binding EtfInavName, Mode=TwoWay}"/>
+                    <TextBox Grid.Column="1" Grid.Row="6" Style="{StaticResource textBox}" x:Name="etfUnderlyingVendorTextBox" Width="Auto" Text="{Binding EtfUnderlyingVendor, Mode=TwoWay}"/>
+                    <TextBox Grid.Column="2" Grid.Row="6" Style="{StaticResource textBox}" x:Name="etfUnderlyingMepTextBox" Width="Auto" Text="{Binding EtfUnderlyingMep, Mode=TwoWay}"/>
+                    <TextBox Grid.Column="3" Grid.Row="6" Style="{StaticResource textBox}" x:Name="etfUnderlyingIsinTextBox" Width="Auto" Text="{Binding EtfUnderlyingIsin, Mode=TwoWay}"/>
+                    <TextBox Grid.Column="4" Grid.Row="6" Style="{StaticResource textBox}" x:Name="etfUnderlyingSymbolTextBox" Width="Auto" Text="{Binding EtfUnderlyingSymbol, Mode=TwoWay}"/>
+                    <TextBox Grid.Column="5" Grid.Row="6" Style="{StaticResource textBox}" x:Name="etfUnderlyingNameTextBox" Width="Auto" Text="{Binding EtfUnderlyingName, Mode=TwoWay}"/>
+                </Grid>
+            </Expander>
+            <Expander x:Name="etvExpander" Style="{StaticResource expander}" Header="etv">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Grid.Row="0" Style="{StaticResource textBlock}">currency</TextBlock>
+                    <TextBox Grid.Column="0" Grid.Row="1" Style="{StaticResource textBox}" x:Name="etvCurrencyTextBox" Width="Auto" Text="{Binding EtvCurrency, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="1" Grid.Row="0" Style="{StaticResource textBlock}">cfi</TextBlock>
+                    <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource textBox}" x:Name="etvCfiTextBox" Width="Auto" Text="{Binding EtvCfi, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="2" Grid.Row="0" Style="{StaticResource textBlock}">mer</TextBlock>
+                    <TextBox Grid.Column="2" Grid.Row="1" Style="{StaticResource textBox}" x:Name="etvMerTextBox" Width="Auto" Text="{Binding EtvMer, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="3" Grid.Row="0" Style="{StaticResource textBlock}">launchDate</TextBlock>
+                    <TextBox Grid.Column="3" Grid.Row="1" Style="{StaticResource textBox}" x:Name="etvLaunchDateTextBox" Width="Auto" Text="{Binding EtvLaunchDate, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="4" Grid.Row="0" Style="{StaticResource textBlock}">issuer</TextBlock>
+                    <TextBox Grid.Column="4" Grid.Row="1" Style="{StaticResource textBox}" x:Name="etvIssuerTextBox" Width="Auto" Text="{Binding EtvIssuer, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="5" Grid.Row="0" Style="{StaticResource textBlock}">fraction</TextBlock>
+                    <TextBox Grid.Column="5" Grid.Row="1" Style="{StaticResource textBox}" x:Name="etvFractionTextBox" Width="Auto" Text="{Binding EtvFraction, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="6" Grid.Row="0" Style="{StaticResource textBlock}">indexFamily</TextBlock>
+                    <TextBox Grid.Column="6" Grid.Row="1" Style="{StaticResource textBox}" x:Name="etvIndexFamilyTextBox" Width="Auto" Text="{Binding EtvIndexFamily, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="7" Grid.Row="0" Style="{StaticResource textBlock}">dividentFreq</TextBlock>
+                    <TextBox Grid.Column="7" Grid.Row="1" Style="{StaticResource textBox}" x:Name="etvDividentFrequencyTextBox" Width="Auto" Text="{Binding EtvDividentFrequency, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="0" Grid.Row="2" Style="{StaticResource textBlock}">icb1</TextBlock>
+                    <TextBox Grid.Column="0" Grid.Row="3" Style="{StaticResource textBox}" x:Name="etvIcb1TextBox" Width="Auto" Text="{Binding EtvIcb1, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="1" Grid.Row="2" Style="{StaticResource textBlock}">icb2</TextBlock>
+                    <TextBox Grid.Column="1" Grid.Row="3" Style="{StaticResource textBox}" x:Name="etvIcb2TextBox" Width="Auto" Text="{Binding EtvIcb2, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="2" Grid.Row="2" Style="{StaticResource textBlock}">icb3</TextBlock>
+                    <TextBox Grid.Column="2" Grid.Row="3" Style="{StaticResource textBox}" x:Name="etvIcb3TextBox" Width="Auto" Text="{Binding EtvIcb3, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="3" Grid.Row="2" Style="{StaticResource textBlock}">icb4</TextBlock>
+                    <TextBox Grid.Column="3" Grid.Row="3" Style="{StaticResource textBox}" x:Name="etvIcb4TextBox" Width="Auto" Text="{Binding EtvIcb4, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="4" Grid.Row="2" Style="{StaticResource textBlock}">seg1</TextBlock>
+                    <TextBox Grid.Column="4" Grid.Row="3" Style="{StaticResource textBox}" x:Name="etvSeg1TextBox" Width="Auto" Text="{Binding EtvSeg1, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="5" Grid.Row="2" Style="{StaticResource textBlock}">seg2</TextBlock>
+                    <TextBox Grid.Column="5" Grid.Row="3" Style="{StaticResource textBox}" x:Name="etvSeg2TextBox" Width="Auto" Text="{Binding EtvSeg2, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="6" Grid.Row="2" Style="{StaticResource textBlock}">seg3</TextBlock>
+                    <TextBox Grid.Column="6" Grid.Row="3" Style="{StaticResource textBox}" x:Name="etvSeg3TextBox" Width="Auto" Text="{Binding EtvSeg3, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="1" Grid.Row="4" Style="{StaticResource textBlock}">vendor</TextBlock>
+                    <TextBlock Grid.Column="2" Grid.Row="4" Style="{StaticResource textBlock}">mep</TextBlock>
+                    <TextBlock Grid.Column="3" Grid.Row="4" Style="{StaticResource textBlock}">isin</TextBlock>
+                    <TextBlock Grid.Column="4" Grid.Row="4" Style="{StaticResource textBlock}">symbol</TextBlock>
+                    <TextBlock Grid.Column="5" Grid.Row="4" Style="{StaticResource textBlock}">name</TextBlock>
+                    <TextBlock Grid.Column="0" Grid.Row="5" Style="{StaticResource textBlock}">inav</TextBlock>
+                    <TextBlock Grid.Column="0" Grid.Row="6" Style="{StaticResource textBlock}">underlying</TextBlock>
+                    <TextBox Grid.Column="1" Grid.Row="5" Style="{StaticResource textBox}" x:Name="etvInavVendorTextBox" Width="Auto" Text="{Binding EtvInavVendor, Mode=TwoWay}"/>
+                    <TextBox Grid.Column="2" Grid.Row="5" Style="{StaticResource textBox}" x:Name="etvInavMepTextBox" Width="Auto" Text="{Binding EtvInavMep, Mode=TwoWay}"/>
+                    <TextBox Grid.Column="3" Grid.Row="5" Style="{StaticResource textBox}" x:Name="etvInavIsinTextBox" Width="Auto" Text="{Binding EtvInavIsin, Mode=TwoWay}"/>
+                    <TextBox Grid.Column="4" Grid.Row="5" Style="{StaticResource textBox}" x:Name="etvInavSymbolTextBox" Width="Auto" Text="{Binding EtvInavSymbol, Mode=TwoWay}"/>
+                    <TextBox Grid.Column="5" Grid.Row="5" Style="{StaticResource textBox}" x:Name="etvInavNameTextBox" Width="Auto" Text="{Binding EtvInavName, Mode=TwoWay}"/>
+                    <TextBox Grid.Column="1" Grid.Row="6" Style="{StaticResource textBox}" x:Name="etvUnderlyingVendorTextBox" Width="Auto" Text="{Binding EtvUnderlyingVendor, Mode=TwoWay}"/>
+                    <TextBox Grid.Column="2" Grid.Row="6" Style="{StaticResource textBox}" x:Name="etvUnderlyingMepTextBox" Width="Auto" Text="{Binding EtvUnderlyingMep, Mode=TwoWay}"/>
+                    <TextBox Grid.Column="3" Grid.Row="6" Style="{StaticResource textBox}" x:Name="etvUnderlyingIsinTextBox" Width="Auto" Text="{Binding EtvUnderlyingIsin, Mode=TwoWay}"/>
+                    <TextBox Grid.Column="4" Grid.Row="6" Style="{StaticResource textBox}" x:Name="etvUnderlyingSymbolTextBox" Width="Auto" Text="{Binding EtvUnderlyingSymbol, Mode=TwoWay}"/>
+                    <TextBox Grid.Column="5" Grid.Row="6" Style="{StaticResource textBox}" x:Name="etvUnderlyingNameTextBox" Width="Auto" Text="{Binding EtvUnderlyingName, Mode=TwoWay}"/>
+                </Grid>
+            </Expander>
+            <Expander x:Name="fundExpander" Style="{StaticResource expander}" Header="fund">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Grid.Row="0" Style="{StaticResource textBlock}">cfi</TextBlock>
+                    <TextBox Grid.Column="0" Grid.Row="1" Style="{StaticResource textBox}" x:Name="fundCfiTextBox" Width="Auto" Text="{Binding FundCfi, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="1" Grid.Row="0" Style="{StaticResource textBlock}">tradingMode</TextBlock>
+                    <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource textBox}" x:Name="fundTradingModeTextBox" Width="Auto" Text="{Binding FundTradingMode, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="2" Grid.Row="0" Style="{StaticResource textBlock}">currency</TextBlock>
+                    <TextBox Grid.Column="2" Grid.Row="1" Style="{StaticResource textBox}" x:Name="fundCurrencyTextBox" Width="Auto" Text="{Binding FundCurrency, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="0" Grid.Row="2" Style="{StaticResource textBlock}">icb1</TextBlock>
+                    <TextBox Grid.Column="0" Grid.Row="3" Style="{StaticResource textBox}" x:Name="fundIcb1Box" Width="Auto" Text="{Binding FundIcb1, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="1" Grid.Row="2" Style="{StaticResource textBlock}">icb2</TextBlock>
+                    <TextBox Grid.Column="1" Grid.Row="3" Style="{StaticResource textBox}" x:Name="fundIcb2Box" Width="Auto" Text="{Binding FundIcb2, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="2" Grid.Row="2" Style="{StaticResource textBlock}">icb3</TextBlock>
+                    <TextBox Grid.Column="2" Grid.Row="3" Style="{StaticResource textBox}" x:Name="fundIcb3Box" Width="Auto" Text="{Binding FundIcb3, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="3" Grid.Row="2" Style="{StaticResource textBlock}">icb4</TextBlock>
+                    <TextBox Grid.Column="3" Grid.Row="3" Style="{StaticResource textBox}" x:Name="fundIcb4Box" Width="Auto" Text="{Binding FundIcb4, Mode=TwoWay}"/>
+                </Grid>
+            </Expander>
+            <Expander x:Name="currencyBinding" Style="{StaticResource expander}" Header="currency">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                </Grid>
+            </Expander>
+        </StackPanel>
+        <ScrollViewer Grid.Row="0" Grid.RowSpan="4" Grid.Column="2" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" MinWidth="500">
+            <WebBrowser x:Name="webBrowser"/>
+        </ScrollViewer>
+        <TextBox Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" x:Name="masterTextBox" Style="{StaticResource logTextBox}" Width="Auto" Height="Auto" MaxHeight="100" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" IsReadOnly="True"/>
+    </Grid>
+</Window>

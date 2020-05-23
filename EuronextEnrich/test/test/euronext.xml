@@ -1,0 +1,533 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<instruments>
+  <instrument foundInSearch="false" mic="XBRU" isin="BE0970172756" symbol="ELI16" name="ELIA(SUB)C16" type="stock" file="xbru/stock/ELI16.h5:/XBRU_ELI16_BE0970172756" description="" mep="BRU" vendor="Euronext">
+    <stock cfi="RS" compartment="A" tradingMode="continuous" currency="EUR" shares="61,024,834">
+      <icb icb1="7000" icb2="7500" icb3="7530" icb4="7535" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XAMS" isin="IS0000000388" symbol="MAREL" name="MAREL" type="stock" file="xams/stock/MAREL.h5:/XAMS_MAREL_IS0000000388" description="" mep="AMS" vendor="Euronext">
+    <stock cfi="ESVUF" compartment="A" tradingMode="continuous" currency="EUR" shares="771,007,916">
+      <icb icb1="2000" icb2="2700" icb3="2750" icb4="2757" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="-typ()" mic="XAMS" isin="IE00BKBF6616" symbol="CEUU" name="ISHARES EMU USD H" type="etf" file="xams/etf/CEUU.h5:/XAMS_CEUU_IE00BKBF6616" description="ISHARES CORE MSCI EMU UCITS ETF USD HEDGED (ACC)" mep="AMS" vendor="Euronext">
+    <etf cfi="CEOGES" tradingMode="continuous" ter="0.15%" launchDate="07/06/2019" issuer="iShares VII plc" fraction="" dividendFrequency="capitalisation" indexFamily="" expositionType="physical" currency="USD">
+      <inav vendor="Euronext" mep="" mic="" isin="NSCFR0ICEUU1" symbol="ICEUU" name="ISHARES CEUU INAV" />
+      <underlying vendor="Euronext" mep="" mic="" isin="" symbol="" name="MSCI EMU NTR Local Index" />
+    </etf>
+  </instrument>
+  <!-- 20190607_221036 -->
+  <!-- 20190610_220452 -->
+  <!-- 20190611_221301 -->
+  <!-- 20190612_221037 -->
+  <!-- 20190613_221130 -->
+  <!-- 20190614_220524 -->
+  <!-- 20190618_002931 -->
+  <instrument foundInSearch="-sym(MLM24)" mic="ENXL" isin="PTMUS0AM0018" symbol="null" name="MULTI 24" type="stock" file="enxl/stock/null.h5:/ENXL_null_PTMUS0AM0018" description="" mep="LIS" vendor="Euronext">
+    <stock cfi="ESVUF" compartment="" tradingMode="double call auction" currency="EUR" shares="44,919,000">
+      <icb icb1="8000" icb2="8600" icb3="8630" icb4="8637" />
+    </stock>
+  </instrument>
+  <!-- 20190619_010434 -->
+  <instrument foundInSearch="false" mic="XPAR" isin="FR0013421278" symbol="ALMDS" name="ALPHA MOS DS" type="stock" file="xpar/stock/ALMDS.h5:/XPAR_ALMDS_FR0013421278" description="" mep="PAR" vendor="Euronext">
+    <stock cfi="RS" compartment="C" tradingMode="continuous" currency="EUR" shares="46,790,453">
+      <icb icb1="2000" icb2="2700" icb3="2730" icb4="2737" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="ENXL" isin="PTMUS0AM0018" symbol="MLM24" name="MULTI 24" type="stock" file="enxl/stock/MLM24.h5:/ENXL_MLM24_PTMUS0AM0018" description="" mep="LIS" vendor="Euronext">
+    <stock cfi="ESVUF" compartment="" tradingMode="double call auction" currency="EUR" shares="44,919,000">
+      <icb icb1="8000" icb2="8600" icb3="8630" icb4="8637" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="false" mic="XPAR" isin="FR0013425105" symbol="TNGDS" name="TRANSGENE DS" type="stock" file="xpar/stock/TNGDS.h5:/XPAR_TNGDS_FR0013425105" description="" mep="PAR" vendor="Euronext">
+    <stock cfi="RSN" compartment="B" tradingMode="continuous" currency="EUR" shares="62,449,098">
+      <icb icb1="4000" icb2="4500" icb3="4570" icb4="4573" />
+    </stock>
+  </instrument>
+  <!-- 20190620_003759 -->
+  <!-- 20190621_003409 -->
+  <instrument foundInSearch="true" mic="XAMS" isin="NL0013654809" symbol="FAST" name="FASTNED" type="stock" file="xams/stock/FAST.h5:/XAMS_FAST_NL0013654809" description="" mep="AMS" vendor="Euronext">
+    <stock cfi="EDSF" compartment="B" tradingMode="continuous" currency="EUR" shares="14,783,028">
+      <icb icb1="5000" icb2="5300" icb3="5370" icb4="5379" />
+    </stock>
+  </instrument>
+  <!-- 20190622_005858 -->
+  <!-- 20190624_215337 -->
+  <instrument foundInSearch="-typ()" mic="XAMS" isin="IE00BJ5JPG56" symbol="ICHN" name="ISHARES CHINA U A" type="etf" file="xams/etf/ICHN.h5:/XAMS_ICHN_IE00BJ5JPG56" description="ISHARES MSCI CHINA UCITS ETF - USD (ACC)" mep="AMS" vendor="Euronext">
+    <etf cfi="CEOGES" tradingMode="continuous" ter="0.4%" launchDate="24/06/2019" issuer="iShares IV plc." fraction="" dividendFrequency="capitalisation" indexFamily="" expositionType="physical" currency="USD">
+      <inav vendor="Euronext" mep="" mic="" isin="NSCFR0IICHN4" symbol="IICHN" name="ISHARES ICHN INAV" />
+      <underlying vendor="Euronext" mep="" mic="" isin="" symbol="" name="MSCI China Index" />
+    </etf>
+  </instrument>
+  <!-- 20190625_215451 -->
+  <instrument foundInSearch="false" mic="XPAR" isin="FR0013428901" symbol="VLTDS" name="VOLTALIA DS" type="stock" file="xpar/stock/VLTDS.h5:/XPAR_VLTDS_FR0013428901" description="" mep="PAR" vendor="Euronext">
+    <stock cfi="RSN" compartment="B" tradingMode="continuous" currency="EUR" shares="48,958,533">
+      <icb icb1="7000" icb2="7500" icb3="7530" icb4="7537" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XPAR" isin="FR0013362985" symbol="AEX7S" name="AEX X7 Short GR" type="index" file="xpar/index/AEX7S.h5:/XPAR_AEX7S_FR0013362985" description="" mep="PAR" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument foundInSearch="true" mic="XPAR" isin="FR0013362993" symbol="CA10L" name="CAC 40 X10 LEV NR" type="index" file="xpar/index/CA10L.h5:/XPAR_CA10L_FR0013362993" description="" mep="PAR" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument foundInSearch="true" mic="XPAR" isin="FR0013361573" symbol="CA10S" name="CAC 40 X10 Short G" type="index" file="xpar/index/CA10S.h5:/XPAR_CA10S_FR0013361573" description="" mep="PAR" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument foundInSearch="true" mic="XPAR" isin="FR0013361649" symbol="CA12S" name="CAC 40 X12 SH GR" type="index" file="xpar/index/CA12S.h5:/XPAR_CA12S_FR0013361649" description="" mep="PAR" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument foundInSearch="true" mic="XPAR" isin="FR0013362662" symbol="CAC3L" name="CAC 40 X3 LEV" type="index" file="xpar/index/CAC3L.h5:/XPAR_CAC3L_FR0013362662" description="" mep="PAR" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument foundInSearch="true" mic="XPAR" isin="FR0013362688" symbol="CAC3S" name="CAC 40 X3 SHORT GR" type="index" file="xpar/index/CAC3S.h5:/XPAR_CAC3S_FR0013362688" description="" mep="PAR" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument foundInSearch="true" mic="XPAR" isin="FR0013362811" symbol="CAC4L" name="CAC 40 X4 LEV NR" type="index" file="xpar/index/CAC4L.h5:/XPAR_CAC4L_FR0013362811" description="" mep="PAR" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument foundInSearch="true" mic="XPAR" isin="FR0013362837" symbol="CAC4S" name="CAC 40 X4 SHORT GR" type="index" file="xpar/index/CAC4S.h5:/XPAR_CAC4S_FR0013362837" description="" mep="PAR" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument foundInSearch="true" mic="XPAR" isin="FR0013361359" symbol="CAC5L" name="CAC 40 X5 LEV NR" type="index" file="xpar/index/CAC5L.h5:/XPAR_CAC5L_FR0013361359" description="" mep="PAR" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument foundInSearch="true" mic="XPAR" isin="FR0013360666" symbol="CAC5S" name="CAC 40 X5 SHORT GR" type="index" file="xpar/index/CAC5S.h5:/XPAR_CAC5S_FR0013360666" description="" mep="PAR" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument foundInSearch="true" mic="XPAR" isin="FR0013362852" symbol="CAC6L" name="CAC 40 X6 LEV NR" type="index" file="xpar/index/CAC6L.h5:/XPAR_CAC6L_FR0013362852" description="" mep="PAR" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument foundInSearch="true" mic="XPAR" isin="FR0013362878" symbol="CAC6S" name="CAC 40 X6 SHORT GR" type="index" file="xpar/index/CAC6S.h5:/XPAR_CAC6S_FR0013362878" description="" mep="PAR" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument foundInSearch="true" mic="XPAR" isin="FR0013362860" symbol="CAC7L" name="CAC 40 X7 LEV NR" type="index" file="xpar/index/CAC7L.h5:/XPAR_CAC7L_FR0013362860" description="" mep="PAR" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument foundInSearch="true" mic="XPAR" isin="FR0013364395" symbol="CAC7S" name="CAC 40 X7 SHORT GR" type="index" file="xpar/index/CAC7S.h5:/XPAR_CAC7S_FR0013364395" description="" mep="PAR" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument foundInSearch="-typ()" mic="XAMS" isin="IE00BK7Y2P34" symbol="SGLU" name="ISHARES GVT BOND $" type="etf" file="xams/etf/SGLU.h5:/XAMS_SGLU_IE00BK7Y2P34" description="ISHARES GLOBAL GVT BOND UCITS ETF USD HEDGED (ACC)" mep="AMS" vendor="Euronext">
+    <etf cfi="CEOGBS" tradingMode="continuous" ter="0.25%" launchDate="25/06/2019" issuer="ETF SEML ISH" fraction="" dividendFrequency="capitalisation" indexFamily="" expositionType="physical" currency="USD">
+      <inav vendor="Euronext" mep="" mic="" isin="NSCFR0ISGLU1" symbol="ISGLU" name="ISHARES SGLU INAV" />
+      <underlying vendor="Euronext" mep="" mic="" isin="" symbol="" name="Citigroup G7 Index" />
+    </etf>
+  </instrument>
+  <!-- 20190626_215513 -->
+  <!-- 20190627_215256 -->
+  <!-- 20190628_215230 -->
+  <instrument foundInSearch="false" mic="XPAR" isin="FR0013428885" symbol="ORDPS" name="OREGE DS" type="stock" file="xpar/stock/ORDPS.h5:/XPAR_ORDPS_FR0013428885" description="" mep="PAR" vendor="Euronext">
+    <stock cfi="RSN" compartment="" tradingMode="continuous" currency="EUR" shares="18,671,115">
+      <icb icb1="2000" icb2="2700" icb3="2790" icb4="2799" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="false" mic="XAMS" isin="NL0000009355" symbol="UNAT" name="UNILEVER DR" type="stock" file="xams/stock/UNAT.h5:/XAMS_UNAT_NL0000009355" description="" mep="AMS" vendor="Euronext">
+    <stock cfi="EDSFN" compartment="A" tradingMode="continuous" currency="EUR" shares="1,714,727,700">
+      <icb icb1="3000" icb2="3700" icb3="3760" icb4="3767" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="-nam(VIVORYON)" mic="XAMS" isin="DE0007921835" symbol="VVY" name="VIVORYON THERAPEUT" type="stock" file="xams/stock/VVY.h5:/XAMS_VVY_DE0007921835" description="" mep="AMS" vendor="Euronext">
+    <stock cfi="ESVUFN" compartment="C" tradingMode="continuous" currency="EUR" shares="12,301,376">
+      <icb icb1="4000" icb2="4500" icb3="4570" icb4="4573" />
+    </stock>
+  </instrument>
+  <!-- 20190701_215558 -->
+  <instrument foundInSearch="false" mic="ALXP" isin="FR0013430519" symbol="NOXDS" name="NOXXON DS" type="stock" file="alxp/stock/NOXDS.h5:/ALXP_NOXDS_FR0013430519" description="" mep="PAR" vendor="Euronext">
+    <stock cfi="RS" compartment="" tradingMode="continuous" currency="EUR" shares="10,122,804">
+      <icb icb1="4000" icb2="4500" icb3="4570" icb4="4573" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XAMS" isin="NL0000388619" symbol="UNA" name="UNILEVER" type="stock" file="xams/stock/UNA.h5:/XAMS_UNA_NL0000388619" description="" mep="AMS" vendor="Euronext">
+    <stock cfi="ESVUFB" compartment="A" tradingMode="continuous" currency="EUR" shares="1,544,727,700">
+      <icb icb1="3000" icb2="3700" icb3="3760" icb4="3767" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XPAR" isin="FR0010291245" symbol="VMX" name="VERIMATRIX" type="stock" file="xpar/stock/VMX.h5:/XPAR_VMX_FR0010291245" description="" mep="PAR" vendor="Euronext">
+    <stock cfi="ESVUFN" compartment="C" tradingMode="continuous" currency="EUR" shares="84,731,585">
+      <icb icb1="9000" icb2="9500" icb3="9530" icb4="9537" />
+    </stock>
+  </instrument>
+  <!-- 20190702_215938 -->
+  <!-- 20190703_215136 -->
+  <instrument foundInSearch="false" mic="XPAR" isin="FR0013430543" symbol="EOSDS" name="ACTEOS DS" type="stock" file="xpar/stock/EOSDS.h5:/XPAR_EOSDS_FR0013430543" description="" mep="PAR" vendor="Euronext">
+    <stock cfi="RS" compartment="" tradingMode="continuous" currency="EUR" shares="2,800,000">
+      <icb icb1="9000" icb2="9500" icb3="9530" icb4="9537" />
+    </stock>
+  </instrument>
+  <!-- 20190704_214749 -->
+  <!-- 20190705_215718 -->
+  <!-- 20190717_215515 -->
+  <instrument foundInSearch="true" mic="TNLB" isin="DE000PSM7770" symbol="PSMP" name="PROSIEBENSAT" type="stock" file="tnlb/stock/PSMP.h5:/TNLB_PSMP_DE000PSM7770" description="" mep="BRU" vendor="Euronext">
+    <stock cfi="ESVUFN" compartment="" tradingMode="continuous" currency="EUR" shares="10">
+      <icb icb1="5000" icb2="5500" icb3="5550" icb4="5553" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XPAR" isin="FR0013421286" symbol="ALM" name="ALPHA MOS" type="stock" file="xpar/stock/ALM.h5:/XPAR_ALM_FR0013421286" description="" mep="PAR" vendor="Euronext">
+    <stock cfi="ESVUF" compartment="C" tradingMode="continuous" currency="EUR" shares="8,478,181">
+      <icb icb1="2000" icb2="2700" icb3="2730" icb4="2737" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="ALXP" isin="FR0013410370" symbol="ALAMG" name="AUPLATA MINING GR" type="stock" file="alxp/stock/ALAMG.h5:/ALXP_ALAMG_FR0013410370" description="" mep="PAR" vendor="Euronext">
+    <stock cfi="ESVUF" compartment="" tradingMode="continuous" currency="EUR" shares="274,208,499">
+      <icb icb1="1000" icb2="1700" icb3="1770" icb4="1777" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="ALXP" isin="FR0013434461" symbol="ALCBS" name="CROSSJECT BSA 2019" type="stock" file="alxp/stock/ALCBS.h5:/ALXP_ALCBS_FR0013434461" description="" mep="PAR" vendor="Euronext">
+    <stock cfi="RPS" compartment="" tradingMode="continuous" currency="EUR" shares="18,447,028">
+      <icb icb1="4000" icb2="4500" icb3="4530" icb4="4537" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="ALXP" isin="FR0013429404" symbol="ALGTR" name="GROUPE TERA" type="stock" file="alxp/stock/ALGTR.h5:/ALXP_ALGTR_FR0013429404" description="" mep="PAR" vendor="Euronext">
+    <stock cfi="ESVUF" compartment="" tradingMode="continuous" currency="EUR" shares="3,311,394">
+      <icb icb1="2000" icb2="2700" icb3="2750" icb4="2757" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="ALXP" isin="FR0004027068" symbol="ALLAN" name="LANSON-BCC" type="stock" file="alxp/stock/ALLAN.h5:/ALXP_ALLAN_FR0004027068" description="" mep="PAR" vendor="Euronext">
+    <stock cfi="ESVUFN" compartment="" tradingMode="continuous" currency="EUR" shares="7,109,910">
+      <icb icb1="3000" icb2="3500" icb3="3530" icb4="3535" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XMLI" isin="ES0105412003" symbol="MLMRE" name="MRE-III.P-5.SOCIMI" type="stock" file="xmli/stock/MLMRE.h5:/XMLI_MLMRE_ES0105412003" description="" mep="PAR" vendor="Euronext">
+    <stock cfi="ESVUF" compartment="" tradingMode="double call auction" currency="EUR" shares="36,725,000">
+      <icb icb1="8000" icb2="8600" icb3="8670" icb4="8674" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="ALXP" isin="IT0005353484" symbol="ALSEI" name="SEIF SPA" type="stock" file="alxp/stock/ALSEI.h5:/ALXP_ALSEI_IT0005353484" description="" mep="PAR" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="" tradingMode="continuous" currency="EUR" shares="25,000,000">
+      <icb icb1="5000" icb2="5500" icb3="5550" icb4="5557" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XESM" isin="IE0000020408" symbol="DOY" name="ABBEY PLC" type="stock" file="xesm/stock/DOY.h5:/XESM_DOY_IE0000020408" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="" tradingMode="fixing" currency="EUR" shares="21,419,578">
+      <icb icb1="3000" icb2="3700" icb3="3720" icb4="3728" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XMSM" isin="IE00BF0L3536" symbol="A5G" name="AIB GROUP PLC" type="stock" file="xmsm/stock/A5G.h5:/XMSM_A5G_IE00BF0L3536" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="A" tradingMode="fixing" currency="EUR" shares="2,714,381,237">
+      <icb icb1="8000" icb2="8300" icb3="8350" icb4="8355" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XMSM" isin="IE0003073255" symbol="DOP" name="AMINEX PLC" type="stock" file="xmsm/stock/DOP.h5:/XMSM_DOP_IE0003073255" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="C" tradingMode="fixing" currency="EUR" shares="3,770,684,843">
+      <icb icb1="0001" icb2="0500" icb3="0530" icb4="0533" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XESM" isin="GB00BKB1MS30" symbol="AYP" name="AMRYT PHARMA PLC" type="stock" file="xesm/stock/AYP.h5:/XESM_AYP_GB00BKB1MS30" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="" tradingMode="fixing" currency="EUR" shares="45,802,881">
+      <icb icb1="0001" icb2="0500" icb3="0530" icb4="0533" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XESM" isin="IE00BXC8D038" symbol="APGN" name="APPLEGREEN PLC" type="stock" file="xesm/stock/APGN.h5:/XESM_APGN_IE00BXC8D038" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="" tradingMode="fixing" currency="EUR" shares="120,616,053">
+      <icb icb1="0001" icb2="0500" icb3="0570" icb4="0573" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XMSM" isin="CH0043238366" symbol="YZA" name="ARYZTA AG" type="stock" file="xmsm/stock/YZA.h5:/XMSM_YZA_CH0043238366" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="A" tradingMode="fixing" currency="EUR" shares="993,105,727">
+      <icb icb1="3000" icb2="3500" icb3="3570" icb4="3577" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XMSM" isin="IE0000730790" symbol="DD7E" name="BANK OF IR NC PREF" type="stock" file="xmsm/stock/DD7E.h5:/XMSM_DD7E_IE0000730790" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="EPVRAR" compartment="A" tradingMode="fixing" currency="EUR" shares="3,026,598">
+      <icb icb1="8000" icb2="8300" icb3="8350" icb4="8355" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XMSM" isin="IE0000730808" symbol="DD7D" name="BANK OF IR NCP STF" type="stock" file="xmsm/stock/DD7D.h5:/XMSM_DD7D_IE0000730808" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="A" tradingMode="fixing" currency="EUR" shares="1,876,090">
+      <icb icb1="8000" icb2="8300" icb3="8350" icb4="8355" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XMSM" isin="IE00BD1RP616" symbol="BIRG" name="BANK OF IRELAND GP" type="stock" file="xmsm/stock/BIRG.h5:/XMSM_BIRG_IE00BD1RP616" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="A" tradingMode="fixing" currency="EUR" shares="1,078,822,872">
+      <icb icb1="8000" icb2="8300" icb3="8350" icb4="8355" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="-nam(C\u0026C GROUP PLC)" mic="XMSM" isin="IE00B010DT83" symbol="GCC" name="C&amp;C GROUP PLC" type="stock" file="xmsm/stock/GCC.h5:/XMSM_GCC_IE00B010DT83" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="A" tradingMode="fixing" currency="EUR" shares="309,894,042">
+      <icb icb1="3000" icb2="3500" icb3="3530" icb4="3535" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XMSM" isin="IE00BWY4ZF18" symbol="C5H" name="CAIRN HOMES PLC" type="stock" file="xmsm/stock/C5H.h5:/XMSM_C5H_IE00BWY4ZF18" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="A" tradingMode="fixing" currency="EUR" shares="788,783,171">
+      <icb icb1="8000" icb2="8300" icb3="8350" icb4="8355" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XESM" isin="IE0007214426" symbol="DQ5" name="CPL RESOURCES PLC." type="stock" file="xesm/stock/DQ5.h5:/XESM_DQ5_IE0007214426" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="" tradingMode="fixing" currency="EUR" shares="27,443,935">
+      <icb icb1="2000" icb2="2700" icb3="2790" icb4="2793" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XMSM" isin="IE0001827264" symbol="DD8A" name="CRH PLC 5PCCumPref" type="stock" file="xmsm/stock/DD8A.h5:/XMSM_DD8A_IE0001827264" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="EPVRAR" compartment="A" tradingMode="fixing" currency="EUR" shares="50,000">
+      <icb icb1="2000" icb2="2300" icb3="2350" icb4="2353" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XMSM" isin="IE0001827603" symbol="DD8B" name="CRH PLC 7PCCumPref" type="stock" file="xmsm/stock/DD8B.h5:/XMSM_DD8B_IE0001827603" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="EPVRAR" compartment="A" tradingMode="fixing" currency="EUR" shares="872,000">
+      <icb icb1="2000" icb2="2300" icb3="2350" icb4="2353" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XMSM" isin="IE0001827041" symbol="CRG" name="CRH PLC ord" type="stock" file="xmsm/stock/CRG.h5:/XMSM_CRG_IE0001827041" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="A" tradingMode="fixing" currency="EUR" shares="799,955,480">
+      <icb icb1="2000" icb2="2300" icb3="2350" icb4="2353" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XMSM" isin="IE00BJMZDW83" symbol="DHG" name="DALATA HOTEL GP." type="stock" file="xmsm/stock/DHG.h5:/XMSM_DHG_IE00BJMZDW83" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="A" tradingMode="fixing" currency="EUR" shares="184,349,666">
+      <icb icb1="5000" icb2="5700" icb3="5750" icb4="5753" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XMSM" isin="IE0000527006" symbol="DLE" name="DATALEX PLC" type="stock" file="xmsm/stock/DLE.h5:/XMSM_DLE_IE0000527006" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="B" tradingMode="fixing" currency="EUR" shares="81,983,842">
+      <icb icb1="9000" icb2="9500" icb3="9530" icb4="9537" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="-mic(XPAR)-sym(DGE)-nam(DIAGEO)" mic="XMSM" isin="GB0002374006" symbol="GUI1" name="DIAGEO PLC" type="stock" file="xmsm/stock/GUI1.h5:/XMSM_GUI1_GB0002374006" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="A" tradingMode="fixing" currency="EUR" shares="2,371,993,629">
+      <icb icb1="3000" icb2="3500" icb3="3530" icb4="3535" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XESM" isin="IE00BD97C178" symbol="DQ7A" name="DONEGAL INVESTMENT" type="stock" file="xesm/stock/DQ7A.h5:/XESM_DQ7A_IE00BD97C178" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="" tradingMode="fixing" currency="EUR" shares="4,169,231">
+      <icb icb1="3000" icb2="3500" icb3="3570" icb4="3577" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XESM" isin="GB00BY7QYJ50" symbol="GRW" name="DRAPER ESPRIT PLC" type="stock" file="xesm/stock/GRW.h5:/XESM_GRW_GB00BY7QYJ50" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="" tradingMode="fixing" currency="EUR" shares="117,925,470">
+      <icb icb1="8000" icb2="8700" icb3="8770" icb4="8771" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="-nam(FALCON OIL\u0026GAS LTD)" mic="XESM" isin="CA3060711015" symbol="FAC" name="FALCON OIL&amp;GAS LTD" type="stock" file="xesm/stock/FAC.h5:/XESM_FAC_CA3060711015" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="" tradingMode="fixing" currency="EUR" shares="981,847,425">
+      <icb icb1="0001" icb2="0500" icb3="0530" icb4="0533" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XMSM" isin="IE0003290289" symbol="EG7" name="FBD HOLDINGS PLC" type="stock" file="xmsm/stock/EG7.h5:/XMSM_EG7_IE0003290289" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="B" tradingMode="fixing" currency="EUR" shares="34,862,464">
+      <icb icb1="8000" icb2="8500" icb3="8530" icb4="8532" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XESM" isin="GB0031477770" symbol="GYQ" name="FIRST DERIVATIVES" type="stock" file="xesm/stock/GYQ.h5:/XESM_GYQ_GB0031477770" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="" tradingMode="fixing" currency="EUR" shares="26,524,936">
+      <icb icb1="9000" icb2="9500" icb3="9530" icb4="9533" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XMSM" isin="IE00BWT6H894" symbol="FLTR" name="FLUTTER ENTERTAIN" type="stock" file="xmsm/stock/FLTR.h5:/XMSM_FLTR_IE00BWT6H894" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="A" tradingMode="fixing" currency="EUR" shares="78,128,783">
+      <icb icb1="5000" icb2="5700" icb3="5750" icb4="5752" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XMSM" isin="IE0000669501" symbol="GL9" name="GLANBIA PLC" type="stock" file="xmsm/stock/GL9.h5:/XMSM_GL9_IE0000669501" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="A" tradingMode="fixing" currency="EUR" shares="296,045,684">
+      <icb icb1="3000" icb2="3500" icb3="3570" icb4="3577" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XMSM" isin="IE00BD6JX574" symbol="GVR" name="GLENVEAGH PROP.PLC" type="stock" file="xmsm/stock/GVR.h5:/XMSM_GVR_IE00BD6JX574" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="B" tradingMode="fixing" currency="EUR" shares="871,333,550">
+      <icb icb1="2000" icb2="2300" icb3="2350" icb4="2353" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XESM" isin="IE00B1FR8863" symbol="8GW" name="GREAT WESTERN MIN." type="stock" file="xesm/stock/8GW.h5:/XESM_8GW_IE00B1FR8863" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="" tradingMode="fixing" currency="EUR" shares="677,673,809">
+      <icb icb1="1000" icb2="1700" icb3="1770" icb4="1775" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XMSM" isin="IE00BBR67J55" symbol="GN1" name="GREEN REIT PLC" type="stock" file="xmsm/stock/GN1.h5:/XMSM_GN1_IE00BBR67J55" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="A" tradingMode="fixing" currency="EUR" shares="699,469,638">
+      <icb icb1="8000" icb2="8600" icb3="8670" icb4="8671" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XESM" isin="IE00BF2NR112" symbol="GRP" name="GREENCOAT REN." type="stock" file="xesm/stock/GRP.h5:/XESM_GRP_IE00BF2NR112" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="" tradingMode="fixing" currency="EUR" shares="520,000,000">
+      <icb icb1="8000" icb2="8900" icb3="8980" icb4="8985" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XMSM" isin="IE00BGHQ1986" symbol="HBRN" name="HIBERNIA REIT PLC" type="stock" file="xmsm/stock/HBRN.h5:/XMSM_HBRN_IE00BGHQ1986" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="B" tradingMode="fixing" currency="EUR" shares="688,894,108">
+      <icb icb1="8000" icb2="8600" icb3="8670" icb4="8674" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XMSM" isin="GB00BYYN4225" symbol="HSW" name="HOSTELWORLD GROUP" type="stock" file="xmsm/stock/HSW.h5:/XMSM_HSW_GB00BYYN4225" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="B" tradingMode="fixing" currency="EUR" shares="95,570,778">
+      <icb icb1="5000" icb2="5700" icb3="5750" icb4="5753" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XMSM" isin="IE0002325243" symbol="IJG" name="IFG GROUP PLC" type="stock" file="xmsm/stock/IJG.h5:/XMSM_IJG_IE0002325243" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="B" tradingMode="fixing" currency="EUR" shares="105,405,665">
+      <icb icb1="8000" icb2="8700" icb3="8770" icb4="8771" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="-nam(IND. NEWS \u0026 MEDIA)" mic="XMSM" isin="IE00B59HWB19" symbol="IPDC" name="IND. NEWS &amp; MEDIA" type="stock" file="xmsm/stock/IPDC.h5:/XMSM_IPDC_IE00B59HWB19" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="C" tradingMode="fixing" currency="EUR" shares="1,386,547,375">
+      <icb icb1="5000" icb2="5500" icb3="5550" icb4="5557" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XMSM" isin="IE00BLP58571" symbol="IR5B" name="IRISH CONT. GP." type="stock" file="xmsm/stock/IR5B.h5:/XMSM_IR5B_IE00BLP58571" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="A" tradingMode="fixing" currency="EUR" shares="190,014,390">
+      <icb icb1="5000" icb2="5700" icb3="5750" icb4="5753" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XMSM" isin="IE00BJ34P519" symbol="IRES" name="IRISH RES. PROP." type="stock" file="xmsm/stock/IRES.h5:/XMSM_IRES_IE00BJ34P519" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="B" tradingMode="fixing" currency="EUR" shares="520,703,946">
+      <icb icb1="8000" icb2="8600" icb3="8670" icb4="8671" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XMSM" isin="IE00BDC5DG00" symbol="KMR" name="KENMARE RESOURCES" type="stock" file="xmsm/stock/KMR.h5:/XMSM_KMR_IE00BDC5DG00" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="B" tradingMode="fixing" currency="EUR" shares="109,601,551">
+      <icb icb1="1000" icb2="1700" icb3="1770" icb4="1775" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XMSM" isin="IE0004906560" symbol="KRZ" name="KERRY GROUP PLC" type="stock" file="xmsm/stock/KRZ.h5:/XMSM_KRZ_IE0004906560" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="A" tradingMode="fixing" currency="EUR" shares="176,477,146">
+      <icb icb1="3000" icb2="3500" icb3="3570" icb4="3577" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XMSM" isin="IE0004927939" symbol="KRX" name="KINGSPAN GROUP PLC" type="stock" file="xmsm/stock/KRX.h5:/XMSM_KRX_IE0004927939" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="A" tradingMode="fixing" currency="EUR" shares="180,827,260">
+      <icb icb1="2000" icb2="2300" icb3="2350" icb4="2353" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XESM" isin="IE00BJYS1G50" symbol="MSTY1" name="MAINSTAY MED. INT." type="stock" file="xesm/stock/MSTY1.h5:/XESM_MSTY1_IE00BJYS1G50" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="" tradingMode="fixing" currency="EUR" shares="8,770,229">
+      <icb icb1="4000" icb2="4500" icb3="4530" icb4="4535" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XESM" isin="IE00BVGC3741" symbol="MLC" name="MALIN CORP. PLC" type="stock" file="xesm/stock/MLC.h5:/XESM_MLC_IE00BVGC3741" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="" tradingMode="fixing" currency="EUR" shares="45,681,093">
+      <icb icb1="4000" icb2="4500" icb3="4570" icb4="4577" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XESM" isin="IE00BD64C665" symbol="MIO" name="MINCON GROUP PLC" type="stock" file="xesm/stock/MIO.h5:/XESM_MIO_IE00BD64C665" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="" tradingMode="fixing" currency="EUR" shares="210,973,102">
+      <icb icb1="2000" icb2="2700" icb3="2750" icb4="2757" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="-nam(OPEN ORPHAN PLC)" mic="XESM" isin="GB00B9275X97" symbol="ORPH" name="OPEN ORPHAN" type="stock" file="xesm/stock/ORPH.h5:/XESM_ORPH_GB00B9275X97" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="" tradingMode="fixing" currency="EUR" shares="253,493,259">
+      <icb icb1="4000" icb2="4500" icb3="4530" icb4="4533" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XESM" isin="IE00B1WV4493" symbol="OIZ" name="ORIGIN ENT. PLC" type="stock" file="xesm/stock/OIZ.h5:/XESM_OIZ_IE00B1WV4493" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="" tradingMode="fixing" currency="EUR" shares="125,583,336">
+      <icb icb1="3000" icb2="3500" icb3="3570" icb4="3573" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XESM" isin="IE00BF0MZF04" symbol="ORQ1" name="ORMONDE MINING PLC" type="stock" file="xesm/stock/ORQ1.h5:/XESM_ORQ1_IE00BF0MZF04" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="" tradingMode="fixing" currency="EUR" shares="472,507,482">
+      <icb icb1="1000" icb2="1700" icb3="1770" icb4="1777" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XESM" isin="IE00B4XVDC01" symbol="OVXA" name="OVOCA BIO PLC" type="stock" file="xesm/stock/OVXA.h5:/XESM_OVXA_IE00B4XVDC01" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="" tradingMode="fixing" currency="EUR" shares="88,458,806">
+      <icb icb1="1000" icb2="1700" icb3="1770" icb4="1775" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XMSM" isin="IE00BWB8X525" symbol="IL0A" name="PERM. TSB GP. HOLD" type="stock" file="xmsm/stock/IL0A.h5:/XMSM_IL0A_IE00BWB8X525" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="B" tradingMode="fixing" currency="EUR" shares="454,695,492">
+      <icb icb1="8000" icb2="8500" icb3="8570" icb4="8575" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XESM" isin="IE00B0Q82B24" symbol="P8ET" name="PETRONEFT RES." type="stock" file="xesm/stock/P8ET.h5:/XESM_P8ET_IE00B0Q82B24" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="" tradingMode="fixing" currency="EUR" shares="721,130,500">
+      <icb icb1="0001" icb2="0500" icb3="0530" icb4="0533" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XESM" isin="IE00B66B5T26" symbol="PZQA" name="PROVIDENCE RES." type="stock" file="xesm/stock/PZQA.h5:/XESM_PZQA_IE00B66B5T26" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="" tradingMode="fixing" currency="EUR" shares="597,658,958">
+      <icb icb1="0001" icb2="0500" icb3="0530" icb4="0533" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XMSM" isin="IE00BYTBXV33" symbol="RY4C" name="RYANAIR HOLD. PLC" type="stock" file="xmsm/stock/RY4C.h5:/XMSM_RY4C_IE00BYTBXV33" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="A" tradingMode="fixing" currency="EUR" shares="1,124,205,079">
+      <icb icb1="5000" icb2="5700" icb3="5750" icb4="5751" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XESM" isin="IE00BD9PKV79" symbol="SCC" name="Scisys Group Plc" type="stock" file="xesm/stock/SCC.h5:/XESM_SCC_IE00BD9PKV79" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVFN" compartment="" tradingMode="fixing" currency="EUR" shares="29,676,160">
+      <icb icb1="9000" icb2="9500" icb3="9530" icb4="9533" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XMSM" isin="IE00B1RR8406" symbol="SK3" name="SMURFIT KAPPA GP" type="stock" file="xmsm/stock/SK3.h5:/XMSM_SK3_IE00B1RR8406" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="A" tradingMode="fixing" currency="EUR" shares="237,637,099">
+      <icb icb1="2000" icb2="2700" icb3="2720" icb4="2723" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XMSM" isin="GB0008847096" symbol="TCO" name="TESCO PLC" type="stock" file="xmsm/stock/TCO.h5:/XMSM_TCO_GB0008847096" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="A" tradingMode="fixing" currency="EUR" shares="9,793,496,561">
+      <icb icb1="5000" icb2="5300" icb3="5330" icb4="5337" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XESM" isin="IE00B1HDWM43" symbol="T7O" name="TOTAL PRODUCE PLC" type="stock" file="xesm/stock/T7O.h5:/XESM_T7O_IE00B1HDWM43" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="" tradingMode="fixing" currency="EUR" shares="388,429,462">
+      <icb icb1="5000" icb2="5300" icb3="5330" icb4="5337" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XMSM" isin="GB0001500809" symbol="TQW" name="TULLOW OIL PLC" type="stock" file="xmsm/stock/TQW.h5:/XMSM_TQW_GB0001500809" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="A" tradingMode="fixing" currency="EUR" shares="1,403,338,920">
+      <icb icb1="0001" icb2="0500" icb3="0530" icb4="0533" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="-nam(UNIPHAR PLC)" mic="XESM" isin="IE00BJ5FQX74" symbol="UPR" name="UNIPHAR" type="stock" file="xesm/stock/UPR.h5:/XESM_UPR_IE00BJ5FQX74" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUF" compartment="" tradingMode="fixing" currency="EUR" shares="269,197,250">
+      <icb icb1="4000" icb2="4500" icb3="4530" icb4="4533" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XESM" isin="IE00BG0HDR01" symbol="6VR" name="VR EDUCATION HOLD." type="stock" file="xesm/stock/6VR.h5:/XESM_6VR_IE00BG0HDR01" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="" tradingMode="fixing" currency="EUR" shares="193,136,406">
+      <icb icb1="9000" icb2="9500" icb3="9530" icb4="9533" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XESM" isin="IE00BDT5KP12" symbol="YEW" name="YEW GROVE REIT PLC" type="stock" file="xesm/stock/YEW.h5:/XESM_YEW_IE00BDT5KP12" description="" mep="DUB" vendor="Euronext">
+    <stock cfi="ESVUFR" compartment="" tradingMode="fixing" currency="EUR" shares="85,000,000">
+      <icb icb1="8000" icb2="8600" icb3="8670" icb4="8671" />
+    </stock>
+  </instrument>
+  <instrument foundInSearch="true" mic="XDUB" isin="IE00B0500264" symbol="ISE20" name="ISEQ 20" type="index" file="xdub/index/ISE20.h5:/XDUB_ISE20_IE00B0500264" description="" mep="DUB" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument foundInSearch="true" mic="XDUB" isin="IE00B2QF4Z54" symbol="ISECA" name="ISEQ 20 Capped" type="index" file="xdub/index/ISECA.h5:/XDUB_ISECA_IE00B2QF4Z54" description="" mep="DUB" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument foundInSearch="true" mic="XDUB" isin="IE00B2QF5075" symbol="ISECG" name="ISEQ 20 Capped GR" type="index" file="xdub/index/ISECG.h5:/XDUB_ISECG_IE00B2QF5075" description="" mep="DUB" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument foundInSearch="true" mic="XDUB" isin="IE00B0500488" symbol="ISE2G" name="ISEQ 20 GR" type="index" file="xdub/index/ISE2G.h5:/XDUB_ISE2G_IE00B0500488" description="" mep="DUB" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument foundInSearch="true" mic="XDUB" isin="IE0001477250" symbol="ISEQ" name="ISEQ All Share" type="index" file="xdub/index/ISEQ.h5:/XDUB_ISEQ_IE0001477250" description="" mep="DUB" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument foundInSearch="true" mic="XDUB" isin="IE0000506851" symbol="ISEQG" name="ISEQ All Share GR" type="index" file="xdub/index/ISEQG.h5:/XDUB_ISEQG_IE0000506851" description="" mep="DUB" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument foundInSearch="true" mic="XDUB" isin="IE0000516009" symbol="ISEFI" name="ISEQ Financial" type="index" file="xdub/index/ISEFI.h5:/XDUB_ISEFI_IE0000516009" description="" mep="DUB" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument foundInSearch="true" mic="XDUB" isin="IE0000511505" symbol="ISEFG" name="ISEQ Financial GR" type="index" file="xdub/index/ISEFG.h5:/XDUB_ISEFG_IE0000511505" description="" mep="DUB" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument foundInSearch="true" mic="XDUB" isin="IE0000506299" symbol="ISESM" name="ISEQ Small" type="index" file="xdub/index/ISESM.h5:/XDUB_ISESM_IE0000506299" description="" mep="DUB" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument foundInSearch="true" mic="XDUB" isin="IE0000506745" symbol="ISESG" name="ISEQ Small GR" type="index" file="xdub/index/ISESG.h5:/XDUB_ISESG_IE0000506745" description="" mep="DUB" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument foundInSearch="-typ()" mic="XMSM" isin="IE00BD3QJ757" symbol="FXIT" name="FinEx USA IT UCITS" type="etf" file="xmsm/etf/FXIT.h5:/XMSM_FXIT_IE00BD3QJ757" description="FINEX USA INFORMATION TECHNOLOGY UCITS ETF" mep="DUB" vendor="Euronext">
+    <etf cfi="CEOJEU" tradingMode="fixing" ter="0.9%" launchDate="08/07/2019" issuer="FINEX FUNDS PLC" fraction="" dividendFrequency="capitalisation" indexFamily="" expositionType="physical" currency="USD">
+      <inav vendor="Euronext" mep="" mic="" isin="NSCFR0IFXIT1" symbol="IFXIT" name="FINEX IFXIT INAV" />
+      <underlying vendor="Euronext" mep="" mic="" isin="" symbol="" name="Solactive US LM CapTech In NTR" />
+    </etf>
+  </instrument>
+  <instrument foundInSearch="-typ()" mic="XMSM" isin="IE00BD3QHZ91" symbol="FXUS" name="FinEx USA UCITS" type="etf" file="xmsm/etf/FXUS.h5:/XMSM_FXUS_IE00BD3QHZ91" description="FINEX USA UCITS ETF" mep="DUB" vendor="Euronext">
+    <etf cfi="CEOJEU" tradingMode="fixing" ter="0.9%" launchDate="08/07/2019" issuer="FINEX FUNDS PLC" fraction="" dividendFrequency="capitalisation" indexFamily="" expositionType="physical" currency="USD">
+      <inav vendor="Euronext" mep="" mic="" isin="NSCFR0IFXUS8" symbol="IFXUS" name="FINEX IFXUS INAV" />
+      <underlying vendor="Euronext" mep="" mic="" isin="" symbol="" name="Solactive GBS US LM Cap In NTR" />
+    </etf>
+  </instrument>
+  <instrument foundInSearch="-typ()" mic="XMSM" isin="IE00BVFB1H83" symbol="WTIE" name="WISDOMTREE ISEQ 20" type="etf" file="xmsm/etf/WTIE.h5:/XMSM_WTIE_IE00BVFB1H83" description="WISDOMTREE ISEQ 20 UCITS ETF SHARES" mep="DUB" vendor="Euronext">
+    <etf cfi="CEOMS" tradingMode="fixing" ter="0.49%" launchDate="14/12/2018" issuer="WISDOMTREE ISSUER PLC" fraction="" dividendFrequency="annually" indexFamily="" expositionType="physical" currency="EUR">
+      <inav vendor="Euronext" mep="" mic="" isin="NSCFR0IWTIE6" symbol="IWTIE" name="WISDOM WTIE INAV" />
+      <underlying vendor="Euronext" mep="" mic="" isin="" symbol="" name="ISEQ 20Index" />
+    </etf>
+  </instrument>
+</instruments>

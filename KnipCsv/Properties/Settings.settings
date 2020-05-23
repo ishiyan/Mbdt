@@ -1,0 +1,63 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="KnipCsv.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="NaN1" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">-999</Value>
+    </Setting>
+    <Setting Name="NaN2" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">-9.99</Value>
+    </Setting>
+    <Setting Name="NaN3" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">-99.9</Value>
+    </Setting>
+    <Setting Name="YearPos" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="YearLen" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">4</Value>
+    </Setting>
+    <Setting Name="DoyPos" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">-1</Value>
+    </Setting>
+    <Setting Name="DoyLen" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">-1</Value>
+    </Setting>
+    <Setting Name="HourPos" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">11</Value>
+    </Setting>
+    <Setting Name="HourLen" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="MinutePos" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">14</Value>
+    </Setting>
+    <Setting Name="MinuteLen" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="SecondPos" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">17</Value>
+    </Setting>
+    <Setting Name="SecondLen" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="OutputTicks" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="DayPos" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">8</Value>
+    </Setting>
+    <Setting Name="DayLen" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="MonthPos" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="MonthLen" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="CsvSplitChar" Type="System.Char" Scope="Application">
+      <Value Profile="(Default)">,</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

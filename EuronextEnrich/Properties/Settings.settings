@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="mbdt.EuronextEnrich.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DownloadTimeout" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">180000</Value>
+    </Setting>
+    <Setting Name="DownloadRetries" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="PauseBeforeRetry" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1000</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

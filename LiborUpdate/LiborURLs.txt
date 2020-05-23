@@ -1,0 +1,250 @@
+NEW URL (Fetch1):
+http://www.global-rates.com/interest-rates/libor/american-dollar/usd-libor-interest-rate-12-months.aspx
+http://www.global-rates.com/interest-rates/libor/american-dollar/usd-libor-interest-rate-overnight.aspx
+http://www.global-rates.com/interest-rates/libor/american-dollar/usd-libor-interest-rate-1-week.aspx
+http://www.global-rates.com/interest-rates/libor/american-dollar/usd-libor-interest-rate-2-weeks.aspx
+http://www.global-rates.com/interest-rates/libor/american-dollar/usd-libor-interest-rate-1-month.aspx
+http://www.global-rates.com/interest-rates/libor/american-dollar/usd-libor-interest-rate-2-months.aspx
+
+http://www.global-rates.com/interest-rates/libor/european-euro/eur-libor-interest-rate-overnight.aspx
+http://www.global-rates.com/interest-rates/libor/european-euro/eur-libor-interest-rate-1-week.aspx
+http://www.global-rates.com/interest-rates/libor/european-euro/eur-libor-interest-rate-2-weeks.aspx
+http://www.global-rates.com/interest-rates/libor/european-euro/eur-libor-interest-rate-1-month.aspx
+http://www.global-rates.com/interest-rates/libor/european-euro/eur-libor-interest-rate-2-months.aspx
+http://www.global-rates.com/interest-rates/libor/european-euro/eur-libor-interest-rate-3-months.aspx
+...
+http://www.global-rates.com/interest-rates/libor/european-euro/eur-libor-interest-rate-11-months.aspx
+http://www.global-rates.com/interest-rates/libor/european-euro/eur-libor-interest-rate-12-months.aspx
+
+
+
+http://www.global-rates.com/interest-rates/libor/australian-dollar/aud-libor-interest-rate-overnight.aspx
+http://www.global-rates.com/interest-rates/libor/british-pound-sterling/gbp-libor-interest-rate-overnight.aspx
+http://www.global-rates.com/interest-rates/libor/canadian-dollar/cad-libor-interest-rate-overnight.aspx
+http://www.global-rates.com/interest-rates/libor/danish-krone/dkk-libor-interest-rate-overnight.aspx
+http://www.global-rates.com/interest-rates/libor/japanese-yen/jpy-libor-interest-rate-overnight.aspx
+http://www.global-rates.com/interest-rates/libor/new-zealand-dollar/nzd-libor-interest-rate-overnight.aspx
+http://www.global-rates.com/interest-rates/libor/swedish-krona/sek-libor-interest-rate-overnight.aspx
+http://www.global-rates.com/interest-rates/libor/swiss-franc/chf-libor-interest-rate-overnight.aspx
+
+
+OLD URL (Fetch2):
+=====================================
+http://www.homefinance.nl/english/international-interest-rates/libor/euro/libor-rates-overnight-eur.asp
+
+<TABLE width="90%" style="margin-top:0px;margin-bottom:0px;" align="center" cellpadding=3 cellspacing=0 class="FormTable">
+<TR class="tableheader">
+<TD width="73%">Euro LIBOR overnight - current rates</TD>
+<TD width="27%"><IMG src="/images/misc/IttyBittyClear.gif"></TD>
+</TR>
+<TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-12-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.27200&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-09-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.27075&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-08-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.27200&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-07-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.27075&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-06-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.27075&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-05-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.27575&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-02-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.28075&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-01-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.28225&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>09-30-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.45625&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>09-29-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.28125&nbsp;%</TD></TR>
+
+</TABLE>
+
+
+=====================================
+http://www.homefinance.nl/english/international-interest-rates/libor/euro/libor-rates-1-week-eur.asp
+
+<TABLE width="90%" style="margin-top:0px;margin-bottom:0px;" align="center" cellpadding=3 cellspacing=0 class="FormTable">
+<TR class="tableheader">
+<TD width="73%">Euro LIBOR 1 week - current rates</TD>
+<TD width="27%"><IMG src="/images/misc/IttyBittyClear.gif"></TD>
+</TR>
+<TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-13-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.32375&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-12-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.32125&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-09-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.32125&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-08-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.31750&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-07-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.31375&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-06-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.31625&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-05-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.31750&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-02-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.32125&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-01-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.32250&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>09-30-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.33375&nbsp;%</TD></TR>
+
+</TABLE>
+
+=====================================
+http://www.homefinance.nl/english/international-interest-rates/libor/euro/libor-rates-2-weeks-eur.asp
+
+<TABLE width="90%" style="margin-top:0px;margin-bottom:0px;" align="center" cellpadding=3 cellspacing=0 class="FormTable">
+<TR class="tableheader">
+<TD width="73%">Euro LIBOR 2 weeks - current rates</TD>
+<TD width="27%"><IMG src="/images/misc/IttyBittyClear.gif"></TD>
+</TR>
+<TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-13-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.34375&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-12-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.34125&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-09-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.33875&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-08-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.33500&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-07-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.33250&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-06-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.33500&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-05-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.33250&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-02-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.33625&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-01-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.33625&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>09-30-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.34375&nbsp;%</TD></TR>
+
+</TABLE>
+
+
+=====================================
+http://www.homefinance.nl/english/international-interest-rates/libor/euro/libor-rates-1-month-eur.asp
+
+<TABLE width="90%" style="margin-top:0px;margin-bottom:0px;" align="center" cellpadding=3 cellspacing=0 class="FormTable">
+<TR class="tableheader">
+<TD width="73%">Euro LIBOR 1 month - current rates</TD>
+<TD width="27%"><IMG src="/images/misc/IttyBittyClear.gif"></TD>
+</TR>
+<TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-13-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.39375&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-12-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.39375&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-09-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.39125&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-08-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.38625&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-07-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.38625&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-06-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.38875&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-05-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.38750&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-02-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.39000&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-01-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.39250&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>09-30-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.39500&nbsp;%</TD></TR>
+
+</TABLE>
+
+=====================================
+http://www.homefinance.nl/english/international-interest-rates/libor/euro/libor-rates-2-months-eur.asp
+
+<TABLE width="90%" style="margin-top:0px;margin-bottom:0px;" align="center" cellpadding=3 cellspacing=0 class="FormTable">
+<TR class="tableheader">
+<TD width="73%">Euro LIBOR 2 months - current rates</TD>
+<TD width="27%"><IMG src="/images/misc/IttyBittyClear.gif"></TD>
+</TR>
+<TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-13-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.53750&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-12-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.54250&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-09-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.54375&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-08-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.54125&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-07-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.53875&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-06-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.54188&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-05-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.54063&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-02-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.54875&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-01-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.55000&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>09-30-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.55500&nbsp;%</TD></TR>
+
+</TABLE>
+
+
+=====================================
+http://www.homefinance.nl/english/international-interest-rates/libor/euro/libor-rates-12-months-eur.asp
+
+<TABLE width="90%" style="margin-top:0px;margin-bottom:0px;" align="center" cellpadding=3 cellspacing=0 class="FormTable">
+<TR class="tableheader">
+<TD width="73%">Euro LIBOR 12 months - current rates</TD>
+<TD width="27%"><IMG src="/images/misc/IttyBittyClear.gif"></TD>
+</TR>
+<TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-13-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>1.23438&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-12-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>1.23438&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-09-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>1.22875&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-08-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>1.22625&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-07-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>1.22000&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-06-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>1.22250&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-05-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>1.22313&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-02-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>1.22563&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-01-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>1.23063&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>09-30-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>1.23813&nbsp;%</TD></TR>
+
+</TABLE>
+
+=====================================
+http://www.homefinance.nl/english/international-interest-rates/libor/usdollar/libor-rates-overnight-usd.asp
+
+<TABLE width="90%" style="margin-top:0px;margin-bottom:0px;" align="center" cellpadding=3 cellspacing=0 class="FormTable">
+<TR class="tableheader">
+<TD width="73%">Overnight USD LIBOR - current rates</TD>
+<TD width="27%"><IMG src="/images/misc/IttyBittyClear.gif"></TD>
+</TR>
+<TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-13-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.19125&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-09-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.19500&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-08-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.19500&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-07-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.19625&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-06-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.20000&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-05-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.20250&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-02-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.20000&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-01-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.20500&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>09-30-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.21125&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>09-29-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.21000&nbsp;%</TD></TR>
+
+</TABLE>
+
+
+=====================================
+http://www.homefinance.nl/english/international-interest-rates/libor/usdollar/libor-rates-1-week-usd.asp
+
+<TABLE width="90%" style="margin-top:0px;margin-bottom:0px;" align="center" cellpadding=3 cellspacing=0 class="FormTable">
+<TR class="tableheader">
+<TD width="73%">1 week USD LIBOR - current rates</TD>
+<TD width="27%"><IMG src="/images/misc/IttyBittyClear.gif"></TD>
+</TR>
+<TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-13-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.23188&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-12-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.23125&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-09-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.23000&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-08-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.23500&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-07-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.23563&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-06-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.23688&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-05-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.23625&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-02-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.23563&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-01-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.23875&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>09-30-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.23875&nbsp;%</TD></TR>
+
+</TABLE>
+
+=====================================
+http://www.homefinance.nl/english/international-interest-rates/libor/usdollar/libor-rates-2-weeks-usd.asp
+
+<TABLE width="90%" style="margin-top:0px;margin-bottom:0px;" align="center" cellpadding=3 cellspacing=0 class="FormTable">
+<TR class="tableheader">
+<TD width="73%">2 week USD LIBOR - current rates</TD>
+<TD width="27%"><IMG src="/images/misc/IttyBittyClear.gif"></TD>
+</TR>
+<TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-13-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.23875&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-12-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.23875&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-09-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.23875&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-08-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.23938&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-07-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.23938&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-06-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.23938&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-05-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.24063&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-02-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.24063&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-01-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.24438&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>09-30-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.24438&nbsp;%</TD></TR>
+
+</TABLE>
+
+=====================================
+http://www.homefinance.nl/english/international-interest-rates/libor/usdollar/libor-rates-1-month-usd.asp
+
+<TABLE width="90%" style="margin-top:0px;margin-bottom:0px;" align="center" cellpadding=3 cellspacing=0 class="FormTable">
+<TR class="tableheader">
+<TD width="73%">1 month USD LIBOR - current rates</TD>
+<TD width="27%"><IMG src="/images/misc/IttyBittyClear.gif"></TD>
+</TR>
+<TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-13-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.24500&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-12-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.24438&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-09-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.24500&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-08-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.24438&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-07-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.24438&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-06-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.24438&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-05-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.24438&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-02-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.24438&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-01-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.24563&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>09-30-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.24563&nbsp;%</TD></TR>
+
+</TABLE>
+
+=====================================
+http://www.homefinance.nl/english/international-interest-rates/libor/usdollar/libor-rates-2-months-usd.asp
+
+<TABLE width="90%" style="margin-top:0px;margin-bottom:0px;" align="center" cellpadding=3 cellspacing=0 class="FormTable">
+<TR class="tableheader">
+<TD width="73%">2 month USD LIBOR - current rates</TD>
+<TD width="27%"><IMG src="/images/misc/IttyBittyClear.gif"></TD>
+</TR>
+<TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-13-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.25375&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-12-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.25313&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-09-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.25375&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-08-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.25375&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-07-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.25375&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-06-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.25375&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-05-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.25313&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-02-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.25250&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-01-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.25313&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>09-30-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.25250&nbsp;%</TD></TR>
+
+</TABLE>
+
+=====================================
+http://www.homefinance.nl/english/international-interest-rates/libor/usdollar/libor-rates-12-months-usd.asp
+
+<TABLE width="90%" style="margin-top:0px;margin-bottom:0px;" align="center" cellpadding=3 cellspacing=0 class="FormTable">
+<TR class="tableheader">
+<TD width="73%">12 month USD LIBOR - current rates</TD>
+<TD width="27%"><IMG src="/images/misc/IttyBittyClear.gif"></TD>
+</TR>
+<TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-13-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>1.23938&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-12-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>1.25125&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-09-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>1.22250&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-08-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>1.21313&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-07-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>1.21688&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-06-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>1.21250&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-05-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>1.20688&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-02-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>1.21250&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-01-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>1.24188&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>09-30-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>1.26375&nbsp;%</TD></TR>
+
+</TABLE>
+
+=====================================
+http://www.homefinance.nl/english/international-interest-rates/libor/poundsterling/libor-rates-overnight-gbp.asp
+
+<TABLE width="90%" style="margin-top:0px;margin-bottom:0px;" align="center" cellpadding=3 cellspacing=0 class="FormTable">
+<TR class="tableheader">
+<TD width="73%">Overnight GBP LIBOR - current rates</TD>
+<TD width="27%"><IMG src="/images/misc/IttyBittyClear.gif"></TD>
+</TR>
+<TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-13-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50375&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-12-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50375&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-09-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50375&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-08-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50375&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-07-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50375&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-06-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50375&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-05-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50250&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-02-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50250&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-01-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50250&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>09-30-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50250&nbsp;%</TD></TR>
+
+</TABLE>
+
+=====================================
+http://www.homefinance.nl/english/international-interest-rates/libor/poundsterling/libor-rates-1-week-gbp.asp
+
+<TABLE width="90%" style="margin-top:0px;margin-bottom:0px;" align="center" cellpadding=3 cellspacing=0 class="FormTable">
+<TR class="tableheader">
+<TD width="73%">1 week GBP LIBOR - current rates</TD>
+<TD width="27%"><IMG src="/images/misc/IttyBittyClear.gif"></TD>
+</TR>
+<TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-13-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50750&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-12-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50750&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-09-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50750&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-08-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50750&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-07-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50750&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-06-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50750&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-05-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50500&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-02-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50250&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-01-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50500&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>09-30-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50500&nbsp;%</TD></TR>
+
+</TABLE>
+
+=====================================
+http://www.homefinance.nl/english/international-interest-rates/libor/poundsterling/libor-rates-2-weeks-gbp.asp
+
+<TABLE width="90%" style="margin-top:0px;margin-bottom:0px;" align="center" cellpadding=3 cellspacing=0 class="FormTable">
+<TR class="tableheader">
+<TD width="73%">2 week GBP LIBOR - current rates</TD>
+<TD width="27%"><IMG src="/images/misc/IttyBittyClear.gif"></TD>
+</TR>
+<TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-13-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50625&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-12-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50625&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-09-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50625&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-08-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50625&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-07-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50625&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-06-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50625&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-05-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50375&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-02-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50375&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-01-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50375&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>09-30-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50375&nbsp;%</TD></TR>
+
+</TABLE>
+
+=====================================
+http://www.homefinance.nl/english/international-interest-rates/libor/poundsterling/libor-rates-1-month-gbp.asp
+
+<TABLE width="90%" style="margin-top:0px;margin-bottom:0px;" align="center" cellpadding=3 cellspacing=0 class="FormTable">
+<TR class="tableheader">
+<TD width="73%">1 month GBP LIBOR - current rates</TD>
+<TD width="27%"><IMG src="/images/misc/IttyBittyClear.gif"></TD>
+</TR>
+<TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-13-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.51000&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-12-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.51000&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-09-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50875&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-08-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50875&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-07-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50750&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-06-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50500&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-05-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50250&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-02-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50125&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-01-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50125&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>09-30-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50313&nbsp;%</TD></TR>
+
+</TABLE>
+
+=====================================
+http://www.homefinance.nl/english/international-interest-rates/libor/poundsterling/libor-rates-2-months-gbp.asp
+
+<TABLE width="90%" style="margin-top:0px;margin-bottom:0px;" align="center" cellpadding=3 cellspacing=0 class="FormTable">
+<TR class="tableheader">
+<TD width="73%">2 month GBP LIBOR - current rates</TD>
+<TD width="27%"><IMG src="/images/misc/IttyBittyClear.gif"></TD>
+</TR>
+<TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-13-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.52250&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-12-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.52250&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-09-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.52000&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-08-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.51750&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-07-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.51625&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-06-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.51438&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-05-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50938&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-02-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50625&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-01-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50750&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>09-30-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>0.50625&nbsp;%</TD></TR>
+
+</TABLE>
+
+=====================================
+http://www.homefinance.nl/english/international-interest-rates/libor/poundsterling/libor-rates-12-months-gbp.asp
+
+<TABLE width="90%" style="margin-top:0px;margin-bottom:0px;" align="center" cellpadding=3 cellspacing=0 class="FormTable">
+<TR class="tableheader">
+<TD width="73%">12 month GBP LIBOR - current rates</TD>
+<TD width="27%"><IMG src="/images/misc/IttyBittyClear.gif"></TD>
+</TR>
+<TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-13-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>1.11063&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-12-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>1.11000&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-09-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>1.10688&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-08-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>1.10500&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-07-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>1.10313&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-06-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>1.09938&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-05-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>1.09063&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-02-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>1.09375&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>10-01-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>1.10375&nbsp;%</TD></TR><TR class='tabledata'><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 1px;'>09-30-2009</TD><TD style='border:1px solid #CCCCCC;border-width:0px 1px 1px 0px;' align='center'>1.10250&nbsp;%</TD></TR>
+
+</TABLE>

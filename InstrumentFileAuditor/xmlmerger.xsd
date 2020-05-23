@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xsd:element name="configuration" type="configurationType" />
+	<xsd:simpleType name="starterFilterType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="component.starter" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="starterTypeType">
+		<xsd:restriction base="starterFilterType">
+			<xsd:enumeration value="component.starter" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="applicationFilterType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="component.application" />
+			<xsd:enumeration value="component.application.Artennix" />
+			<xsd:enumeration value="component.application.Egx" />
+			<xsd:enumeration value="component.application.Pocket" />
+			<xsd:enumeration value="component.application.Polex" />
+			<xsd:enumeration value="component.application.Pralex" />
+			<xsd:enumeration value="component.application.Stulex" />
+			<xsd:enumeration value="component.application.Practor" />
+			<xsd:enumeration value="component.application.Tiener" />
+			<xsd:enumeration value="component.application.Vitale" />
+			<xsd:enumeration value="component.application.Tollik" />
+			<xsd:enumeration value="component.application.template.Hector" />
+			<xsd:enumeration value="component.application.template.Hector.Complete" />
+			<xsd:enumeration value="component.application.settingscenter" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="applicationTypeType">
+		<xsd:restriction base="applicationFilterType">
+			<xsd:enumeration value="component.application.Artennix" />
+			<xsd:enumeration value="component.application.Egx" />
+			<xsd:enumeration value="component.application.Pocket" />
+			<xsd:enumeration value="component.application.Polex" />
+			<xsd:enumeration value="component.application.Pralex" />
+			<xsd:enumeration value="component.application.Stulex" />
+			<xsd:enumeration value="component.application.Practor" />
+			<xsd:enumeration value="component.application.Tiener" />
+			<xsd:enumeration value="component.application.Vitale" />
+			<xsd:enumeration value="component.application.Tollik" />
+			<xsd:enumeration value="component.application.template.Hector.Complete" />
+			<xsd:enumeration value="component.application.settingscenter" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="moduleFilterType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="component.module" />
+			<xsd:enumeration value="component.module.dict" />
+			<xsd:enumeration value="component.module.dict.vdw" />
+			<xsd:enumeration value="component.module.ling" />
+			<xsd:enumeration value="component.module.spell" />
+			<xsd:enumeration value="component.module.spell.ambi" />
+      <xsd:enumeration value="component.module.spell.PSC3_2" />
+			<xsd:enumeration value="component.module.spell.PSC3_2.engels" />
+			<xsd:enumeration value="component.module.spell.PSC3_2.nederlands" />
+			<xsd:enumeration value="component.module.spell.trans" />
+      <xsd:enumeration value="component.module.spell.vds" />
+      <xsd:enumeration value="component.module.user" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="moduleTypeType">
+		<xsd:restriction base="moduleFilterType">
+			<xsd:enumeration value="component.module.dict" />
+			<xsd:enumeration value="component.module.dict.vdw" />
+			<xsd:enumeration value="component.module.ling" />
+			<xsd:enumeration value="component.module.spell" />
+			<xsd:enumeration value="component.module.spell.ambi" />
+			<xsd:enumeration value="component.module.spell.PSC3_2.engels" />
+			<xsd:enumeration value="component.module.spell.PSC3_2.nederlands" />
+			<xsd:enumeration value="component.module.spell.trans" />
+			<xsd:enumeration value="component.module.spell.vds" />
+			<xsd:enumeration value="component.module.user" />
+    </xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="datasetFilterType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="component.dataset" />
+			<xsd:enumeration value="component.dataset.dict" />
+			<xsd:enumeration value="component.dataset.dict.vdw1_0" />
+			<xsd:enumeration value="component.dataset.spell" />
+			<xsd:enumeration value="component.dataset.spell.ambi" />
+			<xsd:enumeration value="component.dataset.spell.ambi.vdw1_0" />
+			<xsd:enumeration value="component.dataset.spell.PSC3_2" />
+			<xsd:enumeration value="component.dataset.spell.PSC3_2.engels" />
+			<xsd:enumeration value="component.dataset.spell.PSC3_2.nederlands" />
+			<xsd:enumeration value="component.dataset.spell.trans" />
+			<xsd:enumeration value="component.dataset.spell.trans.vdw1_0" />
+			<xsd:enumeration value="component.dataset.spell.vds" />
+			<xsd:enumeration value="component.dataset.user" />
+			<xsd:enumeration value="component.dataset.user.reject" />
+			<xsd:enumeration value="component.dataset.user.replace" />
+			<xsd:enumeration value="component.dataset.user.reject.nederlands" />
+			<xsd:enumeration value="component.dataset.user.replace.nederlands" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="datasetTypeType">
+		<xsd:restriction base="datasetFilterType">
+			<xsd:enumeration value="component.dataset.dict.vdw1_0" />
+			<xsd:enumeration value="component.dataset.spell.ambi.vdw1_0" />
+			<xsd:enumeration value="component.dataset.spell.PSC3_2.engels" />
+			<xsd:enumeration value="component.dataset.spell.PSC3_2.nederlands" />
+			<xsd:enumeration value="component.dataset.spell.trans.vdw1_0" />
+      <xsd:enumeration value="component.dataset.spell.vds" />
+      <xsd:enumeration value="component.dataset.user.reject.nederlands" />
+			<xsd:enumeration value="component.dataset.user.replace.nederlands" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="componentFilterType">
+		<xsd:union memberTypes="starterFilterType applicationFilterType moduleFilterType datasetFilterType" />
+	</xsd:simpleType>
+	<xsd:simpleType name="managerNameType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="ConfManager" />
+			<xsd:enumeration value="LicManager" />
+			<xsd:enumeration value="SetManager" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="starterNameType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="ArtennixStarter" />
+			<xsd:enumeration value="HectorStarter" />
+			<xsd:enumeration value="EgxStarter" />
+			<xsd:enumeration value="PocketStarter" />
+			<xsd:enumeration value="PolexStarter" />
+			<xsd:enumeration value="PralexStarter" />
+			<xsd:enumeration value="StulexStarter" />
+			<xsd:enumeration value="PractorStarter" />
+			<xsd:enumeration value="TienerStarter" />
+			<xsd:enumeration value="VitaleStarter" />
+			<xsd:enumeration value="TestStarter" />
+			<xsd:enumeration value="TollikStarter" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="applicationNameType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Artennix" />
+			<xsd:enumeration value="Hector" />
+			<xsd:enumeration value="Egx" />
+			<xsd:enumeration value="Pocket" />
+			<xsd:enumeration value="Polex" />
+			<xsd:enumeration value="Pralex" />
+			<xsd:enumeration value="Stulex" />
+			<xsd:enumeration value="Practor" />
+			<xsd:enumeration value="Tiener" />
+			<xsd:enumeration value="Vitale" />
+			<xsd:enumeration value="SettingsCenter" />
+			<xsd:enumeration value="TestApplication" />
+			<xsd:enumeration value="Tollik" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="moduleNameType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="DictModule" />
+			<xsd:enumeration value="DictVdwModule" />
+			<xsd:enumeration value="LingModule" />
+			<xsd:enumeration value="SpellAmbiModule" />
+			<xsd:enumeration value="SpellModule" />
+			<xsd:enumeration value="SpellModulePscEngels" />
+			<xsd:enumeration value="SpellModulePscNederlands" />
+      <xsd:enumeration value="SpellModuleVds" />
+      <xsd:enumeration value="SpellTransModule" />
+			<xsd:enumeration value="UserModule" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="datasetNameType">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="AmbiDatasetEngels" />
+			<xsd:enumeration value="AmbiDatasetNederlands" />
+			<xsd:enumeration value="DictDatasetZEN" />
+			<xsd:enumeration value="DictDatasetZNE" />
+			<xsd:enumeration value="DictDatasetZNN" />
+			<xsd:enumeration value="DictDatasetZENP" />
+			<xsd:enumeration value="DictDatasetZNEP" />
+			<xsd:enumeration value="DictDatasetZNNP" />
+			<xsd:enumeration value="DictDatasetPEN4" />
+			<xsd:enumeration value="DictDatasetPNE4" />
+			<xsd:enumeration value="DictDatasetPNN4" />
+			<xsd:enumeration value="DictDatasetPNB2" />
+			<xsd:enumeration value="DictDatasetPFN4" />
+			<xsd:enumeration value="DictDatasetPNF4" />
+			<xsd:enumeration value="DictDatasetPDN4" />
+			<xsd:enumeration value="DictDatasetPND4" />
+			<xsd:enumeration value="DictDatasetPSN3" />
+			<xsd:enumeration value="DictDatasetPNS3" />
+			<xsd:enumeration value="DictDatasetPIN1" />
+			<xsd:enumeration value="DictDatasetPNI1" />
+			<xsd:enumeration value="DictDatasetBVD3" />
+			<xsd:enumeration value="DictDatasetVVD1" />
+			<xsd:enumeration value="DictDatasetBSG1" />
+			<xsd:enumeration value="DictDatasetGNN4" />
+			<xsd:enumeration value="DictDatasetGEN4" />
+			<xsd:enumeration value="DictDatasetGNE4" />
+			<xsd:enumeration value="DictDatasetGDN4" />
+			<xsd:enumeration value="DictDatasetGND4" />
+			<xsd:enumeration value="DictDatasetGFN4" />
+			<xsd:enumeration value="DictDatasetGNF4" />
+			<xsd:enumeration value="DictDatasetGIN1" />
+			<xsd:enumeration value="DictDatasetGNI1" />
+			<xsd:enumeration value="DictDatasetGSN2" />
+			<xsd:enumeration value="DictDatasetGNS2" />
+      			<xsd:enumeration value="FoutenlexiconVdsNederlands" />
+			<xsd:enumeration value="SpellLexiconPscEngels" />
+			<xsd:enumeration value="SpellLexiconPscNederlands" />
+      			<xsd:enumeration value="TransDatasetEngels" />
+			<xsd:enumeration value="TransDatasetNederlands" />
+			<xsd:enumeration value="UserLexiconPscEngels" />
+			<xsd:enumeration value="UserLexiconPscNederlands" />
+			<xsd:enumeration value="UserLexiconPscGlobalNederlands" />
+			<xsd:enumeration value="UserLexiconRejectNederlands" />
+			<xsd:enumeration value="UserLexiconRejectGlobalNederlands" />
+			<xsd:enumeration value="UserLexiconReplaceNederlands" />
+			<xsd:enumeration value="UserLexiconReplaceGlobalNederlands" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="componentNameType">
+		<xsd:union memberTypes="managerNameType starterNameType applicationNameType moduleNameType datasetNameType " />
+	</xsd:simpleType>
+	<xsd:attributeGroup name="userTextAttributeGroup">
+		<xsd:attribute name="label" type="xsd:normalizedString" use="optional" />
+		<xsd:attribute name="info" type="xsd:normalizedString" use="optional" />
+	</xsd:attributeGroup>
+	<xsd:group name="mergeElementGroup">
+		<xsd:sequence>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="child" type="childType" />
+				<xsd:element name="license" type="licenseType" />
+				<xsd:element name="merge" type="mergeElementType" />
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:group name="componentElementGroup">
+		<xsd:sequence>
+			<xsd:choice minOccurs="0" maxOccurs="unbounded">
+				<xsd:element name="child" type="childType" />
+				<xsd:element name="datasetSupport" type="datasetSupportType" />
+				<xsd:element name="feature" type="featureType" />
+				<xsd:element name="license" type="licenseType" />
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:group>
+	<xsd:attributeGroup name="componentAttributeGroup">
+		<xsd:attributeGroup ref="userTextAttributeGroup" />
+		<xsd:attribute name="name" type="xsd:string" use="required" />
+		<xsd:attribute name="type" type="xsd:string" use="required" />
+		<xsd:attribute name="majorVersion" type="xsd:integer" use="required" />
+		<xsd:attribute name="minorVersion" type="xsd:integer" use="required" />
+	</xsd:attributeGroup>
+	<xsd:complexType name="configurationType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="manager" type="managerType" />
+			<xsd:element name="starter" type="starterType" />
+			<xsd:element name="application" type="applicationType" />
+			<xsd:element name="module" type="moduleType" />
+			<xsd:element name="dataset" type="datasetType" />
+			<xsd:element name="merge" type="mergeComponentType" />
+		</xsd:choice>
+	</xsd:complexType>
+	<xsd:complexType name="managerType">
+		<xsd:attribute name="name" type="managerNameType" use="required" />
+		<xsd:attribute name="fullPath" type="xsd:normalizedString" use="required" />
+		<xsd:attribute name="objectname" type="xsd:normalizedString" use="required" />
+		<xsd:attribute name="token" type="xsd:normalizedString" use="required" />
+	</xsd:complexType>
+	<xsd:complexType name="mergeComponentType">
+		<xsd:group ref="mergeElementGroup" />
+		<xsd:attribute name="name" type="componentNameType" use="required" />
+	</xsd:complexType>
+	<xsd:complexType name="mergeElementType">
+		<xsd:group ref="mergeElementGroup" />
+		<xsd:attribute name="name" type="xsd:normalizedString" use="required" />
+	</xsd:complexType>
+	<xsd:complexType name="baseStarterType">
+		<xsd:group ref="componentElementGroup" />
+		<xsd:attributeGroup ref="componentAttributeGroup" />
+	</xsd:complexType>
+	<xsd:complexType name="starterType">
+		<xsd:complexContent>
+			<xsd:restriction base="baseStarterType">
+				<xsd:sequence>
+					<xsd:choice minOccurs="0" maxOccurs="unbounded">
+						<xsd:element name="child" type="childType" />
+						<!--xsd:element name="datasetSupport" type="datasetSupportType" /-->
+						<!--xsd:element name="feature" type="featureType" /-->
+						<xsd:element name="license" type="licenseType" />
+					</xsd:choice>
+				</xsd:sequence>
+				<xsd:attribute name="name" type="starterNameType" use="required" />
+				<xsd:attribute name="type" type="starterTypeType" use="required" />
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="baseApplicationType">
+		<xsd:group ref="componentElementGroup" />
+		<xsd:attributeGroup ref="componentAttributeGroup" />
+		<xsd:attribute name="fullPath" type="xsd:normalizedString" use="required" />
+		<xsd:attribute name="objectname" type="xsd:normalizedString" use="required" />
+		<xsd:attribute name="fullHelpFilePath" type="xsd:normalizedString" use="optional" />
+	</xsd:complexType>
+	<xsd:complexType name="applicationType">
+		<xsd:complexContent>
+			<xsd:restriction base="baseApplicationType">
+				<xsd:group ref="componentElementGroup" />
+				<xsd:attribute name="name" type="applicationNameType" use="required" />
+				<xsd:attribute name="type" type="applicationTypeType" use="required" />
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="baseModuleType">
+		<xsd:group ref="componentElementGroup" />
+		<xsd:attributeGroup ref="componentAttributeGroup" />
+		<xsd:attribute name="fullPath" type="xsd:normalizedString" use="required" />
+		<xsd:attribute name="objectname" type="xsd:normalizedString" use="required" />
+		<xsd:attribute name="token" type="xsd:normalizedString" use="required" />
+		<xsd:attribute name="PscDutchFullDirectory" type="xsd:normalizedString" use="optional" />
+		<xsd:attribute name="PscEnglishFullDirectory" type="xsd:normalizedString" use="optional" />
+		<xsd:attribute name="language" type="xsd:normalizedString" use="optional" />
+		<xsd:attribute name="vdwFullDirectory" type="xsd:normalizedString" use="optional" />
+    <xsd:attribute name="vdsFullDirectory" type="xsd:normalizedString" use="optional" />
+  </xsd:complexType>
+	<xsd:complexType name="moduleType">
+		<xsd:complexContent>
+			<xsd:restriction base="baseModuleType">
+				<xsd:group ref="componentElementGroup" />
+				<xsd:attribute name="name" type="moduleNameType" use="required" />
+				<xsd:attribute name="type" type="moduleTypeType" use="required" />
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="baseDatasetType">
+		<xsd:group ref="componentElementGroup" />
+		<xsd:attributeGroup ref="componentAttributeGroup" />
+		<xsd:attribute name="fullPath" type="xsd:normalizedString" use="required" />
+		<xsd:attribute name="sourceLabel" type="xsd:normalizedString" use="required" />
+		<xsd:attribute name="sourceLanguage" type="xsd:normalizedString" use="required" />
+		<xsd:attribute name="icon" type="xsd:normalizedString" use="optional" />
+		<xsd:attribute name="lexiconType" type="xsd:normalizedString" use="optional" />
+		<xsd:attribute name="moniker" type="xsd:normalizedString" use="optional" />
+		<xsd:attribute name="readOnly" type="xsd:normalizedString" use="optional" />
+		<xsd:attribute name="targetLabel" type="xsd:normalizedString" use="optional" />
+		<xsd:attribute name="targetLanguage" type="xsd:normalizedString" use="optional" />
+		<xsd:attribute name="warningTextId" type="xsd:normalizedString" use="optional" />
+	</xsd:complexType>
+	<xsd:complexType name="datasetType">
+		<xsd:complexContent>
+			<xsd:restriction base="baseDatasetType">
+				<xsd:group ref="componentElementGroup" />
+				<xsd:attribute name="name" type="datasetNameType" use="required" />
+				<xsd:attribute name="type" type="datasetTypeType" use="required" />
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="childType">
+		<xsd:attribute name="name" type="componentNameType" use="required" />
+	</xsd:complexType>
+	<xsd:complexType name="datasetSupportType">
+		<xsd:sequence>
+			<xsd:element name="license" type="licenseType" minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+		<xsd:attribute name="name" type="xsd:normalizedString" use="required" />
+		<xsd:attribute name="filter" type="datasetFilterType" use="required" />
+	</xsd:complexType>
+	<xsd:complexType name="featureType">
+		<xsd:sequence>
+			<xsd:element name="setting" type="settingType" minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+		<xsd:attributeGroup ref="userTextAttributeGroup" />
+		<xsd:attribute name="name" type="xsd:normalizedString" use="required" />
+	</xsd:complexType>
+	<xsd:complexType name="licenseType">
+		<xsd:sequence>
+			<xsd:element name="componentSupport" type="componentSupportType" minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+		<xsd:attribute name="name" type="xsd:normalizedString" use="required" />
+		<xsd:attribute name="type" type="xsd:normalizedString" use="required" />
+		<xsd:attribute name="key" type="xsd:normalizedString" use="required" />
+		<xsd:attribute name="majorVersion" type="xsd:integer" use="optional" />
+		<xsd:attribute name="minorVersion" type="xsd:integer" use="optional" />
+		<xsd:attribute name="endDate" type="xsd:normalizedString" use="optional" />
+		<xsd:attribute name="exe" type="xsd:normalizedString" use="optional" />
+		<xsd:attribute name="crc" type="xsd:normalizedString" use="optional" />
+	</xsd:complexType>
+	<xsd:complexType name="componentSupportType">
+		<xsd:attribute name="filter" type="componentFilterType" use="required" />
+	</xsd:complexType>
+	<xsd:complexType name="settingType">
+		<xsd:sequence>
+			<xsd:element name="choice" type="choiceType" minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+		<xsd:attributeGroup ref="userTextAttributeGroup" />
+		<xsd:attribute name="name" type="xsd:normalizedString" use="required" />
+		<xsd:attribute name="type" type="xsd:normalizedString" use="required" />
+		<xsd:attribute name="default" type="xsd:normalizedString" use="required" />
+		<xsd:attribute name="free" type="xsd:boolean" use="optional" />
+		<xsd:attribute name="lock" type="xsd:boolean" use="optional" />
+		<xsd:attribute name="hidden" type="xsd:normalizedString" use="optional" />
+	</xsd:complexType>
+	<xsd:complexType name="choiceType">
+		<xsd:sequence>
+			<xsd:element name="license" type="licenseType" minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+		<xsd:attributeGroup ref="userTextAttributeGroup" />
+		<xsd:attribute name="name" type="xsd:normalizedString" use="required" />
+		<xsd:attribute name="value" type="xsd:normalizedString" use="required" />
+		<xsd:attribute name="searcher" type="xsd:normalizedString" use="optional" />
+		<xsd:attribute name="text" type="xsd:normalizedString" use="optional" />
+	</xsd:complexType>
+</xsd:schema>

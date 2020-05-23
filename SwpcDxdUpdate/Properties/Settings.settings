@@ -1,0 +1,108 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SwpcDxdUpdate.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="RepositoryFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">repository\geosolar.h5</Value>
+    </Setting>
+    <Setting Name="RfInstrumentPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/swpc/Rf</Value>
+    </Setting>
+    <Setting Name="UserAgent" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.5) Gecko/20091106 Shiretoko/3.5.5</Value>
+    </Setting>
+    <Setting Name="Hdf5CorkTheCache" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="Hdf5MaxReadBufferBytes" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1048576</Value>
+    </Setting>
+    <Setting Name="DownloadTimeout" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">180000</Value>
+    </Setting>
+    <Setting Name="SescSsnInstrumentPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/swpc/SescSsn</Value>
+    </Setting>
+    <Setting Name="DownloadFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">downloads\swpc\</Value>
+    </Setting>
+    <Setting Name="DownloadOnlyRf" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="DownloadOnlySescSsn" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="DownloadOnlySsa" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="DownloadOnlyXf" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="SsaInstrumentPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/swpc/Ssa</Value>
+    </Setting>
+    <Setting Name="XfInstrumentPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/swpc/Xf</Value>
+    </Setting>
+    <Setting Name="ApInstrumentPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/swpc/Ap</Value>
+    </Setting>
+    <Setting Name="KpInstrumentPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/swpc/Kp</Value>
+    </Setting>
+    <Setting Name="DownloadOnlyAp" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="DownloadOnlyKp" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="DownloadOnlyPf1" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="DownloadOnlyPf10" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="Pf1InstrumentPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/swpc/Pf1</Value>
+    </Setting>
+    <Setting Name="Pf10InstrumentPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/swpc/Pf10</Value>
+    </Setting>
+    <Setting Name="Pf100InstrumentPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/swpc/Pf100</Value>
+    </Setting>
+    <Setting Name="Ef8InstrumentPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/swpc/Ef8</Value>
+    </Setting>
+    <Setting Name="Ef20InstrumentPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/swpc/Ef20</Value>
+    </Setting>
+    <Setting Name="DownloadOnlyPf100" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="DownloadOnlyEf8" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="DownloadOnlyEf20" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="NcInstrumentPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/swpc/Nc</Value>
+    </Setting>
+    <Setting Name="NmInstrumentPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/swpc/Nm</Value>
+    </Setting>
+    <Setting Name="NxInstrumentPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">/swpc/Nx</Value>
+    </Setting>
+    <Setting Name="DownloadOnlyNc" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="DownloadOnlyNm" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="DownloadOnlyNx" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="iso-8859-1"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+ 
+
+<title>Ordina Beurs Grafiek Analyse</title>
+<meta name="description" content="Ordina technische beurs analyse op de aandelen koers grafiek." />
+<meta name="keywords" content="ordina, analyse, technischem aandeel, aandelen, koersen, koers, aex, euronext, analiseren, advies, tip, koop, kopen, it, positie, aankoopmoment, stochastic, rsi, indicator, winst, stoploss" />
+
+<meta name="robots" content="index, follow" />
+<base href="http://www.beursbox.nl/" />
+	<link rel="shortcut icon" href="http://www.beursbox.nl/images/favicon.ico" />
+	
+
+<link rel="stylesheet" href="templates/crss_beursbox/css/template_css.css" type="text/css" />
+<link rel="stylesheet" href="templates/crss_beursbox/css/sfish.css" type="text/css" />
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-554144-31";
+urchinTracker();
+</script>
+
+<meta http-equiv="Content-Language" content="nl" /></head>
+
+<body class="bodies">
+<div id="wrapper" align="center" >
+	<div id="pagewrapper" style="width:940px; ">
+		<div id="topsect">
+			<div id="logo">
+				<a href="/"><img src="templates/crss_beursbox/images/logo.jpg" alt=" " /></a>
+			</div>
+			<div id="xtd_menu_wrapper">
+				<div id="xtd_menu">
+							<div class="moduletable">
+			<script type="text/javascript" language="JavaScript" src="http://www.beursbox.nl/templates/crss_beursbox/js/menu.js"></script>
+<div class="menu-son-of-suckerfish-horizontal">
+<ul id="menulist_root-son-of-suckerfish-horizontal"
+class="mainlevel-son-of-suckerfish-horizontal"
+><li><a href="http://www.beleggingstips.com/" target="_blank" class="mainlevel-son-of-suckerfish-horizontal">Aandelen Advies</a></li><li><a href="http://www.topaandelen.com" target="_blank" class="mainlevel-son-of-suckerfish-horizontal">Goedkope aandelen</a></li><li><a href="http://www.globalenergynewsletter.nl" target="_blank" class="mainlevel-son-of-suckerfish-horizontal">Trend aandelen</a></li><li><a href="http://forum.beursbox.nl/" target="_blank" class="mainlevel-son-of-suckerfish-horizontal">Beursbox Forum</a></li></ul>
+</div>		</div>
+						</div><div style="clear:both;"></div>
+			</div>
+	
+		</div><!-- end topsect -->
+		<div style="clear:both;"></div>
+
+
+
+		<div id="loginwrapper" >
+			<div id="tpath">
+							<span class="pathway">Voorpagina </span>				 
+			</div>
+			<!--[if IE 7]><div style="margin-top:-2px;"><![endif]-->
+			<!--[if IE 7]></div><![endif]-->
+			<div style="clear:both;"></div>
+		</div>
+
+		<img src="templates/crss_beursbox/images/spacer.gif" width="940" height="12" alt=" " />
+		
+		<div id="banner_wrp">
+			<div id="banner_inner" align="center">
+							<div class="moduletable">
+			<a href="/"><img border="0" alt="" src="images/stories/banner.jpg" /></a>		</div>
+					</div>
+			
+		
+					
+		<div id="bodywrapper">
+			<div id="bodywrapper_inner">
+								<div id="leftsection">
+							<div class="moduletable">
+			<style type="text/css">
+
+	#dropinboxv2cover{
+		width: 400px; 
+		height: 340px;
+		padding: 8px;  
+		position:absolute; 
+		z-index: 100;
+		overflow:hidden;
+		visibility: hidden;
+	}
+
+	#dropinboxv2{
+		color: #000000;
+		width: 390px; 
+		height: 330px; 
+		border-width:1px;
+		border-color:#CCCCCC;
+		border-style:solid;
+		background-color:#FFFFFF;
+		-moz-opacity:0.95;
+		position:absolute; 
+		left: 0;
+		top: 0;
+	}
+</style>
+
+
+<script>
+var dropboxleft=500 //set left position of box (in px)
+var dropboxtop=150 //set top position of box (in px)
+var dropspeed=15 //set speed of drop animation (larger=faster)
+var displaymode="oncepersession";
+
+if (parseInt(displaymode)!=NaN)
+var random_num=Math.floor(Math.random()*displaymode)
+var ie=document.all
+var dom=document.getElementById
+
+function initboxv2(){
+	if (!dom&&!ie)
+		return
+	crossboxcover=(dom)?document.getElementById("dropinboxv2cover") : document.all.dropinboxv2cover
+	crossbox=(dom)?document.getElementById("dropinboxv2"): document.all.dropinboxv2
+	scroll_top=(ie)? truebody().scrollTop : window.pageYOffset
+	crossbox.height=crossbox.offsetHeight
+	crossboxcover.style.height=parseInt(crossbox.height)+"px"
+	crossbox.style.top=crossbox.height*(-1)+"px"
+	crossboxcover.style.left=dropboxleft+"px"
+	crossboxcover.style.top=dropboxtop+"px"
+	crossboxcover.style.visibility=(dom||ie)? "visible" : "show"
+	setTimeout('dropstart=setInterval("dropinv2()",50)', 0) //setinterval = de snelheid van scrollen van de hoover en settimeout is de wachttijd voor de hoover verschijnd.
+}
+
+function dropinv2(){
+	scroll_top=(ie)? truebody().scrollTop : window.pageYOffset
+	if (parseInt(crossbox.style.top)<0){
+		crossboxcover.style.top=scroll_top+dropboxtop+"px"
+		crossbox.style.top=parseInt(crossbox.style.top)+dropspeed+"px"
+	}
+	else{
+		clearInterval(dropstart)
+		crossbox.style.top=0
+	}
+}
+
+function dismissboxv2(){
+	if (window.dropstart) clearInterval(dropstart)
+		crossboxcover.style.visibility="hidden"
+}
+
+function truebody(){
+	return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
+}
+
+function get_cookie(Name) {
+	var search = Name + "="
+	var returnvalue = ""
+	if (document.cookie.length > 0) {
+		offset = document.cookie.indexOf(search)
+		if (offset != -1) {
+			offset += search.length
+			end = document.cookie.indexOf(";", offset)
+			if (end == -1)
+				end = document.cookie.length;
+			returnvalue=unescape(document.cookie.substring(offset, end))
+		}
+	}
+	return returnvalue;
+}
+
+if (displaymode=="oncepersession" && get_cookie("droppedinv2")=="" || displaymode=="always" || parseInt(displaymode)!=NaN && random_num==0){
+	if (window.addEventListener)
+		window.addEventListener("load", initboxv2, false)
+	else if (window.attachEvent)
+		window.attachEvent("onload", initboxv2)
+	else if (document.getElementById || document.all)
+		window.onload=initboxv2
+	if (displaymode=="oncepersession")
+		document.cookie="droppedinv2=yes"
+}
+</script>
+<div id="dropinboxv2cover">
+	<div id="dropinboxv2">
+		<div align="right"><a href="#" onClick="dismissboxv2();return false"><font color="darkblue">[Sluiten]</font></a></div>
+		<div align="left">
+		
+		<table class="contentpaneopen">
+				<tr>
+			<td valign="top" colspan="2">
+				<font face="Arial" size="2">Schrijf nu in op onze gratis  Nieuwsbrief.</font>
+<div><font face="Arial" size="2">Als dank krijgt u het E-boek over Japanse Candles  gratis toegestuurd.<br />
+<br />
+</font>
+<div align="center"><font face="Arial" size="2"> <form action="http://www.beursbox.nl/cgi-bin/mail.cgi" method="get">
+<input type="hidden" name="list" value="bbbh" />
+<input type="hidden" name="f" value="subscribe" />
+<input type="text" name="email" value="email adres" size="16" onfocus="this.value='';" maxlength="1024" />
+<input type="submit" value="Ja, stuur mij de gratis beurs nieuwsbrief" />
+</form></font><font face="Arial" size="2"><img hspace="5" height="220" border="0" width="156" alt="De beursbox nieuwsbrief" src="http://www.beursbox.nl/images/stories/beursbox-nieuwsbrief-front.jpg" /></font></div>
+</div>			</td>
+		</tr>
+				</table>
+
+		<span class="article_seperator">&nbsp;</span>
+
+		</div>
+	</div>
+</div>
+
+
+		</div>
+				<div class="moduletable">
+							<h3>
+					Beursbox Content				</h3>
+				
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr align="left"><td><a href="http://www.beursbox.nl/" class="mainlevel" >Voorpagina</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/beurs-analyses.html" class="mainlevel" >Beurs Analyses</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/beurs-artikelen.html" class="mainlevel" >Beurs Artikelen</a></td></tr>
+<tr align="left"><td><a href="http://forum.beursbox.nl" target="_blank" class="mainlevel" >Beursbox Forum</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/beurs-kennis-box.html" class="mainlevel" >Beurs Kennis Box</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/koersen.html" class="mainlevel" >Koersen</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/table/nieuws-update/" class="mainlevel" >Nieuws</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/aanmelden-nieuwsbrief.html" class="mainlevel" >Aanmelden Nieuwsbrief</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/cgi-bin/mail.cgi/list/bbbh/" target="_blank" class="mainlevel" >Nieuwsbrief archief</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/financiele-diensten.html" class="mainlevel" >Financiële Diensten</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/elliott-wave-op-beursbox.nl.html" class="mainlevel" >Elliott Wave</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/japanse-candles.html" class="mainlevel" >Japanse Candles</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/speeders-citi.html" class="mainlevel" >Speeders Citi</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/links.html" class="mainlevel" >Links</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/disclaimer-en-privacy-policy.html" class="mainlevel" >Disclaimer / Privacy</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/spamfilter-aanpassen.html" class="mainlevel" >Spamfilter aanpassen</a></td></tr>
+<tr align="left"><td><a href="http://www.beursbox.nl/de-echte-beursbox.html" class="mainlevel" >usmarkets</a></td></tr>
+</table>		</div>
+				<div class="moduletable">
+							<h3>
+					 Abonneer op Feeds				</h3>
+				<div align="center" class="dsmodule"><div align="center" class="dsmessage"></div><div align="center" class="dsfeed"><a href="index2.php?option=com_ds-syndicate&amp;version=1&amp;feed_id=1"><img src="http://www.beursbox.nl/components/com_ds-syndicate/buttons/rss20.gif" alt="feed image" /></a></div><div align="center" class="dsfeed"><a href="index2.php?option=com_ds-syndicate&amp;version=1&amp;feed_id=2"><img src="http://www.beursbox.nl/components/com_ds-syndicate/buttons/atom03.gif" alt="feed image" /></a></div></div>		</div>
+				<div class="moduletable">
+					</div>
+						</div>
+								<div id="mainbodysect" style="width:740px;">
+														<table class="contentpaneopen">
+			<tr>
+								<td class="contentheading" width="100%">
+					Ordina Beurs Grafiek Analyse									</td>
+							</tr>
+			</table>
+			
+		<table class="contentpaneopen">
+				<tr>
+			<td valign="top" colspan="2">
+				<table width="100%" class="normal">
+    <tbody>
+        <tr>
+            <td width="849" valign="top" align="left">
+            <p align="center"><img height="444" width="700" border="0" align="left" alt="Ordina aandelen koers grafiek analyse" src="http://www.beursbox.nl/plaatjes/ordina.png" /></p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<table width="600" cellspacing="0" cellpadding="0" border="0">
+    <tbody>
+        <tr>
+            <td>             <font color="#000000">8 juli 2009<br />
+            <br />
+            Na de afstraffende daling halverwege juni is het aandeel blijven hangen rond het niveau net onder de 3 euro per aandeel. Koersdoel lijkt 3 euro te zijn, waarna we weer verder kunnen dalen naar 2,50. Ik blijf hier nu echt even van af.<br />
+            <br />
+            15 juni 2009<br />
+            <br />
+            Voor Ordina is de begin januari gezette koers van 3,75 nog altijd te hoog gegrepen. We hikken al anderhalve maand tegen die koers aan, maar er lijkt geen doorbraak mogelijk te zijn. Vooralsnog niet interessant voor een belegging.<br />
+            <br />
+            25 mei 2009<br />
+            <br />
+            De koers kruipt de laatste maanden omhoog. Begin maart was de koers nog slechts 2 euro. Vrijdag sloten we op 3,44. Het is een aaneensluiting van Doji's, omdat er weinig handel is en echte overtuiging mist.<br />
+            <br />
+            30 apr 2009<br />
+            <br />
+            Nog altijd is de koers van Ordina rond de 3 euro te vinden. We hebben net zelfs vier Doji's achter elkaar gezien. Nog altijd niet interessant.<br />
+            <br />
+            10 apr 2009<br />
+            <br />
+            In tegenstelling tot mijn verwachting is de koers van Ordina niet richting de onderkant van de Bollingerbands vertrokken, maar daalde ze slechts tot halverwege en zo bleef zelfs mijn koersdoel zuidwaarts van 2,50 buiten beeld. Het werd zoiets als 2,6. Daarna trok de koers weer richting de bovenkant van de bands. We sloten gisteren weer rond de 3 euro per aandeel, daar stonden we bij de vorige analyse ook. Geen aandeel om nu in te willen handelen of om te willen bezitten.<br />
+            <br />
+            19 mrt 2009<br />
+            <br />
+            Het herstel van Ordina bracht het aandeel aan de bovenkant van de Bollingerbands. Daarmee is het opwaarts potentieel bereikt, want die Bollingerbands zijn zelf neutraal. Koersdoel is 2,50 en mogelijk zelfs 2 euro per aandeel.<br />
+            <br />
+            27 feb 2009<br />
+            <br />
+            Eerder deze week werd een bodem geraakt, waarna het aandeel herstelde. Die bodem was er met een prachtige Hammer in de candles grafiek, gekoppeld aan een koopsignaal in de Stochastic. Is dit dan 'het herstel'? Dat lijkt me sterk. Er is nu een kleine kans dat er wat herstel gaat optreden, maar het is extreem gevaarlijk om in dit soort kleine fondsen te vertrouwen op technische signalen. Er zijn in feite te weinig beleggers actief in dit fonds en dat maakt dat signalen onbetrouwbaarder zijn. Reageren op dit positieve signaal is dus hoog speculatief.<br />
+            <br />
+            22 jan 2009<br />
+            <br />
+            Het aandeel is na de vorige analyse gestegen van een dieptepunt van 2 euro naar een hoogste punt van 3,70. Procentueel een enorme beweging. Niet veel beleggers hebben meegedaan, want de omzetten waren op de keerpuntdag na extreem laag. Het keerpunt lag op de 2e beursdag van dit jaar. Er gingen toen ruim een miljoen aandelen rond en vanaf dat moment daalden we van 3,70 naar nu 2,73. Procentueel ook weer een stevig verlies. Gisteren zagen we een Doji, dus als de handel 'breed' genoeg is, zouden we nu weer een beweging omhoog kunnen krijgen. Het nadeel van zo'n klein fonds is dat een enkele speler met meer dan een miljoen euro om mee te spelen hier de volledige handel naar zijn hand kan zetten. Denkt u dat u slimmer bent dan die persoon die in feite bepaald wat er met de koers gaat gebeuren? Een paar jaar geleden was het John de Mol die in enkele fondsen op zo'n manier aan het spelen was. Uiteindelijk zijn er niet veel anderen wijzer van geworden.<br />
+            <br />
+            6 jan 2009<br />
+            <br />
+            Enkele jaren geleden begon voor Getronics het begin van het einde doordat het tafelzilver verkocht moest worden om te overleven. Ik vrees dat Ordina zo'n zelfde lot beschoren is. Toch zien we dat de koers de laatste weken uit het absolute dal aan het klimmen is. Bij beleggers is blijkbaar het besef ontstaan dat de afwaardering tot onder de 2 euro per aandeel ook weer iets te overdreven was. Immers is het losse tafelzilver waarschijnlijk wel iets meer waard dan 2 euro per aandeel.<br />
+            De koers is nu terug op 3,34. Toch een ruime 50% rendement die in een drie weken gemaakt had kunnen worden. U leest maar van weinig beleggers dat ze die klapper gemaakt hebben. Dat is niet zo gek. De kans dat we over enkele weken weer onder de 2 staan is namelijk bijzonder groot. Bij Ordina is het nu slechts gokken. Ik raad u aan hier ver van te blijven, ondanks de op papier zo mooie rendementen. Vergeet niet, enkele maanden geleden stonden we nog 8 euro per aandeel. De meeste aandeelhouders hadden toen de aandelen al. Die aandeelhouders zijn nog altijd niet gelukkig met een stijging van 2 naar 3,3.<br />
+            <br />
+            12 dec 2008<br />
+            <br />
+            Na de vorige analyse, waarbij ik aangaf dat serieuze beleggers dit aandeel links zouden laten liggen, is de koers van 5,8 gedaald naar onder de 2. Dramatische dalingen derhalve! Wat dit opwaartse beweging indertijd veroorzaakte, ik weet het niet. De indicatoren geven nu koopsignalen, maar net als de vorige keer geldt dat dit geen aandeel voor serieuze beleggers meer is.<br />
+            <br />
+            13 nov 2008<br />
+            <br />
+            Beleggers die de gok namen zullen op 27 of 28 oktober het verlies genomen hebben. Direct daarna kwam er een prachtige stijging van 3,4 naar boven de 5,5. Het kan soms raar lopen. In deze markt en in een klein fonds als dit blijkt alles mogelijk. Serieuze beleggers hebben in dit fonds niets te zoeken. We sloten gisteren op 4,41 en dat was al de derde zwarte candle op rij.<br />
+            <br />
+            21 okt 2008<br />
+            <br />
+            Net als bij Logica is het bij <a target="_blank" href="http://www.beursbox.nl/logicacmg-beurs-analyse.html">Ordina</a> armoe troef. In tegenstelling tot Logica is hier echter al wel sprake van bodemvorming en ook in de Japanse Candle grafiek een voorzichtig koopsignaal. Let wel, als belegger moet u zich afvragen of u wel in fundamenteel zwakke bedrijven wilt beleggen. Wilt u echter puur op TA beleggen, dan ligt hier een kans. In dat geval kopen Ordina met als stoploss 3,74 end of day.<br />
+            <br />
+            25 sept 2008<br />
+            <br />
+            Het blijkt sukkelen met Ordina. Het aandeel staat nu 5,55 en het is een aaneenschakeling van steeds lagere candles die akelig klein zijn. De bodem is nabij... Immers, de koers is nog slechts 5,55 dus de nul is nog maar iets meer dan 5,5 euro lager te vinden. Zoals het nu gaat, is het slechts de vraag wanneer er een andere partij komt die Ordina tegen een bodemprijs overneemt. Vanuit Ordina zelf zie ik niet snel de klapper komen die het aandeel er voor de aandeelhouders weer bovenop brengt. RSI en Stochastic geven koopsignalen, maar ik zie niet in de Japanse Candles dat lijkt op een koopmoment.<br />
+            <br />
+            11 sep 2008<br />
+            <br />
+            Het gaat echt niet goed met Ordina. De koers zakte verder weg naar 6 euro en is daarmee terug op de niveaus die we in 2002/2003 zagen. Vooralsnog is niet duidelijk waar het herstel vandaan moet komen. Het bedrijf en het aandeel zijn aangeschoten wild.<br />
+            <br />
+            22 aug 2008<br />
+            <br />
+            De vorige analyse was op 8 euro. Ik was niet positief. de koers steeg daarna naar 9 euro, om na de winstwaarschuwing met een enorme gap te dalen naar... 8 euro en lager. Er lijkt een stevige bodem rond de 7,5 te liggen. Dat is mooi, maar is op zich nog geen reden om dus ook maar wat te willen gaan doen. Dit bedrijf heeft een probleem en zolang dat fundamentele probleem niet is opgelost zullen beleggers niet happig zijn om in te stappen. Een fusie of overname? Met de lage beurskoers lijkt hooguit een rol als prooi voor Ordina weggelegd te zijn. Wie de jager dan potentieel is, ik zou het nog niet weten.<br />
+            <br />
+            21 juli 2008<br />
+            <br />
+            In Ordina een herstel, maar ik ben van mening dat het hier nog te vroeg is voor een positie.<br />
+            <br />
+            19 juni 2008<br />
+            <br />
+            Eind mei probeerden we een acte in Ordina. Helaas was die actie al na anderhalve week voorbij. Ordina verloor gisteren nog veel meer en schoot zelfs met een gap omlaag fors uit. Het bedrijf verloor een contract met Robeco en beleggers namen daarop onder hoog volume afscheid.<br />
+            <br />
+            29 mei 2008<br />
+            <br />
+            Gisteren eindelijk een uitbraak in Ordina. Je moet als belegger wel echt durven, maar het is een stijging op toegenomen volume. Het een stoploss op 10,9 euro end of day kunt u speculatief eens wat proberen.<br />
+            <br />
+            12 mei 2008<br />
+            <br />
+            Eindelijk is de 11 euro bereikt, maar alles lijkt nu omlaag gericht te zijn. Ik ga hier helemaal niets mee doen. Niet interessant.<br />
+            <br />
+            18 apr 2008<br />
+            <br />
+            Weinig te melden bij Ordina. De koers van het aandeel is 10,33. Het lijkt mogelijk dat Ordina naar 11 euro gaat. Pas daarboven zou ik overwegen long te gaan. Ik twijfel er echter aan of Ordina er wel boven kan komen.<strong><br />
+            <br />
+            </strong>12 mrt 2008<br />
+            <br />
+            De koers is sinds eind januari nog amper van de plek gekomen. We zien nu wel af en toe wat meer volume op het moment dat de dagcandle iets groter is, maar de trend is zijwaarts.<br />
+            <br />
+            8 feb 2008<br />
+            <br />
+            Het lijkt er op dat Ordina een nieuwe dieptepunt voor 2008 gaat testen. Ik blijf hier verre van.<br />
+            <br />
+            21 jan 2008<br />
+            <br />
+            Het laatste halfjaar is het bergafwaarts en verder bergafwaarts gegaan. Het doet denken aan de donkere tijd van 2002/2003, maar vergis u niet, toen ging de koers terug naar een euro of drie. We zijn ondertussen al wel terug naar koersen zoals we die in 2004 zagen. Je vraagt je af, wat is de meerwaarde van een beursnotering nog voor Ordina.<br />
+            <br />
+            17 dec 2007<br />
+            <br />
+            Er was in november een prachtig herstel, maar het raakte de eerste weerstand en alles was weer over. We zijn nu wederom op weg zuidwaarts. Ik blijf nog altijd alleen maar kijken, want beleggingen in deze hoek zijn al twee jaar lang niet rendabel gebleken.<br />
+            <br />
+            20 nov 2007<br />
+            <br />
+            De koers is van boven de 18 euro per aandeel in april 2007 nu terug naar onder de 11 euro per aandeel. Het bedrijf draait niet slechter, maar het sentiment rond dit soort bedrijven en aandelen is heel slecht. Gelukkig zijn we blijven wachten en kijken en kunnen we dat rustig volhouden.<br />
+            <br />
+            24 okt 2007<br />
+            <br />
+            De trend is nog altijd neerwaarts tenzij... er binnenkort een herstel komt dat de neerwaartse spiraal weet te doorbreken. Zover is het nog lang niet, dus gewoon wachten en kijken.<br />
+            <br />
+            4 okt 2007<br />
+            <br />
+            Met een daling van 18 in april, tot 13 nu is het duidelijk dat Ordina geen gewild aandeel was. Het zit in de verkeerde sector en weet beleggers totaal niet aan te spreken. Dat wil echter niet zeggen dat er niets mee gedaan kan worden. Technische traders kunnen er mogelijk wat mee, maar het is de vraag of het nu al tijd is om in te stappen. Ik denk het eerlijk gezegd nog niet. Gisteren weer een Doji na een klim van enkele dubbeltjes. Het lijkt mij teveel op een klein herstel in een grote daling. Beleggers overdrijven altijd en dat geldt ook richting afwaarderen van bedrijven. Ordina is nu nog niet extreem genoeg afgewaardeerd en daarom wacht ik nog even met instappen. De K/W ligt nog altijd rond de 13 en dat is niet spotgoedkoop.<br />
+            <br />
+            10 sep 2007<br />
+            <br />
+            De eerdere steun van 14,9 is nu de weerstand geworden. Het ziet er vooralsnog niet bijster geweldig uit in de aandelengrafiek van Ordina. Het aandeel is niet sexy en de sector is dat ook allerminst.<br />
+            <br />
+            7 aug 2007             </font>
+            <p> </p>
+            <font color="#000000">             Gisteren werd de stoploss doorbroken, maar daar moet dan  vandaag op gehandeld gaan worden. Bij een stand onder de 14,9 om 10:00 uur zou  ik uitstappen.             </font>
+            <p> </p>
+            <font color="#000000">             3 juli 2007             </font>
+            <p> </p>
+            <font color="#000000">             Het mag overduidelijk zijn dat de vorige maand geopperde  positie geen lang leven beschoren was. Toen nog een suggestie om in te stappen  rond de 16,8. Eergisteren deze we intraday nog 15,1. Ook nu lijkt er een herstel  in te zitten. Nu nog wat meer dan vorige keer, want nu doen ook RSI en  Stochastic mee. Wie dus puur op technisch wil handelen, die heeft hier een  loepzuiver aankoopmoment. Stoploss 14,9. Ik doe zelf even niet mee.             </font>
+            <p> </p>
+            <font color="#000000">             4 juni 2007             </font>
+            <p> </p>
+            <font color="#000000">             We zien in de grafiek bij Ordina hoe prachtig dit aandeel  binnen de toppen en bodems is gebleven. Recent werd de bodem getest. We kunnen  nu dan ook inzetten voor een ritje naar de top. Instappen rond de 16,8 met als  koersdoel 18 te behalen in twee maanden. Misschien iets voor een optie-positie?             </font>
+            <p> </p>
+            <font color="#000000">             7 mei 2007             </font>
+            <p> </p>
+            <font color="#000000">             Rond de 18,2 ligt er voor Ordina een nieuwe weerstand, Het  is in feite de oude weerstand van 17,9 van aug 2006, met een beetje rek in de  koers. Onder de 18,2 lijkt een positie in dit aandeel niet echt veel kansen te  bieden. Komt de koers er wel boven, dan zou in dat geval, in combinatie met een  aardige AEX vooruitzicht, een positie overwogen kunnen worden.             </font>
+            <p> </p>
+            <font color="#000000">             11 apr 2007             </font>
+            <p> </p>
+            <font color="#000000">             Na de vorige analyse, waarin ik aangaf niets in dit  aandeel te zullen doen, steeg het nog &eacute;&eacute;n euro waarna het korte feestje over  was. Pas bij een doorbreking van de 18,3 is aan een nieuwe opwaartse beweging te  denken. Daaronder blijf ik op mijn handen zitten.             </font>
+            <p> </p>
+            <font color="#000000">             20 mrt 2007             </font>
+            <p> </p>
+            <font color="#000000">             We zien de prachtige winst van gisteren, maar helaas, het  aandeel is recent verkocht. Shit happens zullen we maar zeggen. Achteraf gezien  was de stoploss ongelukkig gekozen. Hadden we het keurig gedaan, dan had het  niet geholpen. De 16,3 werd ook enkele keren meerdere dagen neerwaarts  doorbroken, dus ook dan was de positie verlaten geworden. Je kan niet alles  winnen. Ik blijf het een mooi bedrijf vinden, maar ik stap even niet in.             </font>
+            <p> </p>
+            <font color="#000000">             7 mrt 2007             </font>
+            <p> </p>
+            <font color="#000000">             Gisteren is Ordina onder de stoploss gekomen. Als nu het  aandeel niet om 10:00 uur boven de 16,48 is gekomen, dan is het jammer, maar dan  neem ik even afscheid. Het is een mooi bedrijf, maar ik ga niet in deze aandelen  zitten als mijn mede-beleggers blijkbaar van de stukken af willen.             </font>
+            <p> </p>
+            <font color="#000000">             24 jan 2007             </font>
+            <p> </p>
+            <font color="#000000">             De laatste dagen een stukje correctie bij Ordina. We gaan  de stoploss even aanpassen. Die stond nog op 15,9 maar mag nu naar 16,48 end of  day.             </font>
+            <p> </p>
+            <font color="#000000">             21 dec 2006             </font>
+            <p> </p>
+            <font color="#000000">             Een week geleden heb ik een koopadvies op Ordina gegeven.  Gisteren kwam de eerste echte beloning in de vorm van een aardige stijging die  het aandeel over het vorige topje van halverwege november bracht. Daar ook  collega Getronics de laatste dagen de wind mee heeft kan dit mogelijk en  hopelijk nog even doorgaan.             </font>
+            <p> </p>
+            <font color="#000000">             15 dec 2006             </font>
+            <p> </p>
+            <font color="#000000">             Mocht u de eerdere winst genomen hebben (Ordina heeft  nogal rond het stoploss punt gestuiterd) dan lijkt het nu onzin om weer in te  stappen. Toch ga ik het doen, maar met stoploss op 15,9. Ik ga hier dus heel  kort op zitten maar zal de stoploss end of day hanteren en deze pertinent niet  in het banksysteem zetten.             </font>
+            <p> </p>
+            <font color="#000000">             </font><font color="#000000"><br />
+            </font>
+            <p> </p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+<table width="100%" class="tablebox">
+    <tbody>
+        <tr>
+            <td width="40%">
+            <p><font size="2">De Analyses zijn gemaakt door Tom Lassing, tenzij anders aangegeven.</font></p>
+            <font size="2">            </font>
+            <p><font size="2"><font size="2">Tom Lassing en <a href="http://www.progainbv.nl" target="_blank">Pro Gain BV</a> houden geen aanzienlijke belangen in binnen Europa gelegen beursgenoteerde ondernemingen.<br />
+            Het kan zijn dat Tom Lassing priv&eacute; een kleine positie zal innemen conform zijn analyse en advies. U dient daar bij de beoordeling van de analyse rekening mee te houden.<br />
+            Er zijn geen afspraken met banken of brokers over vergoeding omzet op basis van de gegeven adviezen. Ook als adviezen van Tom Lassing via andere aanbieders tot u komen is er geen sprake van een betaalde bijdrage. De analyses worden altijd gratis verstrekt aan derden met slechts de afspraak dat er een werkende link naar <a href="http://www.beursbox.nl" target="_blank">www.beursbox.nl</a> onder staat.   </font></font></p>
+            <font size="2"><font size="2">            </font></font></td>
+            <td width="20%" align="center">
+            <p><br />
+            </p>
+            </td>
+            <td width="40%"><font size="2">Leest u ook onze <a href="http://www.beursbox.nl/disclaimer-en-privacy-policy.html">disclaimer</a> nog eens goed na. In de nieuwsbrief treft u dagelijks de meest recente analyses aan.<br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            </font></td>
+        </tr>
+    </tbody>
+</table>
+</p>			</td>
+		</tr>
+				</table>
+
+		<span class="article_seperator">&nbsp;</span>
+
+					<div class="back_button">
+				<a href='javascript:history.go(-1)'>
+					[ terug ]</a>
+			</div>
+							</div>
+								<div style="clear:both;"></div>
+			</div>
+			<div style="clear:both;"></div>
+			</div>
+		</div><!-- end body wrapper -->
+		
+				<div id="footer_wrapper">
+			<div id="footer_left"></div>
+						<div style="clear:both;"></div>	
+			<center>Copyright &#169; 2009 <a href="http://www.progainbv.nl" target="_blank">Pro Gain BV</a> | <a href="http://www.beursbox.nl/over-beurbox.nl.html">Over ons | <a href="http://www.beursbox.nl/contact-beursbox.html">Contact</a> | <a href="http://www.beursbox.nl/testimonials-beursbox.nl.html">Testimonials</a> | <a href="http://www.progainshop.com/affiliate" target="_blank">Partnerprogramma</a> | <a href="http://www.beursbox.nl/aanmelden-nieuwsbrief.html">Inschrijven nieuwsbrief</a> | <a href="index.php?option=com_joomap&Itemid=259">Sitemap</a><br /><br />
+			Beursbox.nl over: beurs - aandelen - beleggen - geld beleggen - beursnieuws - investeren - koers - beleggingsadvies - rendement - opties - beurskoersen - aex - aandelen tips - aandelen koersen - beursinformatie - aandelenfonds - aandelenkoersen - financiele markt - aandelen koersen - beleggen opties
+			</center>
+		</div>
+
+	</div> <!-- end pagewrapper -->
+</div> <!-- end wrapper -->
+
+</body>
+</html><!-- 1251185226 -->
