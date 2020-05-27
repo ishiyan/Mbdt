@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MicImport.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="IncludeOnly" Type="System.Collections.Specialized.StringCollection" Scope="Application">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;Austria&lt;/string&gt;
+  &lt;string&gt;Belgium&lt;/string&gt;
+  &lt;string&gt;Canada&lt;/string&gt;
+  &lt;string&gt;Denmark&lt;/string&gt;
+  &lt;string&gt;Finland&lt;/string&gt;
+  &lt;string&gt;France&lt;/string&gt;
+  &lt;string&gt;Germany&lt;/string&gt;
+  &lt;string&gt;Iceland&lt;/string&gt;
+  &lt;string&gt;Italy&lt;/string&gt;
+  &lt;string&gt;Luxembourg&lt;/string&gt;
+  &lt;string&gt;Norway&lt;/string&gt;
+  &lt;string&gt;Portugal&lt;/string&gt;
+  &lt;string&gt;Spain&lt;/string&gt;
+  &lt;string&gt;Sweden&lt;/string&gt;
+  &lt;string&gt;Switzerland&lt;/string&gt;
+  &lt;string&gt;Netherlands&lt;/string&gt;
+  &lt;string&gt;UnitedKingdom&lt;/string&gt;
+  &lt;string&gt;UnitedStates&lt;/string&gt;
+  &lt;string&gt;NoCountry&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
