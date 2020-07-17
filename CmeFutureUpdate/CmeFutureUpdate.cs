@@ -526,16 +526,20 @@ namespace CmeFutureUpdate
                         Trace.TraceInformation("Prohibited merge {0}, {1}, to file {2}, instrument path {3}", seriesEntry.Code, seriesEntry.Month, h5File, instrumentPath);
                         continue;
                     }
+                    Trace.TraceInformation("Merging {0}, {1}, CHECKED", seriesEntry.Code, seriesEntry.Month);
 
                     using (Instrument instrument = repository.Open(instrumentPath, true))
                     {
                         using (TradeData tradeData = instrument.OpenTrade(true))
                         {
+                            Trace.TraceInformation("Merging {0}, {1}, START SpreadDuplicateTimeTicks", seriesEntry.Code, seriesEntry.Month);
                             tradeData.SpreadDuplicateTimeTicks(seriesEntry.TradeList, false);
+                            Trace.TraceInformation("Merging {0}, {1}, FINISHED, START Add", seriesEntry.Code, seriesEntry.Month);
                             if (!tradeData.Add(seriesEntry.TradeList,
                                 Properties.Settings.Default.Hdf5UpdateDuplicateTicks ? DuplicateTimeTicks.Update : DuplicateTimeTicks.Skip,
                                 Properties.Settings.Default.Hdf5VerboseAdd))
                                 Trace.TraceError("Failed to add trade list, {0}, {1}, to file {2}, instrument path {3}", seriesEntry.Code, seriesEntry.Month, h5File, instrumentPath);
+                            Trace.TraceInformation("Merging {0}, {1}, FINISHED Add", seriesEntry.Code, seriesEntry.Month);
                         }
                     }
                 }
