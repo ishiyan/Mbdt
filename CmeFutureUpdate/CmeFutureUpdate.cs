@@ -14,6 +14,8 @@ namespace CmeFutureUpdate
 {
     internal class CmeFutureUpdate
     {
+        const int ElementsPerAdd = 40000;
+
         internal CmeFutureUpdate()
         {
             foreach (var future in futureList)
@@ -232,6 +234,145 @@ namespace CmeFutureUpdate
                 Trace.TraceError("Failed to find future symbol {0} code {1}, aborting", symbol, code);
                 return;
             }
+            var trade = new Trade();
+            Trace.TraceInformation("Importing {0}, {1}, [{2}]", future.Symbol, future.Name, future.Uri);
+            Trace.TraceInformation("Importing {0}, {1}, first trade day {2}, last trade day {3}, settlement {4}",
+                seriesEntry.Code, seriesEntry.Month, seriesEntry.FirstTradeDate.ToShortDateString(),
+                seriesEntry.LastTradeDate.ToShortDateString(), seriesEntry.SettlementDate.ToShortDateString());
+            string[] lines = File.ReadAllLines(filePath);
+            foreach (var line in lines)
+            {
+                if (line.Length < 10)
+                    continue;
+                var spl = line.Split(';');
+                trade.dateTimeTicks = DateTime.Parse(spl[0]).Ticks;
+                trade.price = double.Parse(spl[1]);
+                trade.volume= double.Parse(spl[2]);
+                seriesEntry.TradeList.Add(trade);
+            }
+            string h5File = future.RepositoryPath();
+            string instrumentPath = seriesEntry.InstrumentPath(future);
+            if (1 > seriesEntry.TradeList.Count)
+            {
+                Trace.TraceInformation("Skipped merge {0}, {1}, to file {2}, instrument path {3}: no trade data found", seriesEntry.Code, seriesEntry.Month, h5File, instrumentPath);
+                return;
+            }
+            Trace.TraceInformation("Merging {0}, {1}, to file {2}, instrument path {3}", seriesEntry.Code, seriesEntry.Month, h5File, instrumentPath);
+            Trace.TraceInformation("Merging {0}, {1}, starting check", seriesEntry.Code, seriesEntry.Month);
+            var tradePrevious = new Trade();
+            bool tradeActivated = false;
+            bool isGood = true;
+            foreach (var t in seriesEntry.TradeList)
+            {
+                if (tradeActivated)
+                {
+                    if (t.dateTimeTicks < tradePrevious.dateTimeTicks)
+                    {
+                        Trade t2 = t;
+                        t2.dateTimeTicks = tradePrevious.dateTimeTicks;
+                        Trace.TraceError("Found decreasing timestamp: prev [{0}]({1}), this [{2}]({3})", tradePrevious, tradePrevious.TimeStamp.Replace(".0000000", ""), t, t.TimeStamp.Replace(".0000000", ""));
+                        isGood = false;
+                        tradePrevious = t2;
+                    }
+                    else
+                        tradePrevious = t;
+                }
+                else
+                {
+                    tradeActivated = true;
+                    tradePrevious = t;
+                }
+            }
+            if (!isGood)
+            {
+                Trace.TraceInformation("Prohibited merge {0}, {1}, to file {2}, instrument path {3}", seriesEntry.Code, seriesEntry.Month, h5File, instrumentPath);
+                return;
+            }
+            Trace.TraceInformation("Merging {0}, {1}, finished check", seriesEntry.Code, seriesEntry.Month);
+
+            using (Repository repository = Repository.OpenReadWrite(h5File, true, Properties.Settings.Default.Hdf5CorkTheCache))
+            using (Instrument instrument = repository.Open(instrumentPath, true))
+            using (TradeData tradeData = instrument.OpenTrade(true))
+            {
+                Trace.TraceInformation("Merging {0}, {1}, starting SpreadDuplicateTimeTicks", seriesEntry.Code, seriesEntry.Month);
+                tradeData.SpreadDuplicateTimeTicks(seriesEntry.TradeList, false);
+                Trace.TraceInformation("Merging {0}, {1}, finished SpreadDuplicateTimeTicks", seriesEntry.Code, seriesEntry.Month);
+            }
+            int maxChunks = 1 + seriesEntry.TradeList.Count / ElementsPerAdd;
+            if (maxChunks == 1)
+            {
+                Trace.TraceInformation("Merging {0}, {1}, starting Add", seriesEntry.Code, seriesEntry.Month);
+                using (Repository repository = Repository.OpenReadWrite(h5File, true, Properties.Settings.Default.Hdf5CorkTheCache))
+                using (Instrument instrument = repository.Open(instrumentPath, true))
+                using (TradeData tradeData = instrument.OpenTrade(true))
+                {
+                    if (!tradeData.Add(seriesEntry.TradeList,
+                        Properties.Settings.Default.Hdf5UpdateDuplicateTicks ? DuplicateTimeTicks.Update : DuplicateTimeTicks.Skip,
+                        Properties.Settings.Default.Hdf5VerboseAdd))
+                        Trace.TraceError("Failed to add trade list, {0}, {1}, to file {2}, instrument path {3}", seriesEntry.Code, seriesEntry.Month, h5File, instrumentPath);
+                }
+                Trace.TraceInformation("Merging {0}, {1}, finished Add", seriesEntry.Code, seriesEntry.Month);
+            }
+            else
+            {
+                var buf = new List<Trade>(maxChunks);
+                var src = seriesEntry.TradeList;
+                int srcIndex = 0;
+                for (int chunk = 1; chunk < maxChunks; ++chunk)
+                {
+                    Trace.TraceInformation("Merging {0}, {1}, starting Add, chunk {2} of {3}", seriesEntry.Code, seriesEntry.Month, chunk, maxChunks);
+                    buf.Clear();
+                    for (int i = 0; i < ElementsPerAdd; ++i)
+                    {
+                        buf.Add(src[srcIndex++]);
+                    }
+                    using (Repository repository = Repository.OpenReadWrite(h5File, true, Properties.Settings.Default.Hdf5CorkTheCache))
+                    using (Instrument instrument = repository.Open(instrumentPath, true))
+                    using (TradeData tradeData = instrument.OpenTrade(true))
+                    {
+                        if (!tradeData.Add(buf,
+                            Properties.Settings.Default.Hdf5UpdateDuplicateTicks ? DuplicateTimeTicks.Update : DuplicateTimeTicks.Skip,
+                            Properties.Settings.Default.Hdf5VerboseAdd))
+                            Trace.TraceError("Failed to add trade list, {0}, {1}, to file {2}, instrument path {3}", seriesEntry.Code, seriesEntry.Month, h5File, instrumentPath);
+                    }
+                    Trace.TraceInformation("Merging {0}, {1}, finished Add, chunk {2} of {3}", seriesEntry.Code, seriesEntry.Month, chunk, maxChunks);
+                }
+                Trace.TraceInformation("Merging {0}, {1}, starting Add, chunk {2} of {3}", seriesEntry.Code, seriesEntry.Month, maxChunks, maxChunks);
+                buf.Clear();
+                int c = src.Count;
+                while (srcIndex < c)
+                {
+                    buf.Add(src[srcIndex++]);
+                }
+                using (Repository repository = Repository.OpenReadWrite(h5File, true, Properties.Settings.Default.Hdf5CorkTheCache))
+                using (Instrument instrument = repository.Open(instrumentPath, true))
+                using (TradeData tradeData = instrument.OpenTrade(true))
+                {
+                    if (!tradeData.Add(buf,
+                        Properties.Settings.Default.Hdf5UpdateDuplicateTicks ? DuplicateTimeTicks.Update : DuplicateTimeTicks.Skip,
+                        Properties.Settings.Default.Hdf5VerboseAdd))
+                        Trace.TraceError("Failed to add trade list, {0}, {1}, to file {2}, instrument path {3}", seriesEntry.Code, seriesEntry.Month, h5File, instrumentPath);
+                }
+                Trace.TraceInformation("Merging {0}, {1}, finished Add, chunk {2} of {3}", seriesEntry.Code, seriesEntry.Month, maxChunks, maxChunks);
+            }
+        }
+
+        public void ImportText2(string symbol, string code, string filePath, string yyyymmdd)
+        {
+            symbol = symbol.ToUpperInvariant();
+            Future future = futureList.Find(f => symbol == f.Symbol.ToUpperInvariant());
+            if (null == future)
+            {
+                Trace.TraceError("Failed to find future symbol {0}, aborting", symbol);
+                return;
+            }
+            code = code.ToUpperInvariant();
+            SeriesEntry seriesEntry = future.Series.Find(f => code == f.Code.ToUpperInvariant());
+            if (null == seriesEntry)
+            {
+                Trace.TraceError("Failed to find future symbol {0} code {1}, aborting", symbol, code);
+                return;
+            }
             //var frontEntry = future.Front.Find(f => f.SeriesEntry == seriesEntry);
             //if (null == frontEntry)
             //{
@@ -251,7 +392,7 @@ namespace CmeFutureUpdate
                 var spl = line.Split(';');
                 trade.dateTimeTicks = DateTime.Parse(spl[0]).Ticks;
                 trade.price = double.Parse(spl[1]);
-                trade.volume= double.Parse(spl[2]);
+                trade.volume = double.Parse(spl[2]);
                 /*
                 string str = line.Substring(0, 10);
                 string[] splitted = str.Split('/');
@@ -308,6 +449,7 @@ namespace CmeFutureUpdate
                     return;
                 }
                 Trace.TraceInformation("Merging {0}, {1}, to file {2}, instrument path {3}", seriesEntry.Code, seriesEntry.Month, h5File, instrumentPath);
+                Trace.TraceInformation("Merging {0}, {1}, starting check", seriesEntry.Code, seriesEntry.Month);
                 var tradePrevious = new Trade();
                 bool tradeActivated = false;
                 bool isGood = true;
@@ -337,68 +479,109 @@ namespace CmeFutureUpdate
                     Trace.TraceInformation("Prohibited merge {0}, {1}, to file {2}, instrument path {3}", seriesEntry.Code, seriesEntry.Month, h5File, instrumentPath);
                     return;
                 }
+                Trace.TraceInformation("Merging {0}, {1}, finished check", seriesEntry.Code, seriesEntry.Month);
 
                 using (Instrument instrument = repository.Open(instrumentPath, true))
                 {
                     using (TradeData tradeData = instrument.OpenTrade(true))
                     {
+                        Trace.TraceInformation("Merging {0}, {1}, starting SpreadDuplicateTimeTicks", seriesEntry.Code, seriesEntry.Month);
                         tradeData.SpreadDuplicateTimeTicks(seriesEntry.TradeList, false);
-                        if (!tradeData.Add(seriesEntry.TradeList,
-                            Properties.Settings.Default.Hdf5UpdateDuplicateTicks ? DuplicateTimeTicks.Update : DuplicateTimeTicks.Skip,
-                            Properties.Settings.Default.Hdf5VerboseAdd))
-                            Trace.TraceError("Failed to add trade list, {0}, {1}, to file {2}, instrument path {3}", seriesEntry.Code, seriesEntry.Month, h5File, instrumentPath);
-                    }
-                }
-
-/*
-                instrumentPath = frontEntry.InstrumentPath(future);
-                if (1 > seriesEntry.TradeList.Count)
-                {
-                    Trace.TraceInformation("Skipped merge {0} to file {1}, instrument path {2}: no trade data found", frontEntry.Code, h5File, instrumentPath);
-                    return;
-                }
-                Trace.TraceInformation("Merging {0} to file {1}, instrument path {2}", frontEntry.Code, h5File, instrumentPath);
-                tradeActivated = false;
-                //isGood = true;
-                foreach (var t in seriesEntry.TradeList)
-                {
-                    if (tradeActivated)
-                    {
-                        if (t.dateTimeTicks < tradePrevious.dateTimeTicks)
+                        Trace.TraceInformation("Merging {0}, {1}, finished SpreadDuplicateTimeTicks", seriesEntry.Code, seriesEntry.Month);
+                        int maxChunks = 1 + seriesEntry.TradeList.Count / ElementsPerAdd;
+                        if (maxChunks == 1)
                         {
-                            Trade t2 = t;
-                            t2.dateTimeTicks = tradePrevious.dateTimeTicks;
-                            Trace.TraceError("Found decreasing timestamp: prev [{0}]({1}), this [{2}]({3})", tradePrevious, tradePrevious.TimeStamp.Replace(".0000000", ""), t, t.TimeStamp.Replace(".0000000", ""));
-                            isGood = false;
-                            tradePrevious = t2;
+                            Trace.TraceInformation("Merging {0}, {1}, starting Add", seriesEntry.Code, seriesEntry.Month);
+                            if (!tradeData.Add(seriesEntry.TradeList,
+                                Properties.Settings.Default.Hdf5UpdateDuplicateTicks ? DuplicateTimeTicks.Update : DuplicateTimeTicks.Skip,
+                                Properties.Settings.Default.Hdf5VerboseAdd))
+                                Trace.TraceError("Failed to add trade list, {0}, {1}, to file {2}, instrument path {3}", seriesEntry.Code, seriesEntry.Month, h5File, instrumentPath);
+                            Trace.TraceInformation("Merging {0}, {1}, finished Add", seriesEntry.Code, seriesEntry.Month);
                         }
                         else
-                            tradePrevious = t;
+                        {
+                            var buf = new List<Trade>(maxChunks);
+                            var src = seriesEntry.TradeList;
+                            int srcIndex = 0;
+                            for (int chunk = 1; chunk < maxChunks; ++chunk)
+                            {
+                                Trace.TraceInformation("Merging {0}, {1}, starting Add, chunk {2} of {3}", seriesEntry.Code, seriesEntry.Month, chunk, maxChunks);
+                                buf.Clear();
+                                for (int i = 0; i < ElementsPerAdd; ++i)
+                                {
+                                    buf.Add(src[srcIndex++]);
+                                }
+                                if (!tradeData.Add(buf,
+                                    Properties.Settings.Default.Hdf5UpdateDuplicateTicks ? DuplicateTimeTicks.Update : DuplicateTimeTicks.Skip,
+                                    Properties.Settings.Default.Hdf5VerboseAdd))
+                                    Trace.TraceError("Failed to add trade list, {0}, {1}, to file {2}, instrument path {3}", seriesEntry.Code, seriesEntry.Month, h5File, instrumentPath);
+                                Trace.TraceInformation("Merging {0}, {1}, finished Add, chunk {2} of {3}", seriesEntry.Code, seriesEntry.Month, chunk, maxChunks);
+                            }
+                            Trace.TraceInformation("Merging {0}, {1}, starting Add, chunk {2} of {3}", seriesEntry.Code, seriesEntry.Month, maxChunks, maxChunks);
+                            buf.Clear();
+                            int c = src.Count;
+                            while (srcIndex < c)
+                            {
+                                buf.Add(src[srcIndex++]);
+                            }
+                            if (!tradeData.Add(buf,
+                                Properties.Settings.Default.Hdf5UpdateDuplicateTicks ? DuplicateTimeTicks.Update : DuplicateTimeTicks.Skip,
+                                Properties.Settings.Default.Hdf5VerboseAdd))
+                                Trace.TraceError("Failed to add trade list, {0}, {1}, to file {2}, instrument path {3}", seriesEntry.Code, seriesEntry.Month, h5File, instrumentPath);
+                            Trace.TraceInformation("Merging {0}, {1}, finished Add, chunk {2} of {3}", seriesEntry.Code, seriesEntry.Month, maxChunks, maxChunks);
+                        }
                     }
-                    else
-                    {
-                        tradeActivated = true;
-                        tradePrevious = t;
-                    }
-                }
-                if (!isGood)
-                {
-                    Trace.TraceInformation("Prohibited merge {0} to file {1}, instrument path {2}", frontEntry.Code, h5File, instrumentPath);
-                    return;
                 }
 
-                using (Instrument instrument = repository.Open(instrumentPath, true))
-                {
-                    using (TradeData tradeData = instrument.OpenTrade(true))
-                    {
-                        tradeData.SpreadDuplicateTimeTicks(seriesEntry.TradeList, false);
-                        if (!tradeData.Add(seriesEntry.TradeList,
-                            Properties.Settings.Default.Hdf5UpdateDuplicateTicks ? DuplicateTimeTicks.Update : DuplicateTimeTicks.Skip,
-                            Properties.Settings.Default.Hdf5VerboseAdd))
-                            Trace.TraceError("Failed to add trade list, {0} to file {1}, instrument path {2}", frontEntry.Code, h5File, instrumentPath);
-                    }
-                }
-*/
+                /*
+                                instrumentPath = frontEntry.InstrumentPath(future);
+                                if (1 > seriesEntry.TradeList.Count)
+                                {
+                                    Trace.TraceInformation("Skipped merge {0} to file {1}, instrument path {2}: no trade data found", frontEntry.Code, h5File, instrumentPath);
+                                    return;
+                                }
+                                Trace.TraceInformation("Merging {0} to file {1}, instrument path {2}", frontEntry.Code, h5File, instrumentPath);
+                                tradeActivated = false;
+                                //isGood = true;
+                                foreach (var t in seriesEntry.TradeList)
+                                {
+                                    if (tradeActivated)
+                                    {
+                                        if (t.dateTimeTicks < tradePrevious.dateTimeTicks)
+                                        {
+                                            Trade t2 = t;
+                                            t2.dateTimeTicks = tradePrevious.dateTimeTicks;
+                                            Trace.TraceError("Found decreasing timestamp: prev [{0}]({1}), this [{2}]({3})", tradePrevious, tradePrevious.TimeStamp.Replace(".0000000", ""), t, t.TimeStamp.Replace(".0000000", ""));
+                                            isGood = false;
+                                            tradePrevious = t2;
+                                        }
+                                        else
+                                            tradePrevious = t;
+                                    }
+                                    else
+                                    {
+                                        tradeActivated = true;
+                                        tradePrevious = t;
+                                    }
+                                }
+                                if (!isGood)
+                                {
+                                    Trace.TraceInformation("Prohibited merge {0} to file {1}, instrument path {2}", frontEntry.Code, h5File, instrumentPath);
+                                    return;
+                                }
+
+                                using (Instrument instrument = repository.Open(instrumentPath, true))
+                                {
+                                    using (TradeData tradeData = instrument.OpenTrade(true))
+                                    {
+                                        tradeData.SpreadDuplicateTimeTicks(seriesEntry.TradeList, false);
+                                        if (!tradeData.Add(seriesEntry.TradeList,
+                                            Properties.Settings.Default.Hdf5UpdateDuplicateTicks ? DuplicateTimeTicks.Update : DuplicateTimeTicks.Skip,
+                                            Properties.Settings.Default.Hdf5VerboseAdd))
+                                            Trace.TraceError("Failed to add trade list, {0} to file {1}, instrument path {2}", frontEntry.Code, h5File, instrumentPath);
+                                    }
+                                }
+                */
             }
         }
 
@@ -486,6 +669,186 @@ namespace CmeFutureUpdate
             if (!Properties.Settings.Default.WriteToH5)
                 return;
             string h5File = future.RepositoryPath();
+            foreach (var seriesEntry in future.Series)
+            {
+                string instrumentPath = seriesEntry.InstrumentPath(future);
+                if (1 > seriesEntry.TradeList.Count)
+                {
+                    Trace.TraceInformation("Skipped merge {0}, {1}, to file {2}, instrument path {3}: no trade data found", seriesEntry.Code, seriesEntry.Month, h5File, instrumentPath);
+                    continue;
+                }
+                Trace.TraceInformation("Merging {0}, {1}, to file {2}, instrument path {3}", seriesEntry.Code, seriesEntry.Month, h5File, instrumentPath);
+                Trace.TraceInformation("Merging {0}, {1}, starting check", seriesEntry.Code, seriesEntry.Month);
+                var tradePrevious = new Trade();
+                bool tradeActivated = false;
+                bool isGood = true;
+                foreach (var t in seriesEntry.TradeList)
+                {
+                    if (tradeActivated)
+                    {
+                        if (t.dateTimeTicks < tradePrevious.dateTimeTicks)
+                        {
+                            Trade t2 = t;
+                            t2.dateTimeTicks = tradePrevious.dateTimeTicks;
+                            Trace.TraceError("Found decreasing timestamp: prev [{0}]({1}), this [{2}]({3})", tradePrevious, tradePrevious.TimeStamp.Replace(".0000000", ""), t, t.TimeStamp.Replace(".0000000", ""));
+                            isGood = false;
+                            tradePrevious = t2;
+                        }
+                        else
+                            tradePrevious = t;
+                    }
+                    else
+                    {
+                        tradeActivated = true;
+                        tradePrevious = t;
+                    }
+                }
+                if (!isGood)
+                {
+                    Trace.TraceInformation("Prohibited merge {0}, {1}, to file {2}, instrument path {3}", seriesEntry.Code, seriesEntry.Month, h5File, instrumentPath);
+                    continue;
+                }
+                Trace.TraceInformation("Merging {0}, {1}, finished check", seriesEntry.Code, seriesEntry.Month);
+
+                using (Repository repository = Repository.OpenReadWrite(h5File, true, Properties.Settings.Default.Hdf5CorkTheCache))
+                using (Instrument instrument = repository.Open(instrumentPath, true))
+                using (TradeData tradeData = instrument.OpenTrade(true))
+                {
+                    Trace.TraceInformation("Merging {0}, {1}, starting SpreadDuplicateTimeTicks", seriesEntry.Code, seriesEntry.Month);
+                    tradeData.SpreadDuplicateTimeTicks(seriesEntry.TradeList, false);
+                    Trace.TraceInformation("Merging {0}, {1}, finished SpreadDuplicateTimeTicks", seriesEntry.Code, seriesEntry.Month);
+                }
+
+                int maxChunks = 1 + seriesEntry.TradeList.Count / ElementsPerAdd;
+                if (maxChunks == 1)
+                {
+                    Trace.TraceInformation("Merging {0}, {1}, starting Add", seriesEntry.Code, seriesEntry.Month);
+                    using (Repository repository = Repository.OpenReadWrite(h5File, true, Properties.Settings.Default.Hdf5CorkTheCache))
+                    using (Instrument instrument = repository.Open(instrumentPath, true))
+                    using (TradeData tradeData = instrument.OpenTrade(true))
+                    {
+                        if (!tradeData.Add(seriesEntry.TradeList,
+                            Properties.Settings.Default.Hdf5UpdateDuplicateTicks ? DuplicateTimeTicks.Update : DuplicateTimeTicks.Skip,
+                            Properties.Settings.Default.Hdf5VerboseAdd))
+                            Trace.TraceError("Failed to add trade list, {0}, {1}, to file {2}, instrument path {3}", seriesEntry.Code, seriesEntry.Month, h5File, instrumentPath);
+                    }
+                    Trace.TraceInformation("Merging {0}, {1}, finished Add", seriesEntry.Code, seriesEntry.Month);
+                }
+                else
+                {
+                    var buf = new List<Trade>(maxChunks);
+                    var src = seriesEntry.TradeList;
+                    int srcIndex = 0;
+                    for (int chunk = 1; chunk < maxChunks; ++chunk)
+                    {
+                        Trace.TraceInformation("Merging {0}, {1}, starting Add, chunk {2} of {3}", seriesEntry.Code, seriesEntry.Month, chunk, maxChunks);
+                        buf.Clear();
+                        for (int i = 0; i < ElementsPerAdd; ++i)
+                        {
+                            buf.Add(src[srcIndex++]);
+                        }
+                        using (Repository repository = Repository.OpenReadWrite(h5File, true, Properties.Settings.Default.Hdf5CorkTheCache))
+                        using (Instrument instrument = repository.Open(instrumentPath, true))
+                        using (TradeData tradeData = instrument.OpenTrade(true))
+                        {
+                            if (!tradeData.Add(buf,
+                                Properties.Settings.Default.Hdf5UpdateDuplicateTicks ? DuplicateTimeTicks.Update : DuplicateTimeTicks.Skip,
+                                Properties.Settings.Default.Hdf5VerboseAdd))
+                                Trace.TraceError("Failed to add trade list, {0}, {1}, to file {2}, instrument path {3}", seriesEntry.Code, seriesEntry.Month, h5File, instrumentPath);
+                        }
+                        Trace.TraceInformation("Merging {0}, {1}, finished Add, chunk {2} of {3}", seriesEntry.Code, seriesEntry.Month, chunk, maxChunks);
+                    }
+                    Trace.TraceInformation("Merging {0}, {1}, starting Add, chunk {2} of {3}", seriesEntry.Code, seriesEntry.Month, maxChunks, maxChunks);
+                    buf.Clear();
+                    int c = src.Count;
+                    while (srcIndex < c)
+                    {
+                        buf.Add(src[srcIndex++]);
+                    }
+                    using (Repository repository = Repository.OpenReadWrite(h5File, true, Properties.Settings.Default.Hdf5CorkTheCache))
+                    using (Instrument instrument = repository.Open(instrumentPath, true))
+                    using (TradeData tradeData = instrument.OpenTrade(true))
+                    {
+                        if (!tradeData.Add(buf,
+                            Properties.Settings.Default.Hdf5UpdateDuplicateTicks ? DuplicateTimeTicks.Update : DuplicateTimeTicks.Skip,
+                            Properties.Settings.Default.Hdf5VerboseAdd))
+                            Trace.TraceError("Failed to add trade list, {0}, {1}, to file {2}, instrument path {3}", seriesEntry.Code, seriesEntry.Month, h5File, instrumentPath);
+                    }
+                    Trace.TraceInformation("Merging {0}, {1}, finished Add, chunk {2} of {3}", seriesEntry.Code, seriesEntry.Month, maxChunks, maxChunks);
+                }
+            }
+        }
+
+        private void Import2(Future future, string yyyymmdd)
+        {
+            var trade = new Trade();
+            Trace.TraceInformation("Importing {0}, {1}, [{2}]", future.Symbol, future.Name, future.Uri);
+            foreach (var seriesEntry in future.Series)
+            {
+                Trace.TraceInformation("Importing {0}, {1}, first trade day {2}, last trade day {3}, settlement {4}, rollover {5}",
+                    seriesEntry.Code, seriesEntry.Month, seriesEntry.FirstTradeDate.ToShortDateString(),
+                    seriesEntry.LastTradeDate.ToShortDateString(), seriesEntry.SettlementDate.ToShortDateString(), seriesEntry.RolloverDate.ToShortDateString());
+                foreach (var slot in future.TimeSlotList)
+                {
+                    string file = seriesEntry.FilePath(future, yyyymmdd, slot.Id);
+                    if (!File.Exists(file))
+                    {
+                        Trace.TraceError("Cannot find file [{0}], skipping", file);
+                        continue;
+                    }
+                    XDocument xdoc = XDocument.Load(file, LoadOptions.PreserveWhitespace | LoadOptions.SetLineInfo);
+                    List<XElement> xelist = xdoc.XPathSelectElements("/timeandSalesList/timeSalesTO/futuresTO/reportRecordList").ToList();
+                    foreach (var xel in xelist)
+                    {
+                        string date = Content(xel, "saledate", file); // <saledate>04/29/2013</saledate>
+                        string time = Content(xel, "saletime", file); // <saletime>16:10:52</saletime>
+                        string price = Content(xel, "saleprice", file); // <saleprice>157725.0</saleprice>
+                        string quantity = Content(xel, "quantity", file); // <quantity>0</quantity>
+                        //string indictive = Content(xel, "indictive", file); // <indictive>Indicative</indictive>
+                        if (null == date || null == time || null == price || null == quantity)
+                            break;
+                        if ("0" == quantity && !Properties.Settings.Default.IncludeTradesWithZeroVolume)
+                            continue;
+                        if (price.EndsWith("A", StringComparison.Ordinal) || price.EndsWith("a", StringComparison.Ordinal) ||
+                            price.EndsWith("B", StringComparison.Ordinal) || price.EndsWith("b", StringComparison.Ordinal))
+                            price = price.Substring(0, price.Length - 1);
+                        string[] splitted = date.Split('/');
+                        int month = int.Parse(splitted[0], NumberStyles.Any, CultureInfo.InvariantCulture);
+                        int day = int.Parse(splitted[1], NumberStyles.Any, CultureInfo.InvariantCulture);
+                        int year = int.Parse(splitted[2], NumberStyles.Any, CultureInfo.InvariantCulture);
+                        splitted = time.Split(':');
+                        int hour = int.Parse(splitted[0], NumberStyles.Any, CultureInfo.InvariantCulture);
+                        int minute = int.Parse(splitted[1], NumberStyles.Any, CultureInfo.InvariantCulture);
+                        int second = int.Parse(splitted[2], NumberStyles.Any, CultureInfo.InvariantCulture);
+                        var dt = new DateTime(year, month, day, hour, minute, second);
+                        if (slot.DayDelta != 0)
+                            dt = dt.AddDays(slot.DayDelta);
+                        trade.dateTimeTicks = dt.Ticks;
+                        if (double.TryParse(price, NumberStyles.Any, CultureInfo.InvariantCulture, out var v))
+                            trade.price = v;
+                        else
+                        {
+                            Trace.TraceError("Failed to parse price string [{0}] in [{1}] in file [{2}], skipping", price, xel, file);
+                            break;
+                        }
+                        trade.price /= 100;
+                        if (double.TryParse(quantity, NumberStyles.Any, CultureInfo.InvariantCulture, out v))
+                            trade.volume = v;
+                        else
+                        {
+                            Trace.TraceError("Failed to parse quantity string [{0}] in [{1}] in file [{2}], skipping", quantity, xel, file);
+                            break;
+                        }
+                        seriesEntry.TradeList.Add(trade);
+                    }
+                }
+                seriesEntry.TradeList.Sort((a, b) => DateTime.Compare(new DateTime(a.Ticks), new DateTime(b.Ticks)));
+                if (Properties.Settings.Default.ExportToCsv)
+                    seriesEntry.ExportCsv(future, yyyymmdd);
+            }
+            if (!Properties.Settings.Default.WriteToH5)
+                return;
+            string h5File = future.RepositoryPath();
             using (Repository repository = Repository.OpenReadWrite(h5File, true, Properties.Settings.Default.Hdf5CorkTheCache))
             {
                 foreach (var seriesEntry in future.Series)
@@ -497,6 +860,7 @@ namespace CmeFutureUpdate
                         continue;
                     }
                     Trace.TraceInformation("Merging {0}, {1}, to file {2}, instrument path {3}", seriesEntry.Code, seriesEntry.Month, h5File, instrumentPath);
+                    Trace.TraceInformation("Merging {0}, {1}, starting check", seriesEntry.Code, seriesEntry.Month);
                     var tradePrevious = new Trade();
                     bool tradeActivated = false;
                     bool isGood = true;
@@ -526,20 +890,57 @@ namespace CmeFutureUpdate
                         Trace.TraceInformation("Prohibited merge {0}, {1}, to file {2}, instrument path {3}", seriesEntry.Code, seriesEntry.Month, h5File, instrumentPath);
                         continue;
                     }
-                    Trace.TraceInformation("Merging {0}, {1}, CHECKED", seriesEntry.Code, seriesEntry.Month);
+                    Trace.TraceInformation("Merging {0}, {1}, finished check", seriesEntry.Code, seriesEntry.Month);
 
                     using (Instrument instrument = repository.Open(instrumentPath, true))
                     {
                         using (TradeData tradeData = instrument.OpenTrade(true))
                         {
-                            Trace.TraceInformation("Merging {0}, {1}, START SpreadDuplicateTimeTicks", seriesEntry.Code, seriesEntry.Month);
+                            Trace.TraceInformation("Merging {0}, {1}, starting SpreadDuplicateTimeTicks", seriesEntry.Code, seriesEntry.Month);
                             tradeData.SpreadDuplicateTimeTicks(seriesEntry.TradeList, false);
-                            Trace.TraceInformation("Merging {0}, {1}, FINISHED, START Add", seriesEntry.Code, seriesEntry.Month);
-                            if (!tradeData.Add(seriesEntry.TradeList,
-                                Properties.Settings.Default.Hdf5UpdateDuplicateTicks ? DuplicateTimeTicks.Update : DuplicateTimeTicks.Skip,
-                                Properties.Settings.Default.Hdf5VerboseAdd))
-                                Trace.TraceError("Failed to add trade list, {0}, {1}, to file {2}, instrument path {3}", seriesEntry.Code, seriesEntry.Month, h5File, instrumentPath);
-                            Trace.TraceInformation("Merging {0}, {1}, FINISHED Add", seriesEntry.Code, seriesEntry.Month);
+                            Trace.TraceInformation("Merging {0}, {1}, finished SpreadDuplicateTimeTicks", seriesEntry.Code, seriesEntry.Month);
+                            int maxChunks = 1 + seriesEntry.TradeList.Count / ElementsPerAdd;
+                            if (maxChunks == 1)
+                            {
+                                Trace.TraceInformation("Merging {0}, {1}, starting Add", seriesEntry.Code, seriesEntry.Month);
+                                if (!tradeData.Add(seriesEntry.TradeList,
+                                    Properties.Settings.Default.Hdf5UpdateDuplicateTicks ? DuplicateTimeTicks.Update : DuplicateTimeTicks.Skip,
+                                    Properties.Settings.Default.Hdf5VerboseAdd))
+                                    Trace.TraceError("Failed to add trade list, {0}, {1}, to file {2}, instrument path {3}", seriesEntry.Code, seriesEntry.Month, h5File, instrumentPath);
+                                Trace.TraceInformation("Merging {0}, {1}, finished Add", seriesEntry.Code, seriesEntry.Month);
+                            }
+                            else
+                            {
+                                var buf = new List<Trade>(maxChunks);
+                                var src = seriesEntry.TradeList;
+                                int srcIndex = 0;
+                                for (int chunk = 1; chunk < maxChunks; ++chunk)
+                                {
+                                    Trace.TraceInformation("Merging {0}, {1}, starting Add, chunk {2} of {3}", seriesEntry.Code, seriesEntry.Month, chunk, maxChunks);
+                                    buf.Clear();
+                                    for (int i = 0; i < ElementsPerAdd; ++i)
+                                    {
+                                        buf.Add(src[srcIndex++]);
+                                    }
+                                    if (!tradeData.Add(buf,
+                                        Properties.Settings.Default.Hdf5UpdateDuplicateTicks ? DuplicateTimeTicks.Update : DuplicateTimeTicks.Skip,
+                                        Properties.Settings.Default.Hdf5VerboseAdd))
+                                        Trace.TraceError("Failed to add trade list, {0}, {1}, to file {2}, instrument path {3}", seriesEntry.Code, seriesEntry.Month, h5File, instrumentPath);
+                                    Trace.TraceInformation("Merging {0}, {1}, finished Add, chunk {2} of {3}", seriesEntry.Code, seriesEntry.Month, chunk, maxChunks);
+                                }
+                                Trace.TraceInformation("Merging {0}, {1}, starting Add, chunk {2} of {3}", seriesEntry.Code, seriesEntry.Month, maxChunks, maxChunks);
+                                buf.Clear();
+                                int c = src.Count;
+                                while (srcIndex < c)
+                                {
+                                    buf.Add(src[srcIndex++]);
+                                }
+                                if (!tradeData.Add(buf,
+                                    Properties.Settings.Default.Hdf5UpdateDuplicateTicks ? DuplicateTimeTicks.Update : DuplicateTimeTicks.Skip,
+                                    Properties.Settings.Default.Hdf5VerboseAdd))
+                                    Trace.TraceError("Failed to add trade list, {0}, {1}, to file {2}, instrument path {3}", seriesEntry.Code, seriesEntry.Month, h5File, instrumentPath);
+                                Trace.TraceInformation("Merging {0}, {1}, finished Add, chunk {2} of {3}", seriesEntry.Code, seriesEntry.Month, maxChunks, maxChunks);
+                            }
                         }
                     }
                 }
