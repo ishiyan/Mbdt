@@ -94,6 +94,7 @@ Dec 2020	ESZ20         20 Sep 2019  18 Dec 2020   18 Dec 2020 10 Dec 2020
 Mar 2021	ESH21         20 Dec 2019  19 Mar 2021   19 Mar 2021 11 Mar 2021
 Jun 2021	ESM21         20 Mar 2020  18 Jun 2021   18 Jun 2021 10 Jun 2021
 Sep 2021	ESU21         19 Jun 2020  17 Sep 2021   17 Sep 2021 09 Sep 2021
+Dec 2021	ESZ21         18 Sep 2020  17 Dec 2021   17 Dec 2021 09 Dec 2021
 
 Roll dates for the upcoming listed Equity Index quarterly cycle futures contracts:
 
