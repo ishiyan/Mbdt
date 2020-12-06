@@ -12,7 +12,7 @@ namespace mbdt.EuronextDiscover.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.2.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.8.1.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -88,7 +88,9 @@ namespace mbdt.EuronextDiscover.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("alxa;alxb;alxl;alxp;enxl;mlxb;tnla;tnlb;xhft;xlis;xams;xbru;xpar;xmli")]
+        [global::System.Configuration.DefaultSettingValueAttribute("ALXA;ALXB;ALXL;ALXP;ENXL;MLXB;TNLA;TNLB;XHFT;XLIS;XAMS;XBRU;XPAR;XMLI;XDUB;XESM;X" +
+            "MSM;XOSL;alxa;alxb;alxl;alxp;enxl;mlxb;tnla;tnlb;xhft;xlis;xams;xbru;xpar;xmli;x" +
+            "dub;xesm;xmsm;xosl")]
         public string MainEuronextMics {
             get {
                 return ((string)(this["MainEuronextMics"]));

@@ -1,0 +1,1259 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<instruments>
+  <instrument file="xesm/stock/DQ7A.h5:/XESM_DQ7A_IE00BLRPQQ22" isin="IE00BLRPQQ22" mic="XESM" mep="DUB" name="" symbol="DQ7A" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/2020.h5:/XOSL_2020_BMG9156K1018" isin="BMG9156K1018" mic="XOSL" mep="OTH" name="" symbol="2020" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/ABG.h5:/XOSL_ABG_NO0003021909" isin="NO0003021909" mic="XOSL" mep="OTH" name="" symbol="ABG" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/ADE.h5:/XOSL_ADE_NO0010844038" isin="NO0010844038" mic="XOSL" mep="OTH" name="" symbol="ADE" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/AFG.h5:/XOSL_AFG_NO0003078107" isin="NO0003078107" mic="XOSL" mep="OTH" name="" symbol="AFG" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/AKAST.h5:/XOSL_AKAST_NO0010215684" isin="NO0010215684" mic="XOSL" mep="OTH" name="" symbol="AKAST" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/AKER.h5:/XOSL_AKER_NO0010234552" isin="NO0010234552" mic="XOSL" mep="OTH" name="" symbol="AKER" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/AKRBP.h5:/XOSL_AKRBP_NO0010345853" isin="NO0010345853" mic="XOSL" mep="OTH" name="" symbol="AKRBP" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/AKSO.h5:/XOSL_AKSO_NO0010716582" isin="NO0010716582" mic="XOSL" mep="OTH" name="" symbol="AKSO" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/AKVA.h5:/XOSL_AKVA_NO0003097503" isin="NO0003097503" mic="XOSL" mep="OTH" name="" symbol="AKVA" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/AMSC.h5:/XOSL_AMSC_NO0010272065" isin="NO0010272065" mic="XOSL" mep="OTH" name="" symbol="AMSC" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/AQUA.h5:/XOSL_AQUA_NO0010715394" isin="NO0010715394" mic="XOSL" mep="OTH" name="" symbol="AQUA" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/ARCH.h5:/XOSL_ARCH_BMG0451H1170" isin="BMG0451H1170" mic="XOSL" mep="OTH" name="" symbol="ARCH" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/AZT.h5:/XOSL_AZT_NO0010014632" isin="NO0010014632" mic="XOSL" mep="OTH" name="" symbol="AZT" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/ARCUS.h5:/XOSL_ARCUS_NO0010776875" isin="NO0010776875" mic="XOSL" mep="OTH" name="" symbol="ARCUS" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/AFK.h5:/XOSL_AFK_NO0003572802" isin="NO0003572802" mic="XOSL" mep="OTH" name="" symbol="AFK" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/ARR.h5:/XOSL_ARR_NO0003108102" isin="NO0003108102" mic="XOSL" mep="OTH" name="" symbol="ARR" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/ASTK.h5:/XOSL_ASTK_DK0060477263" isin="DK0060477263" mic="XOSL" mep="OTH" name="" symbol="ASTK" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/ATEA.h5:/XOSL_ATEA_NO0004822503" isin="NO0004822503" mic="XOSL" mep="OTH" name="" symbol="ATEA" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/ATLA.h5:/XOSL_ATLA_FO000A0DN9X4" isin="FO000A0DN9X4" mic="XOSL" mep="OTH" name="" symbol="ATLA" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/ASA.h5:/XOSL_ASA_NO0010768500" isin="NO0010768500" mic="XOSL" mep="OTH" name="" symbol="ASA" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/AURG.h5:/XOSL_AURG_NO0006001601" isin="NO0006001601" mic="XOSL" mep="OTH" name="" symbol="AURG" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/AUSS.h5:/XOSL_AUSS_NO0010073489" isin="NO0010073489" mic="XOSL" mep="OTH" name="" symbol="AUSS" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/AGAS.h5:/XOSL_AGAS_BMG067231032" isin="BMG067231032" mic="XOSL" mep="OTH" name="" symbol="AGAS" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/AWDR.h5:/XOSL_AWDR_GB00B5LJSC86" isin="GB00B5LJSC86" mic="XOSL" mep="OTH" name="" symbol="AWDR" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/AXA.h5:/XOSL_AXA_NO0010840515" isin="NO0010840515" mic="XOSL" mep="OTH" name="" symbol="AXA" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/B2H.h5:/XOSL_B2H_NO0010633951" isin="NO0010633951" mic="XOSL" mep="OTH" name="" symbol="B2H" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/BAKKA.h5:/XOSL_BAKKA_FO0000000179" isin="FO0000000179" mic="XOSL" mep="OTH" name="" symbol="BAKKA" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/BELCO.h5:/XOSL_BELCO_NO0003094104" isin="NO0003094104" mic="XOSL" mep="OTH" name="" symbol="BELCO" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/BGBIO.h5:/XOSL_BGBIO_NO0010650013" isin="NO0010650013" mic="XOSL" mep="OTH" name="" symbol="BGBIO" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/BONHR.h5:/XOSL_BONHR_NO0003110603" isin="NO0003110603" mic="XOSL" mep="OTH" name="" symbol="BONHR" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/BOR.h5:/XOSL_BOR_NO0003111700" isin="NO0003111700" mic="XOSL" mep="OTH" name="" symbol="BOR" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/BORR.h5:/XOSL_BORR_BMG1466R2078" isin="BMG1466R2078" mic="XOSL" mep="OTH" name="" symbol="BORR" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/BRG.h5:/XOSL_BRG_NO0010657505" isin="NO0010657505" mic="XOSL" mep="OTH" name="" symbol="BRG" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/BOUV.h5:/XOSL_BOUV_NO0010360266" isin="NO0010360266" mic="XOSL" mep="OTH" name="" symbol="BOUV" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/BWE.h5:/XOSL_BWE_BMG0702P1086" isin="BMG0702P1086" mic="XOSL" mep="OTH" name="" symbol="BWE" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/BWLPG.h5:/XOSL_BWLPG_BMG173841013" isin="BMG173841013" mic="XOSL" mep="OTH" name="" symbol="BWLPG" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/BWO.h5:/XOSL_BWO_BMG1738J1247" isin="BMG1738J1247" mic="XOSL" mep="OTH" name="" symbol="BWO" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/BMA.h5:/XOSL_BMA_NO0003087603" isin="NO0003087603" mic="XOSL" mep="OTH" name="" symbol="BMA" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/CADLR.h5:/XOSL_CADLR_DK0061412772" isin="DK0061412772" mic="XOSL" mep="OTH" name="" symbol="CADLR" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/CARA.h5:/XOSL_CARA_NO0010123060" isin="NO0010123060" mic="XOSL" mep="OTH" name="" symbol="CARA" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/CONTX.h5:/XOSL_CONTX_SE0014731154" isin="SE0014731154" mic="XOSL" mep="OTH" name="" symbol="CONTX" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/CRAYN.h5:/XOSL_CRAYN_NO0010808892" isin="NO0010808892" mic="XOSL" mep="OTH" name="" symbol="CRAYN" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/DNB.h5:/XOSL_DNB_NO0010031479" isin="NO0010031479" mic="XOSL" mep="OTH" name="" symbol="DNB" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/DNO.h5:/XOSL_DNO_NO0003921009" isin="NO0003921009" mic="XOSL" mep="OTH" name="" symbol="DNO" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/DOF.h5:/XOSL_DOF_NO0010070063" isin="NO0010070063" mic="XOSL" mep="OTH" name="" symbol="DOF" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/EIOF.h5:/XOSL_EIOF_NO0010263023" isin="NO0010263023" mic="XOSL" mep="OTH" name="" symbol="EIOF" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/EMGS.h5:/XOSL_EMGS_NO0010358484" isin="NO0010358484" mic="XOSL" mep="OTH" name="" symbol="EMGS" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/ELE.h5:/XOSL_ELE_NO0003055808" isin="NO0003055808" mic="XOSL" mep="OTH" name="" symbol="ELE" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/ELK.h5:/XOSL_ELK_NO0010816093" isin="NO0010816093" mic="XOSL" mep="OTH" name="" symbol="ELK" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/ENDUR.h5:/XOSL_ENDUR_NO0010379779" isin="NO0010379779" mic="XOSL" mep="OTH" name="" symbol="ENDUR" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/ENTRA.h5:/XOSL_ENTRA_NO0010716418" isin="NO0010716418" mic="XOSL" mep="OTH" name="" symbol="ENTRA" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/EQNR.h5:/XOSL_EQNR_NO0010096985" isin="NO0010096985" mic="XOSL" mep="OTH" name="" symbol="EQNR" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/EPR.h5:/XOSL_EPR_NO0010735343" isin="NO0010735343" mic="XOSL" mep="OTH" name="" symbol="EPR" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/FJORD.h5:/XOSL_FJORD_NO0010792625" isin="NO0010792625" mic="XOSL" mep="OTH" name="" symbol="FJORD" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/FKRFT.h5:/XOSL_FKRFT_NO0010815673" isin="NO0010815673" mic="XOSL" mep="OTH" name="" symbol="FKRFT" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/FLNG.h5:/XOSL_FLNG_BMG359472021" isin="BMG359472021" mic="XOSL" mep="OTH" name="" symbol="FLNG" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/FRO.h5:/XOSL_FRO_BMG3682E1921" isin="BMG3682E1921" mic="XOSL" mep="OTH" name="" symbol="FRO" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/GIG.h5:/XOSL_GIG_US36467X2062" isin="US36467X2062" mic="XOSL" mep="OTH" name="" symbol="GIG" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/RISH.h5:/XOSL_RISH_NO0010262686" isin="NO0010262686" mic="XOSL" mep="OTH" name="" symbol="RISH" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/GJF.h5:/XOSL_GJF_NO0010582521" isin="NO0010582521" mic="XOSL" mep="OTH" name="" symbol="GJF" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/GOGL.h5:/XOSL_GOGL_BMG396372051" isin="BMG396372051" mic="XOSL" mep="OTH" name="" symbol="GOGL" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/GOD.h5:/XOSL_GOD_NO0004913609" isin="NO0004913609" mic="XOSL" mep="OTH" name="" symbol="GOD" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/GSF.h5:/XOSL_GSF_NO0010365521" isin="NO0010365521" mic="XOSL" mep="OTH" name="" symbol="GSF" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/GYL.h5:/XOSL_GYL_NO0004288200" isin="NO0004288200" mic="XOSL" mep="OTH" name="" symbol="GYL" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/HAFNI.h5:/XOSL_HAFNI_BMG4233B1090" isin="BMG4233B1090" mic="XOSL" mep="OTH" name="" symbol="HAFNI" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/HAVI.h5:/XOSL_HAVI_NO0010257728" isin="NO0010257728" mic="XOSL" mep="OTH" name="" symbol="HAVI" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/HYARD.h5:/XOSL_HYARD_NO0010708605" isin="NO0010708605" mic="XOSL" mep="OTH" name="" symbol="HYARD" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/HELG.h5:/XOSL_HELG_NO0010029804" isin="NO0010029804" mic="XOSL" mep="OTH" name="" symbol="HELG" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/HEX.h5:/XOSL_HEX_NO0003067902" isin="NO0003067902" mic="XOSL" mep="OTH" name="" symbol="HEX" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/HLNG.h5:/XOSL_HLNG_BMG454221059" isin="BMG454221059" mic="XOSL" mep="OTH" name="" symbol="HLNG" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/HSPG.h5:/XOSL_HSPG_NO0010012636" isin="NO0010012636" mic="XOSL" mep="OTH" name="" symbol="HSPG" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/IDEX.h5:/XOSL_IDEX_NO0003070609" isin="NO0003070609" mic="XOSL" mep="OTH" name="" symbol="IDEX" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/INFRO.h5:/XOSL_INFRO_NO0010789506" isin="NO0010789506" mic="XOSL" mep="OTH" name="" symbol="INFRO" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/INSR.h5:/XOSL_INSR_NO0010593544" isin="NO0010593544" mic="XOSL" mep="OTH" name="" symbol="INSR" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/IOX.h5:/XOSL_IOX_NO0010284318" isin="NO0010284318" mic="XOSL" mep="OTH" name="" symbol="IOX" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/ITERA.h5:/XOSL_ITERA_NO0010001118" isin="NO0010001118" mic="XOSL" mep="OTH" name="" symbol="ITERA" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/JIN.h5:/XOSL_JIN_BMG5137R1088" isin="BMG5137R1088" mic="XOSL" mep="OTH" name="" symbol="JIN" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/JAREN.h5:/XOSL_JAREN_NO0010359433" isin="NO0010359433" mic="XOSL" mep="OTH" name="" symbol="JAREN" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/KID.h5:/XOSL_KID_NO0010743545" isin="NO0010743545" mic="XOSL" mep="OTH" name="" symbol="KID" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/KIT.h5:/XOSL_KIT_NO0003079709" isin="NO0003079709" mic="XOSL" mep="OTH" name="" symbol="KIT" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/KOMP.h5:/XOSL_KOMP_NO0010694029" isin="NO0010694029" mic="XOSL" mep="OTH" name="" symbol="KOMP" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/KOA.h5:/XOSL_KOA_NO0003033102" isin="NO0003033102" mic="XOSL" mep="OTH" name="" symbol="KOA" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/KOG.h5:/XOSL_KOG_NO0003043309" isin="NO0003043309" mic="XOSL" mep="OTH" name="" symbol="KOG" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/LSG.h5:/XOSL_LSG_NO0003096208" isin="NO0003096208" mic="XOSL" mep="OTH" name="" symbol="LSG" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/LINK.h5:/XOSL_LINK_NO0010894231" isin="NO0010894231" mic="XOSL" mep="OTH" name="" symbol="LINK" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/MGN.h5:/XOSL_MGN_NO0010187032" isin="NO0010187032" mic="XOSL" mep="OTH" name="" symbol="MGN" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/MSEIS.h5:/XOSL_MSEIS_NO0010663669" isin="NO0010663669" mic="XOSL" mep="OTH" name="" symbol="MSEIS" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/MEDI.h5:/XOSL_MEDI_NO0010159684" isin="NO0010159684" mic="XOSL" mep="OTH" name="" symbol="MEDI" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/MELG.h5:/XOSL_MELG_NO0006001908" isin="NO0006001908" mic="XOSL" mep="OTH" name="" symbol="MELG" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/MOWI.h5:/XOSL_MOWI_NO0003054108" isin="NO0003054108" mic="XOSL" mep="OTH" name="" symbol="MOWI" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/MPCC.h5:/XOSL_MPCC_NO0010791353" isin="NO0010791353" mic="XOSL" mep="OTH" name="" symbol="MPCC" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/MULTI.h5:/XOSL_MULTI_NO0010734338" isin="NO0010734338" mic="XOSL" mep="OTH" name="" symbol="MULTI" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/NAPA.h5:/XOSL_NAPA_DK0060520450" isin="DK0060520450" mic="XOSL" mep="OTH" name="" symbol="NAPA" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/NAVA.h5:/XOSL_NAVA_NO0010205966" isin="NO0010205966" mic="XOSL" mep="OTH" name="" symbol="NAVA" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/NKR.h5:/XOSL_NKR_NO0003049405" isin="NO0003049405" mic="XOSL" mep="OTH" name="" symbol="NKR" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/NEL.h5:/XOSL_NEL_NO0010081235" isin="NO0010081235" mic="XOSL" mep="OTH" name="" symbol="NEL" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/NEXT.h5:/XOSL_NEXT_NO0010629108" isin="NO0010629108" mic="XOSL" mep="OTH" name="" symbol="NEXT" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/NORBT.h5:/XOSL_NORBT_NO0010856511" isin="NO0010856511" mic="XOSL" mep="OTH" name="" symbol="NORBT" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/NANOV.h5:/XOSL_NANOV_NO0010597883" isin="NO0010597883" mic="XOSL" mep="OTH" name="" symbol="NANOV" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/NOD.h5:/XOSL_NOD_NO0003055501" isin="NO0003055501" mic="XOSL" mep="OTH" name="" symbol="NOD" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/NHY.h5:/XOSL_NHY_NO0005052605" isin="NO0005052605" mic="XOSL" mep="OTH" name="" symbol="NHY" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/NSKOG.h5:/XOSL_NSKOG_NO0010861115" isin="NO0010861115" mic="XOSL" mep="OTH" name="" symbol="NSKOG" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/NODL.h5:/XOSL_NODL_BMG6624L1090" isin="BMG6624L1090" mic="XOSL" mep="OTH" name="" symbol="NODL" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/NOL.h5:/XOSL_NOL_BMG6682J1036" isin="BMG6682J1036" mic="XOSL" mep="OTH" name="" symbol="NOL" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/NRS.h5:/XOSL_NRS_NO0010331838" isin="NO0010331838" mic="XOSL" mep="OTH" name="" symbol="NRS" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/NAS.h5:/XOSL_NAS_NO0010196140" isin="NO0010196140" mic="XOSL" mep="OTH" name="" symbol="NAS" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/NOR.h5:/XOSL_NOR_NO0010379266" isin="NO0010379266" mic="XOSL" mep="OTH" name="" symbol="NOR" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/NOFI.h5:/XOSL_NOFI_NO0010387004" isin="NO0010387004" mic="XOSL" mep="OTH" name="" symbol="NOFI" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/NPRO.h5:/XOSL_NPRO_NO0010317811" isin="NO0010317811" mic="XOSL" mep="OTH" name="" symbol="NPRO" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/NRC.h5:/XOSL_NRC_NO0003679102" isin="NO0003679102" mic="XOSL" mep="OTH" name="" symbol="NRC" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/NTS.h5:/XOSL_NTS_NO0004895103" isin="NO0004895103" mic="XOSL" mep="OTH" name="" symbol="NTS" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/OCY.h5:/XOSL_OCY_NO0010657448" isin="NO0010657448" mic="XOSL" mep="OTH" name="" symbol="OCY" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/OTS.h5:/XOSL_OTS_NO0010317316" isin="NO0010317316" mic="XOSL" mep="OTH" name="" symbol="OTS" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/ODL.h5:/XOSL_ODL_BMG671801022" isin="BMG671801022" mic="XOSL" mep="OTH" name="" symbol="ODL" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/ODF.h5:/XOSL_ODF_NO0003399909" isin="NO0003399909" mic="XOSL" mep="OTH" name="" symbol="ODF" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/ODFB.h5:/XOSL_ODFB_NO0003399917" isin="NO0003399917" mic="XOSL" mep="OTH" name="" symbol="ODFB" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/OKEA.h5:/XOSL_OKEA_NO0010816895" isin="NO0010816895" mic="XOSL" mep="OTH" name="" symbol="OKEA" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/OLT.h5:/XOSL_OLT_NO0005638858" isin="NO0005638858" mic="XOSL" mep="OTH" name="" symbol="OLT" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/ORK.h5:/XOSL_ORK_NO0003733800" isin="NO0003733800" mic="XOSL" mep="OTH" name="" symbol="ORK" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/OTEC.h5:/XOSL_OTEC_NO0010040611" isin="NO0010040611" mic="XOSL" mep="OTH" name="" symbol="OTEC" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/PEN.h5:/XOSL_PEN_NO0010564701" isin="NO0010564701" mic="XOSL" mep="OTH" name="" symbol="PEN" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/PARB.h5:/XOSL_PARB_NO0010397581" isin="NO0010397581" mic="XOSL" mep="OTH" name="" symbol="PARB" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/PCIB.h5:/XOSL_PCIB_NO0010405640" isin="NO0010405640" mic="XOSL" mep="OTH" name="" symbol="PCIB" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/PSE.h5:/XOSL_PSE_CY0102630916" isin="CY0102630916" mic="XOSL" mep="OTH" name="" symbol="PSE" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/PEXIP.h5:/XOSL_PEXIP_NO0010840507" isin="NO0010840507" mic="XOSL" mep="OTH" name="" symbol="PEXIP" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/PGS.h5:/XOSL_PGS_NO0010199151" isin="NO0010199151" mic="XOSL" mep="OTH" name="" symbol="PGS" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/PHO.h5:/XOSL_PHO_NO0010000045" isin="NO0010000045" mic="XOSL" mep="OTH" name="" symbol="PHO" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/PLCS.h5:/XOSL_PLCS_KYG7153K1085" isin="KYG7153K1085" mic="XOSL" mep="OTH" name="" symbol="PLCS" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/POL.h5:/XOSL_POL_NO0010466022" isin="NO0010466022" mic="XOSL" mep="OTH" name="" symbol="POL" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/PLT.h5:/XOSL_PLT_NO0010341712" isin="NO0010341712" mic="XOSL" mep="OTH" name="" symbol="PLT" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/PRS.h5:/XOSL_PRS_NO0010861990" isin="NO0010861990" mic="XOSL" mep="OTH" name="" symbol="PRS" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/PROT.h5:/XOSL_PROT_NO0010209331" isin="NO0010209331" mic="XOSL" mep="OTH" name="" symbol="PROT" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/QFR.h5:/XOSL_QFR_NO0003103103" isin="NO0003103103" mic="XOSL" mep="OTH" name="" symbol="QFR" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/QEC.h5:/XOSL_QEC_CA74836K1003" isin="CA74836K1003" mic="XOSL" mep="OTH" name="" symbol="QEC" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/RAKP.h5:/XOSL_RAKP_GB00BRGBL804" isin="GB00BRGBL804" mic="XOSL" mep="OTH" name="" symbol="RAKP" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/REACH.h5:/XOSL_REACH_NO0003117202" isin="NO0003117202" mic="XOSL" mep="OTH" name="" symbol="REACH" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/RECSI.h5:/XOSL_RECSI_NO0010112675" isin="NO0010112675" mic="XOSL" mep="OTH" name="" symbol="RECSI" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/SALM.h5:/XOSL_SALM_NO0010310956" isin="NO0010310956" mic="XOSL" mep="OTH" name="" symbol="SALM" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/SACAM.h5:/XOSL_SACAM_CL0002409135" isin="CL0002409135" mic="XOSL" mep="OTH" name="" symbol="SACAM" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/SADG.h5:/XOSL_SADG_NO0006001007" isin="NO0006001007" mic="XOSL" mep="OTH" name="" symbol="SADG" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/SASNO.h5:/XOSL_SASNO_SE0003366871" isin="SE0003366871" mic="XOSL" mep="OTH" name="" symbol="SASNO" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/SATS.h5:/XOSL_SATS_NO0010863285" isin="NO0010863285" mic="XOSL" mep="OTH" name="" symbol="SATS" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/SBANK.h5:/XOSL_SBANK_NO0010739402" isin="NO0010739402" mic="XOSL" mep="OTH" name="" symbol="SBANK" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/SCANA.h5:/XOSL_SCANA_NO0003053308" isin="NO0003053308" mic="XOSL" mep="OTH" name="" symbol="SCANA" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/SSO.h5:/XOSL_SSO_NO0010715139" isin="NO0010715139" mic="XOSL" mep="OTH" name="" symbol="SSO" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/SCHA.h5:/XOSL_SCHA_NO0003028904" isin="NO0003028904" mic="XOSL" mep="OTH" name="" symbol="SCHA" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/SCHB.h5:/XOSL_SCHB_NO0010736879" isin="NO0010736879" mic="XOSL" mep="OTH" name="" symbol="SCHB" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/SDSD.h5:/XOSL_SDSD_CY0101550917" isin="CY0101550917" mic="XOSL" mep="OTH" name="" symbol="SDSD" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/SBX.h5:/XOSL_SBX_CY0101162119" isin="CY0101162119" mic="XOSL" mep="OTH" name="" symbol="SBX" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/SDRL.h5:/XOSL_SDRL_BMG7998G1069" isin="BMG7998G1069" mic="XOSL" mep="OTH" name="" symbol="SDRL" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/SSG.h5:/XOSL_SSG_NO0010781206" isin="NO0010781206" mic="XOSL" mep="OTH" name="" symbol="SSG" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/SBO.h5:/XOSL_SBO_NO0010612450" isin="NO0010612450" mic="XOSL" mep="OTH" name="" symbol="SBO" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/SHLF.h5:/XOSL_SHLF_KYG236271055" isin="KYG236271055" mic="XOSL" mep="OTH" name="" symbol="SHLF" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/SIOFF.h5:/XOSL_SIOFF_KYG813131011" isin="KYG813131011" mic="XOSL" mep="OTH" name="" symbol="SIOFF" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/SKUE.h5:/XOSL_SKUE_NO0006001809" isin="NO0006001809" mic="XOSL" mep="OTH" name="" symbol="SKUE" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/SOGN.h5:/XOSL_SOGN_NO0006000603" isin="NO0006000603" mic="XOSL" mep="OTH" name="" symbol="SOGN" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/SOLON.h5:/XOSL_SOLON_NO0003106700" isin="NO0003106700" mic="XOSL" mep="OTH" name="" symbol="SOLON" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/SOFF.h5:/XOSL_SOFF_NO0003080608" isin="NO0003080608" mic="XOSL" mep="OTH" name="" symbol="SOFF" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/SBVG.h5:/XOSL_SBVG_NO0006000207" isin="NO0006000207" mic="XOSL" mep="OTH" name="" symbol="SBVG" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/MING.h5:/XOSL_MING_NO0006390301" isin="NO0006390301" mic="XOSL" mep="OTH" name="" symbol="MING" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/SRBNK.h5:/XOSL_SRBNK_NO0010631567" isin="NO0010631567" mic="XOSL" mep="OTH" name="" symbol="SRBNK" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/MORG.h5:/XOSL_MORG_NO0006390004" isin="NO0006390004" mic="XOSL" mep="OTH" name="" symbol="MORG" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/SOR.h5:/XOSL_SOR_NO0006001502" isin="NO0006001502" mic="XOSL" mep="OTH" name="" symbol="SOR" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/SVEG.h5:/XOSL_SVEG_NO0006000900" isin="NO0006000900" mic="XOSL" mep="OTH" name="" symbol="SVEG" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/SPOG.h5:/XOSL_SPOG_NO0006222009" isin="NO0006222009" mic="XOSL" mep="OTH" name="" symbol="SPOG" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/SBTE.h5:/XOSL_SBTE_NO0010664782" isin="NO0010664782" mic="XOSL" mep="OTH" name="" symbol="SBTE" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/SNOR.h5:/XOSL_SNOR_NO0010691660" isin="NO0010691660" mic="XOSL" mep="OTH" name="" symbol="SNOR" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/SPOL.h5:/XOSL_SPOL_NO0010751910" isin="NO0010751910" mic="XOSL" mep="OTH" name="" symbol="SPOL" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/NONG.h5:/XOSL_NONG_NO0006000801" isin="NO0006000801" mic="XOSL" mep="OTH" name="" symbol="NONG" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/RING.h5:/XOSL_RING_NO0006390400" isin="NO0006390400" mic="XOSL" mep="OTH" name="" symbol="RING" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/SOAG.h5:/XOSL_SOAG_NO0010285562" isin="NO0010285562" mic="XOSL" mep="OTH" name="" symbol="SOAG" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/SNI.h5:/XOSL_SNI_BMG850801025" isin="BMG850801025" mic="XOSL" mep="OTH" name="" symbol="SNI" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/STB.h5:/XOSL_STB_NO0003053605" isin="NO0003053605" mic="XOSL" mep="OTH" name="" symbol="STB" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/STORM.h5:/XOSL_STORM_NO0010360175" isin="NO0010360175" mic="XOSL" mep="OTH" name="" symbol="STORM" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/STRO.h5:/XOSL_STRO_NO0010098247" isin="NO0010098247" mic="XOSL" mep="OTH" name="" symbol="STRO" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/SUBC.h5:/XOSL_SUBC_LU0075646355" isin="LU0075646355" mic="XOSL" mep="OTH" name="" symbol="SUBC" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/TRVX.h5:/XOSL_TRVX_NO0010689326" isin="NO0010689326" mic="XOSL" mep="OTH" name="" symbol="TRVX" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/TECH.h5:/XOSL_TECH_NO0003095309" isin="NO0003095309" mic="XOSL" mep="OTH" name="" symbol="TECH" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/TEL.h5:/XOSL_TEL_NO0010063308" isin="NO0010063308" mic="XOSL" mep="OTH" name="" symbol="TEL" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/TGS.h5:/XOSL_TGS_NO0003078800" isin="NO0003078800" mic="XOSL" mep="OTH" name="" symbol="TGS" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/THIN.h5:/XOSL_THIN_NO0010299068" isin="NO0010299068" mic="XOSL" mep="OTH" name="" symbol="THIN" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/TIETO.h5:/XOSL_TIETO_FI0009000277" isin="FI0009000277" mic="XOSL" mep="OTH" name="" symbol="TIETO" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/TOM.h5:/XOSL_TOM_NO0005668905" isin="NO0005668905" mic="XOSL" mep="OTH" name="" symbol="TOM" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/TOTG.h5:/XOSL_TOTG_NO0006001205" isin="NO0006001205" mic="XOSL" mep="OTH" name="" symbol="TOTG" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/TRE.h5:/XOSL_TRE_NO0010763550" isin="NO0010763550" mic="XOSL" mep="OTH" name="" symbol="TRE" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/ULTI.h5:/XOSL_ULTI_NO0010851603" isin="NO0010851603" mic="XOSL" mep="OTH" name="" symbol="ULTI" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/VEI.h5:/XOSL_VEI_NO0005806802" isin="NO0005806802" mic="XOSL" mep="OTH" name="" symbol="VEI" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/VISTN.h5:/XOSL_VISTN_NO0010734122" isin="NO0010734122" mic="XOSL" mep="OTH" name="" symbol="VISTN" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/VVL.h5:/XOSL_VVL_NO0003025009" isin="NO0003025009" mic="XOSL" mep="OTH" name="" symbol="VVL" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/VOW.h5:/XOSL_VOW_NO0010708068" isin="NO0010708068" mic="XOSL" mep="OTH" name="" symbol="VOW" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/WAWI.h5:/XOSL_WAWI_NO0010571680" isin="NO0010571680" mic="XOSL" mep="OTH" name="" symbol="WAWI" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/WSTEP.h5:/XOSL_WSTEP_NO0010609662" isin="NO0010609662" mic="XOSL" mep="OTH" name="" symbol="WSTEP" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/WWI.h5:/XOSL_WWI_NO0010571698" isin="NO0010571698" mic="XOSL" mep="OTH" name="" symbol="WWI" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/WWIB.h5:/XOSL_WWIB_NO0010576010" isin="NO0010576010" mic="XOSL" mep="OTH" name="" symbol="WWIB" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/WILS.h5:/XOSL_WILS_NO0010252356" isin="NO0010252356" mic="XOSL" mep="OTH" name="" symbol="WILS" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/XXL.h5:/XOSL_XXL_NO0010716863" isin="NO0010716863" mic="XOSL" mep="OTH" name="" symbol="XXL" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/YAR.h5:/XOSL_YAR_NO0010208051" isin="NO0010208051" mic="XOSL" mep="OTH" name="" symbol="YAR" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/stock/ZAL.h5:/XOSL_ZAL_NO0010708910" isin="NO0010708910" mic="XOSL" mep="OTH" name="" symbol="ZAL" type="stock" description="" vendor="Euronext">
+    <stock cfi="" compartment="" tradingMode="" currency="EUR" shares="">
+      <icb icb1="" icb2="" icb3="" icb4="" />
+    </stock>
+  </instrument>
+  <instrument file="xosl/index/OAAXP.h5:/XOSL_OAAXP_NO0010865330" isin="NO0010865330" mic="XOSL" mep="OTH" name="" symbol="OAAXP" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OAAX.h5:/XOSL_OAAX_NO0007035384" isin="NO0007035384" mic="XOSL" mep="OTH" name="" symbol="OAAX" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OAAXN.h5:/XOSL_OAAXN_NO0010865322" isin="NO0010865322" mic="XOSL" mep="OTH" name="" symbol="OAAXN" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OBOSX.h5:/XOSL_OBOSX_NO0010590086" isin="NO0010590086" mic="XOSL" mep="OTH" name="" symbol="OBOSX" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OBOSP.h5:/XOSL_OBOSP_NO0010890650" isin="NO0010890650" mic="XOSL" mep="OTH" name="" symbol="OBOSP" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OBSFX.h5:/XOSL_OBSFX_NO0010760663" isin="NO0010760663" mic="XOSL" mep="OTH" name="" symbol="OBSFX" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OBSFN.h5:/XOSL_OBSFN_NO0010865181" isin="NO0010865181" mic="XOSL" mep="OTH" name="" symbol="OBSFN" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OBSFP.h5:/XOSL_OBSFP_NO0010865199" isin="NO0010865199" mic="XOSL" mep="OTH" name="" symbol="OBSFP" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OBSHX.h5:/XOSL_OBSHX_NO0010771934" isin="NO0010771934" mic="XOSL" mep="OTH" name="" symbol="OBSHX" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OBSHN.h5:/XOSL_OBSHN_NO0010865207" isin="NO0010865207" mic="XOSL" mep="OTH" name="" symbol="OBSHN" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OBSHP.h5:/XOSL_OBSHP_NO0010865215" isin="NO0010865215" mic="XOSL" mep="OTH" name="" symbol="OBSHP" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OBMG.h5:/XOSL_OBMG_NO0010890569" isin="NO0010890569" mic="XOSL" mep="OTH" name="" symbol="OBMG" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OBMN.h5:/XOSL_OBMN_NO0010890577" isin="NO0010890577" mic="XOSL" mep="OTH" name="" symbol="OBMN" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OBMP.h5:/XOSL_OBMP_NO0010890585" isin="NO0010890585" mic="XOSL" mep="OTH" name="" symbol="OBMP" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OCDG.h5:/XOSL_OCDG_NO0010890478" isin="NO0010890478" mic="XOSL" mep="OTH" name="" symbol="OCDG" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OCDN.h5:/XOSL_OCDN_NO0010890486" isin="NO0010890486" mic="XOSL" mep="OTH" name="" symbol="OCDN" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OCDP.h5:/XOSL_OCDP_NO0010890494" isin="NO0010890494" mic="XOSL" mep="OTH" name="" symbol="OCDP" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OCSG.h5:/XOSL_OCSG_NO0010890502" isin="NO0010890502" mic="XOSL" mep="OTH" name="" symbol="OCSG" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OCSN.h5:/XOSL_OCSN_NO0010890510" isin="NO0010890510" mic="XOSL" mep="OTH" name="" symbol="OCSN" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OCSP.h5:/XOSL_OCSP_NO0010890528" isin="NO0010890528" mic="XOSL" mep="OTH" name="" symbol="OCSP" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OENG.h5:/XOSL_OENG_NO0010890593" isin="NO0010890593" mic="XOSL" mep="OTH" name="" symbol="OENG" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OENN.h5:/XOSL_OENN_NO0010890601" isin="NO0010890601" mic="XOSL" mep="OTH" name="" symbol="OENN" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OENP.h5:/XOSL_OENP_NO0010890619" isin="NO0010890619" mic="XOSL" mep="OTH" name="" symbol="OENP" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OFING.h5:/XOSL_OFING_NO0010890411" isin="NO0010890411" mic="XOSL" mep="OTH" name="" symbol="OFING" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OFINN.h5:/XOSL_OFINN_NO0010890429" isin="NO0010890429" mic="XOSL" mep="OTH" name="" symbol="OFINN" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OFINP.h5:/XOSL_OFINP_NO0010890437" isin="NO0010890437" mic="XOSL" mep="OTH" name="" symbol="OFINP" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OBX.h5:/XOSL_OBX_NO0000000021" isin="NO0000000021" mic="XOSL" mep="OTH" name="" symbol="OBX" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OHCG.h5:/XOSL_OHCG_NO0010890387" isin="NO0010890387" mic="XOSL" mep="OTH" name="" symbol="OHCG" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OHCN.h5:/XOSL_OHCN_NO0010890395" isin="NO0010890395" mic="XOSL" mep="OTH" name="" symbol="OHCN" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OHCP.h5:/XOSL_OHCP_NO0010890403" isin="NO0010890403" mic="XOSL" mep="OTH" name="" symbol="OHCP" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OING.h5:/XOSL_OING_NO0010890536" isin="NO0010890536" mic="XOSL" mep="OTH" name="" symbol="OING" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OINN.h5:/XOSL_OINN_NO0010890544" isin="NO0010890544" mic="XOSL" mep="OTH" name="" symbol="OINN" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OINP.h5:/XOSL_OINP_NO0010890551" isin="NO0010890551" mic="XOSL" mep="OTH" name="" symbol="OINP" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OBXP.h5:/XOSL_OBXP_NO0007035376" isin="NO0007035376" mic="XOSL" mep="OTH" name="" symbol="OBXP" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OREG.h5:/XOSL_OREG_NO0010890445" isin="NO0010890445" mic="XOSL" mep="OTH" name="" symbol="OREG" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OREN.h5:/XOSL_OREN_NO0010890452" isin="NO0010890452" mic="XOSL" mep="OTH" name="" symbol="OREN" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OREP.h5:/XOSL_OREP_NO0010890460" isin="NO0010890460" mic="XOSL" mep="OTH" name="" symbol="OREP" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OTECG.h5:/XOSL_OTECG_NO0010890320" isin="NO0010890320" mic="XOSL" mep="OTH" name="" symbol="OTECG" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OTECN.h5:/XOSL_OTECN_NO0010890338" isin="NO0010890338" mic="XOSL" mep="OTH" name="" symbol="OTECN" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OTECP.h5:/XOSL_OTECP_NO0010890346" isin="NO0010890346" mic="XOSL" mep="OTH" name="" symbol="OTECP" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OTELG.h5:/XOSL_OTELG_NO0010890353" isin="NO0010890353" mic="XOSL" mep="OTH" name="" symbol="OTELG" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OTELN.h5:/XOSL_OTELN_NO0010890361" isin="NO0010890361" mic="XOSL" mep="OTH" name="" symbol="OTELN" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OTELP.h5:/XOSL_OTELP_NO0010890379" isin="NO0010890379" mic="XOSL" mep="OTH" name="" symbol="OTELP" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OBXU.h5:/XOSL_OBXU_NO0010865173" isin="NO0010865173" mic="XOSL" mep="OTH" name="" symbol="OBXU" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OBXUP.h5:/XOSL_OBXUP_NO0010892151" isin="NO0010892151" mic="XOSL" mep="OTH" name="" symbol="OBXUP" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OUTG.h5:/XOSL_OUTG_NO0010890627" isin="NO0010890627" mic="XOSL" mep="OTH" name="" symbol="OUTG" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OUTN.h5:/XOSL_OUTN_NO0010890635" isin="NO0010890635" mic="XOSL" mep="OTH" name="" symbol="OUTN" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OUTP.h5:/XOSL_OUTP_NO0010890643" isin="NO0010890643" mic="XOSL" mep="OTH" name="" symbol="OUTP" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OSEAX.h5:/XOSL_OSEAX_NO0007033900" isin="NO0007033900" mic="XOSL" mep="OTH" name="" symbol="OSEAX" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OSEAN.h5:/XOSL_OSEAN_NO0010865223" isin="NO0010865223" mic="XOSL" mep="OTH" name="" symbol="OSEAN" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OSEAP.h5:/XOSL_OSEAP_NO0010865231" isin="NO0010865231" mic="XOSL" mep="OTH" name="" symbol="OSEAP" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OSEBX.h5:/XOSL_OSEBX_NO0007035327" isin="NO0007035327" mic="XOSL" mep="OTH" name="" symbol="OSEBX" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OSEBN.h5:/XOSL_OSEBN_NO0010865249" isin="NO0010865249" mic="XOSL" mep="OTH" name="" symbol="OSEBN" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OSEBP.h5:/XOSL_OSEBP_NO0010865256" isin="NO0010865256" mic="XOSL" mep="OTH" name="" symbol="OSEBP" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OSEBS.h5:/XOSL_OSEBS_NO0010865355" isin="NO0010865355" mic="XOSL" mep="OTH" name="" symbol="OSEBS" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OSEPB.h5:/XOSL_OSEPB_NO0010892227" isin="NO0010892227" mic="XOSL" mep="OTH" name="" symbol="OSEPB" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OSEBG.h5:/XOSL_OSEBG_NO0010865363" isin="NO0010865363" mic="XOSL" mep="OTH" name="" symbol="OSEBG" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OSEPX.h5:/XOSL_OSEPX_NO0010892193" isin="NO0010892193" mic="XOSL" mep="OTH" name="" symbol="OSEPX" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OSEER.h5:/XOSL_OSEER_NO0010865371" isin="NO0010865371" mic="XOSL" mep="OTH" name="" symbol="OSEER" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OSEXP.h5:/XOSL_OSEXP_NO0010892201" isin="NO0010892201" mic="XOSL" mep="OTH" name="" symbol="OSEXP" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OSEFX.h5:/XOSL_OSEFX_NO0007035335" isin="NO0007035335" mic="XOSL" mep="OTH" name="" symbol="OSEFX" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OSEFN.h5:/XOSL_OSEFN_NO0010865264" isin="NO0010865264" mic="XOSL" mep="OTH" name="" symbol="OSEFN" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OSEFP.h5:/XOSL_OSEFP_NO0010865272" isin="NO0010865272" mic="XOSL" mep="OTH" name="" symbol="OSEFP" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OSEMX.h5:/XOSL_OSEMX_NO0010735640" isin="NO0010735640" mic="XOSL" mep="OTH" name="" symbol="OSEMX" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OSEMN.h5:/XOSL_OSEMN_NO0010865280" isin="NO0010865280" mic="XOSL" mep="OTH" name="" symbol="OSEMN" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OSEMP.h5:/XOSL_OSEMP_NO0010865298" isin="NO0010865298" mic="XOSL" mep="OTH" name="" symbol="OSEMP" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OSESX.h5:/XOSL_OSESX_NO0007035343" isin="NO0007035343" mic="XOSL" mep="OTH" name="" symbol="OSESX" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OSESN.h5:/XOSL_OSESN_NO0010865306" isin="NO0010865306" mic="XOSL" mep="OTH" name="" symbol="OSESN" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OSESP.h5:/XOSL_OSESP_NO0010865314" isin="NO0010865314" mic="XOSL" mep="OTH" name="" symbol="OSESP" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OSEEX.h5:/XOSL_OSEEX_NO0000000062" isin="NO0000000062" mic="XOSL" mep="OTH" name="" symbol="OSEEX" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/OSEEP.h5:/XOSL_OSEEP_NO0010890668" isin="NO0010890668" mic="XOSL" mep="OTH" name="" symbol="OSEEP" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/SSENX.h5:/XOSL_SSENX_NO0010580590" isin="NO0010580590" mic="XOSL" mep="OTH" name="" symbol="SSENX" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/SSENP.h5:/XOSL_SSENP_NO0010892169" isin="NO0010892169" mic="XOSL" mep="OTH" name="" symbol="SSENP" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/SSSFX.h5:/XOSL_SSSFX_NO0010580624" isin="NO0010580624" mic="XOSL" mep="OTH" name="" symbol="SSSFX" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/SSSFP.h5:/XOSL_SSSFP_NO0010892177" isin="NO0010892177" mic="XOSL" mep="OTH" name="" symbol="SSSFP" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/SSSHX.h5:/XOSL_SSSHX_NO0010580640" isin="NO0010580640" mic="XOSL" mep="OTH" name="" symbol="SSSHX" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xosl/index/SSSHP.h5:/XOSL_SSSHP_NO0010892185" isin="NO0010892185" mic="XOSL" mep="OTH" name="" symbol="SSSHP" type="index" description="" vendor="Euronext">
+    <index kind="" family="" calcFreq="" baseDate="" baseLevel="" weighting="" capFactor="" currency="EUR" />
+  </instrument>
+  <instrument file="xmsm/etf/FXWO.h5:/XMSM_FXWO_IE00BK224L29" isin="IE00BK224L29" mic="XMSM" mep="DUB" name="" symbol="FXWO" type="etf" description="" vendor="Euronext">
+    <etf cfi="" tradingMode="" ter="" launchDate="" issuer="" fraction="" dividendFrequency="" indexFamily="" expositionType="" currency="EUR">
+      <inav vendor="Euronext" mep="" mic="" isin="" symbol="" name="" />
+      <underlying vendor="Euronext" mep="" mic="" isin="" symbol="" name="" />
+    </etf>
+  </instrument>
+  <instrument file="xosl/etf/OBXD.h5:/XOSL_OBXD_NO0010257801" isin="NO0010257801" mic="XOSL" mep="OTH" name="" symbol="OBXD" type="etf" description="" vendor="Euronext">
+    <etf cfi="" tradingMode="" ter="" launchDate="" issuer="" fraction="" dividendFrequency="" indexFamily="" expositionType="" currency="EUR">
+      <inav vendor="Euronext" mep="" mic="" isin="" symbol="" name="" />
+      <underlying vendor="Euronext" mep="" mic="" isin="" symbol="" name="" />
+    </etf>
+  </instrument>
+  <instrument file="xosl/etf/OBXX.h5:/XOSL_OBXX_SE0009723026" isin="SE0009723026" mic="XOSL" mep="OTH" name="" symbol="OBXX" type="etf" description="" vendor="Euronext">
+    <etf cfi="" tradingMode="" ter="" launchDate="" issuer="" fraction="" dividendFrequency="" indexFamily="" expositionType="" currency="EUR">
+      <inav vendor="Euronext" mep="" mic="" isin="" symbol="" name="" />
+      <underlying vendor="Euronext" mep="" mic="" isin="" symbol="" name="" />
+    </etf>
+  </instrument>
+  <instrument file="xosl/etf/OBXXD.h5:/XOSL_OBXXD_SE0009723000" isin="SE0009723000" mic="XOSL" mep="OTH" name="" symbol="OBXXD" type="etf" description="" vendor="Euronext">
+    <etf cfi="" tradingMode="" ter="" launchDate="" issuer="" fraction="" dividendFrequency="" indexFamily="" expositionType="" currency="EUR">
+      <inav vendor="Euronext" mep="" mic="" isin="" symbol="" name="" />
+      <underlying vendor="Euronext" mep="" mic="" isin="" symbol="" name="" />
+    </etf>
+  </instrument>
+  <instrument file="xosl/etf/OBXXU.h5:/XOSL_OBXXU_SE0009723034" isin="SE0009723034" mic="XOSL" mep="OTH" name="" symbol="OBXXU" type="etf" description="" vendor="Euronext">
+    <etf cfi="" tradingMode="" ter="" launchDate="" issuer="" fraction="" dividendFrequency="" indexFamily="" expositionType="" currency="EUR">
+      <inav vendor="Euronext" mep="" mic="" isin="" symbol="" name="" />
+      <underlying vendor="Euronext" mep="" mic="" isin="" symbol="" name="" />
+    </etf>
+  </instrument>
+</instruments>

@@ -24,7 +24,7 @@
       <Value Profile="(Default)">2</Value>
     </Setting>
     <Setting Name="MainEuronextMics" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">alxa;alxb;alxl;alxp;enxl;mlxb;tnla;tnlb;xhft;xlis;xams;xbru;xpar;xmli</Value>
+      <Value Profile="(Default)">ALXA;ALXB;ALXL;ALXP;ENXL;MLXB;TNLA;TNLB;XHFT;XLIS;XAMS;XBRU;XPAR;XMLI;XDUB;XESM;XMSM;XOSL;alxa;alxb;alxl;alxp;enxl;mlxb;tnla;tnlb;xhft;xlis;xams;xbru;xpar;xmli;xdub;xesm;xmsm;xosl</Value>
     </Setting>
   </Settings>
 </SettingsFile>
