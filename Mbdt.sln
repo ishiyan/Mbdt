@@ -206,6 +206,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstrUpdate", "EstrUpdate\Es
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortCsv", "SortCsv\SortCsv.csproj", "{F0B61CB6-597A-4398-874A-D1E7FF31637D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EuronextDataDateRange", "EuronextDataDateRange\EuronextDataDateRange.csproj", "{B22A1A81-0AF5-4016-BA45-6AF4B5F7F55F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -461,6 +463,10 @@ Global
 		{F0B61CB6-597A-4398-874A-D1E7FF31637D}.Debug|x64.Build.0 = Debug|x64
 		{F0B61CB6-597A-4398-874A-D1E7FF31637D}.Release|x64.ActiveCfg = Release|x64
 		{F0B61CB6-597A-4398-874A-D1E7FF31637D}.Release|x64.Build.0 = Release|x64
+		{B22A1A81-0AF5-4016-BA45-6AF4B5F7F55F}.Debug|x64.ActiveCfg = Debug|x64
+		{B22A1A81-0AF5-4016-BA45-6AF4B5F7F55F}.Debug|x64.Build.0 = Debug|x64
+		{B22A1A81-0AF5-4016-BA45-6AF4B5F7F55F}.Release|x64.ActiveCfg = Release|x64
+		{B22A1A81-0AF5-4016-BA45-6AF4B5F7F55F}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -539,6 +545,7 @@ Global
 		{BC5C5B1B-FE11-44E5-B9A1-4F04F25B9740} = {17116CE1-F2C2-4151-8617-9E40F61A5C3B}
 		{76174FDC-EA24-4243-A52D-05D8B019FF88} = {BC5C5B1B-FE11-44E5-B9A1-4F04F25B9740}
 		{F0B61CB6-597A-4398-874A-D1E7FF31637D} = {2A905732-BAEF-4C67-84F4-8F1430DBDF37}
+		{B22A1A81-0AF5-4016-BA45-6AF4B5F7F55F} = {F03053AE-3E87-449B-876B-1D30EB75BEA0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B20EE63D-65E6-4B99-A6D0-40BC1562830D}
