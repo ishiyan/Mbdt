@@ -83,14 +83,14 @@ namespace mbdt.Euronext
         #endregion
 
         #region DownloadRetries
-        internal static int DownloadRetries = 2;
+        internal static int DownloadRetries = 12;
         #endregion
 
         #region PauseBeforeRetry
         /// <summary>
         /// In milliseconds.
         /// </summary>
-        private const int PauseBeforeRetry = 1000;
+        private const int PauseBeforeRetry = 3000;
         #endregion
 
         private static Dictionary<string, InstrumentInfo> instrumentInfoDictionary = new Dictionary<string, InstrumentInfo>();
@@ -145,6 +145,13 @@ namespace mbdt.Euronext
                     Uri = "https://live.euronext.com/en/pd/data/stocks?mics=" + DubMics,
                     Referer = "https://live.euronext.com/products/equities/list",
                     FileName = "stocks_dub"
+                },
+                new CategoryInfo
+                {
+                    Type = EuronextInstrumentXml.Stock,
+                    Uri = "https://live.euronext.com/en/pd/data/stocks?mics=" + OslMics,
+                    Referer = "https://live.euronext.com/products/equities/list",
+                    FileName = "stocks_osl"
                 },
                 new CategoryInfo
                 {
@@ -213,6 +220,13 @@ namespace mbdt.Euronext
                 new CategoryInfo
                 {
                     Type = EuronextInstrumentXml.Index,
+                    Uri = "https://live.euronext.com/en/pd/data/index?mics=" + OslMics,
+                    Referer = "https://live.euronext.com/products/indices/list",
+                    FileName = "indices_osl"
+                },
+                new CategoryInfo
+                {
+                    Type = EuronextInstrumentXml.Index,
                     Uri = "https://live.euronext.com/en/pd/data/index?mics=" + LonMics1,
                     Referer = "https://live.euronext.com/products/indices/list",
                     FileName = "indices_lon1"
@@ -273,6 +287,13 @@ namespace mbdt.Euronext
                     Uri = "https://live.euronext.com/en/pd/data/etv?mics=" + DubMics,
                     Referer = "https://live.euronext.com/products/etfs/list",
                     FileName = "etvs_dub"
+                },
+                new CategoryInfo
+                {
+                    Type = EuronextInstrumentXml.Etv,
+                    Uri = "https://live.euronext.com/en/pd/data/etv?mics=" + OslMics,
+                    Referer = "https://live.euronext.com/products/etfs/list",
+                    FileName = "etvs_osl"
                 },
                 new CategoryInfo
                 {
@@ -341,6 +362,13 @@ namespace mbdt.Euronext
                 new CategoryInfo
                 {
                     Type = EuronextInstrumentXml.Etf,
+                    Uri = "https://live.euronext.com/en/pd/data/track?mics=" + OslMics,
+                    Referer = "https://live.euronext.com/products/etfs/list",
+                    FileName = "etfs_osl"
+                },
+                new CategoryInfo
+                {
+                    Type = EuronextInstrumentXml.Etf,
                     Uri = "https://live.euronext.com/en/pd/data/track?mics=" + LonMics1,
                     Referer = "https://live.euronext.com/products/etfs/list",
                     FileName = "etfs_lon1"
@@ -405,6 +433,13 @@ namespace mbdt.Euronext
                 new CategoryInfo
                 {
                     Type = EuronextInstrumentXml.Fund,
+                    Uri = "https://live.euronext.com/en/pd/data/funds?mics=" + OslMics,
+                    Referer = "https://live.euronext.com/products/funds/list",
+                    FileName = "funds_osl"
+                },
+                new CategoryInfo
+                {
+                    Type = EuronextInstrumentXml.Fund,
                     Uri = "https://live.euronext.com/en/pd/data/funds?mics=" + LonMics1,
                     Referer = "https://live.euronext.com/products/funds/list",
                     FileName = "funds_lon1"
@@ -447,8 +482,9 @@ namespace mbdt.Euronext
                 { "XLIF", "LON" }, { "XLDN", "LON" },
                 { "XETR", "OTH" }, { "XLON", "OTH" }, { "XMCE", "OTH" }, { "XVTX", "OTH" },
                 { "MTAA", "OTH" }, { "FRAA", "OTH" }, { "XCSE", "OTH" }, { "XSTO", "OTH" },
-                { "XOSL", "OTH" }, { "XHEL", "OTH" }, { "XMAD", "OTH" }, { "XIST", "OTH" },
-                { "XESM", "DUB" }, { "XMSM", "DUB" }, {"XDUB", "DUB"}
+                { "XHEL", "OTH" }, { "XMAD", "OTH" }, { "XIST", "OTH" },
+                { "XESM", "DUB" }, { "XMSM", "DUB" }, {"XDUB", "DUB"},
+                { "XOSL", "OSL" }, { "XOAS", "OSL" }, { "MERK", "OSL" }, { "VPXB", "OSL" },
             };
             return dictionary;
         }
@@ -458,10 +494,11 @@ namespace mbdt.Euronext
         private const string ParMics = "XPAR,ALXP,XMLI";
         private const string LisMics = "XLIS,ALXL,ENXL";
         private const string DubMics = "XDUB,XMSM,XESM";
+        private const string OslMics = "XOSL,XOAS,MERK,VPXB";
         private const string LonMics1 = "XLDN,XLIF";
         private const string LonMics2 = "XLON";
         private const string OthMics1 = "XETR";
-        private const string OthMics2 = "XMCE,XVTX,MTAA,FRAA,XCSE,XSTO,XOSL,XHEL,XMAD,XIST,XHFT";
+        private const string OthMics2 = "XMCE,XVTX,MTAA,FRAA,XCSE,XSTO,XHEL,XMAD,XIST,XHFT";
         #endregion
 
         #region RetrieveTotalRecords
@@ -524,6 +561,11 @@ namespace mbdt.Euronext
             bool containsNull = s.Contains("\"aaData\": []");
             if (containsNull)
                 return;
+            if (s.Contains(",null,"))
+            {
+                s = s.Replace(",null,", ",\"null\",");
+            }
+
             string[] splitted = s.Split(splitter, StringSplitOptions.None);
             if (splitted.Length < 7)
             {
@@ -535,6 +577,8 @@ namespace mbdt.Euronext
                 Isin = StripTrailingChars(splitted[1]), Symbol = StripTrailingChars(splitted[2]), Name = "",
                 MicDescription = StripTrailingChars(splitted[3]).Replace(@"\u00e9", "é"), Type = type
             };
+            if (ii.Isin == "null")
+                ii.Isin = string.Empty;
             if (ii.MicDescription.EndsWith("Pari"))
                 ii.MicDescription = ii.MicDescription + "s";
             string z = "/" + ii.Isin + "-";
@@ -550,7 +594,7 @@ namespace mbdt.Euronext
                     unknownMicDictionary.Add(ii.Mic, "OTH");
                 ii.Mep = "OTH";
             }
-            const string pattern = @"/quotes\u0022\u003E";
+            const string pattern = @"\u0027\u003E";
             i = splitted[0].IndexOf(pattern, StringComparison.Ordinal);
             if (i > 0)
             {
