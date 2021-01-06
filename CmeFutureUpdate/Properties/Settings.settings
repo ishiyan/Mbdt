@@ -44,11 +44,14 @@
     <Setting Name="Hdf5VerboseAdd" Type="System.Boolean" Scope="Application">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="SkipDownloadSeriesCodes" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">ESM13;ESU14;ESZ13;ESH14;ESM14;ESU14</Value>
-    </Setting>
     <Setting Name="CatchGunzip" Type="System.Boolean" Scope="Application">
       <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="SkipDownloadSeriesCodes" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ESM13;ESU13;ESZ13;ESH14;ESM14;ESU14;ESZ14;ESH15;ESU15;ESZ15;ESH16;ESM16</Value>
+    </Setting>
+    <Setting Name="AppendOnly" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

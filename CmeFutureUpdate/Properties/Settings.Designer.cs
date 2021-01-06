@@ -12,7 +12,7 @@ namespace CmeFutureUpdate.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.2.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.8.1.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -151,7 +151,16 @@ namespace CmeFutureUpdate.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("ESM13;ESU14;ESZ13;ESH14;ESM14;ESU14")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool CatchGunzip {
+            get {
+                return ((bool)(this["CatchGunzip"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("ESM13;ESU13;ESZ13;ESH14;ESM14;ESU14;ESZ14;ESH15;ESU15;ESZ15;ESH16;ESM16")]
         public string SkipDownloadSeriesCodes {
             get {
                 return ((string)(this["SkipDownloadSeriesCodes"]));
@@ -160,10 +169,10 @@ namespace CmeFutureUpdate.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool CatchGunzip {
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool AppendOnly {
             get {
-                return ((bool)(this["CatchGunzip"]));
+                return ((bool)(this["AppendOnly"]));
             }
         }
     }

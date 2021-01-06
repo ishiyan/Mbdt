@@ -161,8 +161,8 @@ namespace CmeFutureUpdate
                  //new SeriesEntry { Code="ESZ19", Month = "DEC 2019", MonthShortcut="DEC-19", FirstTradeDate=new DateTime(2018,  9, 21), LastTradeDate=new DateTime(2019, 12, 20), SettlementDate=new DateTime(2019, 12, 20), RolloverDate=new DateTime(2019, 12, 12)},
                  //new SeriesEntry { Code="ESH20", Month = "MAR 2020", MonthShortcut="MAR-20", FirstTradeDate=new DateTime(2018, 12, 21), LastTradeDate=new DateTime(2020,  3, 20), SettlementDate=new DateTime(2020,  3, 20), RolloverDate=new DateTime(2020,  3, 12)},
                  //new SeriesEntry { Code="ESM20", Month = "JUN 2020", MonthShortcut="JUN-20", FirstTradeDate=new DateTime(2019,  3, 17), LastTradeDate=new DateTime(2020,  6, 19), SettlementDate=new DateTime(2020,  6, 19), RolloverDate=new DateTime(2020,  6, 11)},
-                   new SeriesEntry { Code="ESU20", Month = "SEP 2020", MonthShortcut="SEP-20", FirstTradeDate=new DateTime(2019,  6, 21), LastTradeDate=new DateTime(2020,  9, 18), SettlementDate=new DateTime(2020,  9, 18), RolloverDate=new DateTime(2020,  9, 10)},
-                   new SeriesEntry { Code="ESZ20", Month = "DEC 2020", MonthShortcut="DEC-20", FirstTradeDate=new DateTime(2019,  9, 20), LastTradeDate=new DateTime(2020, 12, 18), SettlementDate=new DateTime(2020, 12, 18), RolloverDate=new DateTime(2020, 12, 10)},
+                 //new SeriesEntry { Code="ESU20", Month = "SEP 2020", MonthShortcut="SEP-20", FirstTradeDate=new DateTime(2019,  6, 21), LastTradeDate=new DateTime(2020,  9, 18), SettlementDate=new DateTime(2020,  9, 18), RolloverDate=new DateTime(2020,  9, 10)},
+                 //new SeriesEntry { Code="ESZ20", Month = "DEC 2020", MonthShortcut="DEC-20", FirstTradeDate=new DateTime(2019,  9, 20), LastTradeDate=new DateTime(2020, 12, 18), SettlementDate=new DateTime(2020, 12, 18), RolloverDate=new DateTime(2020, 12, 10)},
                    new SeriesEntry { Code="ESH21", Month = "MAR 2021", MonthShortcut="MAR-21", FirstTradeDate=new DateTime(2019, 12, 20), LastTradeDate=new DateTime(2021,  3, 19), SettlementDate=new DateTime(2021,  3, 19), RolloverDate=new DateTime(2021,  3, 11)},
                    new SeriesEntry { Code="ESM21", Month = "JUN 2021", MonthShortcut="JUN-21", FirstTradeDate=new DateTime(2020,  3, 20), LastTradeDate=new DateTime(2021,  6, 18), SettlementDate=new DateTime(2021,  6, 18), RolloverDate=new DateTime(2021,  6, 10)},
                    new SeriesEntry { Code="ESU21", Month = "SEP 2021", MonthShortcut="SEP-21", FirstTradeDate=new DateTime(2020,  6, 19), LastTradeDate=new DateTime(2021,  9, 17), SettlementDate=new DateTime(2021,  9, 17), RolloverDate=new DateTime(2021,  9,  9)},
@@ -296,6 +296,25 @@ namespace CmeFutureUpdate
             using (Instrument instrument = repository.Open(instrumentPath, true))
             using (TradeData tradeData = instrument.OpenTrade(true))
             {
+                if (Properties.Settings.Default.AppendOnly && tradeData.Count > 0)
+                {
+                    var lastDateTimeExisting = new DateTime(tradeData.LastTicks);
+                    var lastDateTimeToImport = new DateTime(seriesEntry.TradeList[seriesEntry.TradeList.Count - 1].Ticks);
+                    var firstDateTimeToImport = new DateTime(seriesEntry.TradeList[0].Ticks);
+                    Trace.TraceInformation("Merging {0}, {1}, file {2}, instrument path {3}: import first {4} last {5}, last existing {6}", seriesEntry.Code, seriesEntry.Month, h5File, instrumentPath, firstDateTimeToImport, lastDateTimeToImport, lastDateTimeExisting);
+                    if (lastDateTimeToImport <= lastDateTimeExisting)
+                    {
+                        Trace.TraceInformation("Import data already exist: {0}, {1}, file {2}, instrument path {3}: last import {4} <= last existing {5}", seriesEntry.Code, seriesEntry.Month, h5File, instrumentPath, lastDateTimeToImport, lastDateTimeExisting);
+                        return;
+                    }
+                    else if (firstDateTimeToImport <= lastDateTimeExisting)
+                    {
+                        Trace.TraceInformation("Import data overlaps existing: {0}, {1}, file {2}, instrument path {3}: fist import {4} <= last existing {5}", seriesEntry.Code, seriesEntry.Month, h5File, instrumentPath, firstDateTimeToImport, lastDateTimeExisting);
+                        var lastExistingTicks = tradeData.LastTicks;
+                        var countToRemoved = seriesEntry.TradeList.RemoveAll(d => d.Ticks >= lastExistingTicks);
+                        Trace.TraceInformation("Removed {0} import elements, fist import now is {1}", countToRemoved, new DateTime(seriesEntry.TradeList[0].Ticks));
+                    }
+                }
                 Trace.TraceInformation("Merging {0}, {1}, starting SpreadDuplicateTimeTicks", seriesEntry.Code, seriesEntry.Month);
                 tradeData.SpreadDuplicateTimeTicks(seriesEntry.TradeList, false);
                 Trace.TraceInformation("Merging {0}, {1}, finished SpreadDuplicateTimeTicks", seriesEntry.Code, seriesEntry.Month);
@@ -716,6 +735,25 @@ namespace CmeFutureUpdate
                 using (Instrument instrument = repository.Open(instrumentPath, true))
                 using (TradeData tradeData = instrument.OpenTrade(true))
                 {
+                    if (Properties.Settings.Default.AppendOnly && tradeData.Count > 0)
+                    {
+                        var lastDateTimeExisting = new DateTime(tradeData.LastTicks);
+                        var lastDateTimeToImport = new DateTime(seriesEntry.TradeList[seriesEntry.TradeList.Count - 1].Ticks);
+                        var firstDateTimeToImport = new DateTime(seriesEntry.TradeList[0].Ticks);
+                        Trace.TraceInformation("Merging {0}, {1}, file {2}, instrument path {3}: import first {4} last {5}, last existing {6}", seriesEntry.Code, seriesEntry.Month, h5File, instrumentPath, firstDateTimeToImport, lastDateTimeToImport, lastDateTimeExisting);
+                        if (lastDateTimeToImport <= lastDateTimeExisting)
+                        {
+                            Trace.TraceInformation("Import data already exist: {0}, {1}, file {2}, instrument path {3}: last import {4} <= last existing {5}, skipping", seriesEntry.Code, seriesEntry.Month, h5File, instrumentPath, lastDateTimeToImport, lastDateTimeExisting);
+                            return;
+                        }
+                        else if (firstDateTimeToImport <= lastDateTimeExisting)
+                        {
+                            Trace.TraceInformation("Import data overlaps existing: {0}, {1}, file {2}, instrument path {3}: fist import {4} <= last existing {5}", seriesEntry.Code, seriesEntry.Month, h5File, instrumentPath, firstDateTimeToImport, lastDateTimeExisting);
+                            var lastExistingTicks = tradeData.LastTicks;
+                            var countToRemoved = seriesEntry.TradeList.RemoveAll(d => d.Ticks >= lastExistingTicks);
+                            Trace.TraceInformation("Removed {0} import elements, fist import now is {1}", countToRemoved, new DateTime(seriesEntry.TradeList[0].Ticks));
+                        }
+                    }
                     Trace.TraceInformation("Merging {0}, {1}, starting SpreadDuplicateTimeTicks", seriesEntry.Code, seriesEntry.Month);
                     tradeData.SpreadDuplicateTimeTicks(seriesEntry.TradeList, false);
                     Trace.TraceInformation("Merging {0}, {1}, finished SpreadDuplicateTimeTicks", seriesEntry.Code, seriesEntry.Month);
