@@ -311,7 +311,7 @@ namespace CmeFutureUpdate
                     {
                         Trace.TraceInformation("Import data overlaps existing: {0}, {1}, file {2}, instrument path {3}: fist import {4} <= last existing {5}", seriesEntry.Code, seriesEntry.Month, h5File, instrumentPath, firstDateTimeToImport, lastDateTimeExisting);
                         var lastExistingTicks = tradeData.LastTicks;
-                        var countToRemoved = seriesEntry.TradeList.RemoveAll(d => d.Ticks >= lastExistingTicks);
+                        var countToRemoved = seriesEntry.TradeList.RemoveAll(d => d.Ticks <= lastExistingTicks);
                         Trace.TraceInformation("Removed {0} import elements, fist import now is {1}", countToRemoved, new DateTime(seriesEntry.TradeList[0].Ticks));
                     }
                 }
@@ -750,7 +750,7 @@ namespace CmeFutureUpdate
                         {
                             Trace.TraceInformation("Import data overlaps existing: {0}, {1}, file {2}, instrument path {3}: fist import {4} <= last existing {5}", seriesEntry.Code, seriesEntry.Month, h5File, instrumentPath, firstDateTimeToImport, lastDateTimeExisting);
                             var lastExistingTicks = tradeData.LastTicks;
-                            var countToRemoved = seriesEntry.TradeList.RemoveAll(d => d.Ticks >= lastExistingTicks);
+                            var countToRemoved = seriesEntry.TradeList.RemoveAll(d => d.Ticks <= lastExistingTicks);
                             Trace.TraceInformation("Removed {0} import elements, fist import now is {1}", countToRemoved, new DateTime(seriesEntry.TradeList[0].Ticks));
                         }
                     }

@@ -89,11 +89,39 @@ namespace mbdt.EuronextDiscover.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("ALXA;ALXB;ALXL;ALXP;ENXL;MLXB;TNLA;TNLB;XHFT;XLIS;XAMS;XBRU;XPAR;XMLI;XDUB;XESM;X" +
-            "MSM;XOSL;alxa;alxb;alxl;alxp;enxl;mlxb;tnla;tnlb;xhft;xlis;xams;xbru;xpar;xmli;x" +
-            "dub;xesm;xmsm;xosl")]
+            "MSM;XOSL;XOAS;MERK;VPXB;alxa;alxb;alxl;alxp;enxl;mlxb;tnla;tnlb;xhft;xlis;xams;x" +
+            "bru;xpar;xmli;xdub;xesm;xmsm;xosl;xoas,merk,vpxb")]
         public string MainEuronextMics {
             get {
                 return ((string)(this["MainEuronextMics"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("repository\\euronext\\euronext_uninterested.xml")]
+        public string UninterestedEuronextIndexPath {
+            get {
+                return ((string)(this["UninterestedEuronextIndexPath"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool Enrich {
+            get {
+                return ((bool)(this["Enrich"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Mozilla/5.0 (iPhone; CPU iPhone OS 13_5_1 like Mac OS X) AppleWebKit/605.1.15 (KH" +
+            "TML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/604.1")]
+        public string UserAgent {
+            get {
+                return ((string)(this["UserAgent"]));
             }
         }
     }

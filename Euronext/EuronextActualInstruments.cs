@@ -7,6 +7,7 @@ using System.IO;
 using System.Net;
 using System.Globalization;
 using System.Threading;
+using mbdt.EuronextDiscover.Properties;
 using mbdt.Utils;
 
 namespace mbdt.Euronext
@@ -737,14 +738,14 @@ namespace mbdt.Euronext
         #endregion
 
         #region DownloadAndParse
-        private static void DownloadAndParse(string type, string uri, string referer, string folderPath, string fileName)
+        private static void DownloadAndParse(string type, string uri, string referer, string folderPath, string fileName, string userAgent = null)
         {
             const int downloadMinimalLength = 2;
             int totalRecords = 0;
             string filename = string.Format("{0}{1}.json", folderPath, fileName);
             bool status = DownloadPost(uri, filename, downloadMinimalLength, DownloadOverwriteExisting, DownloadRetries,
                 DownloadTimeout, bodyDictionary,
-                referer, null, "application/json, text/javascript, */*");
+                referer, userAgent, "application/json, text/javascript, */*");
             if (!status)
                 Trace.TraceError("Failed to download \"{0}\" to \"{1}\"", uri, filename);
             totalRecords = RetrieveTotalRecords(filename);
@@ -783,7 +784,7 @@ namespace mbdt.Euronext
             instrumentInfoDictionary = new Dictionary<string, InstrumentInfo>();
             foreach (var category in categoryList)
             {
-                DownloadAndParse(category.Type, category.Uri, category.Referer, folderPath, category.FileName);
+                DownloadAndParse(category.Type, category.Uri, category.Referer, folderPath, category.FileName, Settings.Default.UserAgent);
             }
 
             if (zipDownloadPath)

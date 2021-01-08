@@ -5,11 +5,12 @@ using System.Globalization;
 using System.Text;
 using System.IO;
 using System.IO.Compression;
+using System.Runtime.Remoting.Channels;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Runtime.Serialization;
 using System.Xml;
-
+using mbdt.EuronextIntradayUpdate.Properties;
 using mbdt.Utils;
 using Mbh5;
 
@@ -39,6 +40,8 @@ namespace mbdt.Euronext
                 date = date.AddDays(-1);
                 dayOfWeek = date.DayOfWeek;
             }
+
+            date = date.AddDays(-Settings.Default.StartDateDaysBack);
 
             return date.ToString("yyyy'-'MM'-'dd");
         }
@@ -1055,7 +1058,7 @@ namespace mbdt.Euronext
                 { "timezone", "CET"},
                 { "date", LastWorkingDay}
             };
-            if (!Downloader.DownloadPost(uri, s, EuronextInstrumentContext.IntradayDownloadMinimalLength, EuronextInstrumentContext.IntradayDownloadOverwriteExisting, EuronextInstrumentContext.DownloadRetries, EuronextInstrumentContext.DownloadTimeout, postDictionary, referer, null, "application/json, text/javascript, */*"))
+            if (!Downloader.DownloadPost(uri, s, EuronextInstrumentContext.IntradayDownloadMinimalLength, EuronextInstrumentContext.IntradayDownloadOverwriteExisting, EuronextInstrumentContext.DownloadRetries, EuronextInstrumentContext.DownloadTimeout, postDictionary, referer, Settings.Default.UserAgent, "application/json, text/javascript, */*"))
                     return false;
             try
             {

@@ -50,10 +50,15 @@ namespace mbdt.EuronextDiscover
 
             BackupXmlFile(Properties.Settings.Default.MainEuronextIndexPath, dateTime);
             BackupXmlFile(Properties.Settings.Default.OtherEuronextIndexPath, dateTime);
+            /* BackupXmlFile(Properties.Settings.Default.UninterestedEuronextIndexPath, dateTime); */
 
             XDocument xdocMain = XDocument.Load(Properties.Settings.Default.MainEuronextIndexPath
                 /* , LoadOptions.PreserveWhitespace | LoadOptions.SetLineInfo */);
             List<XElement> xelistMain = xdocMain.XPathSelectElements("/instruments/instrument").ToList();
+
+            XDocument xdocUninterested = XDocument.Load(Properties.Settings.Default.UninterestedEuronextIndexPath
+                /* , LoadOptions.PreserveWhitespace | LoadOptions.SetLineInfo */);
+            xelistMain.AddRange(xdocUninterested.XPathSelectElements("/instruments/instrument").ToList());
 
             XDocument xdocOther = XDocument.Load(Properties.Settings.Default.OtherEuronextIndexPath
                 /*, LoadOptions.PreserveWhitespace | LoadOptions.SetLineInfo*/);
@@ -88,7 +93,7 @@ namespace mbdt.EuronextDiscover
                         Trace.TraceError("{0}: element [{1}]", ++i, xElement.ToString(SaveOptions.None));
                     }
                 }
-                if (!ii.IsApproved && !ii.IsDiscovered)
+                if (Properties.Settings.Default.Enrich && !ii.IsApproved && !ii.IsDiscovered)
                 {
                     Trace.TraceInformation("Discovered {0}: \"{1}\":", ii.Type, ii.Key);
                     XElement xel = micListMain.Contains(ii.Mic) ? xdocMain.XPathSelectElement("/instruments") : xdocOther.XPathSelectElement("/instruments");

@@ -24,7 +24,16 @@
       <Value Profile="(Default)">2</Value>
     </Setting>
     <Setting Name="MainEuronextMics" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">ALXA;ALXB;ALXL;ALXP;ENXL;MLXB;TNLA;TNLB;XHFT;XLIS;XAMS;XBRU;XPAR;XMLI;XDUB;XESM;XMSM;XOSL;alxa;alxb;alxl;alxp;enxl;mlxb;tnla;tnlb;xhft;xlis;xams;xbru;xpar;xmli;xdub;xesm;xmsm;xosl</Value>
+      <Value Profile="(Default)">ALXA;ALXB;ALXL;ALXP;ENXL;MLXB;TNLA;TNLB;XHFT;XLIS;XAMS;XBRU;XPAR;XMLI;XDUB;XESM;XMSM;XOSL;XOAS;MERK;VPXB;alxa;alxb;alxl;alxp;enxl;mlxb;tnla;tnlb;xhft;xlis;xams;xbru;xpar;xmli;xdub;xesm;xmsm;xosl;xoas,merk,vpxb</Value>
+    </Setting>
+    <Setting Name="UninterestedEuronextIndexPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">repository\euronext\euronext_uninterested.xml</Value>
+    </Setting>
+    <Setting Name="Enrich" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="UserAgent" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Mozilla/5.0 (iPhone; CPU iPhone OS 13_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/604.1</Value>
     </Setting>
   </Settings>
 </SettingsFile>
