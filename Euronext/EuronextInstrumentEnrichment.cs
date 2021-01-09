@@ -33,14 +33,14 @@ namespace mbdt.Euronext
         #endregion
 
         #region DownloadRetries
-        internal static int DownloadRetries = 2;
+        internal static int DownloadRetries = 5;
         #endregion
 
         #region PauseBeforeRetry
         /// <summary>
         /// In milliseconds.
         /// </summary>
-        internal static int PauseBeforeRetry = 1000;
+        internal static int PauseBeforeRetry = 3000;
         #endregion
 
         private const string DefaultUserAgent = "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:16.0) Gecko/20100101 Firefox/16.0";
@@ -86,7 +86,7 @@ namespace mbdt.Euronext
         /// <summary>
         /// Validates and normalized the given instrument element from the specified instrument info and optionally enriches it.
         /// </summary>
-        internal static void ValidateInstrumentElement(this EuronextActualInstruments.InstrumentInfo ii, XElement xel, bool enrich)
+        internal static void ValidateInstrumentElement(this EuronextActualInstruments.InstrumentInfo ii, XElement xel, bool enrich, string userAgent)
         {
             XAttribute xatr = xel.Attribute(EuronextInstrumentXml.Mic);
             if (null == xatr)
@@ -135,29 +135,29 @@ namespace mbdt.Euronext
             switch (ii.Type)
             {
                 case EuronextInstrumentXml.Stock:
-                    xel.EnrichStockElement();
+                    xel.EnrichStockElement(userAgent);
                     break;
                 case EuronextInstrumentXml.Index:
-                    xel.EnrichIndexElement();
+                    xel.EnrichIndexElement(userAgent);
                     break;
                 case EuronextInstrumentXml.Etf:
-                    xel.EnrichEtfElement();
+                    xel.EnrichEtfElement(userAgent);
                     break;
                 case EuronextInstrumentXml.Etv:
-                    xel.EnrichEtvElement();
+                    xel.EnrichEtvElement(userAgent);
                     break;
                 case EuronextInstrumentXml.Inav:
-                    xel.EnrichInavElement();
+                    xel.EnrichInavElement(userAgent);
                     break;
                 case EuronextInstrumentXml.Fund:
-                    xel.EnrichFundElement();
+                    xel.EnrichFundElement(userAgent);
                     break;
             }
         }
         #endregion
 
         #region EnrichElement
-        internal static void EnrichElement(this XElement xel)
+        internal static void EnrichElement(this XElement xel, string userAgent)
         {
             //xel.EnrichSearchInstrument();
             string type = xel.AttributeValue(EuronextInstrumentXml.Type);
@@ -166,32 +166,32 @@ namespace mbdt.Euronext
             switch (type)
             {
                 case EuronextInstrumentXml.Stock:
-                    xel.EnrichStockElement();
+                    xel.EnrichStockElement(userAgent);
                     break;
                 case EuronextInstrumentXml.Index:
-                    xel.EnrichIndexElement();
+                    xel.EnrichIndexElement(userAgent);
                     break;
                 case EuronextInstrumentXml.Etf:
-                    xel.EnrichEtfElement();
+                    xel.EnrichEtfElement(userAgent);
                     break;
                 case EuronextInstrumentXml.Etv:
-                    xel.EnrichEtvElement();
+                    xel.EnrichEtvElement(userAgent);
                     break;
                 case EuronextInstrumentXml.Inav:
-                    xel.EnrichInavElement();
+                    xel.EnrichInavElement(userAgent);
                     break;
                 case EuronextInstrumentXml.Fund:
-                    xel.EnrichFundElement();
+                    xel.EnrichFundElement(userAgent);
                     break;
             }
         }
         #endregion
 
         #region EnrichIndexElement
-        internal static void EnrichIndexElement(this XElement xel)
+        internal static void EnrichIndexElement(this XElement xel, string userAgent)
         {
             xel.NormalizeIndexElement();
-            //xel.EnrichSearchInstrument(EuronextInstrumentXml.Index);
+            //xel.EnrichSearchInstrument(EuronextInstrumentXml.Index, userAgent);
         }
         #endregion
 
@@ -199,7 +199,7 @@ namespace mbdt.Euronext
         /// <summary>
         /// Normalizes and enriches the stock element.
         /// </summary>
-        internal static void EnrichStockElement(this XElement xel)
+        internal static void EnrichStockElement(this XElement xel, string userAgent)
         {
             // <instrument vendor="Euronext"
             //     mep="AMS" isin="NL0000336543" symbol="BALNE" name="BALLAST NEDAM" type="stock" mic="XAMS"
@@ -224,7 +224,7 @@ namespace mbdt.Euronext
             string mic = xel.AttributeValue(EuronextInstrumentXml.Mic);
             string uri = string.Format(uriFormat, isin, mic);
             string referer = string.Format(refererFormat, isin, mic);
-            string marketInformation = DownloadTextString("market-information", uri, DownloadRetries, DownloadTimeout, referer);
+            string marketInformation = DownloadTextString("market-information", uri, DownloadRetries, DownloadTimeout, referer, userAgent);
             if (string.IsNullOrEmpty(marketInformation))
                 return;
 
@@ -339,7 +339,7 @@ namespace mbdt.Euronext
         /// <summary>
         /// Normalizes and enriches the ETF element.
         /// </summary>
-        internal static void EnrichEtfElement(this XElement xel)
+        internal static void EnrichEtfElement(this XElement xel, string userAgent)
         {
             // <instrument vendor="Euronext"
             //     mep="PAR" mic="XPAR" isin="FR0010754135" symbol="C13" name="AMUNDI ETF EMTS1-3" type="etf"
@@ -353,7 +353,7 @@ namespace mbdt.Euronext
             // </instrument>
 
             xel.NormalizeEtfElement();
-            //xel.EnrichSearchInstrument(EuronextInstrumentXml.Etf);
+            //xel.EnrichSearchInstrument(EuronextInstrumentXml.Etf, userAgent);
             XElement xelEtf = xel.Element(EuronextInstrumentXml.Etf);
             // ReSharper disable PossibleNullReferenceException
             XElement xelInav = xelEtf.Element(EuronextInstrumentXml.Inav);
@@ -366,7 +366,7 @@ namespace mbdt.Euronext
             string mic = xel.AttributeValue(EuronextInstrumentXml.Mic);
             string uri = string.Format(uriFormat, isin, mic);
             string referer = string.Format(refererFormat, isin, mic);
-            string marketInformation = DownloadTextString("market-information", uri, DownloadRetries, DownloadTimeout, referer);
+            string marketInformation = DownloadTextString("market-information", uri, DownloadRetries, DownloadTimeout, referer, userAgent);
             if (string.IsNullOrEmpty(marketInformation))
                 return;
 
@@ -460,13 +460,13 @@ namespace mbdt.Euronext
             if (!string.IsNullOrEmpty(value))
                 xelUnderlying.AttributeValue("???????", value);*/
 
-            //xelInav.EnrichSearchInstrument(EuronextInstrumentXml.Inav);
+            //xelInav.EnrichSearchInstrument(EuronextInstrumentXml.Inav, userAgent);
             //xelUnderlying.EnrichSearchInstrument();
         }
         #endregion
 
         #region EnrichEtvElement
-        internal static void EnrichEtvElement(this XElement xel)
+        internal static void EnrichEtvElement(this XElement xel, string userAgent)
         {
             // <instrument vendor="Euronext"
             //     mep="PAR" mic="XPAR" isin="GB00B15KXP72" symbol="COFFP" name="ETFS COFFEE" type="etv"
@@ -477,7 +477,7 @@ namespace mbdt.Euronext
             // </instrument>
 
             xel.NormalizeEtvElement();
-            //xel.EnrichSearchInstrument(EuronextInstrumentXml.Etv);
+            //xel.EnrichSearchInstrument(EuronextInstrumentXml.Etv, userAgent);
             XElement xelEtv = xel.Element(EuronextInstrumentXml.Etv);
 
             const string uriFormat = "https://live.euronext.com/en/product/etvs/{0}-{1}/market-information";
@@ -486,7 +486,7 @@ namespace mbdt.Euronext
             string mic = xel.AttributeValue(EuronextInstrumentXml.Mic);
             string uri = string.Format(uriFormat, isin, mic);
             string referer = string.Format(refererFormat, isin, mic);
-            string marketInformation = DownloadTextString("market-information", uri, DownloadRetries, DownloadTimeout, referer);
+            string marketInformation = DownloadTextString("market-information", uri, DownloadRetries, DownloadTimeout, referer, userAgent);
             if (string.IsNullOrEmpty(marketInformation))
                 return;
 
@@ -549,7 +549,7 @@ namespace mbdt.Euronext
         /// <summary>
         /// Normalizes and enriches the element.
         /// </summary>
-        internal static void EnrichFundElement(this XElement xel)
+        internal static void EnrichFundElement(this XElement xel, string userAgent)
         {
             // <instrument vendor="Euronext"
             //     mep="AMS" mic="XAMS" isin="NL0006259996" symbol="AWAF" name="ACH WERELD AANDFD3" type="fund"
@@ -560,7 +560,7 @@ namespace mbdt.Euronext
             // </instrument>
 
             xel.NormalizeFundElement();
-            //xel.EnrichSearchInstrument(EuronextInstrumentXml.Fund);
+            //xel.EnrichSearchInstrument(EuronextInstrumentXml.Fund, string userAgent);
             XElement xelFund = xel.Element(EuronextInstrumentXml.Fund);
 
             const string uriFormat = "https://live.euronext.com/en/product/funds/{0}-{1}/market-information";
@@ -569,7 +569,7 @@ namespace mbdt.Euronext
             string mic = xel.AttributeValue(EuronextInstrumentXml.Mic);
             string uri = string.Format(uriFormat, isin, mic);
             string referer = string.Format(refererFormat, isin, mic);
-            string marketInformation = DownloadTextString("market-information", uri, DownloadRetries, DownloadTimeout, referer);
+            string marketInformation = DownloadTextString("market-information", uri, DownloadRetries, DownloadTimeout, referer, userAgent);
             if (string.IsNullOrEmpty(marketInformation))
                 return;
 
@@ -613,7 +613,7 @@ namespace mbdt.Euronext
         /// <summary>
         /// Normalizes and enriches the iNAV element.
         /// </summary>
-        internal static void EnrichInavElement(this XElement xel)
+        internal static void EnrichInavElement(this XElement xel, string userAgent)
         {
             // <instrument vendor="Euronext"
             //     mep="PAR" isin="QS0011161385" symbol="INC33" name="AMUNDI C33 INAV" type="inav"
@@ -626,7 +626,7 @@ namespace mbdt.Euronext
             // </instrument>
 
             xel.NormalizeInavElement();
-            //xel.EnrichSearchInstrument(EuronextInstrumentXml.Inav);
+            //xel.EnrichSearchInstrument(EuronextInstrumentXml.Inav, userAgent);
         }
         #endregion
 
@@ -741,7 +741,7 @@ namespace mbdt.Euronext
         /// <c>WhatType</c> can be: index, inav, stock, etf, etv, fund.
         /// If <c>whatType</c> is null or empty, all types mentioned above will be searched.
         /// </summary>
-        internal static bool SearchFirstInstrument(string what, string whatType, out string isin, out string mic, out string micName, out string symbol, out string name, out string type)
+        internal static bool SearchFirstInstrument(string what, string whatType, out string isin, out string mic, out string micName, out string symbol, out string name, out string type, string userAgent = null)
         {
             string uri, referer;
             isin = null;
@@ -795,7 +795,7 @@ namespace mbdt.Euronext
                     break;
                 }
             }
-            string searchSheet = DownloadTextString("search-sheet", uri, DownloadRetries, DownloadTimeout, referer);
+            string searchSheet = DownloadTextString("search-sheet", uri, DownloadRetries, DownloadTimeout, referer, userAgent);
             if (string.IsNullOrEmpty(searchSheet))
                 return false;
             if (searchSheet.Contains("No Instrument corresponds to your search"))
@@ -947,7 +947,7 @@ namespace mbdt.Euronext
         #endregion
 
         #region EnrichSearchInstrument
-        internal static void EnrichSearchInstrument(this XElement xel, string type = null)
+        internal static void EnrichSearchInstrument(this XElement xel, string type = null, string userAgent = null)
         {
             string isin = xel.AttributeValue(EuronextInstrumentXml.Isin);
             string symbol = xel.AttributeValue(EuronextInstrumentXml.Symbol);
@@ -969,7 +969,7 @@ namespace mbdt.Euronext
                     type = xel.AttributeValue(EuronextInstrumentXml.Type);
                 if ("" == type)
                     type = "All";
-                if (SearchFirstInstrument(what, type, out var searchIsin, out var searchMic, out var searchMicName, out var searchSymbol, out var searchName, out var searchType))
+                if (SearchFirstInstrument(what, type, out var searchIsin, out var searchMic, out var searchMicName, out var searchSymbol, out var searchName, out var searchType, userAgent))
                 {
                     if (!string.IsNullOrEmpty(searchIsin) && "" == isin)
                         xel.AttributeValue(EuronextInstrumentXml.Isin, searchIsin);

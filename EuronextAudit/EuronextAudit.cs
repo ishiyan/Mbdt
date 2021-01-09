@@ -44,7 +44,7 @@ namespace mbdt.EuronextAudit
             foreach (var xel in xelist)
             {
                 xel.NormalizeElement(false);
-                xel.EnrichElement();
+                xel.EnrichElement(Properties.Settings.Default.UserAgent);
                 if (++i % 10 == 0)
                         xdoc.Save(indexPath, SaveOptions.None);
             }

@@ -356,7 +356,7 @@ namespace mbdt.Euronext
         /// <param name="approvedIndexPath">Approved index path. May be null.</param>
         /// <param name="discoveredIndexPath">Discovered index path. May be null.</param>
         /// <param name="deadIndexPath">Dead index path. May be null.</param>
-        internal static void PerformSearchScannning(bool allowAll, bool allowUpdateName, string approvedIndexPath, string discoveredIndexPath, string deadIndexPath)
+        internal static void PerformSearchScanning(bool allowAll, bool allowUpdateName, string approvedIndexPath, string discoveredIndexPath, string deadIndexPath)
         {
             if (!string.IsNullOrEmpty(approvedIndexPath))
                 Scan(approvedIndexPath, "approved", allowAll, allowUpdateName);
@@ -365,7 +365,7 @@ namespace mbdt.Euronext
             if (!string.IsNullOrEmpty(deadIndexPath))
                 Scan(deadIndexPath, "dead", allowAll, allowUpdateName);
         }
-        private static void Scan(string indexPath, string indexType, bool allowAll = true, bool allowUpdateName = true)
+        private static void Scan(string indexPath, string indexType, bool allowAll = true, bool allowUpdateName = true, string userAgent = null)
         {
             var searchResultList = new List<string>();
             DateTime dateTime = DateTime.Now;
@@ -381,7 +381,7 @@ namespace mbdt.Euronext
             int i = 10;
             foreach (var xel in xelist)
             {
-                xel.NormalizeElement(false);
+                xel.NormalizeElement(false, userAgent);
                 
                 string attr = xel.AttributeValue(EuronextInstrumentXml.FoundInSearch);
                 if (attr != "true")

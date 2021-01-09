@@ -21,13 +21,13 @@ namespace mbdt.EuronextEnrich
             int i = 10;
             foreach (var xel in xelist)
             {
-                xel.NormalizeElement(false);
+                xel.NormalizeElement(false, Properties.Settings.Default.UserAgent);
 
                 XAttribute attr = xel.Attribute("foo");
                 if (null != attr)
                     attr.Remove();
                 string isin, mic, micName, symbol, name, type;
-                if (!EuronextInstrumentEnrichment.SearchFirstInstrument(xel.AttributeValue(EuronextInstrumentXml.Isin), xel.AttributeValue(EuronextInstrumentXml.Type), out isin, out mic, out micName, out symbol, out name, out type))
+                if (!EuronextInstrumentEnrichment.SearchFirstInstrument(xel.AttributeValue(EuronextInstrumentXml.Isin), xel.AttributeValue(EuronextInstrumentXml.Type), out isin, out mic, out micName, out symbol, out name, out type, Properties.Settings.Default.UserAgent))
                 {
                     xel.SetAttributeValue(EuronextInstrumentXml.FoundInSearch, "false");
                 }
@@ -49,7 +49,7 @@ namespace mbdt.EuronextEnrich
                     if (s == "")
                         s = "true";
                     xel.SetAttributeValue(EuronextInstrumentXml.FoundInSearch, s);
-                    xel.EnrichElement();
+                    xel.EnrichElement(Properties.Settings.Default.UserAgent);
                 }
 
                 list.Clear();

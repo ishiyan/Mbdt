@@ -142,10 +142,10 @@ namespace mbdt.Euronext
         #endregion
 
         #region NormalizeElement
-        internal static void NormalizeElement(this XElement xel, bool enrichSearch = true)
+        internal static void NormalizeElement(this XElement xel, bool enrichSearch = true, string userAgent = null)
         {
             if (enrichSearch)
-                xel.EnrichSearchInstrument();
+                xel.EnrichSearchInstrument(userAgent);
             string type = xel.AttributeValue(Type);
             if ("" == type)
                 return;

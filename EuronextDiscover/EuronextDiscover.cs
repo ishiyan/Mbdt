@@ -36,7 +36,7 @@ namespace mbdt.EuronextDiscover
 
             DateTime dateTime = DateTime.Now;
             Dictionary<string, EuronextActualInstruments.InstrumentInfo> actualInstrumentsDictionary =
-                EuronextActualInstruments.Fetch(downloadPath);
+                EuronextActualInstruments.Fetch(downloadPath, userAgent: Properties.Settings.Default.UserAgent);
 
             foreach (var v in EuronextActualInstruments.UnknownMicDictionary)
             {
@@ -101,28 +101,28 @@ namespace mbdt.EuronextDiscover
                     switch (ii.Type)
                     {
                         case EuronextInstrumentXml.Index:
-                            xelNew.EnrichIndexElement();
+                            xelNew.EnrichIndexElement(Properties.Settings.Default.UserAgent);
                             break;
                         case EuronextInstrumentXml.Stock:
-                            xelNew.EnrichStockElement();
+                            xelNew.EnrichStockElement(Properties.Settings.Default.UserAgent);
                             break;
                         case EuronextInstrumentXml.Etv:
-                            xelNew.EnrichEtvElement();
+                            xelNew.EnrichEtvElement(Properties.Settings.Default.UserAgent);
                             break;
                         case EuronextInstrumentXml.Etf:
-                            xelNew.EnrichEtfElement();
+                            xelNew.EnrichEtfElement(Properties.Settings.Default.UserAgent);
                             XElement xelInav = xelNew.InavElementFromEtf();
                             if (null != xelInav)
                             {
-                                xelInav.EnrichInavElement();
+                                xelInav.EnrichInavElement(Properties.Settings.Default.UserAgent);
                                 if (xel != null) xel.Add(xelInav);
                             }
                             break;
                         case EuronextInstrumentXml.Fund:
-                            xelNew.EnrichFundElement();
+                            xelNew.EnrichFundElement(Properties.Settings.Default.UserAgent);
                             break;
                         default:
-                            xelNew.EnrichSearchInstrument();
+                            xelNew.EnrichSearchInstrument(userAgent: Properties.Settings.Default.UserAgent);
                             break;
                     }
 

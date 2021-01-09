@@ -7,7 +7,6 @@ using System.IO;
 using System.Net;
 using System.Globalization;
 using System.Threading;
-using mbdt.EuronextDiscover.Properties;
 using mbdt.Utils;
 
 namespace mbdt.Euronext
@@ -738,7 +737,7 @@ namespace mbdt.Euronext
         #endregion
 
         #region DownloadAndParse
-        private static void DownloadAndParse(string type, string uri, string referer, string folderPath, string fileName, string userAgent = null)
+        private static void DownloadAndParse(string type, string uri, string referer, string folderPath, string fileName, string userAgent = defaultUserAgent)
         {
             const int downloadMinimalLength = 2;
             int totalRecords = 0;
@@ -761,7 +760,7 @@ namespace mbdt.Euronext
         /// <param name="downloadPath">The folder to download to.</param>
         /// <param name="zipDownloadPath">Whether to zip downloaded folder.</param>
         /// <param name="deleteDownloadPath">Whether to delete downloaded folder.</param>
-        internal static Dictionary<string, InstrumentInfo> Fetch(string downloadPath, bool zipDownloadPath = true, bool deleteDownloadPath = true)
+        internal static Dictionary<string, InstrumentInfo> Fetch(string downloadPath, bool zipDownloadPath = true, bool deleteDownloadPath = true, string userAgent = null)
         {
             DateTime dateTime = DateTime.Now;
             string separator = Path.DirectorySeparatorChar.ToString(CultureInfo.InvariantCulture);
@@ -784,7 +783,7 @@ namespace mbdt.Euronext
             instrumentInfoDictionary = new Dictionary<string, InstrumentInfo>();
             foreach (var category in categoryList)
             {
-                DownloadAndParse(category.Type, category.Uri, category.Referer, folderPath, category.FileName, Settings.Default.UserAgent);
+                DownloadAndParse(category.Type, category.Uri, category.Referer, folderPath, category.FileName, userAgent);
             }
 
             if (zipDownloadPath)
