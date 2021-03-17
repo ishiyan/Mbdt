@@ -96,6 +96,9 @@ Jun 2021	ESM21         20 Mar 2020  18 Jun 2021   18 Jun 2021 10 Jun 2021
 Sep 2021	ESU21         19 Jun 2020  17 Sep 2021   17 Sep 2021 09 Sep 2021
 Dec 2021	ESZ21         18 Sep 2020  17 Dec 2021   17 Dec 2021 09 Dec 2021
 
+Mar 2022	ESH22         18 Dec 2020  18 Mar 2022   18 Mar 2022 10 Mar 2022
+Jun 2022	ESM22         19 Mar 2021  17 Jun 2022   17 Jun 2022 09 Jun 2022
+
 Roll dates for the upcoming listed Equity Index quarterly cycle futures contracts:
 
 Year	Month	Expiration	Rollover	NikkeiExpiration	NikkeiRollover

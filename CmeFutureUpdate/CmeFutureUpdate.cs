@@ -167,8 +167,9 @@ namespace CmeFutureUpdate
                    new SeriesEntry { Code="ESM21", Month = "JUN 2021", MonthShortcut="JUN-21", FirstTradeDate=new DateTime(2020,  3, 20), LastTradeDate=new DateTime(2021,  6, 18), SettlementDate=new DateTime(2021,  6, 18), RolloverDate=new DateTime(2021,  6, 10)},
                    new SeriesEntry { Code="ESU21", Month = "SEP 2021", MonthShortcut="SEP-21", FirstTradeDate=new DateTime(2020,  6, 19), LastTradeDate=new DateTime(2021,  9, 17), SettlementDate=new DateTime(2021,  9, 17), RolloverDate=new DateTime(2021,  9,  9)},
                    new SeriesEntry { Code="ESZ21", Month = "DEC 2021", MonthShortcut="DEC-21", FirstTradeDate=new DateTime(2020,  9, 18), LastTradeDate=new DateTime(2021,  12, 17), SettlementDate=new DateTime(2021,  12, 17), RolloverDate=new DateTime(2021,  12,  9)},
-                   new SeriesEntry { Code="ESH22", Month = "MAR 2022", MonthShortcut="MAR-22", FirstTradeDate=new DateTime(2020, 12, 18), LastTradeDate=new DateTime(2022,   3, 18), SettlementDate=new DateTime(2022,   3, 18), RolloverDate=new DateTime(2022,   3,  10)}//,
-               },
+                   new SeriesEntry { Code="ESH22", Month = "MAR 2022", MonthShortcut="MAR-22", FirstTradeDate=new DateTime(2020, 12, 18), LastTradeDate=new DateTime(2022,   3, 18), SettlementDate=new DateTime(2022,   3, 18), RolloverDate=new DateTime(2022,   3,  10)},
+                   new SeriesEntry { Code="ESM22", Month = "JUN 2022", MonthShortcut="JUN-22", FirstTradeDate=new DateTime(2021, 3, 19), LastTradeDate=new DateTime(2022,   6, 17), SettlementDate=new DateTime(2022,   3, 18), RolloverDate=new DateTime(2022,   6,  9)}//,
+                },
                TimeSlotList = new List<TimeSlot>
                {
                    new TimeSlot { Id="17", DayDelta = -1},
