@@ -17,7 +17,7 @@ namespace EstrUpdate
             internal double Estr;
         }
 
-        private static IEnumerable<Rate> Fetch()
+        private static List<Rate> Fetch()
         {
             const string url = "https://www.ecb.europa.eu/stats/financial_markets_and_interest_rates/euro_short-term_rate/html/index.en.html";
             var list = new List<Rate>(1);
@@ -42,48 +42,73 @@ namespace EstrUpdate
             }
             using (var streamReader = new StreamReader(responseStream))
             {
-                const string pattern1 = "<li><strong>Rate <span class=\"floatRight\">";
-                const string pattern2 = "</span></strong></li>";
-                const string pattern3 = "<li class=\"ecb-small\">Reference date <span class=\"floatRight\">";
-                const string pattern4 = "</span></li>";
+                const string pattern1 = "<th><strong>Rate</strong></th>";
+                const string pattern2 = "<td><strong>";
+                const string pattern3 = "</strong></td>";
+                const string pattern4 = "<td>";
+                const string pattern5 = "</td>";
                 string line = streamReader.ReadLine();
                 while (null != line)
                 {
-                    int i = line.IndexOf(pattern1, StringComparison.Ordinal); // <li><strong>Rate <span class="floatRight">-0.548</span></strong></li>
+                    int i = line.IndexOf(pattern1, StringComparison.Ordinal); // <strong>Rate</strong>
                     if (-1 < i)
                     {
                         Trace.TraceInformation(">" + line);
-                        string rate = line.Substring(i + pattern1.Length);
-                        Trace.TraceInformation(">" + rate);
-                        i = rate.IndexOf(pattern2, StringComparison.Ordinal);
+                        line = streamReader.ReadLine();
+                        if (line == null)
+                        {
+                            line = string.Empty;
+                        }
+                        Trace.TraceInformation(">" + line);
+                        i = line.IndexOf(pattern2, StringComparison.Ordinal);
                         if (i < 0)
                         {
                             Trace.TraceError(errorFormat, line, pattern2);
+                            return list;
+                        }
+                        string rate = line.Substring(i + pattern2.Length);
+                        i = rate.IndexOf(pattern3, StringComparison.Ordinal);
+                        if (i < 0)
+                        {
+                            Trace.TraceError(errorFormat, rate, pattern3);
                             return list;
                         }
                         rate = rate.Substring(0, i);
                         rate = rate.Replace(",", ".");
                         Trace.TraceInformation(">" + rate);
 
-                        line = streamReader.ReadLine(); // <li class="ecb-small">Reference date <span class="floatRight">24-10-2019</span></li>
+                        line = streamReader.ReadLine(); // </tr>
                         if (null == line)
                         {
                             Trace.TraceError("line is null");
                             return list;
                         }
-                        Trace.TraceInformation(">" + line);
-                        i = line.IndexOf(pattern3, StringComparison.Ordinal);
-                        if (i < 0)
+                        line = streamReader.ReadLine(); // <tr>
+                        if (null == line)
                         {
-                            Trace.TraceError(errorFormat, line, pattern3);
+                            Trace.TraceError("line is null");
                             return list;
                         }
-                        string date = line.Substring(i + pattern3.Length);
-                        Trace.TraceInformation(">" + date);
-                        i = date.IndexOf(pattern4, StringComparison.Ordinal);
+                        line = streamReader.ReadLine(); // <th>Reference date</th>
+                        if (null == line)
+                        {
+                            Trace.TraceError("line is null");
+                            return list;
+                        }
+                        line = streamReader.ReadLine(); // <td>12-04-2021</td>
+                        Trace.TraceInformation(">" + line);
+                        i = line.IndexOf(pattern4, StringComparison.Ordinal);
                         if (i < 0)
                         {
                             Trace.TraceError(errorFormat, line, pattern4);
+                            return list;
+                        }
+                        string date = line.Substring(i + pattern4.Length);
+                        Trace.TraceInformation(">" + date);
+                        i = date.IndexOf(pattern5, StringComparison.Ordinal);
+                        if (i < 0)
+                        {
+                            Trace.TraceError(errorFormat, date, pattern5);
                             return list;
                         }
                         date = date.Substring(0, i);
@@ -120,38 +145,41 @@ namespace EstrUpdate
             Data.DefaultMaximumReadBufferBytes = Properties.Settings.Default.Hdf5MaxReadBufferBytes;
             Trace.TraceInformation("=======================================================================================");
             Trace.TraceInformation("Started: {0}", DateTime.Now);
-            try
+            List<Rate> list = Fetch();
+            if (list.Count > 0)
             {
-                string h5File = Properties.Settings.Default.RepositoryFile;
-                var fileInfo = new FileInfo(h5File);
-                string directoryName = fileInfo.DirectoryName;
-                if (null != directoryName && !Directory.Exists(directoryName))
-                    Directory.CreateDirectory(directoryName);
-                repository = Repository.OpenReadWrite(h5File, true, Properties.Settings.Default.Hdf5CorkTheCache);
-                instrument = repository.Open(Properties.Settings.Default.RepositoryRoot, true);
-                scalarData = instrument.OpenScalar(ScalarKind.Default, DataTimeFrame.Day1, true);
-                IEnumerable<Rate> list = Fetch();
-                scalarList.Clear();
-                foreach (var r in list)
+                try
                 {
-                    scalar.dateTimeTicks = r.DateTime.Ticks;
-                    scalar.value = r.Estr;
-                    scalarList.Add(scalar);
+                    string h5File = Properties.Settings.Default.RepositoryFile;
+                    var fileInfo = new FileInfo(h5File);
+                    string directoryName = fileInfo.DirectoryName;
+                    if (null != directoryName && !Directory.Exists(directoryName))
+                        Directory.CreateDirectory(directoryName);
+                    repository = Repository.OpenReadWrite(h5File, true, Properties.Settings.Default.Hdf5CorkTheCache);
+                    instrument = repository.Open(Properties.Settings.Default.RepositoryRoot, true);
+                    scalarData = instrument.OpenScalar(ScalarKind.Default, DataTimeFrame.Day1, true);
+                    scalarList.Clear();
+                    foreach (var r in list)
+                    {
+                        scalar.dateTimeTicks = r.DateTime.Ticks;
+                        scalar.value = r.Estr;
+                        scalarList.Add(scalar);
+                    }
+                    scalarData.Add(scalarList, DuplicateTimeTicks.Skip, true);
                 }
-                scalarData.Add(scalarList, DuplicateTimeTicks.Skip, true);
+                catch (Exception e)
+                {
+                    Trace.TraceError("Exception: [{0}]", e.Message);
+                }
+                finally
+                {
+                    scalarData?.Flush();
+                    scalarData?.Close();
+                    instrument?.Close();
+                    repository?.Close();
+                }
+                Trace.TraceInformation("Finished: {0}", DateTime.Now);
             }
-            catch (Exception e)
-            {
-                Trace.TraceError("Exception: [{0}]", e.Message);
-            }
-            finally
-            {
-                scalarData?.Flush();
-                scalarData?.Close();
-                instrument?.Close();
-                repository?.Close();
-            }
-            Trace.TraceInformation("Finished: {0}", DateTime.Now);
         }
     }
 }
