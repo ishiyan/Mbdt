@@ -208,6 +208,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortCsv", "SortCsv\SortCsv.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EuronextDataDateRange", "EuronextDataDateRange\EuronextDataDateRange.csproj", "{B22A1A81-0AF5-4016-BA45-6AF4B5F7F55F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RannForexDownload", "RannForexDownload\RannForexDownload.csproj", "{48ABEF65-A069-49BA-A474-B817334914BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -467,6 +469,10 @@ Global
 		{B22A1A81-0AF5-4016-BA45-6AF4B5F7F55F}.Debug|x64.Build.0 = Debug|x64
 		{B22A1A81-0AF5-4016-BA45-6AF4B5F7F55F}.Release|x64.ActiveCfg = Release|x64
 		{B22A1A81-0AF5-4016-BA45-6AF4B5F7F55F}.Release|x64.Build.0 = Release|x64
+		{48ABEF65-A069-49BA-A474-B817334914BE}.Debug|x64.ActiveCfg = Debug|x64
+		{48ABEF65-A069-49BA-A474-B817334914BE}.Debug|x64.Build.0 = Debug|x64
+		{48ABEF65-A069-49BA-A474-B817334914BE}.Release|x64.ActiveCfg = Release|x64
+		{48ABEF65-A069-49BA-A474-B817334914BE}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
