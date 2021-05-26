@@ -163,7 +163,7 @@ namespace CmeFutureUpdate
                  //new SeriesEntry { Code="ESM20", Month = "JUN 2020", MonthShortcut="JUN-20", FirstTradeDate=new DateTime(2019,  3, 17), LastTradeDate=new DateTime(2020,  6, 19), SettlementDate=new DateTime(2020,  6, 19), RolloverDate=new DateTime(2020,  6, 11)},
                  //new SeriesEntry { Code="ESU20", Month = "SEP 2020", MonthShortcut="SEP-20", FirstTradeDate=new DateTime(2019,  6, 21), LastTradeDate=new DateTime(2020,  9, 18), SettlementDate=new DateTime(2020,  9, 18), RolloverDate=new DateTime(2020,  9, 10)},
                  //new SeriesEntry { Code="ESZ20", Month = "DEC 2020", MonthShortcut="DEC-20", FirstTradeDate=new DateTime(2019,  9, 20), LastTradeDate=new DateTime(2020, 12, 18), SettlementDate=new DateTime(2020, 12, 18), RolloverDate=new DateTime(2020, 12, 10)},
-                   new SeriesEntry { Code="ESH21", Month = "MAR 2021", MonthShortcut="MAR-21", FirstTradeDate=new DateTime(2019, 12, 20), LastTradeDate=new DateTime(2021,  3, 19), SettlementDate=new DateTime(2021,  3, 19), RolloverDate=new DateTime(2021,  3, 11)},
+                 //new SeriesEntry { Code="ESH21", Month = "MAR 2021", MonthShortcut="MAR-21", FirstTradeDate=new DateTime(2019, 12, 20), LastTradeDate=new DateTime(2021,  3, 19), SettlementDate=new DateTime(2021,  3, 19), RolloverDate=new DateTime(2021,  3, 11)},
                    new SeriesEntry { Code="ESM21", Month = "JUN 2021", MonthShortcut="JUN-21", FirstTradeDate=new DateTime(2020,  3, 20), LastTradeDate=new DateTime(2021,  6, 18), SettlementDate=new DateTime(2021,  6, 18), RolloverDate=new DateTime(2021,  6, 10)},
                    new SeriesEntry { Code="ESU21", Month = "SEP 2021", MonthShortcut="SEP-21", FirstTradeDate=new DateTime(2020,  6, 19), LastTradeDate=new DateTime(2021,  9, 17), SettlementDate=new DateTime(2021,  9, 17), RolloverDate=new DateTime(2021,  9,  9)},
                    new SeriesEntry { Code="ESZ21", Month = "DEC 2021", MonthShortcut="DEC-21", FirstTradeDate=new DateTime(2020,  9, 18), LastTradeDate=new DateTime(2021,  12, 17), SettlementDate=new DateTime(2021,  12, 17), RolloverDate=new DateTime(2021,  12,  9)},
@@ -1066,7 +1066,8 @@ namespace CmeFutureUpdate
         private static void Download(Future future, string yyyymmdd)
         {
             Trace.TraceInformation("Downloading {0}, {1}, [{2}]", future.Symbol, future.Name, future.Uri);
-            const string uriFormat = "http://www.cmegroup.com/CmeWS/da/TimeandSales/V1/Report/Venue/G/Exchange/XCME/FOI/FUT/Product/{0}/TimeSlot/{1}/ContractMonth/{2}";
+            // https://www.cmegroup.com/CmeWS/da/TimeandSales/V1/Report/Venue/G/Exchange/XCME/FOI/FUT/Product/ES/TimeSlot/17/ContractMonth/JUN-21
+            const string uriFormat = "https://www.cmegroup.com/CmeWS/da/TimeandSales/V1/Report/Venue/G/Exchange/XCME/FOI/FUT/Product/{0}/TimeSlot/{1}/ContractMonth/{2}";
             string[] splitted = null;
             string str = Properties.Settings.Default.SkipDownloadSeriesCodes;
             if (!string.IsNullOrEmpty(str))
@@ -1095,7 +1096,7 @@ namespace CmeFutureUpdate
                 {
                     string uri = string.Format(CultureInfo.InvariantCulture, uriFormat, future.Symbol, slot.Id, seriesEntry.MonthShortcut);
                     string file = seriesEntry.FilePath(future, yyyymmdd, slot.Id);
-                    Downloader.Download(uri, file,
+                    Downloader2.Download(uri, file,
                         Properties.Settings.Default.DownloadMinimalLength, Properties.Settings.Default.DownloadOverwriteExisting,
                         Properties.Settings.Default.DownloadRetries, Properties.Settings.Default.DownloadTimeout, future.Referer,
                         Properties.Settings.Default.UserAgent);

@@ -15,7 +15,7 @@
       <Value Profile="(Default)">3</Value>
     </Setting>
     <Setting Name="UserAgent" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">Mozilla/5.0 (Windows NT 6.1; WOW64; rv:20.0) Gecko/20100101 Firefox/20.0</Value>
+      <Value Profile="(Default)">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36</Value>
     </Setting>
     <Setting Name="Hdf5CorkTheCache" Type="System.Boolean" Scope="Application">
       <Value Profile="(Default)">True</Value>

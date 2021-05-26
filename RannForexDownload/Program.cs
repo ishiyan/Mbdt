@@ -11,7 +11,7 @@ namespace mbdt.RannForexDownload
             int daysBack = Properties.Settings.Default.DaysBack;
             DateTime startDate = Properties.Settings.Default.StartDate;
             if (startDate.Year < 2000)
-                startDate = DateTime.Now.AddDays(-3);
+                startDate = DateTime.Now.AddDays(-1);
             Trace.TraceInformation("=======================================================================================");
             Trace.TraceInformation("Download to [{0}] {1} days back starting from [{2}]", Properties.Settings.Default.DownloadDir, daysBack, startDate.ToShortDateString());
             if (!RannForexDownload.Download(startDate, daysBack))
