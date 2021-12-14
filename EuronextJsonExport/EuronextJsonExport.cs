@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -32,8 +33,9 @@ namespace mbdt.EuronextJsonExport
         private static readonly List<string> EtfFractionList = new List<string>();
         private static readonly List<string> EtfIndexFamilyList = new List<string>();
         private static readonly List<string> EtfTotalExpenseRatioList = new List<string>();
+        private static readonly TextInfo TextInfo = CultureInfo.InvariantCulture.TextInfo;
 
-        internal static void JsonExportTask(string xmlPath)
+        internal static void JsonExportTask(string xmlPath, string jsonPath)
         {
             XDocument xdoc = XDocument.Load(xmlPath
                 /*, LoadOptions.PreserveWhitespace | LoadOptions.SetLineInfo*/);
@@ -55,7 +57,6 @@ namespace mbdt.EuronextJsonExport
             }
             jsonList.Add("]");
 
-            var jsonPath = string.Concat(xmlPath, ".exported.json");
             File.WriteAllLines(jsonPath, jsonList);
 
             foreach (var el in TradingModesList)
@@ -109,7 +110,7 @@ namespace mbdt.EuronextJsonExport
             sb.Append($"\"symbol\":\"{symbol}\"");
             sb.Append($",\"name\":\"{name}\"");
             sb.Append($",\"type\":\"{type}\"");
-            sb.Append($",\"mic\":\"{mic}\"");
+            sb.Append($",\"mic\":\"{MapMic(mic)}\"");
             sb.Append($",\"isin\":\"{isin}\"");
 
             switch (type)
@@ -157,7 +158,7 @@ namespace mbdt.EuronextJsonExport
             sb.AppendIfExists("tradingMode", MapTradingMode(tradingMode));
             sb.AppendIfExists("cfi", MapCfi(cfi));
             sb.AppendIfExists("icb", MapIcb(icb));
-            sb.AppendIfExists("shares", MapShares(shares));
+            sb.AppendIfExistsNumber("sharesOutstanding", MapShares(shares));
             sb.Append("}");
 
 
@@ -218,7 +219,7 @@ namespace mbdt.EuronextJsonExport
             sb.AppendIfExists("tradingMode", MapTradingMode(tradingMode));
             sb.AppendIfExists("cfi", MapCfi(cfi));
             sb.AppendIfExists("issuer", MapIssuer(issuer));
-            sb.AppendIfExists("sharesOutstanding", MapShares(shares));
+            sb.AppendIfExistsNumber("sharesOutstanding", MapShares(shares));
             sb.Append("}");
 
             if (!string.IsNullOrWhiteSpace(tradingMode) && !TradingModesList.Contains(tradingMode))
@@ -247,7 +248,7 @@ namespace mbdt.EuronextJsonExport
             sb.AppendIfExists("expenseRatio", MapExpenseRatio(expenseRatio));
             sb.AppendIfExists("dividendFrequency", MapDividendFrequency(dividendFrequency));
             sb.AppendIfExists("issuer", MapIssuer(issuer));
-            sb.AppendIfExists("sharesOutstanding", MapShares(shares));
+            sb.AppendIfExistsNumber("sharesOutstanding", MapShares(shares));
             sb.Append("}");
 
             if (!string.IsNullOrWhiteSpace(tradingMode) && !TradingModesList.Contains(tradingMode))
@@ -307,7 +308,7 @@ namespace mbdt.EuronextJsonExport
             {
                 bool comma = false;
                 sb.Append(",\"inav\":{");
-                sb.AppendIfExists("mic", inavMic, false);
+                sb.AppendIfExists("mic", MapMic(inavMic), false);
                 if (!string.IsNullOrWhiteSpace(inavMic))
                     comma = true;
                 sb.AppendIfExists("isin", inavIsin, comma);
@@ -327,7 +328,7 @@ namespace mbdt.EuronextJsonExport
             {
                 bool comma = false;
                 sb.Append(",\"underlying\":{");
-                sb.AppendIfExists("mic", underMic, false);
+                sb.AppendIfExists("mic", MapMic(underMic), false);
                 if (!string.IsNullOrWhiteSpace(underMic))
                     comma = true;
                 sb.AppendIfExists("isin", underIsin, comma);
@@ -391,6 +392,13 @@ namespace mbdt.EuronextJsonExport
                 sb.Append("}");
             }
             sb.Append("}");
+        }
+
+        private static string MapMic(string value)
+        {
+            if (string.IsNullOrWhiteSpace(value))
+                return null;
+            return value.ToLowerInvariant(); // TextInfo.ToTitleCase(value.ToLowerInvariant())
         }
 
         private static string MapCurrency(string value)
@@ -584,6 +592,13 @@ namespace mbdt.EuronextJsonExport
             var str = comma ? "," : "";
             if (!string.IsNullOrWhiteSpace(value))
                 sb.Append($"{str}\"{name}\":\"{value}\"");
+        }
+
+        private static void AppendIfExistsNumber(this StringBuilder sb, string name, string value, bool comma = true)
+        {
+            var str = comma ? "," : "";
+            if (!string.IsNullOrWhiteSpace(value))
+                sb.Append($"{str}\"{name}\":{value}");
         }
     }
 }
