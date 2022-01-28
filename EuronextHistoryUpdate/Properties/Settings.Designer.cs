@@ -12,7 +12,7 @@ namespace mbdt.EuronextHistoryUpdate.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.2.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.0.3.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -43,7 +43,7 @@ namespace mbdt.EuronextHistoryUpdate.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("repository\\euronext\\discovered")]
+        [global::System.Configuration.DefaultSettingValueAttribute("repository\\euronext")]
         public string EndofdayDiscoveredRepositoryPath {
             get {
                 return ((string)(this["EndofdayDiscoveredRepositoryPath"]));
@@ -79,7 +79,7 @@ namespace mbdt.EuronextHistoryUpdate.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("repository\\euronext\\securities.xml")]
+        [global::System.Configuration.DefaultSettingValueAttribute("repository\\euronext\\euronext.xml")]
         public string ApprovedIndexPath {
             get {
                 return ((string)(this["ApprovedIndexPath"]));
@@ -88,7 +88,7 @@ namespace mbdt.EuronextHistoryUpdate.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("repository\\euronext\\discovered\\securities.xml")]
+        [global::System.Configuration.DefaultSettingValueAttribute("repository\\euronext\\empty.xml")]
         public string DiscoveredIndexPath {
             get {
                 return ((string)(this["DiscoveredIndexPath"]));

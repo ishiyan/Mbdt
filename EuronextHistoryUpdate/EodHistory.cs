@@ -407,6 +407,8 @@ namespace mbdt.Euronext
             bool hasVolume, hasVolumeAdjusted;
             List<Ohlcv> ohlcvList = ImportCsv2(context, out hasVolume);
             List<Ohlcv> ohlcvListAdjusted = ImportCsv2H(context, out hasVolumeAdjusted);
+            ohlcvList.Sort((p1, p2) => p1.Ticks.CompareTo(p2.Ticks));
+            ohlcvListAdjusted.Sort((p1, p2) => p1.Ticks.CompareTo(p2.Ticks));
 
             if ((null == ohlcvList || 1 > ohlcvList.Count) && (null == ohlcvListAdjusted || 1 > ohlcvListAdjusted.Count))
                 return false;
@@ -725,13 +727,21 @@ namespace mbdt.Euronext
             // This is unadjusted history.
             // For example, Postman
             // POST https://live.euronext.com/en/ajax/AwlHistoricalPrice/getFullDownloadAjax/NL0012866412-XAMS
-            // body: format=csv&decimal_separator=.&date_form=d/m/Y&op=
+            // body: format=csv&decimal_separator=.&date_form=d/m/Y&op=  &adjusted=&base100=&startdate=2020-01-29&enddate=2022-01-28
             // Returns
+            //
+            // "Historical Data"
+            // "From 2020-01-29 to 2022-01-28"
+            // FR0010220475
+            // Date; Open; High; Low; Close; "Number of Shares"; "Number of Trades"; Turnover; vwap
+            // 31 / 12 / 2021; 31.17; 31.22; 30.72; 31.22; 249587; 1653; 7760446; 31.0932
+            //
             // 07/05/2018; 31.70; 31.90; 30.98; 31.44; 503,155; 3,195; 15,811,267
             // 04/05/2018; 31.94; 31.94; 30.66; 31.30; 576,901; 4,395; 17,975,555
             // 03/05/2018; 62.00; 62.00; 59.80; 60.85; 445,062; 4,398; 27,125,753
             // 02/05/2018; 58.40; 61.85; 57.25; 61.65; 1,031,472; 7,189; 62,503,556
             // BESI had a 1:2 split on 04/05/2018
+            postDictionary.Add("adjusted", "false");
             if (!Downloader.DownloadPost(uri, s, EuronextInstrumentContext.HistoryDownloadMinimalLength, EuronextInstrumentContext.HistoryDownloadOverwriteExisting, EuronextInstrumentContext.DownloadRetries, EuronextInstrumentContext.DownloadTimeout, postDictionary, referer, null, "*/*"))
                 return false;
             UnpackGzip(s);
@@ -763,6 +773,7 @@ namespace mbdt.Euronext
             EuronextInstrumentContext.VerifyFile(s);
             postDictionary.Clear();
             postDictionary.Add("nbSession", "4000");
+            // postDictionary.Add("adjusted", "true");
             if (!Downloader.DownloadPost(uri, s, EuronextInstrumentContext.HistoryDownloadMinimalLength, EuronextInstrumentContext.HistoryDownloadOverwriteExisting, EuronextInstrumentContext.DownloadRetries, EuronextInstrumentContext.DownloadTimeout, postDictionary, referer, null, "*/*"))
                 return false;
             UnpackGzip(s);
