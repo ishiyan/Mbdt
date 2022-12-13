@@ -160,6 +160,21 @@ Year	Month	Expiration	Rollover	NikkeiExpiration	NikkeiRollover
 2022	9	9/16/22         9/8/22            9/9/22        *9/6/22
 2022	12	12/16/22        12/8/22           12/9/22       12/5/22
 
+2022	12	12/16	12/12	12/9	12/5
+2023	3	3/17	3/13	3/10	3/6
+2023	6	6/16	6/12	6/9	6/5
+2023	9	9/15	9/11	9/8	9/5
+2023	12	12/15	12/11	12/8	12/4
+2024	3	3/15	3/11	3/8	3/4
+2024	6	6/21	6/21	6/14	6/10
+2024	9	9/20	9/16	9/13	9/9
+2024	12	12/20	12/16	12/13	12/9
+2025	3	3/21	3/17	3/14	3/10
+2025	6	6/20	6/16	6/13	6/9
+2025	9	9/19	9/15	9/12	9/8
+2025	12	12/19	12/15	12/12	12/8
+
+
 Time & Sales (CME Globex Futures)
 ---------------------------------
 CME Group's Time & Sales report provides the price and time of every trade executed and bids/offers conditionally represented on the previous trading day.
