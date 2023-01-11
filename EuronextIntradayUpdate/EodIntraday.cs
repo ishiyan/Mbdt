@@ -1052,9 +1052,9 @@ namespace mbdt.Euronext
             context.DownloadedPath = s;
             Dictionary<string, string> postDictionary = new Dictionary<string, string>
             {
-                {"startTime", "08:00"},
-                { "endTime", "20:00"},
-                { "nbitems", "100000"},
+                // {"startTime", "08:00"},
+                // { "endTime", "20:00"},
+                { "nbitems", "900000"},
                 { "timezone", "CET"},
                 { "date", LastWorkingDay}
             };
