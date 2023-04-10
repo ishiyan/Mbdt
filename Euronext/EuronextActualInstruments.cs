@@ -156,6 +156,13 @@ namespace mbdt.Euronext
                 new CategoryInfo
                 {
                     Type = EuronextInstrumentXml.Stock,
+                    Uri = "https://live.euronext.com/en/pd/data/stocks?mics=" + OslMics,
+                    Referer = "https://live.euronext.com/products/equities/list",
+                    FileName = "stocks_mil"
+                },
+                new CategoryInfo
+                {
+                    Type = EuronextInstrumentXml.Stock,
                     Uri = "https://live.euronext.com/en/pd/data/stocks?mics=" + LonMics1,
                     Referer = "https://live.euronext.com/products/equities/list",
                     FileName = "stocks_lon1"
@@ -223,6 +230,13 @@ namespace mbdt.Euronext
                     Uri = "https://live.euronext.com/en/pd/data/index?mics=" + OslMics,
                     Referer = "https://live.euronext.com/products/indices/list",
                     FileName = "indices_osl"
+                },
+                new CategoryInfo
+                {
+                    Type = EuronextInstrumentXml.Index,
+                    Uri = "https://live.euronext.com/en/pd/data/index?mics=" + MilMics,
+                    Referer = "https://live.euronext.com/products/indices/list",
+                    FileName = "indices_mil"
                 },
                 new CategoryInfo
                 {
@@ -298,6 +312,13 @@ namespace mbdt.Euronext
                 new CategoryInfo
                 {
                     Type = EuronextInstrumentXml.Etv,
+                    Uri = "https://live.euronext.com/en/pd/data/etv?mics=" + MilMics,
+                    Referer = "https://live.euronext.com/products/etfs/list",
+                    FileName = "etvs_mil"
+                },
+                new CategoryInfo
+                {
+                    Type = EuronextInstrumentXml.Etv,
                     Uri = "https://live.euronext.com/en/pd/data/etv?mics=" + LonMics1,
                     Referer = "https://live.euronext.com/products/etfs/list",
                     FileName = "etvs_lon1"
@@ -365,6 +386,13 @@ namespace mbdt.Euronext
                     Uri = "https://live.euronext.com/en/pd/data/track?mics=" + OslMics,
                     Referer = "https://live.euronext.com/products/etfs/list",
                     FileName = "etfs_osl"
+                },
+                new CategoryInfo
+                {
+                    Type = EuronextInstrumentXml.Etf,
+                    Uri = "https://live.euronext.com/en/pd/data/track?mics=" + MilMics,
+                    Referer = "https://live.euronext.com/products/etfs/list",
+                    FileName = "etfs_mil"
                 },
                 new CategoryInfo
                 {
@@ -440,6 +468,13 @@ namespace mbdt.Euronext
                 new CategoryInfo
                 {
                     Type = EuronextInstrumentXml.Fund,
+                    Uri = "https://live.euronext.com/en/pd/data/funds?mics=" + MilMics,
+                    Referer = "https://live.euronext.com/products/funds/list",
+                    FileName = "funds_mil"
+                },
+                new CategoryInfo
+                {
+                    Type = EuronextInstrumentXml.Fund,
                     Uri = "https://live.euronext.com/en/pd/data/funds?mics=" + LonMics1,
                     Referer = "https://live.euronext.com/products/funds/list",
                     FileName = "funds_lon1"
@@ -485,6 +520,8 @@ namespace mbdt.Euronext
                 { "XHEL", "OTH" }, { "XMAD", "OTH" }, { "XIST", "OTH" },
                 { "XESM", "DUB" }, { "XMSM", "DUB" }, {"XDUB", "DUB"},
                 { "XOSL", "OSL" }, { "XOAS", "OSL" }, { "MERK", "OSL" }, { "VPXB", "OSL" },
+                { "MTAA", "MIL" }, { "MTAH", "MIL" }, { "EXGM", "MIL" }, { "BGEM", "MIL" },
+                { "ETFP", "MIL" }, { "ATFX", "MIL" }, { "MIVX", "MIL" }
             };
             return dictionary;
         }
@@ -495,6 +532,7 @@ namespace mbdt.Euronext
         private const string LisMics = "XLIS,ALXL,ENXL";
         private const string DubMics = "XDUB,XMSM,XESM";
         private const string OslMics = "XOSL,XOAS,MERK,VPXB";
+        private const string MilMics = "MTAA,MTAH,EXGM,BGEM,ETFP,ATFX,MIVX";
         private const string LonMics1 = "XLDN,XLIF";
         private const string LonMics2 = "XLON";
         private const string OthMics1 = "XETR";

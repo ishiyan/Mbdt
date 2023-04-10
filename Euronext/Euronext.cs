@@ -17,7 +17,7 @@ namespace mbdt.Euronext
         /// <returns>True if the MEP is valid.</returns>
         public static bool IsValidMep(string mep)
         {
-            return "AMS".Equals(mep) || "PAR".Equals(mep) || "BRU".Equals(mep) || "LIS".Equals(mep) || "LON".Equals(mep) || "OTH".Equals(mep) || "OTHER".Equals(mep);
+            return "AMS".Equals(mep) || "PAR".Equals(mep) || "BRU".Equals(mep) || "LIS".Equals(mep) || "OSL".Equals(mep) || "MIL".Equals(mep) || "DUB".Equals(mep)  || "LON".Equals(mep) || "OTH".Equals(mep) || "OTHER".Equals(mep);
         }
         #endregion
 
