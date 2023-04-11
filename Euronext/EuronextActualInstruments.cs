@@ -516,7 +516,7 @@ namespace mbdt.Euronext
                 { "XLIS", "LIS" }, { "XPAR", "PAR" }, { "XHFT", "OTH" }, //{ "DLON", "LON" },
                 { "XLIF", "LON" }, { "XLDN", "LON" },
                 { "XETR", "OTH" }, { "XLON", "OTH" }, { "XMCE", "OTH" }, { "XVTX", "OTH" },
-                { "MTAA", "OTH" }, { "FRAA", "OTH" }, { "XCSE", "OTH" }, { "XSTO", "OTH" },
+                { "FRAA", "OTH" }, { "XCSE", "OTH" }, { "XSTO", "OTH" },
                 { "XHEL", "OTH" }, { "XMAD", "OTH" }, { "XIST", "OTH" },
                 { "XESM", "DUB" }, { "XMSM", "DUB" }, {"XDUB", "DUB"},
                 { "XOSL", "OSL" }, { "XOAS", "OSL" }, { "MERK", "OSL" }, { "VPXB", "OSL" },
