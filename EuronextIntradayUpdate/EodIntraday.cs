@@ -586,6 +586,7 @@ namespace mbdt.Euronext
         {
             // "tradeId":418817,"time":"17:38:45","price":"34.69","volume":"2,336","type":"Trading at last"
             // "tradeId":"-","time":"18:05:02","price":"567.41","volume":"-","type":"Closing Reference index"
+            // "tradeId":"1U9GHRNVQ","time":"17:38:45","price":"34.69","volume":"2,336","type":"Exchange Continuous"
             jdn = 0;
             tradeId = 0;
             string[] splitted = Regex.Split(str, @",""");
@@ -724,6 +725,136 @@ namespace mbdt.Euronext
             return true;
         }
 
+        private static bool ParseJson(string str, EuronextInstrumentContext context, int year, int month, int day, ref Trade trade, out int jdn, ref bool hasVolume)
+        {
+            // "tradeId":418817,"time":"17:38:45","price":"34.69","volume":"2,336","type":"Trading at last"
+            // "tradeId":"-","time":"18:05:02","price":"567.41","volume":"-","type":"Closing Reference index"
+            // "tradeId":"1U9GHRNVQ","time":"17:38:45","price":"34.69","volume":"2,336","type":"Exchange Continuous"
+            jdn = 0;
+            string[] splitted = Regex.Split(str, @",""");
+            if (5 > splitted.Length)
+            {
+                Trace.TraceError("invalid intraday json: illegal number of splitted entries in [{0}], file {1}, skipping", str, Path.GetFileName(context.DownloadedPath));
+                return false;
+            }
+
+            //string entry = splitted[0];
+            // "tradeId":"1U9GHRNVQ"
+            // "tradeId":418817
+            // "tradeId":"-"
+            //           111111
+            // 0123456789012345
+            /*if (!entry.StartsWith(@"""tradeId"":", StringComparison.OrdinalIgnoreCase))
+            {
+                Trace.TraceError("invalid intraday json: invalid [tradeId] splitted entry [{0}] in [{1}], file {2}, skipping", entry, str, Path.GetFileName(context.DownloadedPath));
+                return false;
+            }*/
+
+            string entry = splitted[1];
+            // time":"17:38:45"
+            //           111111
+            // 0123456789012345
+            if (!entry.StartsWith(@"time"":""", StringComparison.OrdinalIgnoreCase) || 16 != entry.Length || ':' != entry[9] || ':' != entry[12] || '\"' != entry[15])
+            {
+                Trace.TraceError("invalid intraday json: invalid [time] splitted entry [{0}] in [{1}], file {2}, skipping", entry, str, Path.GetFileName(context.DownloadedPath));
+                return false;
+            }
+            int hour = 10 * (entry[7] - '0') + (entry[8] - '0');
+            int minute = 10 * (entry[10] - '0') + (entry[11] - '0');
+            int second = 10 * (entry[13] - '0') + (entry[14] - '0');
+            jdn = JulianDayNumber.ToJdn(year, month, day);
+            trade.dateTimeTicks = new DateTime(year, month, day, hour, minute, second).Ticks;
+
+            entry = splitted[2];
+            // price":"1,329.39"
+            //           1111111
+            // 01234567890123456
+            if (!entry.StartsWith(@"price"":""", StringComparison.OrdinalIgnoreCase) || '\"' != entry[entry.Length - 1])
+            {
+                Trace.TraceError("invalid intraday json: invalid [price] splitted entry [{0}] in [{1}], file {2}, skipping", entry, str, Path.GetFileName(context.DownloadedPath));
+                return false;
+            }
+            entry = entry.Substring(8, entry.Length - 9); // 1,329.39
+            entry = entry.Replace(",", ""); // 1329.39
+            try
+            {
+                trade.price = double.Parse(entry, CultureInfo.InvariantCulture.NumberFormat);
+            }
+            catch (Exception)
+            {
+                Trace.TraceError("invalid intraday json: invalid [price] [{0}] in [{1}], file {2}, skipping", entry, str, Path.GetFileName(context.DownloadedPath));
+                return false;
+            }
+
+            entry = splitted[3];
+            // volume":"1,118.00"
+            // volume":"-"
+            //           11111
+            // 012345678901234
+            if (entry.StartsWith(@"volume"":""-""", StringComparison.OrdinalIgnoreCase))
+            {
+                trade.volume = 0;
+                hasVolume = false;
+            }
+            else
+            {
+                if (!entry.StartsWith(@"volume"":""", StringComparison.OrdinalIgnoreCase) || '\"' != entry[entry.Length - 1])
+                {
+                    Trace.TraceError("invalid intraday json: invalid [volume] splitted entry [{0}] in [{1}], file {2}, skipping", entry, str, Path.GetFileName(context.DownloadedPath));
+                    return false;
+                }
+                entry = entry.Substring(9, entry.Length - 10); // 1,118.00 // 0,00
+                entry = entry.Replace(",", ""); // 1118.00 // 000
+                try
+                {
+                    trade.volume = double.Parse(entry, CultureInfo.InvariantCulture.NumberFormat);
+                    if (0 >= trade.volume)
+                        hasVolume = false;
+                }
+                catch (Exception)
+                {
+                    Trace.TraceError("invalid intraday json: invalid [volume] [{0}] in [{1}], file {2}, skipping", entry, str, Path.GetFileName(context.DownloadedPath));
+                    return false;
+                }
+            }
+
+            entry = splitted[4];
+            // type":"OffBook Out of market"
+            // type":"OffBook Delta Neutral"
+            // type":"Exchange Continuous"
+            // type":"Trading at last"
+            // type":"Auction"
+            // type":"Retail Matching Facility"
+            // type":"OffBook Investment funds"
+            // type":"Options liquidation index"
+            // type":"Closing Reference index"
+            // type":"Automatic indicative index"
+            // type":"Real-time index"
+            // type":"Official opening index"
+            // type":"Valuation Trade"
+            //           111111111122
+            // 0123456789012345678901
+            if (null != entry && entry.StartsWith(@"type"":""", StringComparison.OrdinalIgnoreCase) && '\"' == entry[entry.Length - 1])
+            {
+                entry = entry.Substring(7, entry.Length - 8);
+                if (entry.StartsWith("OffBook", StringComparison.OrdinalIgnoreCase))
+                {
+                    Trace.TraceInformation("found [OffBook ...] trade [{0}] in [{1}], file {2}, skipping", entry, str, Path.GetFileName(context.DownloadedPath));
+                }
+                else if (entry.StartsWith("Automatic indicative index", StringComparison.OrdinalIgnoreCase)
+                    || entry.StartsWith("Options liquidation index", StringComparison.OrdinalIgnoreCase)
+                    || entry.StartsWith("Closing Reference index", StringComparison.OrdinalIgnoreCase))
+                {
+                    Trace.TraceInformation("found [{0}] in [{1}], file {2}, skipping", entry, str, Path.GetFileName(context.DownloadedPath));
+                }
+                else if (entry.StartsWith("Valuation Trade", StringComparison.OrdinalIgnoreCase))
+                {
+                    Trace.TraceInformation("found [{0}] in [{1}], file {2}, skipping", entry, str, Path.GetFileName(context.DownloadedPath));
+                }
+            }
+            return true;
+        }
+
         /// <summary>
         /// Imports a downloaded Euronext intraday json file into a stack containing trades.
         /// </summary>
@@ -767,19 +898,19 @@ namespace mbdt.Euronext
                     break;
                 }
 
-                int tradeId;
-                if (!ParseJson(z, context, year, month, day, ref trade, out jdn, ref hasVolume, out tradeId))
+                // int tradeId;
+                if (!ParseJson(z, context, year, month, day, ref trade, out jdn, ref hasVolume/*, out tradeId*/))
                     return null;
-                if (-2 == tradeId)
+                /*if (-2 == tradeId)
                 {
                     if (!hasNext)
                         break;
                     s = s.Substring(i + 3);
                     continue;
-                }
+                }*/
                 // if (-1 == tradeId || 0 == tradeId)
                 //    sortId = false;
-                tickList.Add(new Payload { TradeId = tradeId, Trade = trade });
+                tickList.Add(new Payload { TradeId = 0 /*tradeId*/, Trade = trade });
                 if (!hasNext)
                     break;
                 s = s.Substring(i + 3);
