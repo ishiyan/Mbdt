@@ -521,7 +521,7 @@ namespace mbdt.Euronext
                 { "XESM", "DUB" }, { "XMSM", "DUB" }, {"XDUB", "DUB"},
                 { "XOSL", "OSL" }, { "XOAS", "OSL" }, { "MERK", "OSL" }, { "VPXB", "OSL" },
                 { "MTAA", "MIL" }, { "MTAH", "MIL" }, { "EXGM", "MIL" }, { "BGEM", "MIL" },
-                { "ETFP", "MIL" }, { "ATFX", "MIL" }, { "MIVX", "MIL" }
+                { "ETLX", "MIL" }, { "ETFP", "MIL" }, { "ATFX", "MIL" }, { "MIVX", "MIL" }
             };
             return dictionary;
         }
@@ -532,7 +532,7 @@ namespace mbdt.Euronext
         private const string LisMics = "XLIS,ALXL,ENXL";
         private const string DubMics = "XDUB,XMSM,XESM";
         private const string OslMics = "XOSL,XOAS,MERK,VPXB";
-        private const string MilMics = "MTAA,MTAH,EXGM,BGEM,ETFP,ATFX,MIVX";
+        private const string MilMics = "MTAA,MTAH,EXGM,BGEM,ETLX,ETFP,ATFX,MIVX";
         private const string LonMics1 = "XLDN,XLIF";
         private const string LonMics2 = "XLON";
         private const string OthMics1 = "XETR";
